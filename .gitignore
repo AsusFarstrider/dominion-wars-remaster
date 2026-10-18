@@ -17,3 +17,14 @@
 *.sav
 ds9dw*.exe
 *.pdb
+# Private publication backups, credentials and generated downloads.
+*.bundle
+.env
+.env.*
+*.zip
+*.7z
+*.mdf
+*.nrg
+*.img
+*.key
+*.pem

@@ -1,0 +1,28 @@
+{
+  "record_type": "publication_preparation_supplement",
+  "record_schema": 1,
+  "integration_build_id": "int-20261018.1",
+  "source_revision": "921826392c5b6f5acdc523f4db2429cbad234782",
+  "flavor": "original-assets",
+  "proposed_tag": "int-20261018.1",
+  "package": {
+    "file": "dominion-wars-remaster-int-20261018.1.zip",
+    "bytes": 4101191,
+    "sha256": "7633f657e8c5845d083c2d6cf6a871b8360155b7f8d7bc1733e839134392c864",
+    "package_manifest_schema": 1,
+    "package_manifest_sha256": "ee9c6cff67be3ccf7c607cddb41fccb398aaff20ee945c4ab359a896640adcb4"
+  },
+  "internal_acceptance": "accepted by user; Master promotion record and validation-accepted.json bind the exact package",
+  "release_direction": {
+    "status": "user directed Release to use this candidate as first release, relayed by Master",
+    "user_words": "Tell the release thread to read it's earlier instructions I gave it about releasing to github and use this candidate as the first release.",
+    "scope": "Original-assets candidate only; no substitution, functional change or third-party rights grant"
+  },
+  "publication_status": "publication authorized; exact original-assets ZIP only",
+  "source_license_decision": "MIT for newly project-authored code; third-party and original-game fragments excepted as documented",
+  "history_review": "28 environment-path files reviewed; no personal profile/contact paths identified; no history rewrite needed; complete private bundle verified",
+  "independent_reproduction": "Exact ZIP and manifest hashes reproduced from approved9218263 detached worktree",
+  "historical_record_note": "Frozen package-manifest approval/test fields describe creation-time status. This supplement does not modify the authoritative schema1 manifest or tested ZIP.",
+  "excluded": ["private Saber flavor and artwork", "full game assets/executables/archives/media/updater", "unfinished models and portraits", "private test logs and evidence"],
+  "remaining_publication_steps": ["commit reviewed documentation/notices", "create separate public repository and push only reviewed master", "publish experimental prerelease with exact approved ZIP and checksum", "verify remote identity and downloaded asset hashes"]
+}

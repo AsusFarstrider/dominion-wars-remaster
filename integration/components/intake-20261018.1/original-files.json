@@ -1,0 +1,147 @@
+[
+  {
+    "path": "binkw32.dll",
+    "sha256": "65358b3cde7281df10cb68ac8e1c9f8705893a47df33f87bb882073fd0955c90",
+    "size": 285696
+  },
+  {
+    "path": "ds9dw.exe",
+    "sha256": "03c20a3535d0209111ff9f3b90eba403e059df2be7e784d2746abf1535c1be6a",
+    "size": 991232
+  },
+  {
+    "path": "GameSpy.ico",
+    "sha256": "84a650c17e18749ca39f47c99cc565e82f0a88c8049a28226593c275b9c8bf9e",
+    "size": 766
+  },
+  {
+    "path": "gizmolog.ico",
+    "sha256": "c70a3ecda92eada621fdee656d643db231e3922ad5d0ba3a8b5c9321b5845c8b",
+    "size": 2998
+  },
+  {
+    "path": "rs/Bolts/ds9blt.blt",
+    "sha256": "40ad59d38a6424558f80837735a47b5b9083b35c298ba4e49e8198a6f7bd2a8b",
+    "size": 45204654
+  },
+  {
+    "path": "rs/Bolts/ds9dat.blt",
+    "sha256": "34f3197e65a37cb43f27def055c6366616378a384f17bea955f741534bb82d45",
+    "size": 11764522
+  },
+  {
+    "path": "rs/Bolts/ds9media.blt",
+    "sha256": "b7fd88d88189d363b221b3a4eb77294dc74a800a1a7f7595e80a248bcbd2e585",
+    "size": 264140392
+  },
+  {
+    "path": "rs/Briefings/Starlog-Bajorian.BMP",
+    "sha256": "f193a699786e5a06d1416f703ea509d9c3220e6df0916c197dda1e9d819f0415",
+    "size": 144216
+  },
+  {
+    "path": "rs/Briefings/Starlog-Breen.BMP",
+    "sha256": "3be4a27bb7ce9c42d2c4316f90fc166ab2c75cc6c7e5b980001b4829130ca9ee",
+    "size": 144216
+  },
+  {
+    "path": "rs/Briefings/Starlog-Cardassian.BMP",
+    "sha256": "80933b1487be6102d0220dcd44a8a3d64ba173ab6bb5739d27fe3f6588ec4a5d",
+    "size": 144216
+  },
+  {
+    "path": "rs/Briefings/starlog-Dominion.bmp",
+    "sha256": "fe46b70425de7a82122cc3b2558678f59c3d9438b6acbbc14b256bc43132e2f0",
+    "size": 144216
+  },
+  {
+    "path": "rs/Briefings/Starlog-Klingon.BMP",
+    "sha256": "b4a5e97323634d4c9961616af42692b23af61305090f5867afddcd13983c20d2",
+    "size": 144216
+  },
+  {
+    "path": "rs/Briefings/Starlog-Maquis.BMP",
+    "sha256": "12993d75b0b71af429ae34a8064643813fac403f5ce82f36b41399af7c9619d4",
+    "size": 144216
+  },
+  {
+    "path": "rs/Briefings/Starlog-Romulan.BMP",
+    "sha256": "d5ca34fca2a4f93d50456df22b43bce060c4c36a909ac01a906a4f670c0ebcba",
+    "size": 144216
+  },
+  {
+    "path": "rs/Briefings/StarLog-UFP.bmp",
+    "sha256": "f59bbc2a5384ed1962306bda158199e9d28129039f6a9eb131811d68ba10b77a",
+    "size": 144216
+  },
+  {
+    "path": "rs/Briefings/TacDisp.bmp",
+    "sha256": "e7df2b2edecbe690b64d058b2b1c4d1d5c75724b0261a1f8f4ca2e209625d0d8",
+    "size": 125790
+  },
+  {
+    "path": "rs/Missions/shipcapt.mis",
+    "sha256": "70fd5a81756795f7c1a16a2eb4c11b419dabb2f215b9c530cf0b7a09813c4ea9",
+    "size": 109472
+  },
+  {
+    "path": "rs/Video/DomEnd.bik",
+    "sha256": "0382e2c89d9962496468748ce5a5dcb2921bfe03e9b1b9327a3b327e7c380828",
+    "size": 4822236
+  },
+  {
+    "path": "rs/Video/DomIntro.bik",
+    "sha256": "c29394156fe2148939d084e3cba18b046464fd2a9ef92fa6527cd32ac3262e43",
+    "size": 32793452
+  },
+  {
+    "path": "rs/Video/FedEnd.bik",
+    "sha256": "a4c1ecb19a09d825f7139b0cab7cf879a08a9dd1b632265b3b61e31c28998d40",
+    "size": 5653644
+  },
+  {
+    "path": "rs/Video/FedIntro.bik",
+    "sha256": "e7537c61575703d835798e863f36f24597a0761682629f0f9b75ba92ab8808d2",
+    "size": 22046256
+  },
+  {
+    "path": "rs/Video/GizmoLogo.bik",
+    "sha256": "c80976eacec03c9dbe032b46524aaa99f2686d155bb846b34711e1a67d003e7e",
+    "size": 4455744
+  },
+  {
+    "path": "rs/Video/IntroDS9.bik",
+    "sha256": "1b1e6e1e87c868f228252af84c31a0d6f92efa10a743ec32d47d6bfed9c41691",
+    "size": 50378652
+  },
+  {
+    "path": "rs/Video/PanLogo.bik",
+    "sha256": "963dba645c1489ea05aa23468fb81074791182c3bc92aa114d10ea9719e4f111",
+    "size": 4327080
+  },
+  {
+    "path": "rs/Video/Paramount.bik",
+    "sha256": "963dba645c1489ea05aa23468fb81074791182c3bc92aa114d10ea9719e4f111",
+    "size": 4327080
+  },
+  {
+    "path": "rs/Video/SSLogo1.bik",
+    "sha256": "e444e02185d1fd7d7c7be5edf3bd2842cd43cfe9a89e715a2542ce59c0f7249e",
+    "size": 3885492
+  },
+  {
+    "path": "rs/Video/Tut1.bik",
+    "sha256": "49586fc811dcb2598684d7cd2748a18a226f2c25bd43d8806f873e776d5ac826",
+    "size": 22307024
+  },
+  {
+    "path": "rs/Video/Tut2.bik",
+    "sha256": "a367b69b67f15de1c5eed392bb0eb0b357f1292a13877e68e3c8e8cab2e857bd",
+    "size": 26461880
+  },
+  {
+    "path": "rs/Video/Tut3.bik",
+    "sha256": "916e7e5ad71fe3d008b89827c350e181d7315347000a2b5430ecc327d3d9c5fe",
+    "size": 31479408
+  }
+]

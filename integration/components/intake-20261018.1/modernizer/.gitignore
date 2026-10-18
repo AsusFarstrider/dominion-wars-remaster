@@ -1,0 +1,26 @@
+# User-supplied copyrighted media and game files
+*.bin
+*.cue
+*.iso
+ds9dw.exe
+ds9dw1to4.exe
+binkw32.dll
+*.blt
+*.bik
+*.mis
+*.sav
+rs/
+
+# Runtime and disposable validation output
+DDrawCompat-*.log
+.dw-modernizer/
+.dw-launcher/
+.dw-*
+.test-*
+.media-*
+.selfcontained-*
+releases/
+
+# Windows metadata
+Thumbs.db
+Desktop.ini

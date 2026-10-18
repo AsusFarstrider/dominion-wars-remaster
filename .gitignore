@@ -1,0 +1,19 @@
+# Private specialist work and owner-media evidence are not public source inputs.
+/native-geometry/
+/remaster-evidence/
+/startup-research/
+/handoffs/
+**/__pycache__/
+*.pyc
+/integration/current.json
+/integration/current.*.json
+/integration/.test*/
+# Keep commercial/private build outputs outside this source tree.
+*.blt
+*.bin
+*.iso
+*.cue
+*.bik
+*.sav
+ds9dw*.exe
+*.pdb

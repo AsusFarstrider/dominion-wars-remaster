@@ -1,0 +1,2 @@
+# Preserve validated package bytes and MANIFEST.json hashes across platforms.
+* -text

@@ -1,0 +1,44 @@
+{
+  "base_sha256": "12779af0b0e41807d58eafec6d6724756f32d164268e3475de79e4ea7d401ebe",
+  "candidate_sha256": "ea1ea1b8e580265d304c3905199951be2288e9fc87bb9dae503d23191c29139b",
+  "patches": [
+    {
+      "va": "0x472630",
+      "before": "a1ec387100",
+      "stub_va": "0xabd285",
+      "label": "selection root full-surface repaint before artwork"
+    },
+    {
+      "va": "0x434569",
+      "before": "6a006838a74d00",
+      "stub_va": "0xabd2a5",
+      "label": "loading background parent X from UI root"
+    },
+    {
+      "va": "0x4345a3",
+      "before": "8b1540a74d00",
+      "stub_va": "0xabd2ba",
+      "label": "loading text absolute X from local widget plus root"
+    },
+    {
+      "va": "0x434625",
+      "before": "0fbf3540a74d00",
+      "stub_va": "0xabd2d2",
+      "label": "loading bar and clipping share absolute X"
+    }
+  ],
+  "stub_va": "0xabd285",
+  "stub_bytes": "9c60a1649ba3008b006a0050e87a449eff83c408619da1ec387100e990539bff500fbf05e07e5f008704246838a74d00e9b67297ff8b1540a74d009c500fbf05e07e5f0001c2589de9d77297ff0fbf3540a74d009c500fbf05e07e5f0001c6589de9417397ff",
+  "runtime_validated": false,
+  "corrected_repaint": true,
+  "includes_loading_changes": true,
+  "provenance": {
+    "selection_root": "0x4e5050, callback 0x472630, resource 0x801",
+    "loading_widget": "0x4da738, normal callback 0x434700, direct update 0x434560"
+  },
+  "limitations": [
+    "Normal loading callback remains parent-relative and unchanged.",
+    "Other menus may need margin repaint; not a global clear hook.",
+    "Source paths statically corroborated; user visual validation required."
+  ]
+}

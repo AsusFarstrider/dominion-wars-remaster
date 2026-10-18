@@ -1,0 +1,27 @@
+i6comp v0.20 attribution and license notice
+============================================
+
+i6comp is the InstallShield 6.x Cabinet Utility created by fOSSiL and updated
+by Morlac in 2000.
+
+The source headers in i6comp.h and is6cab.h state:
+
+    Any use is authorized, granted the proper credit is given.
+
+This distribution gives that credit to fOSSiL and Morlac and uses i6comp solely
+to extract files from media owned by the user.
+
+Validated bundled executable
+----------------------------
+
+File: i6comp.exe
+Version displayed by program: 0.20
+SHA-256: 1181AE0DADA52EA5A5990D11F966E5986BF0A01614D2D5E5AD63B7C79E29FA29
+
+Preserved source archive used for validation
+--------------------------------------------
+
+File: i6comp_0-20.zip
+SHA-256: 5DEC18E55D77ABE696F8447A7DFE3F7F4D4B543E01535B31129EEA82763B5B50
+
+No game data is included with i6comp or Dominion Wars Modernizer.

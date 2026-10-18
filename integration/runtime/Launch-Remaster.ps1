@@ -1,0 +1,54 @@
+[CmdletBinding()]
+param([string]$GameRoot,[switch]$VerifyOnly)
+$ErrorActionPreference='Stop'
+if(-not $GameRoot){$GameRoot=Split-Path -Parent $MyInvocation.MyCommand.Path}
+$GameRoot=[IO.Path]::GetFullPath($GameRoot)
+Import-Module (Join-Path $GameRoot 'Remaster.Core.psm1') -Force
+$helper=$null;$child=$null;$mutex=$null;$owns=$false;$code=1
+$prior=@{}
+try {
+    if(-not $VerifyOnly){Assert-RemasterIdle}
+    $state=Test-RemasterInstalled $GameRoot
+    if($VerifyOnly){Write-Host "Verified remaster $($state.build_id).";exit 0}
+    # The native recenter patch is validated only for the primary origin (0,0).
+    Add-Type -AssemblyName System.Windows.Forms
+    $primary=[Windows.Forms.Screen]::PrimaryScreen
+    if($primary.Bounds.X -ne 0 -or $primary.Bounds.Y -ne 0){throw 'This candidate requires the primary display at desktop origin (0,0).'}
+    foreach($config in @((Join-Path $env:PROGRAMDATA 'DDrawCompat\DDrawCompat.ini'),(Join-Path $env:LOCALAPPDATA 'DDrawCompat\DDrawCompat.ini'),(Join-Path $GameRoot 'DDrawCompat.ini'),(Join-Path $GameRoot 'DDrawCompatOverlay-ds9dw.ini'))) {
+        if(Test-Path -LiteralPath $config){throw "Additional wrapper configuration requires review: $config"}
+    }
+    $mutex=New-Object Threading.Mutex($false,'Local\DominionWarsRemaster.Launch')
+    try {$owns=$mutex.WaitOne(0)}catch [Threading.AbandonedMutexException]{$owns=$true}
+    if(-not $owns){throw 'Another remaster launcher is active.'}
+    $run=Join-Path $GameRoot ('.dw-remaster\runs\'+[DateTime]::UtcNow.ToString('yyyyMMddTHHmmssfffZ')+'-'+[guid]::NewGuid().ToString('N'))
+    $null=New-Item -ItemType Directory -Path $run
+    foreach($name in @('PSModulePath','DW_EXPERIMENTAL_FOCUS_GUARD','DW_EXPERIMENTAL_FOCUS_DESKTOP','DW_FOCUS_DEVICE','DW_FOCUS_DEVICE_IDENTITY','DW_FOCUS_ORIGINAL_MODE','DW_RESOLUTION_TELEMETRY','DW_DRAW_TELEMETRY','DW_PROJECTION_TELEMETRY','DW_COORDINATE_PROBE')) {
+        $prior[$name]=[Environment]::GetEnvironmentVariable($name,'Process')
+        [Environment]::SetEnvironmentVariable($name,$null,'Process')
+    }
+    $env:PSModulePath=Join-Path $env:WINDIR 'System32\WindowsPowerShell\v1.0\Modules'
+    $env:DW_EXPERIMENTAL_FOCUS_GUARD='1'
+    $engine=Join-Path $env:WINDIR 'System32\WindowsPowerShell\v1.0\powershell.exe'
+    $helperArgs='-NoProfile -ExecutionPolicy Bypass -File "'+(Join-Path $GameRoot 'Watch-RemasterFocus.ps1')+'" -GamePath "'+(Join-Path $GameRoot 'ds9dw.exe')+'" -LogPath "'+(Join-Path $run 'focus.log')+'"'
+    $helper=Start-Process -FilePath $engine -ArgumentList $helperArgs -WindowStyle Hidden -PassThru -RedirectStandardOutput (Join-Path $run 'helper-output.log') -RedirectStandardError (Join-Path $run 'helper-error.log')
+    $null=$helper.Handle
+    $deadline=[DateTime]::UtcNow.AddSeconds(20)
+    while(-not(Test-Path -LiteralPath (Join-Path $run 'focus.log'))) {
+        if($helper.HasExited -or [DateTime]::UtcNow -ge $deadline){throw 'Focus helper failed preflight; game not launched.'}
+        Start-Sleep -Milliseconds 100
+    }
+    Write-Host "Launching remaster $($state.build_id); no startup desktop mode change. Pause manually before changing focus."
+    $argsChild='-NoProfile -ExecutionPolicy Bypass -File "'+(Join-Path $GameRoot 'Launch-NoDesktopSwitch.ps1')+'" -GamePath "'+(Join-Path $GameRoot 'ds9dw.exe')+'" -GraphicsBackend Profile -VisualPreset Baseline'
+    $child=Start-Process -FilePath $engine -ArgumentList $argsChild -WorkingDirectory $GameRoot -WindowStyle Hidden -PassThru -RedirectStandardOutput (Join-Path $run 'launcher-output.log') -RedirectStandardError (Join-Path $run 'launcher-error.log')
+    $null=$child.Handle;$child.WaitForExit();$child.Refresh();$code=$child.ExitCode
+    if(-not $helper.WaitForExit(5000)){Stop-Process -Id $helper.Id -ErrorAction SilentlyContinue}
+    $null=Test-RemasterInstalled $GameRoot
+    Write-RemasterJson (Join-Path $run 'result.json') ([ordered]@{build_id=$state.build_id;launcher_exit=$code;managed_files_verified=$true;recorded_utc=[DateTime]::UtcNow.ToString('o');automatic_pause=$false})
+    Write-Host "Session complete (exit $code). Logs: $run"
+} catch {Write-Error -ErrorAction Continue $_; $code=1}
+finally {
+    if($helper -and -not $helper.HasExited){Stop-Process -Id $helper.Id -ErrorAction SilentlyContinue}
+    foreach($name in $prior.Keys){[Environment]::SetEnvironmentVariable($name,$prior[$name],'Process')}
+    if($owns){$mutex.ReleaseMutex()};if($mutex){$mutex.Dispose()}
+}
+exit $code

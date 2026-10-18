@@ -1,0 +1,10 @@
+@echo off
+setlocal
+"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoLogo -NoProfile -ExecutionPolicy Bypass -File "%~dp0Launch-Remaster.ps1" -VerifyOnly
+if errorlevel 1 (
+  echo Verification failed. Use the remaster package to repair this installation.
+  pause
+  exit /b 1
+)
+pause
+exit /b 0

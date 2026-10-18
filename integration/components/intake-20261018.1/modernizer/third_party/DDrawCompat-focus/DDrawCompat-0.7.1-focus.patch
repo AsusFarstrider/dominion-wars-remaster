@@ -1,0 +1,524 @@
+diff --git a/DDrawCompat/DDraw/DirectDraw.cpp b/DDrawCompat/DDraw/DirectDraw.cpp
+index f84b491..9bda283 100644
+--- a/DDrawCompat/DDraw/DirectDraw.cpp
++++ b/DDrawCompat/DDraw/DirectDraw.cpp
+@@ -24,6 +24,7 @@
+ #include <DDraw/Surfaces/TagSurface.h>
+ #include <DDraw/Visitors/DirectDrawVtblVisitor.h>
+ #include <Gdi/WinProc.h>
++#include <Gdi/DominionWarsFocus.h>
+ #include <Win32/DisplayMode.h>
+ #include <Win32/Thread.h>
+ 
+@@ -241,6 +242,10 @@ namespace
+ 	LRESULT handleActivateApp(HWND hwnd, WPARAM wParam, LPARAM lParam, WNDPROC origWndProc)
+ 	{
+ 		LOG_FUNC("DirectDraw::handleActivateApp", hwnd, wParam, lParam, origWndProc);
++		// If resuming the saved desktop failed, do not undo the private controller's
++		// decision to keep the game minimized. Surface restoration waits for a safe mode.
++		if (wParam && Gdi::WinProc::isDominionWarsFocusExperiment(hwnd) &&
++			Gdi::DominionWarsFocus::isPresentationHeld()) { return 0; }
+ 
+ 		if (Config::Settings::AltTabFix::OFF == Config::altTabFix.get())
+ 		{
+@@ -283,6 +288,11 @@ namespace
+ 			static HWND lastActivePopup = nullptr;
+ 			if (wParam)
+ 			{
++				if (Gdi::WinProc::isDominionWarsFocusExperiment(hwnd) && IsIconic(hwnd))
++				{
++					LOG_INFO << "DW focus experiment: restoring an explicitly minimized game window";
++					ShowWindow(hwnd, SW_RESTORE);
++				}
+ 				if (lastActivePopup)
+ 				{
+ 					ShowWindow(hwnd, IsIconic(hwnd) ? SW_RESTORE : SW_SHOW);
+@@ -297,7 +307,14 @@ namespace
+ 				{
+ 					lastActivePopup = nullptr;
+ 				}
+-				ShowWindow(hwnd, SW_SHOWMINNOACTIVE);
++				if (!Gdi::WinProc::isDominionWarsFocusExperiment(hwnd))
++				{
++					ShowWindow(hwnd, SW_SHOWMINNOACTIVE);
++				}
++				else
++				{
++					LOG_INFO << "DW focus experiment: retaining the borderless image on deactivation";
++				}
+ 				CALL_ORIG_FUNC(ClipCursor)(nullptr);
+ 			}
+ 
+diff --git a/DDrawCompat/DDraw/RealPrimarySurface.cpp b/DDrawCompat/DDraw/RealPrimarySurface.cpp
+index 413b11b..a2598a6 100644
+--- a/DDrawCompat/DDraw/RealPrimarySurface.cpp
++++ b/DDrawCompat/DDraw/RealPrimarySurface.cpp
+@@ -29,9 +29,11 @@
+ #include <Gdi/Caret.h>
+ #include <Gdi/Cursor.h>
+ #include <Gdi/DcFunctions.h>
++#include <Gdi/DominionWarsFocus.h>
+ #include <Gdi/GuiThread.h>
+ #include <Gdi/VirtualScreen.h>
+ #include <Gdi/Window.h>
++#include <Gdi/WinProc.h>
+ #include <Input/Input.h>
+ #include <Overlay/ConfigWindow.h>
+ #include <Overlay/StatsWindow.h>
+@@ -364,13 +366,33 @@ namespace
+ 			g_isUpdateReady = false;
+ 		}
+ 
+-		present(src, isOverlayOnly);
++		// Retain the last composited image while another app (including Snipping Tool)
++		// has focus. Do not keep flipping a fullscreen surface over that app. Normal
++		// presentation-parameter handling above still releases fullscreen cursor state.
++		const bool holdBackgroundFrame = g_isFullscreen &&
++			Gdi::WinProc::isDominionWarsFocusExperiment(g_deviceWindow) &&
++			(Gdi::DominionWarsFocus::isPresentationHeld() || !DDraw::RealPrimarySurface::isProcessActive());
++		static bool wasHoldingBackgroundFrame = false;
++		if (holdBackgroundFrame != wasHoldingBackgroundFrame)
++		{
++			LOG_INFO << "DW focus experiment: background frame hold=" << holdBackgroundFrame;
++			wasHoldingBackgroundFrame = holdBackgroundFrame;
++		}
++		if (!holdBackgroundFrame)
++		{
++			present(src, isOverlayOnly);
++		}
+ 		D3dDdi::KernelModeThunks::setPresentEndVsyncCount();
+ 	}
+ 
+ 	void updatePresentationParams()
+ 	{
+ 		LOG_FUNC("RealPrimarySurface::updatePresentationParams");
++		if (Gdi::DominionWarsFocus::isPresentationHeld())
++		{
++			setFullscreenPresentationMode({});
++			return;
++		}
+ 
+ 		HWND fullscreenWindow = nullptr;
+ 		if (DDraw::RealPrimarySurface::isProcessActive())
+diff --git a/DDrawCompat/DDrawCompat.vcxproj b/DDrawCompat/DDrawCompat.vcxproj
+index 6750a6b..62ffcdd 100644
+--- a/DDrawCompat/DDrawCompat.vcxproj
++++ b/DDrawCompat/DDrawCompat.vcxproj
+@@ -322,6 +322,8 @@
+     <ClInclude Include="Gdi\VirtualScreen.h" />
+     <ClInclude Include="Gdi\Window.h" />
+     <ClInclude Include="Gdi\WinProc.h" />
++    <ClInclude Include="Gdi\DominionWarsFocus.h" />
++    <ClInclude Include="Gdi\DominionWarsFocusPolicy.h" />
+     <ClInclude Include="Input\HotKey.h" />
+     <ClInclude Include="Input\Input.h" />
+     <ClInclude Include="Overlay\ButtonControl.h" />
+@@ -465,6 +467,7 @@
+     <ClCompile Include="Gdi\VirtualScreen.cpp" />
+     <ClCompile Include="Gdi\Window.cpp" />
+     <ClCompile Include="Gdi\WinProc.cpp" />
++    <ClCompile Include="Gdi\DominionWarsFocus.cpp" />
+     <ClCompile Include="Input\HotKey.cpp" />
+     <ClCompile Include="Input\Input.cpp" />
+     <ClCompile Include="Overlay\ButtonControl.cpp" />
+@@ -551,4 +554,4 @@
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+   <ImportGroup Label="ExtensionTargets">
+   </ImportGroup>
+-</Project>
+\ No newline at end of file
++</Project>
+diff --git a/DDrawCompat/Gdi/WinProc.cpp b/DDrawCompat/Gdi/WinProc.cpp
+index 797bb08..457d12b 100644
+--- a/DDrawCompat/Gdi/WinProc.cpp
++++ b/DDrawCompat/Gdi/WinProc.cpp
+@@ -1,4 +1,5 @@
+ #include <map>
++#include <cstring>
+ 
+ #include <Windows.h>
+ #include <Windowsx.h>
+@@ -16,6 +17,7 @@
+ #include <DDraw/RealPrimarySurface.h>
+ #include <DDraw/Surfaces/TagSurface.h>
+ #include <Gdi/Cursor.h>
++#include <Gdi/DominionWarsFocus.h>
+ #include <Gdi/Gdi.h>
+ #include <Gdi/GuiThread.h>
+ #include <Gdi/ScrollBar.h>
+@@ -164,9 +166,19 @@ namespace
+ 		LOG_FUNC("ddcWindowProc", Compat::WindowMessageStruct(hwnd, uMsg, wParam, lParam));
+ 		ScopedIncrement inc(g_inWindowProc);
+ 		POINT cursorPos = {};
++		if (Gdi::DominionWarsFocus::beforeMessage(hwnd, uMsg, wParam)) { return 0; }
+ 
+ 		switch (uMsg)
+ 		{
++		case WM_ACTIVATE:
++			if (Gdi::WinProc::isDominionWarsFocusExperiment(hwnd))
++			{
++				LOG_INFO << "DW focus experiment: suppressing game WM_ACTIVATE, active="
++					<< LOWORD(wParam) << ", minimized=" << HIWORD(wParam);
++				return 0;
++			}
++			break;
++
+ 		case WM_COMMAND:
+ 			if (CBN_DROPDOWN == HIWORD(wParam))
+ 			{
+@@ -1062,6 +1074,33 @@ namespace Gdi
+ 			return it != g_ddrawWindowProc.end() ? it->second : nullptr;
+ 		}
+ 
++		bool isDominionWarsFocusExperiment(HWND hwnd)
++		{
++			// Private, opt-in experiment. The test harness additionally verifies
++			// the entire North American 1.04 executable SHA-256 before launch.
++			static const bool enabled = []()
++			{
++				char flag[4] = {};
++				if (GetEnvironmentVariableA("DW_EXPERIMENTAL_FOCUS_GUARD", flag, sizeof(flag)) != 1 || flag[0] != '1')
++				{
++					return false;
++				}
++				char path[MAX_PATH] = {};
++				if (!GetModuleFileNameA(nullptr, path, sizeof(path))) { return false; }
++				auto baseName = std::strrchr(path, '\\');
++				if (!baseName || _stricmp(baseName + 1, "ds9dw.exe")) { return false; }
++				auto module = reinterpret_cast<const BYTE*>(GetModuleHandle(nullptr));
++				auto dos = reinterpret_cast<const IMAGE_DOS_HEADER*>(module);
++				auto nt = reinterpret_cast<const IMAGE_NT_HEADERS*>(module + dos->e_lfanew);
++				if (dos->e_magic != IMAGE_DOS_SIGNATURE || nt->Signature != IMAGE_NT_SIGNATURE ||
++					nt->FileHeader.TimeDateStamp != 0x3b991296) { return false; }
++				LOG_INFO << "Dominion Wars private focus guard enabled; background auto-pause is not preserved";
++				return true;
++			}();
++			return enabled && reinterpret_cast<const BYTE*>(getDDrawOrigWndProc(hwnd)) ==
++				reinterpret_cast<const BYTE*>(GetModuleHandle(nullptr)) + 0x33620;
++		}
++
+ 		void installHooks()
+ 		{
+ 			HOOK_FUNCTION(user32, AnimateWindow, animateWindow);
+diff --git a/DDrawCompat/Gdi/WinProc.h b/DDrawCompat/Gdi/WinProc.h
+index 1874407..f723244 100644
+--- a/DDrawCompat/Gdi/WinProc.h
++++ b/DDrawCompat/Gdi/WinProc.h
+@@ -9,6 +9,7 @@ namespace Gdi
+ 		DWORD adjustComboListBoxRect(HWND hwnd, DWORD awFlags);
+ 		void dllThreadDetach();
+ 		WNDPROC getDDrawOrigWndProc(HWND hwnd);
++		bool isDominionWarsFocusExperiment(HWND hwnd);
+ 		void installHooks();
+ 		void onCreateWindow(HWND hwnd);
+ 		void startFrame();
+diff --git a/DDrawCompat/Gdi/DominionWarsFocus.h b/DDrawCompat/Gdi/DominionWarsFocus.h
+new file mode 100644
+--- /dev/null
++++ b/DDrawCompat/Gdi/DominionWarsFocus.h
+@@ -0,0 +1,9 @@
++#pragma once
++
++#include <Windows.h>
++
++namespace Gdi::DominionWarsFocus
++{
++	bool beforeMessage(HWND hwnd, UINT message, WPARAM wParam);
++	bool isPresentationHeld();
++}
+diff --git a/DDrawCompat/Gdi/DominionWarsFocusPolicy.h b/DDrawCompat/Gdi/DominionWarsFocusPolicy.h
+new file mode 100644
+--- /dev/null
++++ b/DDrawCompat/Gdi/DominionWarsFocusPolicy.h
+@@ -0,0 +1,59 @@
++#pragma once
++
++#include <cwchar>
++#include <Windows.h>
++
++namespace Gdi::DominionWarsFocusPolicy
++{
++	inline bool sameMode(const DEVMODEW& a, const DEVMODEW& b)
++	{
++		return a.dmPelsWidth == b.dmPelsWidth && a.dmPelsHeight == b.dmPelsHeight &&
++			a.dmBitsPerPel == b.dmBitsPerPel && a.dmDisplayFrequency == b.dmDisplayFrequency &&
++			a.dmPosition.x == b.dmPosition.x && a.dmPosition.y == b.dmPosition.y &&
++			a.dmDisplayOrientation == b.dmDisplayOrientation && a.dmDisplayFlags == b.dmDisplayFlags &&
++			a.dmDisplayFixedOutput == b.dmDisplayFixedOutput;
++	}
++
++	inline bool expectedGameMode(const DEVMODEW& original, const DEVMODEW& current)
++	{
++		// Stock DDrawCompat resets the physical display to the registry desktop
++		// during startup. Accept that exact original mode OR the launcher bootstrap,
++		// never an arbitrary later resolution, monitor position or orientation.
++		return sameMode(original, current) || (current.dmPelsWidth == 1280 && current.dmPelsHeight == 960 &&
++			current.dmBitsPerPel == 32 && current.dmDisplayFrequency > 0 && current.dmDisplayFrequency <= 1000 &&
++			current.dmPosition.x == original.dmPosition.x && current.dmPosition.y == original.dmPosition.y &&
++			current.dmDisplayOrientation == original.dmDisplayOrientation);
++	}
++
++	inline bool decodeMode(const wchar_t* hex, DEVMODEW& mode)
++	{
++		if (!hex || std::wcslen(hex) != sizeof(mode) * 2) { return false; }
++		DEVMODEW decoded = {};
++		auto bytes = reinterpret_cast<unsigned char*>(&decoded);
++		for (size_t i = 0; i < sizeof(decoded); ++i)
++		{
++			unsigned value = 0;
++			for (size_t j = 0; j < 2; ++j)
++			{
++				const auto c = hex[i * 2 + j];
++				const int digit = c >= L'0' && c <= L'9' ? c - L'0' :
++					c >= L'A' && c <= L'F' ? c - L'A' + 10 :
++					c >= L'a' && c <= L'f' ? c - L'a' + 10 : -1;
++				if (digit < 0) { return false; }
++				value = value * 16 + digit;
++			}
++			bytes[i] = static_cast<unsigned char>(value);
++		}
++		const DWORD fields = DM_PELSWIDTH | DM_PELSHEIGHT | DM_BITSPERPEL | DM_DISPLAYFREQUENCY;
++		if (decoded.dmSize != sizeof(decoded) || decoded.dmDriverExtra != 0 ||
++			(decoded.dmFields & fields) != fields || decoded.dmBitsPerPel != 32 ||
++			decoded.dmPelsWidth < 640 || decoded.dmPelsWidth > 32768 ||
++			decoded.dmPelsHeight < 480 || decoded.dmPelsHeight > 32768 ||
++			decoded.dmDisplayFrequency < 1 || decoded.dmDisplayFrequency > 1000)
++		{
++			return false;
++		}
++		mode = decoded;
++		return true;
++	}
++}
+diff --git a/DDrawCompat/Gdi/DominionWarsFocus.cpp b/DDrawCompat/Gdi/DominionWarsFocus.cpp
+new file mode 100644
+--- /dev/null
++++ b/DDrawCompat/Gdi/DominionWarsFocus.cpp
+@@ -0,0 +1,226 @@
++#include <atomic>
++#include <string>
++
++#include <Windows.h>
++#include <Common/Hook.h>
++#include <Common/Log.h>
++#include <Gdi/DominionWarsFocus.h>
++#include <Gdi/DominionWarsFocusPolicy.h>
++#include <Gdi/WinProc.h>
++
++// Private NA 1.04 experiment only. All state except the presentation hold is
++// owned by the game window's thread. No worker thread changes display modes.
++namespace
++{
++	constexpr UINT_PTR TIMER_ID = 0x44574647;
++	std::atomic<bool> g_hold = false;
++	bool g_initialized = false;
++	bool g_enabled = false;
++	bool g_suspended = false;
++	bool g_transition = false;
++	bool g_timer = false;
++	ULONGLONG g_lossTime = 0;
++	std::wstring g_device;
++	std::wstring g_identity;
++	DEVMODEW g_original = {};
++	DEVMODEW g_temporary = {};
++
++	std::wstring environment(const wchar_t* name)
++	{
++		wchar_t value[2048] = {};
++		const auto count = GetEnvironmentVariableW(name, value, ARRAYSIZE(value));
++		return count && count < ARRAYSIZE(value) ? value : L"";
++	}
++
++	bool sameDisplay()
++	{
++		for (DWORD i = 0; ; ++i)
++		{
++			DISPLAY_DEVICEW adapter = {};
++			adapter.cb = sizeof(adapter);
++			if (!CALL_ORIG_FUNC(EnumDisplayDevicesW)(nullptr, i, &adapter, 0)) { return false; }
++			if (g_device != adapter.DeviceName) { continue; }
++			if ((adapter.StateFlags & (DISPLAY_DEVICE_ATTACHED_TO_DESKTOP | DISPLAY_DEVICE_PRIMARY_DEVICE)) !=
++				(DISPLAY_DEVICE_ATTACHED_TO_DESKTOP | DISPLAY_DEVICE_PRIMARY_DEVICE)) { return false; }
++			DISPLAY_DEVICEW monitor = {};
++			monitor.cb = sizeof(monitor);
++			if (!CALL_ORIG_FUNC(EnumDisplayDevicesW)(g_device.c_str(), 0, &monitor, EDD_GET_DEVICE_INTERFACE_NAME))
++			{
++				return false;
++			}
++			return g_identity == std::wstring(adapter.DeviceID) + L"|" + monitor.DeviceID;
++		}
++	}
++
++	bool readMode(DEVMODEW& mode)
++	{
++		mode = {};
++		mode.dmSize = sizeof(mode);
++		return !!CALL_ORIG_FUNC(EnumDisplaySettingsExW)(g_device.c_str(), ENUM_CURRENT_SETTINGS, &mode, 0);
++	}
++
++	void disable(const char* reason)
++	{
++		g_enabled = false;
++		LOG_INFO << "DW focus desktop: switching disabled; " << reason;
++	}
++
++	void initialize()
++	{
++		g_initialized = true;
++		if (environment(L"DW_EXPERIMENTAL_FOCUS_DESKTOP") != L"1") { return; }
++		g_device = environment(L"DW_FOCUS_DEVICE");
++		g_identity = environment(L"DW_FOCUS_DEVICE_IDENTITY");
++		if (g_device.empty() || g_identity.empty() ||
++			!Gdi::DominionWarsFocusPolicy::decodeMode(environment(L"DW_FOCUS_ORIGINAL_MODE").c_str(), g_original) ||
++			!sameDisplay() || !readMode(g_temporary) || g_temporary.dmDriverExtra != 0 ||
++			!Gdi::DominionWarsFocusPolicy::expectedGameMode(g_original, g_temporary))
++		{
++			disable("invalid snapshot, changed monitor, or unexpected initial game desktop");
++			return;
++		}
++		g_enabled = true;
++		LOG_INFO << "DW focus desktop: armed; original=" << g_original.dmPelsWidth << "x" <<
++			g_original.dmPelsHeight << "@" << g_original.dmDisplayFrequency << "; game=" <<
++			g_temporary.dmPelsWidth << "x" << g_temporary.dmPelsHeight << "@" << g_temporary.dmDisplayFrequency;
++	}
++
++	bool apply(DEVMODEW mode, const DEVMODEW& expected)
++	{
++		DEVMODEW current = {};
++		if (!sameDisplay() || !readMode(current) || !Gdi::DominionWarsFocusPolicy::sameMode(current, expected))
++		{
++			return false;
++		}
++		if (Gdi::DominionWarsFocusPolicy::sameMode(current, mode)) { return true; }
++		if (CALL_ORIG_FUNC(ChangeDisplaySettingsExW)(g_device.c_str(), &mode, nullptr, CDS_TEST, nullptr) != DISP_CHANGE_SUCCESSFUL)
++		{
++			return false;
++		}
++		if (!sameDisplay() || !readMode(current) || !Gdi::DominionWarsFocusPolicy::sameMode(current, expected))
++		{
++			return false;
++		}
++		const auto result = CALL_ORIG_FUNC(ChangeDisplaySettingsExW)(g_device.c_str(), &mode, nullptr, CDS_FULLSCREEN, nullptr);
++		return result == DISP_CHANGE_SUCCESSFUL && sameDisplay() && readMode(current) &&
++			Gdi::DominionWarsFocusPolicy::sameMode(current, mode);
++	}
++
++	void stopTimer(HWND hwnd)
++	{
++		if (g_timer) { KillTimer(hwnd, TIMER_ID); g_timer = false; }
++	}
++
++	bool isCaptureWindow(HWND foreground)
++	{
++		// Experimental exception, not a security boundary. These Windows screenshot
++		// hosts may take focus without indicating that the user switched apps.
++		DWORD pid = 0;
++		GetWindowThreadProcessId(foreground, &pid);
++		HANDLE process = OpenProcess(PROCESS_QUERY_LIMITED_INFORMATION, FALSE, pid);
++		if (!process) { return false; }
++		wchar_t path[32768] = {};
++		DWORD count = ARRAYSIZE(path);
++		const bool queried = !!QueryFullProcessImageNameW(process, 0, path, &count);
++		CloseHandle(process);
++		if (!queried) { return false; }
++		const auto name = std::wcsrchr(path, L'\\');
++		return name && (!_wcsicmp(name + 1, L"ScreenClippingHost.exe") || !_wcsicmp(name + 1, L"SnippingTool.exe"));
++	}
++
++	bool resume()
++	{
++		if (!g_suspended || g_transition) { return true; }
++		if (!g_enabled) { return false; }
++		DEVMODEW current = {};
++		if (!sameDisplay() || !readMode(current))
++		{
++			disable("monitor changed while suspended; leaving desktop untouched");
++			return false;
++		}
++		if (!Gdi::DominionWarsFocusPolicy::sameMode(current, g_original) &&
++			!Gdi::DominionWarsFocusPolicy::sameMode(current, g_temporary))
++		{
++			disable("display was adjusted while suspended; leaving later settings untouched");
++			return false;
++		}
++		g_transition = true;
++		const bool applied = Gdi::DominionWarsFocusPolicy::sameMode(current, g_temporary) || apply(g_temporary, current);
++		g_transition = false;
++		if (!applied) { disable("driver rejected game desktop; keeping presentation held"); return false; }
++		g_suspended = false;
++		g_hold = false;
++		LOG_INFO << "DW focus desktop: game mode reapplied before window return";
++		return true;
++	}
++
++	void suspend(HWND hwnd)
++	{
++		if (!g_enabled || g_suspended || g_transition) { return; }
++		DEVMODEW current = {};
++		if (!sameDisplay() || !readMode(current) || !Gdi::DominionWarsFocusPolicy::sameMode(current, g_temporary))
++		{
++			disable("monitor or display changed before switching away; leaving settings untouched");
++			return;
++		}
++		g_transition = true;
++		g_hold = true;
++		ShowWindow(hwnd, SW_SHOWMINNOACTIVE);
++		if (!IsIconic(hwnd))
++		{
++			g_transition = false;
++			g_hold = false;
++			disable("window did not minimize; desktop left unchanged");
++			return;
++		}
++		// Mark suspended before the driver call, which may reenter this window proc.
++		g_suspended = true;
++		const bool applied = apply(g_original, g_temporary);
++		g_transition = false;
++		if (!applied) { disable("desktop restoration failed; quit and inspect launcher logs"); return; }
++		LOG_INFO << "DW focus desktop: minimized; original desktop restored";
++	}
++}
++
++namespace Gdi::DominionWarsFocus
++{
++	bool isPresentationHeld() { return g_hold.load(); }
++
++	bool beforeMessage(HWND hwnd, UINT message, WPARAM wParam)
++	{
++		if (!Gdi::WinProc::isDominionWarsFocusExperiment(hwnd)) { return false; }
++		if (!g_initialized) { initialize(); }
++		if (message == WM_TIMER && wParam == TIMER_ID && g_timer)
++		{
++			const auto foreground = GetForegroundWindow();
++			DWORD pid = 0;
++			if (foreground) { GetWindowThreadProcessId(foreground, &pid); }
++			const auto elapsed = GetTickCount64() - g_lossTime;
++			if (pid == GetCurrentProcessId() || !g_enabled || elapsed > 12000) { stopTimer(hwnd); return true; }
++			if (!foreground || elapsed < 300 || (GetAsyncKeyState(VK_MENU) & 0x8000) || isCaptureWindow(foreground))
++			{
++				return true;
++			}
++			stopTimer(hwnd);
++			suspend(hwnd);
++			return true;
++		}
++		if ((message == WM_ACTIVATE && LOWORD(wParam) != WA_INACTIVE) || (message == WM_ACTIVATEAPP && wParam))
++		{
++			stopTimer(hwnd);
++			if (!resume() && !g_transition) { ShowWindow(hwnd, SW_SHOWMINNOACTIVE); }
++		}
++		else if ((message == WM_ACTIVATE || message == WM_ACTIVATEAPP) && !g_transition && g_enabled && !g_suspended)
++		{
++			g_lossTime = GetTickCount64();
++			g_timer = !!SetTimer(hwnd, TIMER_ID, 100, nullptr);
++		}
++		else if (message == WM_SYSCOMMAND && (wParam & 0xfff0) == SC_RESTORE)
++		{
++			stopTimer(hwnd);
++			if (!resume()) { return true; }
++		}
++		else if (message == WM_NCDESTROY) { stopTimer(hwnd); }
++		return false;
++	}
++}
+

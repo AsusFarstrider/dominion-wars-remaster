@@ -1,0 +1,291 @@
+{
+  "product": "Dominion Wars Modernizer",
+  "version": "0.6.0-alpha",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "size": 86,
+      "sha256": "D77A7A57CFDB3DE912FEBEDD81F82D78FEDA3FA8D4627EB4F53F1D66F9090A65"
+    },
+    {
+      "path": ".gitignore",
+      "size": 315,
+      "sha256": "F3501C95CAE2B3BF5DEE8901B37281482E0EAF10821B163E4A828D489F9678FA"
+    },
+    {
+      "path": "Build-Release.ps1",
+      "size": 3333,
+      "sha256": "6CE4A9BCF00301B73977C8750B6FF201938FEEF0936721289399C725CBDD4E90"
+    },
+    {
+      "path": "docs/COMPATIBILITY.md",
+      "size": 14671,
+      "sha256": "0A3B3CD12240C4AF1941360C1B1A3651125752EB5023D5A4A9FBE37C66C45833"
+    },
+    {
+      "path": "docs/GRAPHICS.md",
+      "size": 5759,
+      "sha256": "F66D04B24F6A40B6AE25D5724766D7C206A795E85BBA578BB34C63AAA37C652B"
+    },
+    {
+      "path": "docs/NEW-SYSTEM-TESTING.md",
+      "size": 6170,
+      "sha256": "1A23605CC4270CE40ED7294C7B688699C2AD6BA55AA71DF7F3204DB90F688364"
+    },
+    {
+      "path": "docs/PORTABILITY.md",
+      "size": 13730,
+      "sha256": "9AE33A01484B680EB83D9A7F7B57D66ADB4CD3FCDDD931E18B9A1A797DB56F9E"
+    },
+    {
+      "path": "DominionWarsModernizer.ps1",
+      "size": 33726,
+      "sha256": "F12919D5C8A1877D88D4E4CD10741DC2FDD497D338332EC3296AE2D1B96BB58D"
+    },
+    {
+      "path": "Install Dominion Wars.cmd",
+      "size": 973,
+      "sha256": "47C871F961C3A687148786F5DD4B9186AC0C193DD0D92346FCB3FAA119BB5260"
+    },
+    {
+      "path": "LICENSE.txt",
+      "size": 1094,
+      "sha256": "40CB1CD81E82AAA24C47749ADA03D19894C53CD7EB6C649B3CD2FDE89B238522"
+    },
+    {
+      "path": "payload/ddraw.dll",
+      "size": 3612672,
+      "sha256": "F75F0AC48D2782F225C483DC2F1142303A513E8DD8A60793891ADE89F64755EA"
+    },
+    {
+      "path": "payload/DDrawCompat-ds9dw.ini",
+      "size": 258,
+      "sha256": "98F9028973A4553C27A60213F45AED2A67D37646EDFD638A2B426A99B38949E8"
+    },
+    {
+      "path": "payload/DDrawCompat-Focus.dll",
+      "size": 3468800,
+      "sha256": "3AA11B1C81A21C6EF5FB85D2DC31DEEC7EB8217F637094E9ED7B9F6D6BC90490"
+    },
+    {
+      "path": "payload/DDrawCompat-LICENSE.txt",
+      "size": 607,
+      "sha256": "3662A9ADFE6FEDDB077F96DFAD3CB30408540A2A3EAE5A656B7FF4375E622BE0"
+    },
+    {
+      "path": "payload/Diagnose Dominion Wars.cmd",
+      "size": 170,
+      "sha256": "64B55B3169A545B47838BA5D1504C11F3B8749A95E28BD6459617AA4D901A705"
+    },
+    {
+      "path": "payload/DominionWarsFocus.psm1",
+      "size": 9222,
+      "sha256": "C1EFEAFD64B5B47BCF20E4E87C3BBC08DE59DD25BB59BB27B06BCD79C898BAF0"
+    },
+    {
+      "path": "payload/DominionWarsInstall.psm1",
+      "size": 18850,
+      "sha256": "6086AB9172E6E16CE71ECDA2D83FA51D01AFE9112017F9C0C8295FD0E616D754"
+    },
+    {
+      "path": "payload/DominionWarsLauncher.psm1",
+      "size": 26865,
+      "sha256": "DE2388B980B7FBF829C12857022384E3501AF1D2405893C6937A53D220472A9D"
+    },
+    {
+      "path": "payload/Launch-DominionWars.ps1",
+      "size": 17541,
+      "sha256": "EDA2E2EE1CFB2E1CC1691DD703F07DA2806B26C3C1A49A2EDB79D5F8CDE8DE36"
+    },
+    {
+      "path": "payload/Play Dominion Wars - 60 Hz.cmd",
+      "size": 82,
+      "sha256": "DDC8D93CBA7D2627A99B20A07BD0E4F3EEBE2ADF5DDA0374A14AE26FD9545023"
+    },
+    {
+      "path": "payload/Play Dominion Wars - Baseline.cmd",
+      "size": 89,
+      "sha256": "FAC71B0E80DDCD0233002F9BA67AC949B980F64B39897A806C366378DBABD0E6"
+    },
+    {
+      "path": "payload/Play Dominion Wars - D3D9On12 Graphics.cmd",
+      "size": 92,
+      "sha256": "1F7FBA7441417626FBDDB57FC5C610EEBB8D8CA82AC80D077F30C275BF153B6A"
+    },
+    {
+      "path": "payload/Play Dominion Wars - Enhanced 3D.cmd",
+      "size": 91,
+      "sha256": "457D251145F6D5DEACE6E488F120E8CF430B8D40088ACFCEFE04EF7542BAE3E7"
+    },
+    {
+      "path": "payload/Play Dominion Wars - Experimental Alt-Tab.cmd",
+      "size": 207,
+      "sha256": "B7233A902C530FD14FA47E94397B472EB3AA607C7B573325FE008AFB2F2221D7"
+    },
+    {
+      "path": "payload/Play Dominion Wars - Native Graphics.cmd",
+      "size": 90,
+      "sha256": "E4628B951FFF0033ADA44FBEA3096919138F1FC795F3876C9096FC0A1534BA6C"
+    },
+    {
+      "path": "payload/Play Dominion Wars - Resource-saving.cmd",
+      "size": 95,
+      "sha256": "9876D7FF6F5C6EDDAC58C15EAF497E59F12D288166EF6214368338D75129F083"
+    },
+    {
+      "path": "payload/Play Dominion Wars - Sharper.cmd",
+      "size": 88,
+      "sha256": "2B80606132A8F7E2407D837AC3F086DE57CC27BAF6C82AF8A3720B3DADB93C85"
+    },
+    {
+      "path": "payload/Play Dominion Wars.cmd",
+      "size": 183,
+      "sha256": "EEBBB0BE5F680AF7E798F7F70999743EEA0B09F33489E4EF65FBECE0161B76B0"
+    },
+    {
+      "path": "payload/Recover Dominion Wars Desktop.cmd",
+      "size": 172,
+      "sha256": "60805D77334257B261CF3EFE9AA8DFF4E5EF1B1725FACB50BD30EFF965039FD1"
+    },
+    {
+      "path": "payload/Reset Dominion Wars Compatibility.cmd",
+      "size": 108,
+      "sha256": "74939C12319759A619DFC961FB47D9E0B83E08A8E904E160405DBF63C86E56DD"
+    },
+    {
+      "path": "payload/Restore-DominionWarsDesktop.ps1",
+      "size": 2908,
+      "sha256": "F7EDAD67B209F351DD1B40D5DE9556D8B8CA58D43F55709CD10F93A025614F43"
+    },
+    {
+      "path": "payload/tools/I6COMP-LICENSE.txt",
+      "size": 872,
+      "sha256": "4A369573CE1A194CE65A81A7D045962E74DCE6B5836161387D67847E7B8E3533"
+    },
+    {
+      "path": "payload/tools/i6comp.exe",
+      "size": 114688,
+      "sha256": "1181AE0DADA52EA5A5990D11F966E5986BF0A01614D2D5E5AD63B7C79E29FA29"
+    },
+    {
+      "path": "payload/Undo Dominion Wars Compatibility Reset.cmd",
+      "size": 110,
+      "sha256": "B4FAAE7D919410D81A9E677CBAD6889F07DA99D0219A41D29C33D138B1E2086B"
+    },
+    {
+      "path": "README.md",
+      "size": 32889,
+      "sha256": "2A8C990B16EB7A8FF40E335EAED45648B3650C4EE7D9B29E13BF2B5A757D50E9"
+    },
+    {
+      "path": "RELEASE-NOTES.md",
+      "size": 5916,
+      "sha256": "D4AF441624C200CEB566CB738F46137256E48D4D997E57FF7F9173BB7A1B9203"
+    },
+    {
+      "path": "Remove Dominion Wars Modernizer.cmd",
+      "size": 578,
+      "sha256": "1ED51CF58C62A25C52B25A9A4E31DE595C92C25277D83C62B37498E178351569"
+    },
+    {
+      "path": "Repair Dominion Wars.cmd",
+      "size": 345,
+      "sha256": "472F67DA1B221F796B772994636832E0339BF71D231DD66B9D1BEC3260FFA575"
+    },
+    {
+      "path": "TESTING.md",
+      "size": 35357,
+      "sha256": "C7B08E89E64A5CB2CCF728114A81A2CEE4F3235F6FE14C79618FBA93EEE9188C"
+    },
+    {
+      "path": "tests/ExitProbe.cs",
+      "size": 484,
+      "sha256": "3B3D162FF433838A53E1B6C87DE53BB9DA3B5A20C3B23B1AC5C3111034E32BEB"
+    },
+    {
+      "path": "tests/Test-FocusSession.ps1",
+      "size": 5365,
+      "sha256": "33195A45B5FA0DE4ADD721BD1294E799E5F7F50DE7AF2ED68C1C96D631DAC9D9"
+    },
+    {
+      "path": "tests/Test-InstallerActivity.ps1",
+      "size": 7651,
+      "sha256": "C2096CBC7FB5455304ABA4034792B624F2AD5EFE64ED887530E8A0CA68B0A5FB"
+    },
+    {
+      "path": "tests/Test-InstallerConsole.ps1",
+      "size": 4849,
+      "sha256": "DA2AFD2BB270F518F0584D975C40A377A976B2BA0A9D398F51D62936F4BB5127"
+    },
+    {
+      "path": "tests/Test-InstallerConsoleInteractive.ps1",
+      "size": 1716,
+      "sha256": "7913B5CD0557283CB9A1C8D86F1D786C0533D1F3C5D54CBC2C6C3ABABB30D34D"
+    },
+    {
+      "path": "tests/Test-InstallerEntryPoint.ps1",
+      "size": 6171,
+      "sha256": "87B294A530554485977876338698541322CF27712A747A5B7B5B9F235F516573"
+    },
+    {
+      "path": "tests/Test-InstallerMedia.ps1",
+      "size": 4642,
+      "sha256": "A69B59EEB11264F48FF93E1CCF163A0EBFAC7F063540550CC73512A3BA6AA7F2"
+    },
+    {
+      "path": "tests/Test-Launcher.ps1",
+      "size": 6586,
+      "sha256": "023EFC00DB3DEA8D3C4A28240B4F205402A75B90D6D0F510FC69C7781869E743"
+    },
+    {
+      "path": "tests/Test-LaunchOrchestration.ps1",
+      "size": 9532,
+      "sha256": "29B826300AD92C4B5D292A549871FF3049BFCBFAD4FFDD0B705920F17C1B2879"
+    },
+    {
+      "path": "tests/Test-Lifecycle.ps1",
+      "size": 6848,
+      "sha256": "80A2D8FCFC5B9ED7F57510189CE0B38283C90B7316B810852D38B4A8274A49F3"
+    },
+    {
+      "path": "tests/Test-MinimalModuleEnvironment.ps1",
+      "size": 962,
+      "sha256": "48E4D29CF7FCC34DD97F801FB72CFFFBC5D555FDD22EF8E19C11E60BA2FEE235"
+    },
+    {
+      "path": "tests/Test-RealDesktopRecovery.ps1",
+      "size": 10930,
+      "sha256": "FF42B1F381607C99136C5479C651515C5BFC532B053C085D9A62F176D79DD2BA"
+    },
+    {
+      "path": "tests/Test-RecoveryAndProfiles.ps1",
+      "size": 6471,
+      "sha256": "FDA94F8898930352440E5220BD8ED311DF22B0037321D4F0FE064928D68849C7"
+    },
+    {
+      "path": "tests/Test-Shortcuts.ps1",
+      "size": 2870,
+      "sha256": "E4D2D669285210FB803C9CE1163C22739DF085C68972AAF9CCEA75F9A3F89243"
+    },
+    {
+      "path": "tests/Test-VisualPresets.ps1",
+      "size": 4324,
+      "sha256": "299062903C204285E7875B930B5E898BAA1E3E773255712D608AE8B1875B3389"
+    },
+    {
+      "path": "third_party/DDrawCompat-focus/DDrawCompat-0.7.1-focus.patch",
+      "size": 19171,
+      "sha256": "E9B79F93A20AF711C1DE98377FAE3C90A6B8E0EB41F8086FF86500E71E0953B0"
+    },
+    {
+      "path": "third_party/DDrawCompat-focus/LICENSE.txt",
+      "size": 694,
+      "sha256": "75FCA8C3A867AFB7EDA9198CC38917F7805DD86EB74AC4464F0D892FF75ABB16"
+    },
+    {
+      "path": "third_party/DDrawCompat-focus/README.md",
+      "size": 3920,
+      "sha256": "8B04CBDD8915BA0297C7F9B01458B05DEBC5ECEB4306EB9F64BD88C383F80D5B"
+    }
+  ]
+}

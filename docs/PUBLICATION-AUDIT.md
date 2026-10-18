@@ -49,3 +49,13 @@ Rebuild from that source commit, not the later documentation HEAD: the builder
 embeds Git HEAD and therefore a documentation-only commit changes a new ZIP's
 provenance. The private detached verification worktree is not a new baseline.
 Private audit/backup/reproduction records stay outside public history.
+
+## Publication receipt
+
+The original-assets experimental release was published October18,2026. The public
+tag int-20261018.1 points to documentation/license commit9b7e9d8, whose integration
+tree is byte-identical to approved source9218263. Twelve Python and fifteen PS5
+core checks were rerun successfully. A cloud/reparse fixture location was refused
+on the first core-test attempt; ordinary local fixtures passed without code edits.
+GitHub's uploaded ZIP digest and a downloaded round-trip both match the approved
+7633f657... SHA256. See the [machine-readable receipt](../release/int-20261018.1/PUBLICATION.json).

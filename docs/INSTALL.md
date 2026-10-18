@@ -10,6 +10,9 @@ not a source checkout. Get the named ZIP from the
 - Supply legitimate North American retail media, mounted as a Windows CD/DVD drive,
   and the full North American `ds9dw1to4.exe` updater; or use a supported verified
   original/Modernizer installation. Raw image files are not mounted by the installer.
+  The historical [TrekCore downloads page](https://gaming.trekcore.com/dominionwars/downloads.html)
+  lists **Official Patch (v1.01 to v1.04)**. Incremental and other-region updates
+  are not substitutes. The official updater is not included in our download.
 - Use a writable folder and allow several GB of spare space for retained staging
   and backups. No Python, Git or SDK is needed by players.
 - Use ordinary local game/source/destination directories. Cloud placeholders,

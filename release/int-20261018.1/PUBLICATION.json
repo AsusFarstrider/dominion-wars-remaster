@@ -1,0 +1,36 @@
+{
+  "record_type": "verified_publication_receipt",
+  "record_schema": 1,
+  "repository": "https://github.com/AsusFarstrider/dominion-wars-remaster",
+  "release_url": "https://github.com/AsusFarstrider/dominion-wars-remaster/releases/tag/int-20261018.1",
+  "tag": "int-20261018.1",
+  "tag_target_documentation_commit": "9b7e9d813f06d4bfc3d6de696e2aed31a6fd7bc9",
+  "approved_runtime_source_commit": "921826392c5b6f5acdc523f4db2429cbad234782",
+  "integration_tree_unchanged_between_commits": true,
+  "published_at_utc": "2026-10-18T21:43:15Z",
+  "is_draft": false,
+  "is_prerelease": true,
+  "user_direction": "Include a downloadable release, that is half the point, not just say I am doing it, but let people try it out.",
+  "package": {
+    "name": "dominion-wars-remaster-int-20261018.1.zip",
+    "flavor": "original-assets",
+    "bytes": 4101191,
+    "sha256": "7633f657e8c5845d083c2d6cf6a871b8360155b7f8d7bc1733e839134392c864",
+    "manifest_sha256": "ee9c6cff67be3ccf7c607cddb41fccb398aaff20ee945c4ab359a896640adcb4",
+    "download_url": "https://github.com/AsusFarstrider/dominion-wars-remaster/releases/download/int-20261018.1/dominion-wars-remaster-int-20261018.1.zip",
+    "independent_reproduction_matches": true,
+    "uploaded_github_digest_matches": true,
+    "uploaded_download_round_trip_matches": true,
+    "runtime_bytes_changed_for_publication": false
+  },
+  "source_privacy": {
+    "complete_private_history_bundle_verified": true,
+    "historical_path_files_reviewed": 28,
+    "personal_profile_or_private_contact_paths_found": false,
+    "history_rewritten": false,
+    "published_refs": "reviewed master and identified release tag only; private application refs excluded"
+  },
+  "license_scope": "MIT for newly project-authored code/docs only; third-party and game-derived fragment exceptions in docs/LICENSING.md",
+  "verification": "12 Python and 15 PowerShell core checks passed. Core test initially refused a OneDrive reparse-point fixture root, then passed in an ordinary local fixture root without code changes. Master package-bound gameplay/install/save-load evidence remains scoped to one known system.",
+  "excluded": ["private Saber package and art", "full commercial game/media/updater files", "reference models and portraits", "private logs/screenshots/saves", "private history backup and application refs"]
+}

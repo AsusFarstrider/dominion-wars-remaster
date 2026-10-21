@@ -56,11 +56,33 @@ it does not require rewriting their historical contents.
 
 ## Numbering and advancement
 
-Player-facing remaster versions use **major.two-digit-milestone** strings, for
-example `1.10`, `1.20`, and eventually `2.00`. Examples are illustrative, not
-approved values, reserved feature assignments, schedules or promised increments.
+Remaster numbering **continues after the official 1.04**, with **1.05** as the
+first available remaster label. Player-facing versions use
+**major.two-digit-milestone** strings: `1.05`, `1.06`, `1.07`, `1.08`, `1.09`,
+`1.10`, `1.11`, potentially `1.25`, `1.54`, `1.75`, `1.90`, and ultimately `2.00`.
+These examples describe the allowed scheme, not assigned versions, reserved
+feature assignments, schedules or promised increments. This clarification does
+not itself assign1.05 to the already-published historical package.
 Keep values as strings: `1.10` must not become floating-point `1.1`. This is a
 project milestone convention, not a claim of strict semantic versioning.
+Always preserve two digits in game, launcher and player-facing releases; shortened
+labels such as `1.1` or `1.2` are not permitted. Continuing the sequence does not
+make a remaster release an official original-game patch: label that distinction.
+
+Versions may skip numbers when Master's validated milestone assessment warrants
+it. `1.25` is **not**25% complete, `1.75` is **not**75%, and no numeric span creates
+a requirement to invent intervening releases. `2.00` remains reserved for a game
+that can fairly be called a completed remaster, with further development expected.
+
+Keep integration IDs and tooling-specific package versions compatible with their
+actual tools. If a tool requires a different numeric representation, record an
+explicit mapping in separate tooling metadata (or a reviewed schema revision),
+without changing the canonical player-facing string. For example, a tool requiring
+three integer components could map display`1.05` to internal`1.5.0`, and display
+`2.00` to internal`2.0.0`. These are illustrative adapters, not selected package
+versions or shortened labels to show players. Do not silently add fields to the
+strict shared identity schema. Compare canonical versions as integer pairs, never
+as floating-point values or a tooling-formatted display string.
 
 Pre-2.00 remaster versions are above the official 1.04 base and below 2.00.
 Experimental/alpha/beta/release-candidate status is a **separate field** and must be

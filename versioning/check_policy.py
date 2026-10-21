@@ -62,6 +62,12 @@ def validate(registry, manifest=None, current_record=None, identity=None):
     require(goal["status"] in ("not-achieved", "achieved"), "Unknown goal status")
     require(registry["numbering"]["automatic_advancement"] is False, "Automatic advancement is prohibited")
     require(registry["numbering"]["stage_is_separate"] is True, "Stage must be separate from version")
+    numbering = registry["numbering"]
+    require(numbering["continues_after_official"] == "1.04" and numbering["first_available_remaster_label"] == "1.05",
+            "Remaster numbering continues after1.04, beginning at1.05")
+    require(numbering["two_digit_presentation_required"] is True, "Two-digit player labels are required")
+    require(numbering["sequential_advancement_required"] is False and numbering["not_completion_percentage"] is True,
+            "Milestone numbering is neither sequentially compulsory nor a completion percentage")
     current = registry["current_baseline"]
     require(current["release_stage"] in STAGES, "Unsupported release stage")
     for field in ("package_sha256", "manifest_sha256", "generated_executable_sha256"):

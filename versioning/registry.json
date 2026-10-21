@@ -35,6 +35,12 @@
   "numbering": {
     "format": "major.two-digit-milestone",
     "store_as": "string",
+    "continues_after_official": "1.04",
+    "first_available_remaster_label": "1.05",
+    "two_digit_presentation_required": true,
+    "sequential_advancement_required": false,
+    "not_completion_percentage": true,
+    "machine_version_policy": "Tool-compatible values require an explicit separate mapping; never shorten the canonical player-facing label or silently extend the identity schema.",
     "automatic_advancement": false,
     "stage_is_separate": true,
     "routine_changes": "new build identity as needed, not automatic remaster-version advancement",

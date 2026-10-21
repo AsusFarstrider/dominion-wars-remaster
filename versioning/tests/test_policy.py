@@ -16,9 +16,25 @@ class VersionPolicyTests(unittest.TestCase):
 
     def test_two_digit_string_not_float(self):
         self.assertEqual(remaster_number("1.10"), (1, 10))
-        for value in (1.1, "1.1", "01.10", "1.100", "1.10-alpha", None):
+        for value in (1.1, "1.1", "1.2", "01.10", "1.100", "1.10-alpha", None):
             with self.assertRaises(ValueError):
                 remaster_number(value)
+
+    def test_clarified_continuation_and_skipped_milestones(self):
+        labels = ["1.05", "1.06", "1.07", "1.08", "1.09", "1.10", "1.11", "1.25", "1.54", "1.75", "1.90", "2.00"]
+        numbers = [remaster_number(value) for value in labels]
+        self.assertEqual(numbers[0], (1, 5))
+        self.assertEqual(numbers[-1], (2, 0))
+        self.assertEqual(numbers, sorted(numbers))
+        self.assertEqual(labels[5], "1.10")
+
+    def test_sequence_or_percentage_rule_refused(self):
+        for field, value in (("two_digit_presentation_required", False), ("sequential_advancement_required", True),
+                             ("not_completion_percentage", False)):
+            registry = copy.deepcopy(REGISTRY)
+            registry["numbering"][field] = value
+            with self.assertRaises(ValueError):
+                validate(registry)
 
     def test_official_number_is_not_remaster_number(self):
         for value in ("1.04", "1.00", "0.10"):

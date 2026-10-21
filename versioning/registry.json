@@ -1,0 +1,79 @@
+{
+  "schema": 1,
+  "project": "Dominion Wars Remastered",
+  "owner": "Master Integration",
+  "policy": "docs/VERSIONING.md",
+  "established_date": "2026-10-21",
+  "official_original": {
+    "version": "1.04",
+    "edition": "North American retail",
+    "unmodified_executable_sha256": "03c20a3535d0209111ff9f3b90eba403e059df2be7e784d2746abf1535c1be6a"
+  },
+  "standing_goal": {
+    "version": "2.00",
+    "status": "not-achieved",
+    "decision_owner": "Master Integration",
+    "meaning": "Dominion Wars has been successfully remastered; everything afterward is continued development.",
+    "evidence_categories": [
+      "practical modern compatibility",
+      "reliable representative gameplay and saves",
+      "modern-resolution presentation, layout and input",
+      "appropriately restored graphics and interface",
+      "ordinary installation and lifecycle recovery",
+      "coherent reasonably polished player experience",
+      "faithfulness to original gameplay and identity"
+    ],
+    "not_prerequisites": [
+      "perfection or zero bugs",
+      "complete reconstructed engine source",
+      "every asset replaced",
+      "every conceivable graphical improvement",
+      "speculative new features",
+      "universal hardware support"
+    ]
+  },
+  "numbering": {
+    "format": "major.two-digit-milestone",
+    "store_as": "string",
+    "automatic_advancement": false,
+    "stage_is_separate": true,
+    "routine_changes": "new build identity as needed, not automatic remaster-version advancement",
+    "proposals_are_not_approved_versions": true
+  },
+  "current_baseline": {
+    "build_id": "int-20261018.1",
+    "flavor": "original-assets",
+    "source_revision": "921826392c5b6f5acdc523f4db2429cbad234782",
+    "package_sha256": "7633f657e8c5845d083c2d6cf6a871b8360155b7f8d7bc1733e839134392c864",
+    "manifest_sha256": "ee9c6cff67be3ccf7c607cddb41fccb398aaff20ee945c4ab359a896640adcb4",
+    "generated_executable_sha256": "77a99e3bf0a2d8704f4060e5ce584514daa03bb44891fd3336a7d66460efe179",
+    "remaster_version": null,
+    "release_stage": "experimental",
+    "version_identity_status": "legacy-release-with-no-separate-numeric-remaster-version",
+    "in_game_label": "Version 1.04",
+    "in_game_label_meaning": "official-original-base-version-not-remaster-version",
+    "display_binding": "legacy-original-label",
+    "publication_tag": "int-20261018.1",
+    "historical_package_remains_immutable": true
+  },
+  "milestone_reviews": [
+    {
+      "id": "version-review-20261021-01",
+      "date": "2026-10-21",
+      "decision": "hold",
+      "assigned_remaster_version": null,
+      "reviewed_build_id": "int-20261018.1",
+      "rationale": "The accepted resolution/launcher foundation retains its historical release identity. No subsequent component is promoted into Current; a standing goal or research handoff alone is not a new integrated milestone.",
+      "evidence": [
+        "handoffs/master/int-20261018.1-9218263/APPROVED-INTERNAL-BASELINE.md (private)",
+        "release/int-20261018.1/PUBLICATION.json",
+        "handoffs/master/dwui-v1-20261019-r1/REVIEW.md (private)"
+      ],
+      "remaining_boundaries": [
+        "DWUI candidate integration, catalog lifecycle and production retests remain",
+        "QFR and reconstructed-engine/font work remain research, not Current",
+        "shared version-provider binding is not implemented in the legacy package"
+      ]
+    }
+  ]
+}

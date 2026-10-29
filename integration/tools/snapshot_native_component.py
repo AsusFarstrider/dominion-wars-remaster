@@ -6,13 +6,10 @@ visual inputs/full remuxed movies remain in a separate PRIVATE input directory.
 import argparse
 import json
 from pathlib import Path
-import shutil
 
 from binary_delta import sha
 
 ROOT = Path(__file__).resolve().parents[1]
-EXPECTED_SOURCE = '4812ccb9c32034f1d5129b7525a0e5c57010927761ca01f23124657233b9e23e'
-EXPECTED_DLL = '85812305fcdfdfcb64d84dcb150fd7be0d399d909a224d228626d5885e391c94'
 
 
 def read(path):
@@ -30,13 +27,18 @@ def main():
     parser.add_argument('--source', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--asset-output', type=Path, required=True)
+    parser.add_argument('--expected-source-sha', required=True)
+    parser.add_argument('--expected-wrapper-sha', required=True)
+    parser.add_argument('--gizmo-report', type=Path, required=True)
     args = parser.parse_args()
     if args.output.exists() or args.asset_output.exists():
         raise ValueError('Both output directories must be NEW; historical inputs stay untouched')
     if args.asset_output.resolve().is_relative_to(ROOT.parent.resolve()):
         raise ValueError('Private media input cache must stay outside public source')
     source_bytes = (args.source / 'qfr-source.json').read_bytes()
-    if sha(source_bytes) != EXPECTED_SOURCE:
+    expected_source = args.expected_source_sha.lower()
+    expected_dll = args.expected_wrapper_sha.lower()
+    if sha(source_bytes) != expected_source:
         raise ValueError('Unreviewed specialist source identity')
     manifest = json.loads(source_bytes)
     baseline = ROOT / 'components/intake-20261018.1/wrapper-source'
@@ -47,26 +49,53 @@ def main():
         if files.get(change['path']) != change['before']:
             raise ValueError('Unexpected baseline-relative before hash: ' + change['path'])
         files[change['path']] = change['after']
-    if len(files) != 464 or files != manifest['opening_flow']['source_files']:
+    if files != manifest['opening_flow']['source_files']:
         raise ValueError('Incomplete current source inventory')
     for name, expected in files.items():
         if sha((args.source / name).read_bytes()) != expected:
             raise ValueError('Changed frozen source: ' + name)
-    if sha((args.source / 'Release/ddraw.dll').read_bytes()) != EXPECTED_DLL:
+    if sha((args.source / 'Release/ddraw.dll').read_bytes()) != expected_dll:
         raise ValueError('Changed frozen wrapper')
-    tests = read(args.source / 'validation/results.json')
-    if not tests['passed'] or tests['source_manifest_sha256'] != EXPECTED_SOURCE:
+    tests_bytes = (args.source / 'validation/results.json').read_bytes()
+    tests = json.loads(tests_bytes)
+    repair = manifest.get('gpu_hook_fix')
+    if repair:
+        if (sha(tests_bytes) != repair['validation_sha256'] or repair['wrapper_sha256'] != expected_dll
+                or not tests['clean_build'] or tests['wrapper_sha256'] != expected_dll):
+            raise ValueError('Repair validation/build binding mismatch')
+    elif tests.get('source_manifest_sha256') != expected_source:
         raise ValueError('Matching specialist preflight required')
+    if not tests['passed']:
+        raise ValueError('Specialist preflight failed')
     for result in tests['tests']:
         if not result['passed'] or sha(Path(result['binary']).read_bytes()) != result['binary_sha256']:
             raise ValueError('Missing/changed specialist test evidence: ' + result['name'])
     for name, expected in manifest['production_runtime']['test_sources'].items():
         if sha((args.source / 'production-validation-sources' / name).read_bytes()) != expected:
             raise ValueError('Changed test source: ' + name)
+    if repair:
+        for name, expected in repair['test_sources'].items():
+            if sha((args.source / 'gpu-hook-validation-sources' / name).read_bytes()) != expected:
+                raise ValueError('Changed real-visitor test source: ' + name)
     for name in files:
         put(args.output / 'wrapper-source' / name, (args.source / name).read_bytes())
-    for name in ('qfr-source.json', 'validation/results.json', 'build-production-06.log'):
+    for name in ('qfr-source.json', 'validation/results.json'):
         put(args.output / name, (args.source / name).read_bytes())
+    if repair:
+        logs = [p for p in args.source.glob('build-*.log') if sha(p.read_bytes()) == tests['build_log_sha256']]
+        if len(logs) != 1:
+            raise ValueError('Missing exact current clean build log')
+        put(args.output / 'native-build.log', logs[0].read_bytes())
+        for path in (args.source / 'gpu-hook-validation-sources').rglob('*'):
+            if path.is_file() and '__pycache__' not in path.parts:
+                put(args.output / 'tests/gpu-hook' / path.relative_to(args.source / 'gpu-hook-validation-sources'), path.read_bytes())
+        for name, expected in repair['contract_snapshots'].items():
+            data = (args.source / 'gpu-hook-contract-snapshots' / name).read_bytes()
+            if sha(data) != expected:
+                raise ValueError('Changed repair contract snapshot')
+            put(args.output / 'contracts/gpu-hook' / name, data)
+    else:
+        put(args.output / 'native-build.log', (args.source / 'build-production-06.log').read_bytes())
     for path in (args.source / 'production-validation-sources').rglob('*'):
         if path.is_file() and '__pycache__' not in path.parts:
             put(args.output / 'tests' / path.relative_to(args.source / 'production-validation-sources'), path.read_bytes())
@@ -88,9 +117,13 @@ def main():
     asset(workspace / 'paramount-restoration/private-1440-v1/Paramount-1440p15-original-audio.bik',
           'movies/Paramount.bik', 'rs/Video/Paramount.bik',
           '5a3506e3f48190073591c1349f4e35dbfe8dde9d2ded19364fa865817deecff3', 'bink-delta')
-    asset(workspace / 'cinematic-extraction/original-gizmo-hd-v1/GizmoLogo-1440p-original-audio.bik',
-          'movies/GizmoLogo.bik', 'rs/Video/GizmoLogo.bik',
-          'c65bf6cb39b6838ab76f059152790bd0bf437d513c93b4c7b2bdd81d700dc851', 'bink-delta')
+    gizmo = read(args.gizmo_report)
+    gizmo_sha = gizmo['sha256']
+    for relative in ('DDrawCompat/Remaster/Runtime.cpp', 'DDrawCompat/Research/OpeningFlow/OpeningFlow.cpp'):
+        if gizmo_sha not in (args.source / relative).read_text():
+            raise ValueError('Gizmo input is not admitted by both frozen runtime gates')
+    asset(args.gizmo_report.parent / gizmo['asset'], 'movies/GizmoLogo.bik',
+          'rs/Video/GizmoLogo.bik', gizmo_sha, 'bink-delta')
     ss_report = read(workspace / 'cinematic-extraction/original-ss-hd-v1/asset-report.json')
     ss = workspace / 'cinematic-extraction/original-ss-hd-v1' / ss_report['asset']
     asset(ss, 'movies/SSLogo1.bik', 'rs/Video/SSLogo1.bik',
@@ -108,7 +141,7 @@ def main():
     for bank in json.loads(button_bytes)['banks']:
         asset(Path(bank['path']), 'art/' + bank['name'] + '.dwbank',
               'rs/Remaster/MainButtons/' + bank['name'] + '.dwbank', bank['sha256'], 'runtime')
-    lock = dict(schema=1, source_manifest_sha256=EXPECTED_SOURCE, wrapper_sha256=EXPECTED_DLL,
+    lock = dict(schema=1, source_manifest_sha256=expected_source, wrapper_sha256=expected_dll,
                 native_engine_sha256='de3e3ede7a9b4ce65a891201547f36413f3a880e4df3f28fb8a81e51f687abc6',
                 assets=assets, live_acceptance='pending', version_display='pending package-bound trial',
                 restored_visual_authorization='Owner confirmed October28: created by self/ChatGPT and may be released; original game/audio/trademark rights not transferred.',
@@ -116,7 +149,7 @@ def main():
                        for p in sorted(args.output.rglob('*')) if p.is_file()])
     put(args.output / 'source-lock.json', (json.dumps(lock, indent=2, sort_keys=True) + '\n').encode())
     print(json.dumps(dict(intake=str(args.output), private_asset_inputs=str(args.asset_output),
-                          source_files=len(files), assets=len(assets), source_manifest_sha256=EXPECTED_SOURCE), indent=2))
+                          source_files=len(files), assets=len(assets), source_manifest_sha256=expected_source), indent=2))
 
 
 if __name__ == '__main__':

@@ -1,0 +1,423 @@
+Build started 10/29/2026 5:34:09 PM.
+Logging verbosity is set to: Normal.
+     1>Project "E:\Codex\research\dominion-rendering\production-runtime-work-02\DDrawCompat.sln" on node 1 (Rebuild target(s)).
+     1>ValidateSolutionConfiguration:
+         Building solution configuration "Release|x86".
+     1>Project "E:\Codex\research\dominion-rendering\production-runtime-work-02\DDrawCompat.sln" (1) is building "E:\Codex\research\dominion-rendering\production-runtime-work-02\DDrawCompat\DDrawCompat.vcxproj" (2) on node 1 (Rebuild target(s)).
+     2>_PrepareForClean:
+         Deleting file "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\DDrawCompat.tlog\DDrawCompat.lastbuildstate".
+       PrepareForBuild:
+         Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+       InitializeBuildStatus:
+         Touching "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\DDrawCompat.tlog\unsuccessfulbuild".
+       PreBuildEvent:
+         Generating version information
+         powershell.exe -NonInteractive -NoProfile -ExecutionPolicy Unrestricted -File genversion.ps1 "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\version.h"
+         :VCEnd
+         Version: v0.7.1-opening1 (same as previous build)
+       FxCompile:
+         C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\fxc.exe /nologo /E"main" /T ps_3_0 /Fh "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\AlphaBlend.h" /Vn "g_psAlphaBlend" Shaders\AlphaBlend.hlsl 
+         C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\fxc.exe /nologo /E"main" /T ps_3_0 /Fh "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\CubicConvolution3.h" /Vn "g_psCubicConvolution3" Shaders\CubicConvolution3.hlsl 
+         C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\fxc.exe /nologo /E"main" /T ps_3_0 /Fh "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\CubicConvolution4.h" /Vn "g_psCubicConvolution4" Shaders\CubicConvolution4.hlsl 
+         C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\fxc.exe /nologo /E"main" /T ps_3_0 /Fh "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\DepthRead16.h" /Vn "g_psDepthRead16" Shaders\DepthRead16.hlsl 
+         C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\fxc.exe /nologo /E"main" /T ps_3_0 /Fh "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\ColorKey.h" /Vn "g_psColorKey" Shaders\ColorKey.hlsl 
+         C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\fxc.exe /nologo /E"main" /T ps_3_0 /Fh "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\DepthLockRef24.h" /Vn "g_psDepthLockRef24" Shaders\DepthLockRef24.hlsl 
+         C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\fxc.exe /nologo /E"main" /T ps_3_0 /Fh "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\DepthLockRef16.h" /Vn "g_psDepthLockRef16" Shaders\DepthLockRef16.hlsl 
+         C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\fxc.exe /nologo /E"main" /T ps_3_0 /Fh "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\DepthCopy.h" /Vn "g_psDepthCopy" Shaders\DepthCopy.hlsl 
+         C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\fxc.exe /nologo /E"main" /T ps_3_0 /Fh "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\DepthCopyPcf16.h" /Vn "g_psDepthCopyPcf16" Shaders\DepthCopyPcf16.hlsl 
+         C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\fxc.exe /nologo /E"main" /T ps_3_0 /Fh "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\CubicConvolution2.h" /Vn "g_psCubicConvolution2" Shaders\CubicConvolution2.hlsl 
+         C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\fxc.exe /nologo /E"main" /T ps_3_0 /Fh "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\Bilinear.h" /Vn "g_psBilinear" Shaders\Bilinear.hlsl 
+         C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\fxc.exe /nologo /E"main" /T ps_3_0 /Fh "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\DepthReadPcf16.h" /Vn "g_psDepthReadPcf16" Shaders\DepthReadPcf16.hlsl 
+         C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\fxc.exe /nologo /E"main" /T ps_3_0 /Fh "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\DepthRead24.h" /Vn "g_psDepthRead24" Shaders\DepthRead24.hlsl 
+         C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\fxc.exe /nologo /E"main" /T ps_3_0 /Fh "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\ColorKeyBlend.h" /Vn "g_psColorKeyBlend" Shaders\ColorKeyBlend.hlsl 
+         C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\fxc.exe /nologo /E"main" /T ps_3_0 /Fh "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\DepthCopyPcf24.h" /Vn "g_psDepthCopyPcf24" Shaders\DepthCopyPcf24.hlsl 
+         C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\fxc.exe /nologo /E"main" /T ps_3_0 /Fh "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\DepthReadPcf24.h" /Vn "g_psDepthReadPcf24" Shaders\DepthReadPcf24.hlsl 
+         compilation header save succeeded; see E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\ColorKeyBlend.h
+         compilation header save succeeded; see E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\AlphaBlend.h
+         C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\fxc.exe /nologo /E"main" /T ps_3_0 /Fh "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\DepthWrite16.h" /Vn "g_psDepthWrite16" Shaders\DepthWrite16.hlsl 
+         C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\fxc.exe /nologo /E"main" /T ps_3_0 /Fh "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\DepthWrite24.h" /Vn "g_psDepthWrite24" Shaders\DepthWrite24.hlsl 
+         compilation header save succeeded; see E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\DepthCopyPcf24.h
+         compilation header save succeeded; see E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\DepthRead16.h
+         C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\fxc.exe /nologo /E"main" /T ps_3_0 /Fh "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\DrawCursor.h" /Vn "g_psDrawCursor" Shaders\DrawCursor.hlsl 
+         compilation header save succeeded; see E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\DepthReadPcf24.h
+         C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\fxc.exe /nologo /E"main" /T ps_3_0 /Fh "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\Lanczos.h" /Vn "g_psLanczos" Shaders\Lanczos.hlsl 
+         C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\fxc.exe /nologo /E"main" /T ps_3_0 /Fh "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\LockRef.h" /Vn "g_psLockRef" Shaders\LockRef.hlsl 
+         compilation header save succeeded; see E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\DepthReadPcf16.h
+         C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\fxc.exe /nologo /E"main" /T ps_3_0 /Fh "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\PaletteLookup.h" /Vn "g_psPaletteLookup" Shaders\PaletteLookup.hlsl 
+         compilation header save succeeded; see E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\ColorKey.h
+         compilation header save succeeded; see E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\DepthLockRef16.h
+         compilation header save succeeded; see E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\DepthRead24.h
+         C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\fxc.exe /nologo /E"main" /T ps_3_0 /Fh "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\Point.h" /Vn "g_psPoint" Shaders\Point.hlsl 
+         C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\fxc.exe /nologo /E"main" /T ps_3_0 /Fh "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\PointNoFilter.h" /Vn "g_psPointNoFilter" Shaders\PointNoFilter.hlsl 
+         C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\fxc.exe /nologo /E"main" /T ps_3_0 /Fh "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\TextureSampler.h" /Vn "g_psTextureSampler" Shaders\TextureSampler.hlsl 
+         compilation header save succeeded; see E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\DepthCopyPcf16.h
+         C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\fxc.exe /nologo /E"main" /T vs_2_0 /Fh "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\VertexFixup.h" /Vn "g_vsVertexFixup" Shaders\VertexFixup.hlsl 
+         compilation header save succeeded; see E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\DepthCopy.h
+         compilation header save succeeded; see E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\DepthLockRef24.h
+         compilation header save succeeded; see E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\DepthWrite16.h
+         compilation header save succeeded; see E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\DrawCursor.h
+         compilation header save succeeded; see E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\DepthWrite24.h
+         compilation header save succeeded; see E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\PaletteLookup.h
+         compilation header save succeeded; see E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\LockRef.h
+         compilation header save succeeded; see E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\TextureSampler.h
+         compilation header save succeeded; see E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\PointNoFilter.h
+         compilation header save succeeded; see E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\VertexFixup.h
+         compilation header save succeeded; see E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\Bilinear.h
+         compilation header save succeeded; see E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\Point.h
+         compilation header save succeeded; see E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\Lanczos.h
+         compilation header save succeeded; see E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\CubicConvolution2.h
+         compilation header save succeeded; see E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\CubicConvolution3.h
+         compilation header save succeeded; see E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Shaders\CubicConvolution4.h
+       ComputeStdModulesCompileInputs:
+         Reading library manifest file 'C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.50.35717\modules\modules.json' which provides data for library 'microsoft/STL'.
+         Adding module source 'C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.50.35717\modules\std.ixx' from library 'microsoft/STL' to be built with this project.
+         Adding module source 'C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.50.35717\modules\std.compat.ixx' from library 'microsoft/STL' to be built with this project.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.50.35717\bin\HostX86\x86\CL.exe /c /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\DDrawCompat\\" /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\\" /I"E:\Codex\tools\wdk-10.0.26100.1\c\Include\10.0.26100.0\um" /Zi /nologo /W4 /WX- /diagnostics:column /MP /O2 /Oy- /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D CINTERFACE /D _NO_DDRAWINT_NO_COM /D PSAPI_VERSION=1 /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D DDRAWCOMPAT_EXPORTS /D _WINDLL /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /permissive- /Fo"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Common\\" /Fd"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\vc145.pdb" /external:W4 /Gd /TP /analyze- /FC /errorReport:queue Common\Disasm.cpp Common\Log.cpp Common\Hook.cpp Common\Path.cpp Common\Rect.cpp Common\Time.cpp
+         Disasm.cpp
+         Log.cpp
+         Hook.cpp
+         Path.cpp
+         Rect.cpp
+         Time.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.50.35717\bin\HostX86\x86\CL.exe /c /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\DDrawCompat\\" /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\\" /I"E:\Codex\tools\wdk-10.0.26100.1\c\Include\10.0.26100.0\um" /Zi /nologo /W4 /WX- /diagnostics:column /MP /O2 /Oy- /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D CINTERFACE /D _NO_DDRAWINT_NO_COM /D PSAPI_VERSION=1 /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D DDRAWCOMPAT_EXPORTS /D _WINDLL /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /permissive- /Fo"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\\" /Fd"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\vc145.pdb" /external:W4 /Gd /TP /analyze- /FC /errorReport:queue Config\AtomicSetting.cpp Config\Config.cpp Config\EnumListSetting.cpp Config\EnumSetting.cpp Config\FormatListSetting.cpp Config\ListSetting.cpp Config\Parser.cpp Config\Setting.cpp
+         AtomicSetting.cpp
+         Config.cpp
+         EnumListSetting.cpp
+         EnumSetting.cpp
+         FormatListSetting.cpp
+         ListSetting.cpp
+         Parser.cpp
+         Setting.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.50.35717\bin\HostX86\x86\CL.exe /c /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\DDrawCompat\\" /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\\" /I"E:\Codex\tools\wdk-10.0.26100.1\c\Include\10.0.26100.0\um" /Zi /nologo /W4 /WX- /diagnostics:column /MP /O2 /Oy- /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D CINTERFACE /D _NO_DDRAWINT_NO_COM /D PSAPI_VERSION=1 /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D DDRAWCOMPAT_EXPORTS /D _WINDLL /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /permissive- /Fo"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\Settings\\" /Fd"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\vc145.pdb" /external:W4 /Gd /TP /analyze- /FC /errorReport:queue Config\Settings\Antialiasing.cpp Config\Settings\CapsPatches.cpp Config\Settings\ColorKeyMethod.cpp Config\Settings\CompatFixes.cpp Config\Settings\ConfigRows.cpp Config\Settings\CpuAffinity.cpp Config\Settings\DesktopResolution.cpp Config\Settings\DisplayAspectRatio.cpp Config\Settings\DisplayFilter.cpp Config\Settings\DisplayRefreshRate.cpp Config\Settings\DisplayResolution.cpp Config\Settings\FpsLimiter.cpp Config\Settings\GdiInterops.cpp Config\Settings\ResolutionScale.cpp Config\Settings\SpriteDetection.cpp Config\Settings\SpriteFilter.cpp Config\Settings\SpriteTexCoord.cpp Config\Settings\SupportedDepthFormats.cpp Config\Settings\SupportedDevices.cpp Config\Settings\SupportedRefreshRates.cpp Config\Settings\SupportedResolutions.cpp Config\Settings\SupportedTextureFormats.cpp Config\Settings\SurfacePatches.cpp Config\Settings\TextureFilter.cpp Config\Settings\VSync.cpp Config\Settings\WinVersionLie.cpp
+         Antialiasing.cpp
+         CapsPatches.cpp
+         ColorKeyMethod.cpp
+         CompatFixes.cpp
+         ConfigRows.cpp
+         CpuAffinity.cpp
+         DesktopResolution.cpp
+         DisplayAspectRatio.cpp
+         DisplayFilter.cpp
+         DisplayRefreshRate.cpp
+         DisplayResolution.cpp
+         FpsLimiter.cpp
+         GdiInterops.cpp
+         ResolutionScale.cpp
+         SpriteDetection.cpp
+         SpriteFilter.cpp
+         SpriteTexCoord.cpp
+         SupportedDepthFormats.cpp
+         SupportedDevices.cpp
+         SupportedRefreshRates.cpp
+         SupportedResolutions.cpp
+         SupportedTextureFormats.cpp
+         SurfacePatches.cpp
+         TextureFilter.cpp
+         VSync.cpp
+         WinVersionLie.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.50.35717\bin\HostX86\x86\CL.exe /c /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\DDrawCompat\\" /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\\" /I"E:\Codex\tools\wdk-10.0.26100.1\c\Include\10.0.26100.0\um" /Zi /nologo /W4 /WX- /diagnostics:column /MP /O2 /Oy- /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D CINTERFACE /D _NO_DDRAWINT_NO_COM /D PSAPI_VERSION=1 /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D DDRAWCOMPAT_EXPORTS /D _WINDLL /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /permissive- /Fo"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\D3dDdi\\" /Fd"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\vc145.pdb" /external:W4 /Gd /TP /analyze- /FC /errorReport:queue D3dDdi\Adapter.cpp D3dDdi\AdapterCallbacks.cpp D3dDdi\AdapterFuncs.cpp D3dDdi\Device.cpp D3dDdi\DeviceCallbacks.cpp D3dDdi\DeviceFuncs.cpp D3dDdi\DeviceState.cpp D3dDdi\DrawPrimitive.cpp D3dDdi\FormatInfo.cpp D3dDdi\Hooks.cpp D3dDdi\KernelModeThunks.cpp D3dDdi\MetaShader.cpp D3dDdi\Resource.cpp D3dDdi\ScopedCriticalSection.cpp D3dDdi\ShaderAssembler.cpp D3dDdi\ShaderBlitter.cpp D3dDdi\ShaderCompiler.cpp D3dDdi\SurfaceRepository.cpp
+         Adapter.cpp
+         AdapterCallbacks.cpp
+         AdapterFuncs.cpp
+         Device.cpp
+         DeviceCallbacks.cpp
+         DeviceFuncs.cpp
+         DeviceState.cpp
+         DrawPrimitive.cpp
+         FormatInfo.cpp
+         Hooks.cpp
+         KernelModeThunks.cpp
+         MetaShader.cpp
+         Resource.cpp
+         ScopedCriticalSection.cpp
+         ShaderAssembler.cpp
+         ShaderBlitter.cpp
+         ShaderCompiler.cpp
+         SurfaceRepository.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.50.35717\bin\HostX86\x86\CL.exe /c /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\DDrawCompat\\" /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\\" /I"E:\Codex\tools\wdk-10.0.26100.1\c\Include\10.0.26100.0\um" /Zi /nologo /W4 /WX- /diagnostics:column /MP /O2 /Oy- /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D CINTERFACE /D _NO_DDRAWINT_NO_COM /D PSAPI_VERSION=1 /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D DDRAWCOMPAT_EXPORTS /D _WINDLL /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /permissive- /Fo"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\D3dDdi\Log\\" /Fd"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\vc145.pdb" /external:W4 /Gd /TP /analyze- /FC /errorReport:queue D3dDdi\Log\AdapterCallbacksLog.cpp D3dDdi\Log\AdapterFuncsLog.cpp D3dDdi\Log\CommonLog.cpp D3dDdi\Log\DeviceCallbacksLog.cpp D3dDdi\Log\DeviceFuncsLog.cpp D3dDdi\Log\KernelModeThunksLog.cpp
+         AdapterCallbacksLog.cpp
+         AdapterFuncsLog.cpp
+         CommonLog.cpp
+         DeviceCallbacksLog.cpp
+         DeviceFuncsLog.cpp
+         KernelModeThunksLog.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.50.35717\bin\HostX86\x86\CL.exe /c /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\DDrawCompat\\" /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\\" /I"E:\Codex\tools\wdk-10.0.26100.1\c\Include\10.0.26100.0\um" /Zi /nologo /W4 /WX- /diagnostics:column /MP /O2 /Oy- /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D CINTERFACE /D _NO_DDRAWINT_NO_COM /D PSAPI_VERSION=1 /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D DDRAWCOMPAT_EXPORTS /D _WINDLL /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /permissive- /Fo"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\DDraw\\" /Fd"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\vc145.pdb" /external:W4 /Gd /TP /analyze- /FC /errorReport:queue DDraw\Blitter.cpp DDraw\DirectDraw.cpp DDraw\DirectDrawClipper.cpp DDraw\DirectDrawGammaControl.cpp DDraw\DirectDrawPalette.cpp DDraw\DirectDrawSurface.cpp DDraw\Hooks.cpp DDraw\IReleaseNotifier.cpp DDraw\Log.cpp DDraw\LogUsedResourceFormat.cpp DDraw\RealPrimarySurface.cpp
+         Blitter.cpp
+         DirectDraw.cpp
+         DirectDrawClipper.cpp
+         DirectDrawGammaControl.cpp
+         DirectDrawPalette.cpp
+         DirectDrawSurface.cpp
+         Hooks.cpp
+         IReleaseNotifier.cpp
+         Log.cpp
+         LogUsedResourceFormat.cpp
+         RealPrimarySurface.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.50.35717\bin\HostX86\x86\CL.exe /c /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\DDrawCompat\\" /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\\" /I"E:\Codex\tools\wdk-10.0.26100.1\c\Include\10.0.26100.0\um" /Zi /nologo /W4 /WX- /diagnostics:column /MP /O2 /Oy- /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D CINTERFACE /D _NO_DDRAWINT_NO_COM /D PSAPI_VERSION=1 /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D DDRAWCOMPAT_EXPORTS /D _WINDLL /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /permissive- /Fo"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\DDraw\Surfaces\\" /Fd"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\vc145.pdb" /external:W4 /Gd /TP /analyze- /FC /errorReport:queue DDraw\Surfaces\PrimarySurface.cpp DDraw\Surfaces\PrimarySurfaceImpl.cpp DDraw\Surfaces\Surface.cpp DDraw\Surfaces\SurfaceImpl.cpp DDraw\Surfaces\TagSurface.cpp
+         PrimarySurface.cpp
+         PrimarySurfaceImpl.cpp
+         Surface.cpp
+         SurfaceImpl.cpp
+         TagSurface.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.50.35717\bin\HostX86\x86\CL.exe /c /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\DDrawCompat\\" /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\\" /I"E:\Codex\tools\wdk-10.0.26100.1\c\Include\10.0.26100.0\um" /Zi /nologo /W4 /WX- /diagnostics:column /MP /O2 /Oy- /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D CINTERFACE /D _NO_DDRAWINT_NO_COM /D PSAPI_VERSION=1 /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D DDRAWCOMPAT_EXPORTS /D _WINDLL /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /permissive- /Fo"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Direct3d\\" /Fd"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\vc145.pdb" /external:W4 /Gd /TP /analyze- /FC /errorReport:queue Direct3d\Direct3d.cpp Direct3d\Direct3dDevice.cpp Direct3d\Direct3dExecuteBuffer.cpp Direct3d\Direct3dLight.cpp Direct3d\Direct3dMaterial.cpp Direct3d\Direct3dTexture.cpp Direct3d\Direct3dVertexBuffer.cpp Direct3d\Direct3dViewport.cpp Direct3d\Hooks.cpp Direct3d\Log.cpp
+         Direct3d.cpp
+         Direct3dDevice.cpp
+         Direct3dExecuteBuffer.cpp
+         Direct3dLight.cpp
+         Direct3dMaterial.cpp
+         Direct3dTexture.cpp
+         Direct3dVertexBuffer.cpp
+         Direct3dViewport.cpp
+         Hooks.cpp
+         Log.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.50.35717\bin\HostX86\x86\CL.exe /c /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\DDrawCompat\\" /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\\" /I"E:\Codex\tools\wdk-10.0.26100.1\c\Include\10.0.26100.0\um" /Zi /nologo /W4 /WX- /diagnostics:column /MP /O2 /Oy- /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D CINTERFACE /D _NO_DDRAWINT_NO_COM /D PSAPI_VERSION=1 /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D DDRAWCOMPAT_EXPORTS /D _WINDLL /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /permissive- /Fo"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Research\FlightRecorder\\" /Fd"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\vc145.pdb" /external:W4 /Gd /TP /analyze- /FC /errorReport:queue Research\FlightRecorder\Recorder.cpp Research\FlightRecorder\Driver.cpp Research\FlightRecorder\Lifecycle.cpp Research\FlightRecorder\Engine.cpp
+         Recorder.cpp
+         Driver.cpp
+         Lifecycle.cpp
+         Engine.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.50.35717\bin\HostX86\x86\CL.exe /c /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\DDrawCompat\\" /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\\" /I"E:\Codex\tools\wdk-10.0.26100.1\c\Include\10.0.26100.0\um" /Zi /nologo /W4 /WX- /diagnostics:column /MP /O2 /Oy- /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D CINTERFACE /D _NO_DDRAWINT_NO_COM /D PSAPI_VERSION=1 /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D DDRAWCOMPAT_EXPORTS /D _WINDLL /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /permissive- /Fo"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Research\NativeProbe\\" /Fd"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\vc145.pdb" /external:W4 /Gd /TP /analyze- /FC /errorReport:queue Research\NativeProbe\Probe.cpp
+         Probe.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.50.35717\bin\HostX86\x86\CL.exe /c /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\DDrawCompat\\" /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\\" /I"E:\Codex\tools\wdk-10.0.26100.1\c\Include\10.0.26100.0\um" /Zi /nologo /W4 /WX- /diagnostics:column /MP /O2 /Oy- /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D CINTERFACE /D _NO_DDRAWINT_NO_COM /D PSAPI_VERSION=1 /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D DDRAWCOMPAT_EXPORTS /D _WINDLL /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /permissive- /Fo"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Research\MenuProbe\\" /Fd"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\vc145.pdb" /external:W4 /Gd /TP /analyze- /FC /errorReport:queue Research\MenuProbe\Probe.cpp Research\MenuProbe\TransitionProbe.cpp
+         Probe.cpp
+         TransitionProbe.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.50.35717\bin\HostX86\x86\CL.exe /c /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\DDrawCompat\\" /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\\" /I"E:\Codex\tools\wdk-10.0.26100.1\c\Include\10.0.26100.0\um" /Zi /nologo /W4 /WX- /diagnostics:column /MP /O2 /Oy- /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D CINTERFACE /D _NO_DDRAWINT_NO_COM /D PSAPI_VERSION=1 /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D DDRAWCOMPAT_EXPORTS /D _WINDLL /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /permissive- /Fo"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Research\MenuCanvas\\" /Fd"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\vc145.pdb" /external:W4 /Gd /TP /analyze- /FC /errorReport:queue Research\MenuCanvas\CanvasRuntime.cpp
+         CanvasRuntime.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.50.35717\bin\HostX86\x86\CL.exe /c /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\DDrawCompat\\" /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\\" /I"E:\Codex\tools\wdk-10.0.26100.1\c\Include\10.0.26100.0\um" /Zi /nologo /W4 /WX- /diagnostics:column /MP /O2 /Oy- /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D CINTERFACE /D _NO_DDRAWINT_NO_COM /D PSAPI_VERSION=1 /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D DDRAWCOMPAT_EXPORTS /D _WINDLL /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /permissive- /Fo"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Research\OpeningFlow\\" /Fd"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\vc145.pdb" /external:W4 /Gd /TP /analyze- /FC /errorReport:queue Research\OpeningFlow\OpeningFlow.cpp
+         OpeningFlow.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.50.35717\bin\HostX86\x86\CL.exe /c /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\DDrawCompat\\" /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\\" /I"E:\Codex\tools\wdk-10.0.26100.1\c\Include\10.0.26100.0\um" /Zi /nologo /W4 /WX- /diagnostics:column /MP /O2 /Oy- /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D CINTERFACE /D _NO_DDRAWINT_NO_COM /D PSAPI_VERSION=1 /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D DDRAWCOMPAT_EXPORTS /D _WINDLL /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /permissive- /Fo"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Remaster\\" /Fd"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\vc145.pdb" /external:W4 /Gd /TP /analyze- /FC /errorReport:queue Remaster\Runtime.cpp Remaster\MainButtons.cpp
+         Runtime.cpp
+         MainButtons.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.50.35717\bin\HostX86\x86\CL.exe /c /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\DDrawCompat\\" /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\\" /I"E:\Codex\tools\wdk-10.0.26100.1\c\Include\10.0.26100.0\um" /Zi /nologo /W4 /WX- /diagnostics:column /MP /O2 /Oy- /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D CINTERFACE /D _NO_DDRAWINT_NO_COM /D PSAPI_VERSION=1 /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D DDRAWCOMPAT_EXPORTS /D _WINDLL /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /permissive- /Fo"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Research\HudCaptain\\" /Fd"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\vc145.pdb" /external:W4 /Gd /TP /analyze- /FC /errorReport:queue Research\HudCaptain\HudCaptain.cpp
+         HudCaptain.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.50.35717\bin\HostX86\x86\CL.exe /c /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\DDrawCompat\\" /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\\" /I"E:\Codex\tools\wdk-10.0.26100.1\c\Include\10.0.26100.0\um" /Zi /nologo /W4 /WX- /diagnostics:column /MP /O2 /Oy- /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D CINTERFACE /D _NO_DDRAWINT_NO_COM /D PSAPI_VERSION=1 /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D DDRAWCOMPAT_EXPORTS /D _WINDLL /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /permissive- /Fo"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Research\HudAssembly\\" /Fd"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\vc145.pdb" /external:W4 /Gd /TP /analyze- /FC /errorReport:queue Research\HudAssembly\HudAssembly.cpp
+         HudAssembly.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.50.35717\bin\HostX86\x86\CL.exe /c /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\DDrawCompat\\" /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\\" /I"E:\Codex\tools\wdk-10.0.26100.1\c\Include\10.0.26100.0\um" /Zi /nologo /W4 /WX- /diagnostics:column /MP /O2 /Oy- /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D CINTERFACE /D _NO_DDRAWINT_NO_COM /D PSAPI_VERSION=1 /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D DDRAWCOMPAT_EXPORTS /D _WINDLL /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /permissive- /Fo"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Dll\\" /Fd"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\vc145.pdb" /external:W4 /Gd /TP /analyze- /FC /errorReport:queue Dll\DllMain.cpp Dll\Dll.cpp
+         DllMain.cpp
+         Dll.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.50.35717\bin\HostX86\x86\CL.exe /c /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\DDrawCompat\\" /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\\" /I"E:\Codex\tools\wdk-10.0.26100.1\c\Include\10.0.26100.0\um" /Zi /nologo /W4 /WX- /diagnostics:column /MP /O2 /Oy- /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D CINTERFACE /D _NO_DDRAWINT_NO_COM /D PSAPI_VERSION=1 /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D DDRAWCOMPAT_EXPORTS /D _WINDLL /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /permissive- /Fo"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Gdi\\" /Fd"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\vc145.pdb" /external:W4 /Gd /TP /analyze- /FC /errorReport:queue Gdi\CompatDc.cpp Gdi\Cursor.cpp Gdi\Font.cpp Gdi\Gdi.cpp Gdi\Caret.cpp Gdi\Dc.cpp Gdi\DcFunctions.cpp Gdi\GuiThread.cpp Gdi\Icon.cpp Gdi\PresentationWindow.cpp Gdi\User32WndProcs.cpp Gdi\Palette.cpp Gdi\Region.cpp Gdi\ScrollBar.cpp Gdi\ScrollFunctions.cpp Gdi\TitleBar.cpp Gdi\VirtualScreen.cpp Gdi\Window.cpp Gdi\WinProc.cpp Gdi\DominionWarsFocus.cpp
+         CompatDc.cpp
+         Cursor.cpp
+         Font.cpp
+         Gdi.cpp
+         Caret.cpp
+         Dc.cpp
+         DcFunctions.cpp
+         GuiThread.cpp
+         Icon.cpp
+         PresentationWindow.cpp
+         User32WndProcs.cpp
+         Palette.cpp
+         Region.cpp
+         ScrollBar.cpp
+         ScrollFunctions.cpp
+         TitleBar.cpp
+         VirtualScreen.cpp
+         Window.cpp
+         WinProc.cpp
+         DominionWarsFocus.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.50.35717\bin\HostX86\x86\CL.exe /c /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\DDrawCompat\\" /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\\" /I"E:\Codex\tools\wdk-10.0.26100.1\c\Include\10.0.26100.0\um" /Zi /nologo /W4 /WX- /diagnostics:column /MP /O2 /Oy- /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D CINTERFACE /D _NO_DDRAWINT_NO_COM /D PSAPI_VERSION=1 /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D DDRAWCOMPAT_EXPORTS /D _WINDLL /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /permissive- /Fo"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Input\\" /Fd"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\vc145.pdb" /external:W4 /Gd /TP /analyze- /FC /errorReport:queue Input\HotKey.cpp Input\Input.cpp
+         HotKey.cpp
+         Input.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.50.35717\bin\HostX86\x86\CL.exe /c /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\DDrawCompat\\" /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\\" /I"E:\Codex\tools\wdk-10.0.26100.1\c\Include\10.0.26100.0\um" /Zi /nologo /W4 /WX- /diagnostics:column /MP /O2 /Oy- /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D CINTERFACE /D _NO_DDRAWINT_NO_COM /D PSAPI_VERSION=1 /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D DDRAWCOMPAT_EXPORTS /D _WINDLL /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /permissive- /Fo"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Overlay\\" /Fd"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\vc145.pdb" /external:W4 /Gd /TP /analyze- /FC /errorReport:queue Overlay\ButtonControl.cpp Overlay\ComboBoxControl.cpp Overlay\ComboBoxDropDown.cpp Overlay\ShaderSettingControl.cpp Overlay\ShaderStatusControl.cpp Overlay\ConfigWindow.cpp Overlay\Control.cpp Overlay\LabelControl.cpp Overlay\ScrollBarControl.cpp Overlay\SettingControl.cpp Overlay\StatsControl.cpp Overlay\StatsEventCount.cpp Overlay\StatsEventGroup.cpp Overlay\StatsEventTime.cpp Overlay\StatsQueue.cpp Overlay\StatsEventRate.cpp Overlay\StatsTimer.cpp Overlay\StatsWindow.cpp Overlay\Steam.cpp Overlay\Window.cpp
+         ButtonControl.cpp
+         ComboBoxControl.cpp
+         ComboBoxDropDown.cpp
+         ShaderSettingControl.cpp
+         ShaderStatusControl.cpp
+         ConfigWindow.cpp
+         Control.cpp
+         LabelControl.cpp
+         ScrollBarControl.cpp
+         SettingControl.cpp
+         StatsControl.cpp
+         StatsEventCount.cpp
+         StatsEventGroup.cpp
+         StatsEventTime.cpp
+         StatsQueue.cpp
+         StatsEventRate.cpp
+         StatsTimer.cpp
+         StatsWindow.cpp
+         Steam.cpp
+         Window.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.50.35717\bin\HostX86\x86\CL.exe /c /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\DDrawCompat\\" /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\\" /I"E:\Codex\tools\wdk-10.0.26100.1\c\Include\10.0.26100.0\um" /Zi /nologo /W4 /WX- /diagnostics:column /MP /O2 /Oy- /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D CINTERFACE /D _NO_DDRAWINT_NO_COM /D PSAPI_VERSION=1 /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D DDRAWCOMPAT_EXPORTS /D _WINDLL /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /permissive- /Fo"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Win32\\" /Fd"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\vc145.pdb" /external:W4 /Gd /TP /analyze- /FC /errorReport:queue Win32\DisplayMode.cpp Win32\DpiAwareness.cpp Win32\Log.cpp Win32\MemoryManagement.cpp Win32\Registry.cpp Win32\Thread.cpp Win32\Version.cpp Win32\Winmm.cpp
+         DisplayMode.cpp
+         DpiAwareness.cpp
+         Log.cpp
+         MemoryManagement.cpp
+         Registry.cpp
+         Thread.cpp
+         Version.cpp
+         Winmm.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\rc.exe /l"0x0409" /I"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\\" /nologo /fo"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\DDrawCompat.res" DDrawCompat.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.50.35717\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"E:\Codex\research\dominion-rendering\production-runtime-work-02\Release\ddraw.dll" /INCREMENTAL:NO /NOLOGO avrt.lib bcrypt.lib dwmapi.lib dxguid.lib imm32.lib msimg32.lib oleacc.lib uxtheme.lib version.lib Windowscodecs.lib winmm.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST:NO /DEBUG:FULL /PDB:"E:\Codex\research\dominion-rendering\production-runtime-work-02\Release\ddraw.pdb" /OPT:REF /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\ddraw.lib" /MACHINE:X86 /SAFESEH /DLL "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\DDrawCompat.res"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Common\Disasm.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Common\Log.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Common\Hook.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Common\Path.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Common\Rect.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Common\Time.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\AtomicSetting.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\Config.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\EnumListSetting.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\EnumSetting.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\FormatListSetting.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\ListSetting.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\Parser.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\Setting.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\Settings\Antialiasing.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\Settings\CapsPatches.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\Settings\ColorKeyMethod.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\Settings\CompatFixes.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\Settings\ConfigRows.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\Settings\CpuAffinity.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\Settings\DesktopResolution.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\Settings\DisplayAspectRatio.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\Settings\DisplayFilter.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\Settings\DisplayRefreshRate.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\Settings\DisplayResolution.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\Settings\FpsLimiter.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\Settings\GdiInterops.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\Settings\ResolutionScale.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\Settings\SpriteDetection.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\Settings\SpriteFilter.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\Settings\SpriteTexCoord.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\Settings\SupportedDepthFormats.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\Settings\SupportedDevices.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\Settings\SupportedRefreshRates.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\Settings\SupportedResolutions.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\Settings\SupportedTextureFormats.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\Settings\SurfacePatches.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\Settings\TextureFilter.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\Settings\VSync.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Config\Settings\WinVersionLie.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\D3dDdi\Adapter.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\D3dDdi\AdapterCallbacks.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\D3dDdi\AdapterFuncs.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\D3dDdi\Device.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\D3dDdi\DeviceCallbacks.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\D3dDdi\DeviceFuncs.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\D3dDdi\DeviceState.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\D3dDdi\DrawPrimitive.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\D3dDdi\FormatInfo.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\D3dDdi\Hooks.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\D3dDdi\KernelModeThunks.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\D3dDdi\MetaShader.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\D3dDdi\Resource.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\D3dDdi\ScopedCriticalSection.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\D3dDdi\ShaderAssembler.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\D3dDdi\ShaderBlitter.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\D3dDdi\ShaderCompiler.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\D3dDdi\SurfaceRepository.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\D3dDdi\Log\AdapterCallbacksLog.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\D3dDdi\Log\AdapterFuncsLog.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\D3dDdi\Log\CommonLog.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\D3dDdi\Log\DeviceCallbacksLog.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\D3dDdi\Log\DeviceFuncsLog.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\D3dDdi\Log\KernelModeThunksLog.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\DDraw\Blitter.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\DDraw\DirectDraw.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\DDraw\DirectDrawClipper.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\DDraw\DirectDrawGammaControl.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\DDraw\DirectDrawPalette.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\DDraw\DirectDrawSurface.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\DDraw\Hooks.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\DDraw\IReleaseNotifier.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\DDraw\Log.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\DDraw\LogUsedResourceFormat.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\DDraw\RealPrimarySurface.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\DDraw\Surfaces\PrimarySurface.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\DDraw\Surfaces\PrimarySurfaceImpl.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\DDraw\Surfaces\Surface.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\DDraw\Surfaces\SurfaceImpl.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\DDraw\Surfaces\TagSurface.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Direct3d\Direct3d.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Direct3d\Direct3dDevice.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Direct3d\Direct3dExecuteBuffer.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Direct3d\Direct3dLight.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Direct3d\Direct3dMaterial.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Direct3d\Direct3dTexture.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Direct3d\Direct3dVertexBuffer.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Direct3d\Direct3dViewport.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Direct3d\Hooks.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Direct3d\Log.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Research\FlightRecorder\Recorder.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Research\FlightRecorder\Driver.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Research\FlightRecorder\Lifecycle.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Research\FlightRecorder\Engine.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Research\NativeProbe\Probe.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Research\MenuProbe\Probe.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Research\MenuProbe\TransitionProbe.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Research\MenuCanvas\CanvasRuntime.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Research\OpeningFlow\OpeningFlow.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Remaster\Runtime.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Remaster\MainButtons.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Research\HudCaptain\HudCaptain.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Research\HudAssembly\HudAssembly.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Dll\DllMain.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Dll\Dll.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Gdi\CompatDc.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Gdi\Cursor.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Gdi\Font.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Gdi\Gdi.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Gdi\Caret.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Gdi\Dc.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Gdi\DcFunctions.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Gdi\GuiThread.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Gdi\Icon.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Gdi\PresentationWindow.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Gdi\User32WndProcs.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Gdi\Palette.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Gdi\Region.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Gdi\ScrollBar.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Gdi\ScrollFunctions.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Gdi\TitleBar.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Gdi\VirtualScreen.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Gdi\Window.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Gdi\WinProc.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Gdi\DominionWarsFocus.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Input\HotKey.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Input\Input.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Overlay\ButtonControl.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Overlay\ComboBoxControl.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Overlay\ComboBoxDropDown.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Overlay\ShaderSettingControl.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Overlay\ShaderStatusControl.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Overlay\ConfigWindow.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Overlay\Control.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Overlay\LabelControl.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Overlay\ScrollBarControl.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Overlay\SettingControl.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Overlay\StatsControl.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Overlay\StatsEventCount.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Overlay\StatsEventGroup.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Overlay\StatsEventTime.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Overlay\StatsQueue.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Overlay\StatsEventRate.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Overlay\StatsTimer.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Overlay\StatsWindow.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Overlay\Steam.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Overlay\Window.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Win32\DisplayMode.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Win32\DpiAwareness.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Win32\Log.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Win32\MemoryManagement.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Win32\Registry.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Win32\Thread.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Win32\Version.obj"
+         "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\Win32\Winmm.obj"
+            Creating library E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\ddraw.lib and object E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\ddraw.exp
+         DDrawCompat.vcxproj -> E:\Codex\research\dominion-rendering\production-runtime-work-02\Release\ddraw.dll
+       FinalizeBuildStatus:
+         Deleting file "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\DDrawCompat.tlog\unsuccessfulbuild".
+         Touching "E:\Codex\research\dominion-rendering\production-runtime-work-02\Build\Release\DDrawCompat.tlog\DDrawCompat.lastbuildstate".
+     2>Done Building Project "E:\Codex\research\dominion-rendering\production-runtime-work-02\DDrawCompat\DDrawCompat.vcxproj" (Rebuild target(s)).
+     1>Done Building Project "E:\Codex\research\dominion-rendering\production-runtime-work-02\DDrawCompat.sln" (Rebuild target(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:02:01.73

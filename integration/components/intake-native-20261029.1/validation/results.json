@@ -1,0 +1,139 @@
+{
+  "schema": "quantum-gpu-hook-fix-validation-1",
+  "tests": [
+    {
+      "name": "GpuVisitorTests",
+      "source": "E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v2",
+      "command": [
+        "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/MSBuild.exe",
+        "E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v2\\gpu-hook-validation-sources\\GpuVisitorTests.vcxproj",
+        "/t:Rebuild",
+        "/p:Configuration=Release",
+        "/p:Platform=Win32",
+        "/p:WrapperSourceInclude=E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v2\\DDrawCompat",
+        "/p:OutDir=E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v2\\validation\\GpuVisitorTests\\bin\\",
+        "/p:IntDir=E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v2\\validation\\GpuVisitorTests\\obj\\",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "binary": "E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v2\\validation\\GpuVisitorTests\\bin\\GpuVisitorTests.exe",
+      "binary_sha256": "81567fc244125672fda598fc8d9350e47dada976c472665306f338ba9ecd9cc2",
+      "exit_code": 0,
+      "stdout": "PASS 90 actual vtable install/dispatch assertions; INFO/OFF, INFO/ON, DEBUG/OFF; no game/GPU\n",
+      "stderr": "",
+      "expected_assertions": 90,
+      "expected_parent_failure": false,
+      "passed": true
+    },
+    {
+      "name": "GpuVisitorParentNegative",
+      "source": "E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v1",
+      "command": [
+        "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/MSBuild.exe",
+        "E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v2\\gpu-hook-validation-sources\\GpuVisitorTests.vcxproj",
+        "/t:Rebuild",
+        "/p:Configuration=Release",
+        "/p:Platform=Win32",
+        "/p:WrapperSourceInclude=E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v1\\DDrawCompat",
+        "/p:OutDir=E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v2\\validation\\GpuVisitorParentNegative\\bin\\",
+        "/p:IntDir=E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v2\\validation\\GpuVisitorParentNegative\\obj\\",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "binary": "E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v2\\validation\\GpuVisitorParentNegative\\bin\\GpuVisitorTests.exe",
+      "binary_sha256": "38310f844d2ca6ed876a4d83558cbec951de0f89b88e5f1a7b53277765696962",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "FAIL three functional slots installed at INFO/record OFF and diagnostics modes\n",
+      "expected_assertions": null,
+      "expected_parent_failure": true,
+      "passed": true
+    },
+    {
+      "name": "HudAssemblyTests",
+      "source": "E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v2",
+      "command": [
+        "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/MSBuild.exe",
+        "E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v2\\production-validation-sources\\hud-tests\\HudAssemblyTests.vcxproj",
+        "/t:Rebuild",
+        "/p:Configuration=Release",
+        "/p:Platform=Win32",
+        "/p:WrapperSourceInclude=E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v2\\DDrawCompat",
+        "/p:OutDir=E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v2\\validation\\HudAssemblyTests\\bin\\",
+        "/p:IntDir=E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v2\\validation\\HudAssemblyTests\\obj\\",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "binary": "E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v2\\validation\\HudAssemblyTests\\bin\\HudAssemblyTests.exe",
+      "binary_sha256": "b0a913ac1842a5931137e0e2bf2e5c21fa72aed493d7c0708cdd543e5455e599",
+      "exit_code": 0,
+      "stdout": "PASS 864 combined HUD geometry/primitive/input/lifetime assertions; no game or hardware proof\n",
+      "stderr": "",
+      "expected_assertions": 864,
+      "expected_parent_failure": false,
+      "passed": true
+    },
+    {
+      "name": "RuntimePolicyTests",
+      "source": "E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v2",
+      "command": [
+        "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/MSBuild.exe",
+        "E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v2\\production-validation-sources\\RuntimePolicyTests.vcxproj",
+        "/t:Rebuild",
+        "/p:Configuration=Release",
+        "/p:Platform=Win32",
+        "/p:WrapperSourceInclude=E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v2\\DDrawCompat",
+        "/p:OutDir=E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v2\\validation\\RuntimePolicyTests\\bin\\",
+        "/p:IntDir=E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v2\\validation\\RuntimePolicyTests\\obj\\",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "binary": "E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v2\\validation\\RuntimePolicyTests\\bin\\RuntimePolicyTests.exe",
+      "binary_sha256": "3d4bae4d88e70a230bdcc7686367894b5dfbdbfdb4e5592887241107f077edbf",
+      "exit_code": 0,
+      "stdout": "PASS 51 runtime identity/feature/label assertions; no hooks/game/hardware executed\n",
+      "stderr": "",
+      "expected_assertions": 51,
+      "expected_parent_failure": false,
+      "passed": true
+    },
+    {
+      "name": "OpeningControllerTests",
+      "source": "E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v2",
+      "command": [
+        "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/MSBuild.exe",
+        "E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v2\\production-validation-sources\\opening-tests\\OpeningControllerTests.vcxproj",
+        "/t:Rebuild",
+        "/p:Configuration=Release",
+        "/p:Platform=Win32",
+        "/p:WrapperSourceInclude=E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v2\\DDrawCompat",
+        "/p:OutDir=E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v2\\validation\\OpeningControllerTests\\bin\\",
+        "/p:IntDir=E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v2\\validation\\OpeningControllerTests\\obj\\",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "binary": "E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v2\\validation\\OpeningControllerTests\\bin\\OpeningControllerTests.exe",
+      "binary_sha256": "b59a405ec713b53f8a3890c8dc7a4b235cb1df6a9f78f6936a9d692fc0b7c8c5",
+      "exit_code": 0,
+      "stdout": "PASS 384 actual opening-controller assertions including HD provider\n",
+      "stderr": "",
+      "expected_assertions": 384,
+      "expected_parent_failure": false,
+      "passed": true
+    }
+  ],
+  "clean_build": true,
+  "build_log_sha256": "cc766d9f7aa185931460c6fd072684b517e2302c8ba379490a8ae80e3409e60d",
+  "exports_match_parent": true,
+  "source_files_verified": 464,
+  "changed": [
+    "DDrawCompat/Common/VtableHookVisitor.h",
+    "DDrawCompat/Remaster/Runtime.cpp",
+    "DDrawCompat/Research/OpeningFlow/OpeningFlow.cpp"
+  ],
+  "wrapper_sha256": "3d636d6164859eb01e9c3e4ad394f298fa69bba16d892d9057845e456c662a63",
+  "game_launched": false,
+  "current_modified": false,
+  "current_json_sha256": "2101ca75ca68178c5d5d0f1ffdcb46c9b7c6add45bbf330f270bdb1eba1fc36f",
+  "passed": true
+}

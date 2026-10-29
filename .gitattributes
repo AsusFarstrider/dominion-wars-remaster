@@ -1,2 +1,3 @@
 # Frozen dependency hashes and reproducible package bytes must survive checkout.
 /integration/** -text
+/versioning/** -text

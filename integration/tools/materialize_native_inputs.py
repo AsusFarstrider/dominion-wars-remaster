@@ -27,12 +27,14 @@ def main():
     p.add_argument('--package', type=Path, required=True)
     p.add_argument('--original-game', type=Path, required=True)
     p.add_argument('--output', type=Path, required=True)
+    p.add_argument('--intake', type=Path, required=True)
     a = p.parse_args()
     if a.output.exists() or a.output.resolve().is_relative_to(ROOT.parent.resolve()):
         raise ValueError('Use a new private output outside source')
     manifest = json.loads((a.package / 'manifest.json').read_text())
-    lock = json.loads((ROOT / 'components/intake-native-20261028.1/source-lock.json').read_text())
-    if manifest['intake_lock_sha256'] != sha((ROOT / 'components/intake-native-20261028.1/source-lock.json').read_bytes()):
+    lock_path = a.intake / 'source-lock.json'
+    lock = json.loads(lock_path.read_text())
+    if manifest['intake_lock_sha256'] != sha(lock_path.read_bytes()):
         raise ValueError('Package belongs to another source intake')
     for item in manifest['files']:
         if sha(child(a.package, item['path']).read_bytes()) != item['sha256']:

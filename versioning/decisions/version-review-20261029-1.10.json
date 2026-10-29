@@ -1,0 +1,29 @@
+{
+  "id": "version-review-20261029-1.10",
+  "owner": "Master Integration",
+  "status": "candidate-proposal-pending-combined-acceptance",
+  "proposed_remaster_version": "1.10",
+  "release_stage": "alpha",
+  "integration_build_id": "int-20261029.1",
+  "flavor": "native1440-restored-v7-gizmo-v5",
+  "in_game_label": "Remastered 1.10",
+  "official_original_game_version": "1.04",
+  "rationale": "Retry of the same proposed1.10 presentation milestone after a recorder-dependent GPU-hook installation defect caused the prior candidate to fail. Adds the requested same-format Gizmo v5 visual revision. This repair/asset revision does not advance the proposed numeric milestone.",
+  "supersedes_failed_candidate": "int-20261027.1 at8b8ee20059845fbada5a7b0c44fd1c9387c567b9; preserved, never Current",
+  "evidence_before_new_live_test": [
+    "User screenshot: recording-off mission world missing and mixed-scale HUD",
+    "Same DLL/EXE/art/profile with recording enabled: user screenshot and report show expected world/HUD",
+    "313249 sequenced recorder events, complete footer, no losses/stalls/exceptions,3815 HUD commits",
+    "Focused real-visitor regression: intended failure on old source; minimal hook-installation fix tested separately"
+  ],
+  "remaining_gates": [
+    "Exact new frozen component and managed package provenance",
+    "One short combined recording-OFF Gizmo v5/menu/version/mission retest",
+    "Final acceptance before promotion; release remains held"
+  ],
+  "asset_test_scope": "Reuse established Gizmo workflow; narrow integrity/timing/original-audio checks and one combined live view, not a new video test campaign.",
+  "known_scope": "Native1440 pilot, limited system coverage, multiplayer unsupported.",
+  "current_baseline_changed": false,
+  "version_advancement_approved": false,
+  "publication_authorized_by_this_record": false
+}

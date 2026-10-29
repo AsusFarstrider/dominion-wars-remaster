@@ -4,10 +4,13 @@ Player package reconstructs original audio from verified owner files. Complete
 commercial inputs/remuxed movies and the generated EXE remain private.
 """
 import argparse
+from datetime import date
 import importlib.util
 import json
 from pathlib import Path
 import re
+import shutil
+import subprocess
 import sys
 import zipfile
 import zlib
@@ -43,13 +46,31 @@ def native_engine(original, expected):
 
 
 def main():
+    global NATIVE, BUILD_ID, FLAVOR, DECISION
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--original-game', type=Path, required=True)
     parser.add_argument('--asset-inputs', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--intake', type=Path, required=True)
+    parser.add_argument('--decision', type=Path, required=True)
     args = parser.parse_args()
     if args.output.exists():
         raise ValueError('Output must be new; historical builds are immutable')
+    NATIVE = args.intake.resolve()
+    if NATIVE.parent != (ROOT / 'components').resolve():
+        raise ValueError('Intake must be a frozen component in this source tree')
+    decision_path = args.decision.resolve()
+    if decision_path.parent != (ROOT.parent / 'versioning/decisions').resolve():
+        raise ValueError('Decision must be committed in this source tree')
+    decision_bytes = decision_path.read_bytes()
+    decision = json.loads(decision_bytes)
+    BUILD_ID, FLAVOR, DECISION = (decision[k] for k in ('integration_build_id', 'flavor', 'id'))
+    if not re.fullmatch(r'int-[0-9]{8}\.[1-9][0-9]*(?:-[a-z0-9-]+)?', BUILD_ID):
+        raise ValueError('Invalid integration build ID')
+    if (decision['proposed_remaster_version'], decision['release_stage'], decision['in_game_label']) != ('1.10', 'alpha', 'Remastered 1.10'):
+        raise ValueError('This builder requires the selected 1.10 Alpha candidate decision')
+    digits = BUILD_ID[4:12]
+    build_date = date(int(digits[:4]), int(digits[4:6]), int(digits[6:])).isoformat()
     lock = json.loads((NATIVE / 'source-lock.json').read_text())
     for item in lock['files']:
         checked_file(NATIVE / item['path'], item['sha256'])
@@ -61,12 +82,12 @@ def main():
         checked_file(args.original_game / record['path'], record['sha256'])
     for item in lock['assets']:
         checked_file(args.asset_inputs / item['input'], item['sha256'])
+    git = shutil.which('git') or 'C:/Program Files/Git/cmd/git.exe'
+    if subprocess.check_output([git, '-C', str(ROOT.parent), 'status', '--porcelain', '--', 'versioning']).strip():
+        raise ValueError('Commit and freeze versioning inputs first')
     revision, tree_hash, dirty = source_identity(False)
-    decision_path = ROOT.parent / 'versioning/decisions' / (DECISION + '.json')
-    decision_bytes = decision_path.read_bytes()
-    decision = json.loads(decision_bytes)
-    if (decision['proposed_remaster_version'], decision['integration_build_id'], decision['flavor']) != ('1.10', BUILD_ID, FLAVOR):
-        raise ValueError('Candidate version decision mismatch')
+    tree_hash = sha(data_json(dict(integration=tree_hash, version_decision=sha(decision_bytes),
+                                  identity_schema=sha((ROOT.parent / 'versioning/identity.schema.json').read_bytes()))))
     engine, composition = native_engine((args.original_game / 'ds9dw.exe').read_bytes(), lock['native_engine_sha256'])
     package = args.output / 'package'
     package.mkdir(parents=True)
@@ -152,7 +173,7 @@ def main():
     put(package / 'version-decision.json', decision_bytes)
     files = [dict(path=p.relative_to(package).as_posix(), size=p.stat().st_size, sha256=sha(p.read_bytes()))
              for p in sorted(package.rglob('*')) if p.is_file()]
-    manifest = dict(schema=1, product='Dominion Wars Remaster', build_id=BUILD_ID, build_date='2026-10-28',
+    manifest = dict(schema=1, product='Dominion Wars Remaster', build_id=BUILD_ID, build_date=build_date,
                     flavor=FLAVOR, status='integration-candidate', source_revision=revision,
                     source_tree_sha256=tree_hash, uncommitted_source=dirty, remaster_version='1.10',
                     release_stage='alpha', in_game_label=identity['in_game_label'], version_decision_id=DECISION,
@@ -176,7 +197,7 @@ def main():
     with zipfile.ZipFile(archive_path, 'x', zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
         for path in sorted(package.rglob('*')):
             if path.is_file():
-                info = zipfile.ZipInfo(path.relative_to(package).as_posix(), (2026, 10, 28, 0, 0, 0))
+                info = zipfile.ZipInfo(path.relative_to(package).as_posix(), tuple(map(int, build_date.split('-'))) + (0, 0, 0))
                 info.compress_type = zipfile.ZIP_DEFLATED
                 info.external_attr = 0o644 << 16
                 archive.writestr(info, path.read_bytes())

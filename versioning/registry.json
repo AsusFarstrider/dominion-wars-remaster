@@ -47,20 +47,22 @@
     "proposals_are_not_approved_versions": true
   },
   "current_baseline": {
-    "build_id": "int-20261018.1",
-    "flavor": "original-assets",
-    "source_revision": "921826392c5b6f5acdc523f4db2429cbad234782",
-    "package_sha256": "7633f657e8c5845d083c2d6cf6a871b8360155b7f8d7bc1733e839134392c864",
-    "manifest_sha256": "ee9c6cff67be3ccf7c607cddb41fccb398aaff20ee945c4ab359a896640adcb4",
-    "generated_executable_sha256": "77a99e3bf0a2d8704f4060e5ce584514daa03bb44891fd3336a7d66460efe179",
-    "remaster_version": null,
-    "release_stage": "experimental",
-    "version_identity_status": "legacy-release-with-no-separate-numeric-remaster-version",
-    "in_game_label": "Version 1.04",
-    "in_game_label_meaning": "official-original-base-version-not-remaster-version",
-    "display_binding": "legacy-original-label",
-    "publication_tag": "int-20261018.1",
-    "historical_package_remains_immutable": true
+    "build_id": "int-20261029.1",
+    "flavor": "native1440-restored-v7-gizmo-v5",
+    "source_revision": "f025d0cfaacaa1c28964792424ee7b77f37ace97",
+    "package_sha256": "fdd3f3ee6bc619bcc841324ec7d3841fc6188379904301590293714de4a007ee",
+    "manifest_sha256": "b0319fd0a248d8862e2641ddc8eb03218632fbfd4d63a2384ff1203827bed43d",
+    "generated_executable_sha256": "de3e3ede7a9b4ce65a891201547f36413f3a880e4df3f28fb8a81e51f687abc6",
+    "remaster_version": "1.10",
+    "release_stage": "alpha",
+    "version_identity_status": "master-approved-remaster-version",
+    "in_game_label": "Remastered 1.10",
+    "in_game_label_meaning": "remaster milestone; official original input remains1.04",
+    "display_binding": "validated-shared-version-record",
+    "publication_tag": "v1.10-alpha",
+    "historical_package_remains_immutable": true,
+    "known_accepted_bug": "In mission, Esc->Main Menu returns to upper-left legacy menu with nonfunctional mouse input; avoid this route and close/relaunch. User explicitly deferred repair until after release.",
+    "coverage": "Limited native1440 Alpha; short current recording-off retest plus explicitly inherited component evidence, not a fresh full regression matrix."
   },
   "milestone_reviews": [
     {
@@ -79,6 +81,29 @@
         "DWUI candidate integration, catalog lifecycle and production retests remain",
         "QFR and reconstructed-engine/font work remain research, not Current",
         "shared version-provider binding is not implemented in the legacy package"
+      ]
+    },
+    {
+      "id": "version-review-20261029-1.10",
+      "date": "2026-10-29",
+      "decision": "advance",
+      "assigned_remaster_version": "1.10",
+      "reviewed_build_id": "int-20261029.1",
+      "significance": "validated-integrated-milestone",
+      "approved_by": "Master Integration",
+      "rationale": "First numeric remaster milestone: coherent native scene/HUD/UI presentation, restored openings and Main artwork/buttons, package-bound version display and ordinary managed install pipeline. Recorder-dependent GPU installation defect was isolated by actual A/B and repaired before this short recording-off retest. User explicitly authorized Alpha publication with one session-blocking Esc-menu re-entry defect deferred. This is not a completion percentage or a claim that2.00 has been earned.",
+      "evidence": [
+        "handoffs/master/int-20261029.1-release/APPROVAL.json (private exact user authorization and package binding)",
+        "handoffs/master/int-20261029.1-release/validation-accepted.json (private, explicitly scopes inherited coverage)",
+        "E:/Codex/remaster-builds/baselines/int-20261029.1-fdd3f3ee6bc6.json (immutable internal promotion)",
+        "integration/components/intake-native-20261029.1/validation/results.json (focused hook test and expected parent failure)",
+        "versioning/decisions/version-review-20261029-1.10.json (immutable candidate proposal; final approval external)"
+      ],
+      "remaining_boundaries": [
+        "Esc->Main Menu legacy-size/non-clickable return path accepted for deferral; latest launcher exit1, not clean-quit success",
+        "Native2560x1440 primary at0,0 only; extremely limited hardware/OS coverage",
+        "No new final-package fresh-media/save-load/focus matrix claimed; unchanged-component validation inherited explicitly",
+        "Multiplayer unsupported; substantial further graphics/interface/gameplay coverage required before2.00"
       ]
     }
   ]

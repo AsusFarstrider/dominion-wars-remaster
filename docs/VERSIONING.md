@@ -39,8 +39,8 @@ not by itself proof that the broader 2.00 goal has been earned.
 | Identity | Meaning | Current recorded value |
 |---|---|---|
 | Official original-game version | Supported original game's official patch/input identity | North American retail **1.04** |
-| Remaster version | Master-approved player-facing restoration milestone | **Not separately assigned to the legacy first release** |
-| Integration build ID | Exact experimental assembly, with source revision, flavor and hashes | **int-20261018.1**, original-assets |
+| Remaster version | Master-approved player-facing restoration milestone | **1.10 Alpha**; legacy first release remains numerically unassigned |
+| Integration build ID | Exact experimental assembly, with source revision, flavor and hashes | **int-20261029.1**, native1440-restored-v7-gizmo-v5 |
 
 An altered executable derived from 1.04 is not the unmodified official executable.
 Preserve both its original-input SHA256 and generated-output SHA256. A PE version,
@@ -187,9 +187,9 @@ python -B versioning/check_policy.py --manifest '<selected package manifest.json
 python -B -m unittest discover -s versioning/tests -v
 ```
 
-For a future selected package, add `--identity '<package version.json>'`. The
-registry deliberately records the legacy release's absence of a separate number;
-it does not modify its original 1.04 executable, generated engine or old manifest.
+For a versioned selected package, add `--identity '<package version.json>'`.
+The current registry now records1.10Alpha. Historical int-20261018.1 retains its
+original1.04 label, immutable package and separate release identity.
 
 ## Initial review, October 21, 2026
 
@@ -204,3 +204,38 @@ Next review: when a significant new candidate is integrated and validated, or wh
 new evidence materially changes the assessment. Review does not require a bump.
 Maintain the registry and append decision evidence; do not let the policy become
 dependent on a chat remembering what a number meant.
+
+## Milestone approval, October29,2026 — 1.10 Alpha
+
+Master approves **1.10 Alpha**, exact build **int-20261029.1** at runtime source
+`f025d0cfaacaa1c28964792424ee7b77f37ace97`, ZIP SHA256
+`fdd3f3ee6bc619bcc841324ec7d3841fc6188379904301590293714de4a007ee`.
+The jump from official1.04 is intentional milestone numbering, not six releases
+or10% completion. Official1.04 remains the required original input identity.
+
+The integrated milestone includes native scene/HUD/UI presentation, restored
+openings, Main background and v7 button states, shared immutable game/launcher
+version identity, and the managed build/install foundation. The observed
+recorder-off GPU-hook installation regression was isolated with a real A/B and
+fixed through a focused actual-installation-path regression before the final
+short recording-off playtest. Gizmo v5 reused the established conversion path;
+no repeated codec campaign is claimed.
+
+**Known accepted bug:** in a mission, **Esc -> Main Menu** returns to an old menu
+drawn only at the upper-left with nonfunctional mouse input. The user explicitly
+authorized release and deferral of this defect. Avoid this route; close/relaunch
+instead. The final run returned1, not a clean-shutdown pass. Do not conceal this
+limitation behind successful compilation, file verification or earlier exits0.
+
+This is a native2560x1440 pilot with very limited system coverage, not universal
+Windows/GPU or arbitrary-resolution support. Fresh-media/save-load/focus coverage
+for unchanged components is explicitly inherited, not reported as newly repeated
+on the final package. Multiplayer remains unsupported. These limits are compatible
+with an early Alpha, not evidence that2.00 has been earned.
+
+The exact package keeps its original candidate/held placeholders as historical
+build metadata. Separate package-hash-bound Master acceptance and user publication
+authorization supersede them; tested runtime bytes are not silently rewritten to
+change approval status. Public source privacy redaction, if performed by Release,
+must identify original/private versus public revisions and any metadata hash changes
+without claiming redacted source is byte-identical. The tested ZIP stays immutable.

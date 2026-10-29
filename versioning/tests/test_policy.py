@@ -7,11 +7,25 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from check_policy import remaster_number, validate, validate_identity
 
-REGISTRY = json.loads((Path(__file__).resolve().parents[1] / "registry.json").read_text())
+CURRENT_REGISTRY = json.loads((Path(__file__).resolve().parents[1] / "registry.json").read_text())
+# Keep the legacy-policy fixtures independent of whichever milestone is Current.
+REGISTRY = copy.deepcopy(CURRENT_REGISTRY)
+REGISTRY['current_baseline'] = dict(
+    build_id='int-20261018.1', flavor='original-assets',
+    source_revision='921826392c5b6f5acdc523f4db2429cbad234782',
+    package_sha256='7633f657e8c5845d083c2d6cf6a871b8360155b7f8d7bc1733e839134392c864',
+    manifest_sha256='ee9c6cff67be3ccf7c607cddb41fccb398aaff20ee945c4ab359a896640adcb4',
+    generated_executable_sha256='77a99e3bf0a2d8704f4060e5ce584514daa03bb44891fd3336a7d66460efe179',
+    remaster_version=None, release_stage='experimental',
+    version_identity_status='legacy-release-with-no-separate-numeric-remaster-version',
+    display_binding='legacy-original-label', in_game_label='Version 1.04')
+REGISTRY['milestone_reviews'] = [d for d in REGISTRY['milestone_reviews']
+                                 if d.get('reviewed_build_id') == 'int-20261018.1']
 
 
 class VersionPolicyTests(unittest.TestCase):
     def test_current_legacy_registry(self):
+        self.assertTrue(validate(CURRENT_REGISTRY))
         self.assertTrue(validate(REGISTRY))
 
     def test_two_digit_string_not_float(self):

@@ -1,0 +1,23 @@
+{
+  "id": "version-review-20261027-1.10",
+  "owner": "Master Integration",
+  "status": "candidate-proposal-pending-combined-acceptance",
+  "proposed_remaster_version": "1.10",
+  "release_stage": "alpha",
+  "integration_build_id": "int-20261027.1",
+  "flavor": "native1440-restored-v7",
+  "in_game_label": "Remastered 1.10",
+  "official_original_game_version": "1.04",
+  "rationale": "A coherent native-resolution presentation milestone: scene/HUD/UI, restored opening sequence, source-density Main background, ordered RGBA button states and package-bound version display. Number is a milestone label, not a completion percentage.",
+  "remaining_gates": [
+    "Package-bound recording-off Simon/buttons/version combined live acceptance",
+    "Managed install/clone/repair/removal/save preservation and audio reconstruction tests",
+    "Normal launcher gameplay, focus, screenshots, save/load and clean exit",
+    "Final source/manifest/ZIP validation and explicit acceptance before promotion",
+    "Release audit and publication hold lifted only after required validation"
+  ],
+  "known_scope": "Native1440 experimental profile only; one-system evidence, no universal Windows/GPU support; multiplayer unsupported.",
+  "current_baseline_changed": false,
+  "version_advancement_approved": false,
+  "publication_authorized_by_this_record": false
+}

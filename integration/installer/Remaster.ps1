@@ -11,10 +11,11 @@ $packageRoot=Split-Path -Parent $MyInvocation.MyCommand.Path
 Import-Module (Join-Path $packageRoot 'Remaster.Core.psm1') -Force
 $guard=$null;$stage=$null;$exitCode=1;$mutex=$null;$owns=$false
 
-function Install-RemasterShortcut([string]$Root,[string]$BuildId) {
+function Install-RemasterShortcut([string]$Root,[string]$BuildId,$Identity=$null) {
     $desktop=[Environment]::GetFolderPath('Desktop')
     $shell=New-Object -ComObject WScript.Shell
     $name="Dominion Wars Remaster ($BuildId)";$index=0
+    if($Identity -and $Identity.remaster_version){$name='Dominion Wars Remastered '+$Identity.remaster_version+' ('+$Identity.release_stage+')'}
     do {
         $suffix=if($index){" ($index)"}else{''}
         $path=Join-Path $desktop ($name+$suffix+'.lnk')
@@ -28,7 +29,7 @@ function Install-RemasterShortcut([string]$Root,[string]$BuildId) {
     $link=$shell.CreateShortcut($path)
     $link.TargetPath=Join-Path $Root 'Play Dominion Wars Remaster.cmd'
     $link.WorkingDirectory=$Root;$link.IconLocation=(Join-Path $Root 'ds9dw.exe')+',0'
-    $link.Description="Dominion Wars Remaster $BuildId (experimental integration candidate)"
+    $link.Description="$name; build $BuildId; official base 1.04"
     $link.Save();return $path
 }
 
@@ -123,14 +124,15 @@ try {
                 Copy-Item -LiteralPath (Join-Path $game 'ds9dw.exe') -Destination (Join-Path $meta 'base\ds9dw.exe')
                 Invoke-RemasterDelta -InputPath (Join-Path $game 'ds9dw.exe') -DeltaPath (Get-RemasterChild $packageRoot $manifest.engine.path) -OutputPath (Join-Path $meta 'engine.new')
                 Copy-Item -LiteralPath (Join-Path $meta 'engine.new') -Destination (Join-Path $game 'ds9dw.exe') -Force
-                if($manifest.asset) {
-                    if($manifest.asset.target -notin @($manifest.original_files | ForEach-Object {$_.path})){throw 'Asset component must name a verified original file'}
-                    $bolt=Get-RemasterChild $game $manifest.asset.target
-                    $assetBackup=Get-RemasterChild (Join-Path $meta 'base\assets') $manifest.asset.target
+                foreach($assetPatch in @(Get-RemasterAssetPatches $manifest)) {
+                    if($assetPatch.target -notin @($manifest.original_files | ForEach-Object {$_.path})){throw 'Asset component must name a verified original file'}
+                    $bolt=Get-RemasterChild $game $assetPatch.target
+                    $assetBackup=Get-RemasterChild (Join-Path $meta 'base\assets') $assetPatch.target
                     $null=New-Item -ItemType Directory -Path (Split-Path -Parent $assetBackup) -Force
                     Copy-Item -LiteralPath $bolt -Destination $assetBackup
-                    Invoke-RemasterDelta -InputPath $bolt -DeltaPath (Get-RemasterChild $packageRoot $manifest.asset.path) -OutputPath (Join-Path $meta 'assets.new')
-                    Copy-Item -LiteralPath (Join-Path $meta 'assets.new') -Destination $bolt -Force
+                    $assetOutput=Join-Path $meta ('asset-'+[guid]::NewGuid().ToString('N')+'.new')
+                    Invoke-RemasterDelta -InputPath $bolt -DeltaPath (Get-RemasterChild $packageRoot $assetPatch.path) -OutputPath $assetOutput
+                    Copy-Item -LiteralPath $assetOutput -Destination $bolt -Force
                 }
                 $null=New-Item -ItemType Directory -Path (Join-Path $meta 'foundation-entrypoints')
                 foreach($entry in Get-ChildItem -LiteralPath $game -Filter '*.cmd' -File) {
@@ -169,9 +171,16 @@ try {
             if($Action -ne 'Remove') {
                 $state=Test-RemasterInstalled $destinationFull
                 if(-not $NoDesktopShortcut) {
-                    $state.shortcut=Install-RemasterShortcut $destinationFull $manifest.build_id
+                    $state.shortcut=Install-RemasterShortcut $destinationFull $manifest.build_id (Get-RemasterIdentity $destinationFull $manifest)
                     $state.shortcut_sha256=Get-RemasterHash $state.shortcut
                     Write-RemasterJson (Join-Path $destinationFull '.dw-remaster\installed.json') $state
+                } elseif($Action -eq 'Repair' -and $oldState.shortcut) {
+                    # Keep ownership of an unchanged shortcut when repair intentionally
+                    # skips creating one; otherwise later removal would strand it.
+                    if((Test-Path -LiteralPath $oldState.shortcut) -and (Get-RemasterHash $oldState.shortcut) -eq $oldState.shortcut_sha256) {
+                        $state.shortcut=$oldState.shortcut;$state.shortcut_sha256=$oldState.shortcut_sha256
+                        Write-RemasterJson (Join-Path $destinationFull '.dw-remaster\installed.json') $state
+                    }
                 }
             } elseif($oldState.shortcut) {
                 $desktop=[Environment]::GetFolderPath('Desktop')

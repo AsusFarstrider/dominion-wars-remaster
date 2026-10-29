@@ -1,0 +1,122 @@
+{
+  "schema": "quantum-production-runtime-preflight-1",
+  "source_manifest_sha256": "4812ccb9c32034f1d5129b7525a0e5c57010927761ca01f23124657233b9e23e",
+  "source_files_verified": 464,
+  "tests": [
+    {
+      "name": "RuntimePolicyTests",
+      "binary": "E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v1\\validation\\RuntimePolicyTests\\bin\\RuntimePolicyTests.exe",
+      "binary_sha256": "f58e8e86d50d4a3e0abbd5907e997c06570167ac6ee66eada3c8963b440c46b8",
+      "expected_assertions": 51,
+      "arguments": [],
+      "exit_code": 0,
+      "stdout": "PASS 51 runtime identity/feature/label assertions; no hooks/game/hardware executed\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "TransitionRuntimeTests",
+      "binary": "E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v1\\validation\\TransitionRuntimeTests\\bin\\TransitionRuntimeTests.exe",
+      "binary_sha256": "fe8964c9765b8fef8f1513fb1406abc47eb905e42a39dd69d68be9a102157c21",
+      "expected_assertions": 7,
+      "arguments": [],
+      "exit_code": 0,
+      "stdout": "PASS 7 actual transition observer assertions with recording disabled; no game/hooks/hardware\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "OrderedPaintTests",
+      "binary": "E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v1\\validation\\OrderedPaintTests\\bin\\OrderedPaintTests.exe",
+      "binary_sha256": "026bff37b3c4e637274c7834b2a3b2a1938b98b692eb64d718eb68913a7400b6",
+      "expected_assertions": 239,
+      "arguments": [
+        "E:\\Codex\\research\\dominion-rendering\\main-button-assets-v7"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS 239 ordered source-density/alpha/resource assertions; no game or hardware proof\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "OpeningControllerTests",
+      "binary": "E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v1\\validation\\OpeningControllerTests\\bin\\OpeningControllerTests.exe",
+      "binary_sha256": "57b02392338fc2bfd3eb5a5511dbc8beca7650f25cfb4a60d61bb7af233dd053",
+      "expected_assertions": 384,
+      "arguments": [],
+      "exit_code": 0,
+      "stdout": "PASS 384 actual opening-controller assertions including HD provider\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "CanvasRuntimeTests",
+      "binary": "E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v1\\validation\\CanvasRuntimeTests\\bin\\CanvasRuntimeTests.exe",
+      "binary_sha256": "a8cff08ed4742f15b4b61485c3d2294355ebcf4b31b774e5b25ad5e117f9f5b8",
+      "expected_assertions": 391,
+      "arguments": [],
+      "exit_code": 0,
+      "stdout": "PASS 391 actual controller assertions with mock memory/COM/blits; no game/hardware proof\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "HudAssemblyTests",
+      "binary": "E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v1\\validation\\HudAssemblyTests\\bin\\HudAssemblyTests.exe",
+      "binary_sha256": "1f2dc97248e7d98661dd9e9496828ae2f3e58a86b73058b83fff410a969523d1",
+      "expected_assertions": 864,
+      "arguments": [],
+      "exit_code": 0,
+      "stdout": "PASS 864 combined HUD geometry/primitive/input/lifetime assertions; no game or hardware proof\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "Canvas565Tests",
+      "binary": "E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v1\\validation\\Canvas565Tests\\bin\\Canvas565Tests.exe",
+      "binary_sha256": "4408663231ea61e6d451ade2f3f4b1960059c3a6a7d4ad11714f344a9bf12de3",
+      "expected_assertions": 50573941,
+      "arguments": [],
+      "exit_code": 0,
+      "stdout": "PASS 50573941 CPU composition assertions; 11 simulated dimensions; no game launched\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "PredicateBridgeTests",
+      "binary": "E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v1\\validation\\PredicateBridgeTests\\bin\\PredicateBridgeTests.exe",
+      "binary_sha256": "7fdaafde5959eb96a2d9cd0b6dc603826c97c4bca8d1550f6eaec9faa66ad218",
+      "expected_assertions": 257,
+      "arguments": [],
+      "exit_code": 0,
+      "stdout": "PASS 257 predicate-bridge ABI assertions; synthetic continuations only\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "PublicationStateTests",
+      "binary": "E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v1\\validation\\PublicationStateTests\\bin\\PublicationStateTests.exe",
+      "binary_sha256": "77770aa307a97af75b89a90f42570d15ed2ef49fe7cde8bd7f8d6a1dc3dbbf29",
+      "expected_assertions": 74,
+      "arguments": [],
+      "exit_code": 0,
+      "stdout": "PASS 74 publication failure-transition assertions; no presentation/hardware claim\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "TransitionStateTests",
+      "binary": "E:\\Codex\\research\\dominion-rendering\\production-runtime-source-v1\\validation\\TransitionStateTests\\bin\\TransitionStateTests.exe",
+      "binary_sha256": "d293d875fe899ddef95d6727454b6e4b9b739d6d7b479c1fd7dd5c9cf15da4fa",
+      "expected_assertions": 63,
+      "arguments": [],
+      "exit_code": 0,
+      "stdout": "PASS 63 transition state/epoch assertions; no game/device calls\n",
+      "stderr": "",
+      "passed": true
+    }
+  ],
+  "test_policy": "All six changed/new controller/provider/dependency suites rebuilt against frozen source; four unchanged pure dependency binaries SHA-verified and rerun.",
+  "game_launched": false,
+  "passed": true
+}

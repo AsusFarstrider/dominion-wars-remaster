@@ -51,6 +51,53 @@ def make_delta(before, after):
     return finish(before, after, ops)
 
 
+def bink_frames(data):
+    """Narrow verified BIKi/one-audio-track packet boundaries, without decoding."""
+    if len(data) < 60 or data[:4] != b'BIKi':
+        raise ValueError('BIKi header required')
+    header = struct.unpack_from('<11I', data)
+    count = header[2]
+    if header[1] + 8 != len(data) or header[10] != 1 or not 0 < count <= 1000:
+        raise ValueError('Unsupported Bink track/count/size')
+    index_end = 56 + 4 * (count + 1)
+    if index_end > len(data):
+        raise ValueError('Truncated Bink index')
+    offsets = [v & ~1 for v in struct.unpack_from('<' + str(count + 1) + 'I', data, 56)]
+    if offsets[0] != index_end or offsets[-1] != len(data):
+        raise ValueError('Unexpected Bink index layout')
+    frames = []
+    for start, end in zip(offsets, offsets[1:]):
+        if end <= start or end - start < 4 or end > len(data):
+            raise ValueError('Invalid Bink frame extent')
+        audio_length = 4 + struct.unpack_from('<I', data, start)[0]
+        if audio_length > end - start:
+            raise ValueError('Invalid Bink audio extent')
+        frames.append((start, start + audio_length, end))
+    return header, index_end, frames
+
+
+def make_bink_delta(before, after):
+    """Ship restored video; reconstruct every original audio packet via COPY.
+
+    Does not grant redistribution rights to the replacement visuals. No encoded
+    original audio bytes or original audio metadata are literal delta payloads.
+    """
+    old, _, sources = bink_frames(before)
+    new, index_end, targets = bink_frames(after)
+    if old[2] != new[2] or old[7:9] != new[7:9] or before[44:56] != after[44:56]:
+        raise ValueError('Bink timing/audio metadata mismatch')
+    ops = []
+    same_position(ops, before[:44], after[:44])
+    add_copy(ops, 44, 12)
+    add_bytes(ops, after[56:index_end])
+    for (start, audio_end, _), (target, target_audio_end, target_end) in zip(sources, targets):
+        if before[start:audio_end] != after[target:target_audio_end]:
+            raise ValueError('Bink original audio packet differs')
+        add_copy(ops, start, audio_end - start)
+        add_bytes(ops, after[target_audio_end:target_end])
+    return finish(before, after, ops)
+
+
 def bolt_blocks(data):
     """Read only outer BOLT block boundaries; no codec or assets are decoded."""
     if data[:4] != b'BOLT' or len(data) < 16:

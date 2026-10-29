@@ -9,7 +9,16 @@ $prior=@{}
 try {
     if(-not $VerifyOnly){Assert-RemasterIdle}
     $state=Test-RemasterInstalled $GameRoot
-    if($VerifyOnly){Write-Host "Verified remaster $($state.build_id).";exit 0}
+    $manifest=Read-RemasterJson (Join-Path $GameRoot '.dw-remaster\manifest.json')
+    $identity=Get-RemasterIdentity $GameRoot $manifest
+    $displayName=if($identity -and $identity.remaster_version){'Dominion Wars Remastered '+$identity.remaster_version+' '+$identity.release_stage+' ('+$state.build_id+')'}else{'remaster '+$state.build_id}
+    if($VerifyOnly){Write-Host "Verified $displayName.";exit 0}
+    if($manifest.PSObject.Properties['rendering']) {
+        Import-Module (Join-Path $GameRoot 'DominionWarsLauncher.psm1') -Force
+        Initialize-DominionWarsDisplay
+        $physicalMode=[DominionWarsDisplayMode]::GetCurrent([DominionWarsDisplayMode]::GetPrimaryDevice())
+        Assert-RemasterOutput $manifest $physicalMode
+    }
     # The native recenter patch is validated only for the primary origin (0,0).
     Add-Type -AssemblyName System.Windows.Forms
     $primary=[Windows.Forms.Screen]::PrimaryScreen
@@ -22,7 +31,8 @@ try {
     if(-not $owns){throw 'Another remaster launcher is active.'}
     $run=Join-Path $GameRoot ('.dw-remaster\runs\'+[DateTime]::UtcNow.ToString('yyyyMMddTHHmmssfffZ')+'-'+[guid]::NewGuid().ToString('N'))
     $null=New-Item -ItemType Directory -Path $run
-    foreach($name in @('PSModulePath','DW_EXPERIMENTAL_FOCUS_GUARD','DW_EXPERIMENTAL_FOCUS_DESKTOP','DW_FOCUS_DEVICE','DW_FOCUS_DEVICE_IDENTITY','DW_FOCUS_ORIGINAL_MODE','DW_RESOLUTION_TELEMETRY','DW_DRAW_TELEMETRY','DW_PROJECTION_TELEMETRY','DW_COORDINATE_PROBE')) {
+    $clearNames=@('PSModulePath','DW_EXPERIMENTAL_FOCUS_GUARD','DW_EXPERIMENTAL_FOCUS_DESKTOP','DW_FOCUS_DEVICE','DW_FOCUS_DEVICE_IDENTITY','DW_FOCUS_ORIGINAL_MODE','DW_RESOLUTION_TELEMETRY','DW_DRAW_TELEMETRY','DW_PROJECTION_TELEMETRY','DW_COORDINATE_PROBE')+@([Environment]::GetEnvironmentVariables('Process').Keys | Where-Object {$_ -like 'QFR_*'})
+    foreach($name in ($clearNames | Select-Object -Unique)) {
         $prior[$name]=[Environment]::GetEnvironmentVariable($name,'Process')
         [Environment]::SetEnvironmentVariable($name,$null,'Process')
     }
@@ -37,13 +47,15 @@ try {
         if($helper.HasExited -or [DateTime]::UtcNow -ge $deadline){throw 'Focus helper failed preflight; game not launched.'}
         Start-Sleep -Milliseconds 100
     }
-    Write-Host "Launching remaster $($state.build_id); no startup desktop mode change. Pause manually before changing focus."
+    Write-Host "Launching $displayName; no startup desktop mode change. Pause manually before changing focus."
     $argsChild='-NoProfile -ExecutionPolicy Bypass -File "'+(Join-Path $GameRoot 'Launch-NoDesktopSwitch.ps1')+'" -GamePath "'+(Join-Path $GameRoot 'ds9dw.exe')+'" -GraphicsBackend Profile -VisualPreset Baseline'
     $child=Start-Process -FilePath $engine -ArgumentList $argsChild -WorkingDirectory $GameRoot -WindowStyle Hidden -PassThru -RedirectStandardOutput (Join-Path $run 'launcher-output.log') -RedirectStandardError (Join-Path $run 'launcher-error.log')
     $null=$child.Handle;$child.WaitForExit();$child.Refresh();$code=$child.ExitCode
     if(-not $helper.WaitForExit(5000)){Stop-Process -Id $helper.Id -ErrorAction SilentlyContinue}
     $null=Test-RemasterInstalled $GameRoot
-    Write-RemasterJson (Join-Path $run 'result.json') ([ordered]@{build_id=$state.build_id;launcher_exit=$code;managed_files_verified=$true;recorded_utc=[DateTime]::UtcNow.ToString('o');automatic_pause=$false})
+    $result=[ordered]@{build_id=$state.build_id;launcher_exit=$code;managed_files_verified=$true;recorded_utc=[DateTime]::UtcNow.ToString('o');automatic_pause=$false}
+    if($identity){$result.version_identity=$identity;$result.version_identity_sha256=$manifest.version_identity.sha256}
+    Write-RemasterJson (Join-Path $run 'result.json') $result
     Write-Host "Session complete (exit $code). Logs: $run"
 } catch {Write-Error -ErrorAction Continue $_; $code=1}
 finally {

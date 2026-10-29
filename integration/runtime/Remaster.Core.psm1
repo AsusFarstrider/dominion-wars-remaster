@@ -41,6 +41,50 @@ function Write-RemasterJson([string]$Path,$Value) {
     $text=$Value | ConvertTo-Json -Depth 20
     [IO.File]::WriteAllText($Path,$text,(New-Object Text.UTF8Encoding($false)))
 }
+function Get-RemasterAssetPatches($Manifest) {
+    # Legacy single-asset manifests remain valid. New packages use an explicit list.
+    $items=@()
+    if($Manifest.PSObject.Properties['asset'] -and $Manifest.asset){$items+=@($Manifest.asset)}
+    if($Manifest.PSObject.Properties['asset_patches']){$items+=@($Manifest.asset_patches)}
+    $targets=@{}
+    foreach($item in $items) {
+        if(-not $item.target -or $targets.ContainsKey($item.target)){throw 'Duplicate/empty patched asset target'}
+        $targets[$item.target]=$true
+    }
+    return $items
+}
+function Get-RemasterIdentity([string]$GameRoot,$Manifest) {
+    if(-not $Manifest.PSObject.Properties['version_identity']){
+        if(Test-Path -LiteralPath (Join-Path $GameRoot 'version.json')){throw 'Unregistered version.json is not a legacy installation'}
+        return $null
+    }
+    $record=$Manifest.version_identity
+    $path=Get-RemasterChild $GameRoot $record.target
+    Assert-RemasterHash $path $record.sha256
+    $identity=Read-RemasterJson $path
+    $required=@('schema','product','original_game_version','remaster_version','release_stage','integration_build_id','source_revision','flavor','version_decision_id','in_game_label')
+    if(@($identity.PSObject.Properties.Name).Count -ne $required.Count){throw 'Invalid version identity fields'}
+    foreach($name in $required){if(-not $identity.PSObject.Properties[$name]){throw "Missing version identity field: $name"}}
+    if($identity.schema -ne 1 -or $identity.product -cne 'Dominion Wars Remastered' -or $identity.original_game_version -cne '1.04'){throw 'Unsupported version identity'}
+    if($identity.integration_build_id -cne $Manifest.build_id -or $identity.source_revision -cne $Manifest.source_revision -or $identity.flavor -cne $Manifest.flavor){throw 'Version/build identity mismatch'}
+    if($identity.integration_build_id -cnotmatch '^int-[0-9]{8}\.[1-9][0-9]*(?:-[a-z0-9-]+)?$' -or $identity.source_revision -cnotmatch '^[a-f0-9]{40}$'){throw 'Invalid version provenance'}
+    if($identity.release_stage -cnotin @('experimental','alpha','beta','release-candidate','stable') -or -not $identity.version_decision_id){throw 'Invalid version decision/stage'}
+    if($null -eq $identity.remaster_version) {
+        if($identity.in_game_label -cne 'Version 1.04'){throw 'Unversioned label mismatch'}
+    } else {
+        if($identity.remaster_version -isnot [string] -or $identity.remaster_version -cnotmatch '^(?:1\.(?:0[5-9]|[1-9][0-9])|(?:[2-9]|[1-9][0-9]+)\.[0-9]{2})$'){throw 'Remaster version must retain two digits'}
+        if($identity.in_game_label -cne ('Remastered '+$identity.remaster_version)){throw 'Remaster label mismatch'}
+    }
+    return $identity
+}
+function Assert-RemasterOutput($Manifest,$Mode) {
+    if(-not $Manifest.PSObject.Properties['rendering']){return}
+    $render=$Manifest.rendering
+    if($render.profile -cne 'native-1440-v1' -or $render.width -ne 2560 -or $render.height -ne 1440){throw 'Unsupported managed rendering profile'}
+    if($Mode.dmPositionX -ne 0 -or $Mode.dmPositionY -ne 0 -or $Mode.dmPelsWidth -ne $render.width -or $Mode.dmPelsHeight -ne $render.height) {
+        throw 'Native 1440p Alpha requires the PRIMARY display at physical 2560x1440 and origin (0,0). Game not launched; no display mode was changed. Use the separate compatible-original installation on other displays.'
+    }
+}
 function Assert-RemasterPackage([string]$Root) {
     Assert-RemasterTree $Root
     $manifest=Read-RemasterJson (Join-Path $Root 'manifest.json')
@@ -91,10 +135,11 @@ function Test-RemasterInstalled([string]$GameRoot) {
     $manifest=Read-RemasterJson (Join-Path $GameRoot '.dw-remaster\manifest.json')
     $state=Read-RemasterJson (Join-Path $GameRoot '.dw-remaster\installed.json')
     if($manifest.schema -ne 1 -or $state.schema -ne 1 -or $state.build_id -ne $manifest.build_id){throw 'Installed build metadata mismatch'}
+    $assetPatches=@(Get-RemasterAssetPatches $manifest)
     foreach($record in $manifest.original_files) {
         $expected=$record.sha256
         if($record.path -eq 'ds9dw.exe'){$expected=$manifest.engine.output_sha256}
-        if($manifest.asset -and $record.path -eq $manifest.asset.target){$expected=$manifest.asset.output_sha256}
+        foreach($assetPatch in $assetPatches){if($record.path -eq $assetPatch.target){$expected=$assetPatch.output_sha256}}
         Assert-RemasterHash (Get-RemasterChild $GameRoot $record.path) $expected
     }
     foreach($record in $manifest.runtime_files) {Assert-RemasterHash (Get-RemasterChild $GameRoot $record.target) $record.sha256}
@@ -102,7 +147,8 @@ function Test-RemasterInstalled([string]$GameRoot) {
     if($profile.Count -ne 1){throw 'Unknown installed backend profile'}
     Assert-RemasterHash (Join-Path $GameRoot 'DDrawCompat-ds9dw.ini') $profile[0].sha256
     Assert-RemasterHash (Join-Path $GameRoot '.dw-remaster\base\ds9dw.exe') $manifest.engine.input_sha256
-    if($manifest.asset){Assert-RemasterHash (Get-RemasterChild (Join-Path $GameRoot '.dw-remaster\base\assets') $manifest.asset.target) $manifest.asset.input_sha256}
+    foreach($assetPatch in $assetPatches){Assert-RemasterHash (Get-RemasterChild (Join-Path $GameRoot '.dw-remaster\base\assets') $assetPatch.target) $assetPatch.input_sha256}
+    $null=Get-RemasterIdentity $GameRoot $manifest
     return $state
 }
 function Copy-RemasterOriginal([string]$Source,[string]$Target,$Manifest) {
@@ -117,7 +163,9 @@ function Copy-RemasterOriginal([string]$Source,[string]$Target,$Manifest) {
     foreach($record in $Manifest.original_files) {
         $path=Get-RemasterChild $Source $record.path
         if($installed -and $record.path -eq 'ds9dw.exe'){$path=Join-Path $Source '.dw-remaster\base\ds9dw.exe'}
-        if($installed -and $sourceManifest.asset -and $record.path -eq $sourceManifest.asset.target){$path=Get-RemasterChild (Join-Path $Source '.dw-remaster\base\assets') $sourceManifest.asset.target}
+        if($installed){foreach($assetPatch in @(Get-RemasterAssetPatches $sourceManifest)) {
+            if($record.path -eq $assetPatch.target){$path=Get-RemasterChild (Join-Path $Source '.dw-remaster\base\assets') $assetPatch.target}
+        }}
         Assert-RemasterHash $path $record.sha256
         $inputs+=@{Source=$path;Relative=$record.path}
     }

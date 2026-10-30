@@ -1,4 +1,33 @@
-# Initial public-source audit
+# Publication audits
+
+## 1.10 Alpha — int-20261029.1
+
+Exact approved ZIP SHA256 fdd3f3ee6bc619bcc841324ec7d3841fc6188379904301590293714de4a007ee,
+182,134,278 bytes. Independent inspection passed CRC, all 558 checksum entries
+and 557 manifest members (559 ZIP members total), identity and original source
+binding. Nine converted restored visual payloads have owner distribution permission.
+Three movie deltas reconstructed exact target hashes from verified local originals:
+all 225/601/281 compressed audio packets and each 12-byte header are source COPY
+only, with no literal audio payload. Newly encoded restored video remains included;
+delta format alone does not confer rights. Third-party notices/source are retained.
+
+All reachable selected source blobs were reviewed (730 unique blobs through mapped
+approval commit). No prohibited game/media extension or credential-pattern match
+was found. Five personal-path provenance/log files were redacted in an isolated
+copy, with two public-only metadata locks refreshed. The private complete history
+bundle was verified first. Existing public history/tags and Master/worktrees are
+unchanged; no useful technical finding or runtime was removed. The sanitized
+history scan found zero personal-profile pattern matches. These pattern checks
+are aids, not proof of security or legal clearance.
+
+See [source mapping/reproduction](PUBLIC-SOURCE.md),
+[approval supplement](../release/int-20261029.1/RELEASE-RECORD.json),
+[licensing](LICENSING.md) and [known issues](KNOWN-ISSUES.md). The owner's acceptance
+explicitly defers Esc → Main Menu; launcher exit 1 is not a clean-exit pass.
+Only reviewed master ancestry and the named release tag will be published, never
+private application refs, the failed trial, private originals or verification ZIPs.
+
+## Initial public-source audit — unchanged historical record
 
 Baseline source:921826392c5b6f5acdc523f4db2429cbad234782, one commit,557 files.
 Publication documentation/license commits retain it as an ancestor. No competing

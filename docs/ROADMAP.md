@@ -17,5 +17,5 @@ only separately approved snapshots of that baseline.
   narrowly targeted changes. Retain QUANTUM, missions, mechanics and balance.
 
 Private specialist progress is not automatically integrated or publicly available.
-Future true16:9 support, asset updates and quality-of-life changes must earn their
+Broader native-resolution support, further asset updates and quality-of-life changes must earn their
 place through testing; this is not a promise to deliver every possible feature.

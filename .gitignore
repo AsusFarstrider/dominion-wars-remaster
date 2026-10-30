@@ -28,3 +28,12 @@ ds9dw*.exe
 *.img
 *.key
 *.pem
+# Unintegrated specialist resources and private release coordination.
+/MASTER-RELEASE-HANDOFF.md
+/asset-capacity/
+/asset-replacement/
+/cinematic-extraction/
+/hud-catalog/
+/paramount-restoration/
+/rendering-research/
+/release/preparation-*/

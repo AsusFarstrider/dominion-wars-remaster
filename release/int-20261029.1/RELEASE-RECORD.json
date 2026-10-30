@@ -1,0 +1,49 @@
+{
+  "record_schema": 1,
+  "record_type": "exact_package_release_approval_supplement",
+  "date": "2026-10-29",
+  "remaster_version": "1.10",
+  "release_stage": "alpha",
+  "integration_build_id": "int-20261029.1",
+  "flavor": "native1440-restored-v7-gizmo-v5",
+  "publication_tag": "v1.10-alpha",
+  "original_runtime_source_revision": "f025d0cfaacaa1c28964792424ee7b77f37ace97",
+  "public_mapped_runtime_source_revision": "4d3ce9ea2dcb97b73672cd9b8303633def904c46",
+  "master_approval_metadata_revision": "4b59a98cd99a8ddd1d1ab812919e0ac4cd886dc0",
+  "public_mapped_approval_metadata_revision": "0065e0d3aed963a195c13e84dcc9f200bf28b440",
+  "package": {
+    "file": "dominion-wars-remastered-1.10-alpha-int-20261029.1.zip",
+    "bytes": 182134278,
+    "sha256": "fdd3f3ee6bc619bcc841324ec7d3841fc6188379904301590293714de4a007ee",
+    "manifest_sha256": "b0319fd0a248d8862e2641ddc8eb03218632fbfd4d63a2384ff1203827bed43d",
+    "identity_sha256": "b5dac568d540f387131401e55f19735d9ab9e37a0c23d9bddb14664a3849ca5b",
+    "wrapper_sha256": "3d636d6164859eb01e9c3e4ad394f298fa69bba16d892d9057845e456c662a63",
+    "generated_executable_sha256": "de3e3ede7a9b4ce65a891201547f36413f3a880e4df3f28fb8a81e51f687abc6",
+    "runtime_or_zip_changed_for_publication": false
+  },
+  "user_authorization": "Go ahead and release. There is one bug but we will address it after release. When in a mission, if you select the Main Menu button from the Esc menu it drops you into the old main menu which renders only in the top left of the screen and recognizes no mouse clicks.",
+  "master_decision": "approve-experimental-release-with-explicit-known-bug",
+  "historical_status_override": "External approval supersedes embedded internal-trial, pending and held placeholders for this exact ZIP only. It does not rewrite creation-time evidence or approve changed runtime bytes.",
+  "known_bug": {
+    "id": "esc-main-menu-reentry",
+    "result": "Legacy Main menu at upper-left ignores mouse clicks",
+    "workaround": "Avoid Esc -> Main Menu in missions; close and relaunch instead",
+    "fixed": false,
+    "user_accepted_deferral": true
+  },
+  "validation": {
+    "current_clone_install": "passed exact packaged installer with verified runtime and reconstructed movies",
+    "current_gameplay": "short recording-off mission playtest, user release approval with known bug deferred",
+    "latest_launcher_exit": 1,
+    "clean_shutdown_pass_claimed": false,
+    "media_install_focus_save_load": "explicitly inherited component evidence; not freshly rerun on final package",
+    "coverage": "one known Windows 11 / RX 6800 XT / three-monitor computer; not all screens, per-movie playback or full campaigns",
+    "package_audit": "559 ZIP members; 558 checksums and 557 manifest files verified; CRC passed",
+    "audio_audit": "All 225 Paramount, 601 Gizmo, 281 Simon & Schuster audio packets and each 12-byte audio header are source COPY only; zero literal audio payload bytes; all reconstructed target hashes exact"
+  },
+  "requirements": "North American retail official 1.04 data; primary physical 2560x1440 at origin 0,0; multiplayer unsupported",
+  "licenses": "MIT only newly project-authored code/docs; BSD-0-Clause wrapper and other third-party notices retained; restored visuals authorized for project distribution, not blanket MIT; original game/audio/trademark rights not transferred",
+  "history": "Private original history backed up and verified; isolated public history replaces personal profile prefixes in five provenance/log files, refreshes two metadata locks, preserves existing published ancestry and all runtime bytes. See SOURCE-MAP.json.",
+  "excluded": ["original game EXE and BOLT archives", "original soundtrack and decoder", "disc images and official updater", "RAD encoder/SDK tools", "Saber texture/model/portrait experiments", "private logs, saves, backups and application refs"],
+  "publication_receipt": "PUBLICATION.json is added after upload and round-trip verification"
+}

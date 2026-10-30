@@ -1,12 +1,18 @@
 # Installing an experimental remaster build
 
-These steps describe the approved **int-20261018.1 original-assets** player package,
+These steps describe **Remastered 1.10 Alpha / int-20261029.1**,
 not a source checkout. Get the named ZIP from the
-[experimental release](https://github.com/AsusFarstrider/dominion-wars-remaster/releases/tag/int-20261018.1).
+[experimental release](https://github.com/AsusFarstrider/dominion-wars-remaster/releases/tag/v1.10-alpha).
+Read the separate **READ-ME-FIRST-1.10-ALPHA.md** release attachment. The unchanged
+ZIP calls itself an internal trial; the external acceptance record approves those
+exact bytes with the known limitations below, rather than silently repackaging it.
 
 ## Before starting
 
 - Back up saves and keep your working original/Modernizer installation.
+- Set your primary monitor to physical **2560×1440**, at desktop origin **(0,0)**.
+  This native pilot refuses other primary-display modes and does not resize your
+  desktop. It is not a 1080p or 4K release. Other monitor layouts/DPI are unproven.
 - Supply legitimate North American retail media, mounted as a Windows CD/DVD drive,
   and the full North American `ds9dw1to4.exe` updater; or use a supported verified
   original/Modernizer installation. Raw image files are not mounted by the installer.
@@ -23,7 +29,7 @@ not a source checkout. Get the named ZIP from the
 
 ## Install and play
 
-1. Download **dominion-wars-remaster-int-20261018.1.zip** and extract it fully.
+1. Download **dominion-wars-remastered-1.10-alpha-int-20261029.1.zip** and extract it fully.
    Do not run inside the ZIP or download GitHub's source archive as an installer.
 2. Close other Dominion Wars sessions. Run **Install Dominion Wars Remaster.cmd**.
 3. If your usual Modernizer installation is detected, choose whether to clone it or
@@ -38,6 +44,16 @@ Recognized `*.sav` files outside internal `.dw-*` folders are copied, not moved.
 Other mods and custom-file formats are not automatically imported. Unsupported
 versions, modified immutable input files and reparse-point sources are refused.
 Keep legitimate media available where the original game requires it.
+
+The package installs restored opening/Main art and reconstructs three restored
+movies using original audio packets from your verified files. It does not require
+separate private artwork, an encoder or a developer toolchain. Recording is off.
+
+**In a mission, avoid Esc → Main Menu.** That path opens an unresponsive old menu
+in the top-left corner. Close and relaunch instead; save beforehand where possible.
+If the broken screen is already open, try Alt+F4 or end only the game's ds9dw.exe
+in Task Manager. Unsaved progress may be lost. Do not mix old/new EXEs or remove
+the HD safety configuration while keeping HD movies installed.
 
 ## Verify, repair or return to the compatible original
 
@@ -65,3 +81,5 @@ journal recovery; see the [exact advanced procedure](../integration/docs/INSTALL
 Session/focus logs: `.dw-remaster\runs` in the installed game. Startup/recovery
 diagnostics: `.dw-launcher`. Installer foundation logs are in the retained staging
 path printed by the operation. Review personal paths before sharing logs.
+The bounded renderer safety ledger is in
+`%LOCALAPPDATA%\Dominion Wars Remastered\Rendering`; it is not full gameplay recording.

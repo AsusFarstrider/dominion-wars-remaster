@@ -4,6 +4,19 @@ Master integrates; Release documents/audits/packages; the user authorizes releas
 An internal baseline is not automatically a public download. No independent merge
 of specialist artifacts, replacement build or runtime change is allowed here.
 
+For 1.10 Alpha, Master approved exact int-20261029.1 / source f025d0c / ZIP
+fdd3f3ee6bc619bcc841324ec7d3841fc6188379904301590293714de4a007ee with the
+explicit Esc → Main Menu bug deferred. Tag `v1.10-alpha` maps to this integration
+build, not the failed previous trial. The approved ZIP remains unchanged; external
+release attachments override creation-time status wording and disclose actual
+test coverage. Public source uses [targeted privacy mapping](PUBLIC-SOURCE.md),
+not a competing runtime baseline. See [release record](../release/int-20261029.1/RELEASE-RECORD.json).
+
+Future Master handoffs must identify which existing public mapped revision they
+correspond to. Do not push the private original branch or private application refs
+on top of public history, or merge them back indiscriminately. Coordinate a mapped
+continuation before each publication; existing public tags/ancestry stay immutable.
+
 For every release, record exact integration ID/source commit, selected original
 inputs, package/schema1 manifest hashes, component/license inventory, reproduction
 recipe, tests/evidence, hardware coverage, known limitations and explicit approval.

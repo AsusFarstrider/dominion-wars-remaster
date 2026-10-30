@@ -1,4 +1,41 @@
-# Known limitations — int-20261018.1 original-assets
+# Known limitations — 1.10 Alpha / int-20261029.1
+
+## Mission → Main Menu is broken
+
+**Do not choose Esc → Main Menu during a mission.** It opens the legacy Main menu
+in the top-left of the screen and mouse clicks do not work. The owner approved
+publication with this bug deferred. Close and relaunch instead; save first where
+possible. If stuck, try Alt+F4 or end the game's ds9dw.exe in Task Manager; unsaved
+progress may be lost. No fix is included in this release.
+
+## Current native-1440p pilot
+
+- Physical **2560×1440 primary display at origin (0,0) only**. Other modes are
+  refused before launch; the launcher does not change your desktop resolution.
+  Arbitrary resolutions, 1080p/4K and other DPI/monitor layouts are not validated.
+- One known Windows 11 / AMD Radeon RX 6800 XT / three-monitor system. No universal
+  Windows 10/11, NVIDIA, Intel or hybrid-GPU compatibility claim.
+- North American retail official 1.04 inputs only. Multiplayer is unsupported and
+  untested, even though the restored Main menu includes its button. Avoid it.
+- Single-player is the test target, not full-campaign validation. The release
+  session's launcher returned 1; do not read approval as a clean-exit test pass.
+- HUD assembly still uses original-density art and original fonts/control geometry.
+  Ship textures, models and captain portraits are not restored in this package.
+- Restored button banks cache about 231 MiB in a 32-bit process. Report memory
+  failures, slowdowns, missing art and driver/Windows-update regressions.
+- Recording is off. A bounded renderer safety ledger remains enabled. Focus,
+  screenshots, skips, save/load and longer play need broader testing; do not assume
+  every requested check was completed merely because the owner approved release.
+- Unsigned scripts and legacy helpers may trigger antivirus warnings. Do not
+  disable security as an installation step. Keep separate originals and saves.
+- Retained staging/backups need several GB of disk space. Repair/Remove are guarded
+  rebuilds, not recursive deletion. See [installation](INSTALL.md).
+- Package creation-time pending/held fields remain immutable historical records.
+  The separate release acceptance record identifies the later approval exactly.
+
+## Earlier int-20261018.1 original-assets experiment
+
+The following limitations describe the unchanged earlier download, **not 1.10**:
 
 - Very early development, with a short combined first-mission smoke on one
   Windows 11/AMD/three-monitor system. Long campaigns and other systems unverified.

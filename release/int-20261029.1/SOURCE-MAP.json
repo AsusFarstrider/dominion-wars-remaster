@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "reason": "Targeted personal-profile path sanitization before first publication of these new commits",
+  "private_history_bundle_sha256": "087c5b0f7e9c438fc64c7dc11e5ba7f46075653c0a6a5fb286ade95622091d9e",
+  "private_bundle_complete_and_verified": true,
+  "original_master_and_worktrees_unchanged": true,
+  "existing_public_history_and_tags_unchanged": true,
+  "published_anchor": "0d6eb3ac6f16bf612bea0f11b788c909a791ecfb",
+  "commit_mapping": {
+    "0c9bc6d4f796090fdb9b3b6bd3ee83d2058ec981": "0c9bc6d4f796090fdb9b3b6bd3ee83d2058ec981",
+    "02d28e88e238a709994e1c162cca6f796e005402": "02d28e88e238a709994e1c162cca6f796e005402",
+    "8b8ee20059845fbada5a7b0c44fd1c9387c567b9": "a8e9b76f0ab0273a766ae7d0bbc0b812b75b1b9f",
+    "f025d0cfaacaa1c28964792424ee7b77f37ace97": "4d3ce9ea2dcb97b73672cd9b8303633def904c46",
+    "4b59a98cd99a8ddd1d1ab812919e0ac4cd886dc0": "0065e0d3aed963a195c13e84dcc9f200bf28b440"
+  },
+  "personal_prefix_redacted_in": [
+    "integration/components/intake-native-20261028.1/build-production-06.log",
+    "integration/components/intake-native-20261028.1/qfr-source.json",
+    "integration/components/intake-native-20261029.1/qfr-source.json",
+    "integration/components/intake-native-20261029.1/contracts/gpu-hook/gizmo-v5-asset-report.json",
+    "integration/components/intake-native-20261029.1/contracts/gpu-hook/gizmo-v5-preparation.json"
+  ],
+  "public_only_lock_refresh": [
+    "integration/components/intake-native-20261028.1/source-lock.json",
+    "integration/components/intake-native-20261029.1/source-lock.json"
+  ],
+  "retained": "Suffixes, filenames, tool versions, technical findings, original artifact hashes, meaningful commit messages and author history. Nonpersonal E:/Codex and Program Files paths remain historical provenance, not portable prerequisites.",
+  "original_private_pins": {
+    "approved_package_manifest_sha256": "b0319fd0a248d8862e2641ddc8eb03218632fbfd4d63a2384ff1203827bed43d",
+    "original_source_manifest_sha256": "c992873dcabf1047b196d4fbf708f3bcae046506c7413318ed9fea12c7944b84",
+    "meaning": "Pins inside approved package/registry refer to original tested source and metadata, not rewritten public metadata. Runtime asset hashes are unchanged. The package includes its original source-lock."
+  },
+  "reproduction": "Public redacted source is independently build-checked; original approved ZIP retains original revision/lock provenance. Do not claim byte-identical ZIP reproduction from mapped HEAD. See docs/PUBLIC-SOURCE.md."
+}

@@ -13,11 +13,20 @@ while addressing presentation and technical limitations. This is not a remake.
 
 ## Development status
 
-The first accepted internal baseline is **int-20261018.1**, original-assets flavor,
-from source revision `921826392c5b6f5acdc523f4db2429cbad234782`.
-The [first experimental download](https://github.com/AsusFarstrider/dominion-wars-remaster/releases/tag/int-20261018.1)
-uses this original-assets baseline. GitHub's automatic source ZIP is not a player
-installation package. See [release notes](docs/RELEASE-NOTES.md).
+The new experimental player build is **Remastered 1.10 Alpha**, integration
+**int-20261029.1**. It targets a **2560×1440 primary display at desktop origin (0,0)
+only**, without changing your desktop resolution. Other display modes are refused
+before launch. Testing is limited to one Windows 11 / Radeon RX 6800 XT computer
+with three monitors; other GPUs, drivers and Windows builds still need testing.
+
+> **Known bug:** In a mission, do not choose **Esc → Main Menu**. It opens an old,
+> top-left menu that does not respond to mouse clicks. Close and relaunch the game
+> instead. This path is broken in this release; see [known issues](docs/KNOWN-ISSUES.md).
+
+Get the [1.10 Alpha player download](https://github.com/AsusFarstrider/dominion-wars-remaster/releases/tag/v1.10-alpha),
+not GitHub's automatic source ZIP. See [release notes](docs/RELEASE-NOTES.md).
+The [earlier original-assets experiment](https://github.com/AsusFarstrider/dominion-wars-remaster/releases/tag/int-20261018.1)
+remains available separately and unchanged; it does not contain these restorations.
 
 The separate [Dominion Wars Modernizer](https://github.com/AsusFarstrider/dominion-wars-modern)
 installs and runs the original game on modern Windows. The remaster builds on that
@@ -33,29 +42,37 @@ These are goals, not a list of finished features.
 
 ## Current progress
 
-| Area | Status in the first internal baseline |
+| Area | Status in 1.10 Alpha |
 |---|---|
-| Resolution/interface | Experimental 960×600 logical 16:10 presentation and display-fit rendering; menu, fleet, loading and first-mission UI corrections |
-| Startup and input | No forced desktop resize at startup; integrated input/focus handling |
-| Gameplay smoke | Owner-observed first-mission/control, focus/capture, separate save/load and clean-exit checks passed on one system |
-| Installation | Original-media plus official updater installation and verified-existing-install cloning tested |
-| Textures/models/portraits | Original game assets only; private specialist experiments are not included |
+| Resolution/interface | Experimental native 2560×1440 rendering/UI/HUD assembly; original-density HUD artwork retained |
+| Opening and Main artwork | Restored opening cards, three opening movies, Main background and six Main button banks included |
+| Startup and input | Production launch with recording off, shared Remastered 1.10 label, no forced desktop resolution change |
+| Gameplay | Owner approved the new recording-off trial with the Esc → Main Menu bug deferred; not a clean-exit or full-campaign pass |
+| Installation | Verified media/official-patch or supported existing-install workflow; installs a separate copy |
+| Ship textures/models/portraits | Not restored in this release; specialist experiments are not automatically included |
 | Broader restoration | In development/planned; no finished campaign restoration or universal hardware support |
 
-The resolution branch measured 2304×1440 drawing on a 2560×1440 display. The combined
-baseline passed a visual smoke, but its render targets were not independently
-remeasured. This is **not full 16:9, arbitrary native UI resolution, or universally
-working 1440p**. See [known limitations](docs/KNOWN-ISSUES.md).
+This is a limited native-1440p pilot, **not arbitrary-resolution support** or a
+completed first-mission restoration. Restored buttons add about 231 MiB of cached
+image data to a 32-bit game. Report memory problems, slowdowns or missing art.
+See [known limitations](docs/KNOWN-ISSUES.md).
 
 ## Downloading and testing
 
-Download **dominion-wars-remaster-int-20261018.1.zip** from the
-[experimental release assets](https://github.com/AsusFarstrider/dominion-wars-remaster/releases/tag/int-20261018.1),
+Download **dominion-wars-remastered-1.10-alpha-int-20261029.1.zip** from the
+[1.10 Alpha release assets](https://github.com/AsusFarstrider/dominion-wars-remaster/releases/tag/v1.10-alpha),
 then extract it fully. Use that player ZIP—not the repository source download.
 See [installation](docs/INSTALL.md) and
 [testing](docs/TESTING.md). You must supply legitimate North American original
 media and the full official 1.04 updater, or a supported verified original/Modernizer
-installation. No commercial game files, updater or DRM bypass are supplied.
+installation. No complete game executable, original archive, original soundtrack,
+official updater or DRM bypass is supplied. Restored movie video is included as
+deltas; the original soundtrack is reconstructed from your verified local files.
+
+Run **Install Dominion Wars Remaster.cmd**, choose a new destination, then use the
+installed desktop shortcut. No PowerShell knowledge, Git, Python or encoder is
+needed to install and play. Read the release's **READ-ME-FIRST-1.10-ALPHA.md**:
+it supplements the ZIP's unchanged, creation-time internal-trial wording.
 
 Keep your working original installation. The remaster installs to a separate new
 directory; do not overlay a test build onto your only working game.
@@ -85,5 +102,7 @@ developers, publishers or Star Trek rights holders. Rights in the game and Star
 Trek remain with their respective owners. See [credits/distribution](docs/CREDITS.md).
 Newly project-authored integration/build/install/release code is MIT; existing
 third-party licenses remain applicable. See [scope and exceptions](docs/LICENSING.md).
-This is not a blanket license for game-derived assets or private artwork. See
+Restored visuals are distributed with the creator's permission for this project,
+not under a blanket MIT artwork license. Original game and trademark rights are
+not transferred. See
 [publication audit](docs/PUBLICATION-AUDIT.md) for source/history review.

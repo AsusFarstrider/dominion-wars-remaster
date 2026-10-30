@@ -40,12 +40,32 @@ Identify these separately from newly authored patch logic:
   original instruction signatures alongside newly authored hooks.
 - Generated player patches/engine.json: an executable transform, not a complete
   original executable or an automatic grant of redistribution rights.
+- Native intake build_engine.py, qfr-source.json, tests and wrapper modifications
+  also contain version-specific addresses/signatures and original-byte evidence.
+  Those original fragments are excepted from the project's MIT grant. Changes to
+  DDrawCompat remain under its BSD-0-Clause license, not blanket MIT.
 
 MIT does not purport to license original-game fragments because they appear in
 our tools/deltas. Rights remain with their owners where applicable. No full game
 executable or substantial original source-code listing was identified in the
 selected tree; this observation is not a legal guarantee. Future substantial
 third-party/game-derived contributions with unclear rights need separate review.
+
+## Restored visuals in 1.10 Alpha
+
+The project owner attested that new/restored visuals were created by the owner or
+with ChatGPT and authorized their distribution in this project. The release
+contains three converted opening/Main cards, six Main button banks and replacement
+video payloads for Paramount, Gizmo/Mass Media and Simon & Schuster. This records
+project-distribution permission, not blanket MIT/CC licensing of the art or a claim
+to own original logos, Star Trek trademarks or other underlying third-party rights.
+
+Movie deltas copy the original 12-byte audio metadata and every compressed audio
+packet from the player's hash-verified files. Independent package inspection
+verified 225, 601 and 281 audio packets respectively, with no literal audio payload.
+Newly encoded video is supplied in the deltas; a delta is not itself legal clearance.
+The original binkw32.dll stays owner-supplied. RAD/Bink encoder, SDK, player and
+development-tool binaries are not included, and their terms are not replaced by MIT.
 
 ## Exclusions
 

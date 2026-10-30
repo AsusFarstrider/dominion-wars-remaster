@@ -8,7 +8,9 @@ original files/media and the official patch. No no-CD or DRM bypass is included.
   `4f889dea81385c3a604d09eb82452a1b48fafa25`, MIT license and bundled notices retained.
 - **DDrawCompat 0.7.1 / Narzoul:** modified resolution-diag1/focus wrapper, BSD Zero
   Clause license, matching collected source and recorded build provenance. Normal
-  launches clear telemetry flags. See the integration dependency inventory.
+  launches clear telemetry flags. The 1.10 package carries the newer native1440
+  restored-v7/Gizmo-v5 wrapper with recorder-independent GPU hooks, matching source
+  and the same upstream license. See the integration dependency inventory.
 - **i6comp 0.20 / fOSSiL and Morlac:** pinned legacy cabinet helper. The preserved
   notice quotes its source headers: “Any use is authorized, granted the proper
   credit is given.” Attribution and exact helper hash accompany the foundation.
@@ -18,6 +20,12 @@ original files/media and the official patch. No no-CD or DRM bypass is included.
   derivative tools remain subject to their documented GPL obligations; no blanket
   relicensing is applied. The default integration package does not import that
   private asset-authoring pipeline.
+- **Restored visuals:** supplied by the project owner, created by the owner or
+  with ChatGPT, and authorized for this project's distribution. Paramount,
+  Gizmo Games, Mass Media, Simon & Schuster and Star Trek names/logos retain their
+  respective ownership. Original soundtrack and Bink decoder are owner-supplied.
+- **RAD Game Tools / Bink:** original game's movie technology; no encoder, SDK or
+  replacement commercial decoder is distributed by this release.
 
 Newly project-authored integration/build/install/release code is MIT, with
 [explicit scope/exceptions](LICENSING.md). Third-party licenses remain in force.

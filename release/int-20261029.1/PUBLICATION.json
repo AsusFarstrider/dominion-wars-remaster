@@ -1,0 +1,90 @@
+{
+  "record_schema": 1,
+  "record_type": "verified_publication_receipt",
+  "repository": "https://github.com/AsusFarstrider/dominion-wars-remaster",
+  "release_url": "https://github.com/AsusFarstrider/dominion-wars-remaster/releases/tag/v1.10-alpha",
+  "tag": "v1.10-alpha",
+  "tag_target_documentation_commit": "2021ef8d9c9bbddbfd319fe85b2484beb035819d",
+  "published_at_utc": "2026-10-30T02:49:01Z",
+  "published_local_date": "2026-10-29",
+  "local_timezone": "America/New_York",
+  "is_draft": false,
+  "is_prerelease": true,
+  "integration_build_id": "int-20261029.1",
+  "remaster_version": "1.10",
+  "release_stage": "alpha",
+  "original_runtime_source_revision": "f025d0cfaacaa1c28964792424ee7b77f37ace97",
+  "public_mapped_runtime_source_revision": "4d3ce9ea2dcb97b73672cd9b8303633def904c46",
+  "public_mapped_master_approval_revision": "0065e0d3aed963a195c13e84dcc9f200bf28b440",
+  "package": {
+    "name": "dominion-wars-remastered-1.10-alpha-int-20261029.1.zip",
+    "bytes": 182134278,
+    "sha256": "fdd3f3ee6bc619bcc841324ec7d3841fc6188379904301590293714de4a007ee",
+    "manifest_sha256": "b0319fd0a248d8862e2641ddc8eb03218632fbfd4d63a2384ff1203827bed43d",
+    "download_url": "https://github.com/AsusFarstrider/dominion-wars-remaster/releases/download/v1.10-alpha/dominion-wars-remastered-1.10-alpha-int-20261029.1.zip",
+    "uploaded_github_digest_matches": true,
+    "download_round_trip_matches": true,
+    "runtime_or_zip_changed_for_publication": false,
+    "embedded_candidate_status_superseded_by_external_approval": true
+  },
+  "approval": "Direct human release authorization confirmed in Master chat; session-blocking Esc -> Main Menu bug explicitly deferred. RELEASE-RECORD.json binds approval to exact package.",
+  "limits": {
+    "required_display": "primary physical 2560x1440 at desktop origin 0,0",
+    "hardware": "one known Windows 11 / RX 6800 XT / three-monitor system",
+    "latest_launcher_exit": 1,
+    "clean_exit_pass": false,
+    "multiplayer": "unsupported",
+    "inherited_tests": "media extraction, focus and save/load evidence are not fresh final-package passes"
+  },
+  "audit": {
+    "zip_members": 559,
+    "checksums_verified": 558,
+    "manifest_files_verified": 557,
+    "crc_pass": true,
+    "source_blobs_scanned_through_tag": 748,
+    "credential_pattern_matches": 0,
+    "personal_profile_pattern_matches_after_sanitization": 0,
+    "restricted_game_media_history_paths": 0,
+    "audio_packets_source_copy_only": [
+      225,
+      601,
+      281
+    ],
+    "audio_headers_source_copy_only": true,
+    "literal_audio_bytes": 0,
+    "original_soundtrack_and_decoder_not_bundled": true,
+    "tests": {
+      "version_policy": 19,
+      "integration": 16
+    },
+    "relative_document_links_resolve": true
+  },
+  "source_privacy": {
+    "private_complete_history_bundle_verified": true,
+    "private_bundle_sha256": "087c5b0f7e9c438fc64c7dc11e5ba7f46075653c0a6a5fb286ade95622091d9e",
+    "personal_prefix_files_redacted": 5,
+    "public_metadata_locks_refreshed": 2,
+    "original_master_worktrees_unchanged": true,
+    "existing_public_history_and_tags_unchanged": true,
+    "published_refs": "sanitized master and v1.10-alpha only; private refs and original rewritten branch not pushed",
+    "mapping": "SOURCE-MAP.json"
+  },
+  "reproduction": {
+    "public_redacted_source_build_pass": true,
+    "matching_game_patch_media_art_wrapper_installer_launcher": true,
+    "differences": "version.json, version-hash binding in Remaster.Rendering.json, public source lock, manifest and checksums only",
+    "bit_identical_approved_zip_from_redacted_head_claimed": false,
+    "private_verification_zip_not_published": true,
+    "packaged_original_lock_materialization_pass": true
+  },
+  "licensing": "MIT limited to newly authored project code/docs; third-party licenses preserved; restored visuals authorized for this project, not blanket MIT; original game/trademark/audio rights not transferred",
+  "excluded": [
+    "original game executables and archives",
+    "original soundtrack/decoder",
+    "official updater and disc images",
+    "encoder/SDK tools",
+    "unintegrated Saber/models/portraits",
+    "private logs/saves/backups/application refs"
+  ],
+  "previous_release_unchanged": "int-20261018.1"
+}

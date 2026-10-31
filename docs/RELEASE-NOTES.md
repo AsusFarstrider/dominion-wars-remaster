@@ -1,3 +1,62 @@
+# Remastered 1.15 Alpha — int-20261030.1
+
+**Early experimental release.** Adaptive current-primary output replaces 1.10's
+fixed-1440p requirement. Actual 1080p/1440p component evidence is limited to one
+Windows 11 / RX 6800 XT computer at 96 DPI; the current packaged manual pass was
+1440p. No universal display/GPU/Windows or completed-remaster claim.
+
+## Changes
+
+- Select the current primary physical display at origin (0,0) before startup,
+  without switching the desktop mode. One size per launch; no live resize/hotplug.
+- Repair mission **Esc → Main Menu** re-entry and Preferences responsiveness.
+- Keep the same restored opening/Main/button visuals and three movie video payloads.
+  Original audio remains reconstructed from verified local owner files.
+- Coordinated adaptive engine/wrapper/profile/launcher and **Remastered 1.15** label.
+  Do not mix these with the old fixed-resolution files.
+
+## What passed—and what did not get retested
+
+The current packaged human test passed opening/audio/version, Preferences, an
+existing-save mission, HUD/radar/selection/camera, paused Alt-Tab, Esc → Main Menu,
+Preferences return and normal quit. Game and managed launcher exited 0; managed
+files verified. Audio is a human observation, not a new measurement. The automated
+UI-navigation attempt was incomplete and is not claimed as an agent mission pass.
+
+Actual 1080p acceptance is inherited from identical engine/provider/launcher/asset
+components, not a fresh final-package run. Original-media installation, save-writing
+and other focus cases have attributed inherited evidence. No fresh fleet traversal,
+new-save roundtrip, full campaign or exhaustive display/screenshot matrix is claimed.
+
+Master records 19 integration + 19 policy Python tests, 95 Windows PowerShell
+checks, 2,177 rebuilt focused native assertions, 29 installer lifecycle checks and
+an independent byte-identical original-source ZIP build. Release's redacted-source
+build separately preserved production payloads but necessarily changed provenance.
+Automated checks do not establish other hardware or every screen.
+
+## Download
+
+Get **dominion-wars-remastered-1.15-alpha-int-20261030.1.zip** (182,161,058 bytes)
+from [v1.15-alpha](https://github.com/AsusFarstrider/dominion-wars-remaster/releases/tag/v1.15-alpha),
+not GitHub's source archive.
+
+SHA256: `09b76f38aea263f13c9f596683968972a26f787b70ccc7b1ea9326f568eabd35`.
+
+Read **READ-ME-FIRST-1.15-ALPHA.md** alongside the ZIP. It supplements historical
+candidate/pending status and clarifies that nine authorized replacement visual
+payloads ARE included. No complete original retail game EXE/archive, original
+soundtrack/decoder, official updater or media image is supplied. The exact tested
+ZIP remains unchanged. See [approval record](../release/int-20261030.1/RELEASE-RECORD.json).
+
+See [installation](INSTALL.md), [testing](TESTING.md), [limitations](KNOWN-ISSUES.md),
+[license scope](LICENSING.md) and [public-source mapping](PUBLIC-SOURCE.md).
+The official game base remains 1.04; 1.15 is a remaster milestone, not an official
+patch, percentage complete or achievement of the larger 2.00 goal. Prior release
+tags and ZIPs remain immutable.
+
+---
+
+## Historical releases
 # Remastered 1.10 Alpha — int-20261029.1
 
 **Early experimental release. Native 2560×1440 primary display at origin (0,0)

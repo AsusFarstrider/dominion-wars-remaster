@@ -1,3 +1,48 @@
+# 1.15 Alpha publication audit — int-20261030.1
+
+Exact approved player ZIP:
+09b76f38aea263f13c9f596683968972a26f787b70ccc7b1ea9326f568eabd35,
+182,161,058 bytes. Independent inspection passed CRC, 561 checksum entries,
+560 manifest files (562 ZIP members total), version/source binding and reconstructed
+movie hashes. All 225/601/281 compressed audio packets and 12-byte audio headers
+are source COPY only; no literal original audio is present. Nine owner-authorized
+replacement visual payloads are included. Third-party notices/source remain.
+
+A complete private history bundle including final Master approval ba88c51 was
+verified before final mapping. The new public continuation preserves f7bc25b
+ancestry, all earlier tags and their exact downloads. It imports only new private
+integration/decision content, then Master's two-file approval metadata.
+
+Private profile prefixes and unnecessary unique monitor identifiers were redacted
+in proof/metadata. Three developer evidence-helper path literals received only
+prefix substitutions, with Master approval; production wrapper/launcher/engine
+bytes are unchanged. Two monitor identities use consistent public aliases.
+Public metadata references and locks were refreshed; all 1,777 frozen public
+file hashes/sizes and source-manifest joins verified. Complete originals and
+mapping receipts stay private. Collection-time constants still denote original
+proof, not a false assertion of redacted hash equivalence.
+
+The public-source build succeeds and preserves game patch/media/art/wrapper/
+installer/launcher payloads. Only version identity, its rendering-config hash
+binding, the public source lock, manifest and checksums differ. This private
+verification ZIP is not uploaded or substituted for the approved artifact.
+See [source map](../release/int-20261030.1/SOURCE-MAP.json) and
+[developer procedure](PUBLIC-SOURCE.md).
+
+Pattern scans of reachable selected history found no credential pattern, prohibited
+game/media extension or remaining personal-profile path. These are aids, not proof
+of security or legal clearance. Raw original logs/device identities, private refs,
+backup bundles, original game files and private verification builds are excluded
+from publication. Only reviewed public master and the named tag are pushed.
+
+Exact-package approval and current/inherited test scope are in the
+[release record](../release/int-20261030.1/RELEASE-RECORD.json).
+Original-source reproducibility, 1440p human acceptance and inherited 1080p evidence
+must not be collapsed into a universal compatibility claim.
+
+---
+
+## Earlier publication audits
 # Publication audits
 
 ## 1.10 Alpha — int-20261029.1

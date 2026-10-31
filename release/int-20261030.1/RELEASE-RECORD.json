@@ -1,0 +1,85 @@
+{
+  "record_schema": 1,
+  "record_type": "exact_package_release_approval_supplement",
+  "date": "2026-10-31",
+  "remaster_version": "1.15",
+  "release_stage": "alpha",
+  "integration_build_id": "int-20261030.1",
+  "flavor": "native-display-restored-v7-gizmo-v5",
+  "publication_tag": "v1.15-alpha",
+  "original_runtime_source_revision": "8a32bcc36117442fffda89cd42580382f3305216",
+  "public_mapped_runtime_source_revision": "aa8e82ebd511f19aa94e7a3fd7d5ccb48d49aa75",
+  "master_approval_metadata_revision": "ba88c517c08578e6060e43f6803ebba3621d7db3",
+  "public_mapped_approval_metadata_revision": "89495847bfde5af2dd9e90043c3fe83ef16a6c56",
+  "package": {
+    "file": "dominion-wars-remastered-1.15-alpha-int-20261030.1.zip",
+    "bytes": 182161058,
+    "sha256": "09b76f38aea263f13c9f596683968972a26f787b70ccc7b1ea9326f568eabd35",
+    "manifest_sha256": "9bbb5a7d32e78a66ceb6647bff6157820f2f2357c860727305aaf2591e94e9cf",
+    "identity_sha256": "a33d323d50d889ef96fbe55df6aa7f7b3da2af86255da89959328f3b124f777e",
+    "wrapper_sha256": "7694f070e24b4e1f80b27356a1087c056c04d519a63bab54b12f19e17f72b720",
+    "generated_executable_sha256": "e81aacb185e755c6478c06516bf0d442b7b95edc1f3a3603bfc7ecda1c777023",
+    "runtime_or_zip_changed_for_publication": false
+  },
+  "user_authorization": "Alright, let's update the internal build to this and release. You guys can run your tests this time. If you feel it needs a version number update that is allowed.",
+  "master_decision": "approve-1.15-alpha-internal-baseline-and-experimental-public-release",
+  "manual_acceptance": {
+    "date": "2026-10-31",
+    "result": "All checks passed; quit normally",
+    "clarification": "Tested mission using a save game file",
+    "acceptance_sha256": "274ecb4331ef2581b708b3947efd27a75018e4c665c7d29ff047fb53472aaae8",
+    "process_and_launcher_exit": 0,
+    "managed_files_verified": true,
+    "scope": "Current 1440p/DPI96 human pass: opening/audio/version, Preferences, existing-save mission HUD/radar/selection/camera, paused Alt-Tab, Esc Main return and normal quit; not an agent gameplay pass"
+  },
+  "resolved_since_1_10": [
+    "Esc -> Main Menu legacy-size/non-clickable reentry",
+    "Preferences responsiveness"
+  ],
+  "validation": {
+    "python_integration": 19,
+    "python_policy": 19,
+    "winps_checks": 95,
+    "rebuilt_focused_native_assertions": 2177,
+    "installer_lifecycle_checks": 29,
+    "original_source_independent_zip_byte_identical": true,
+    "public_redacted_source_build": "passed; production patch/media/art/wrapper/installer/launcher unchanged; only provenance, lock, version-hash binding, manifest/checksums differ",
+    "package_audit": "562 ZIP members; 561 checksums and 560 manifest files verified; CRC and identity/source binding passed",
+    "audio_audit": "All 225/601/281 audio packets and each 12-byte audio header COPY-only from owner originals; zero literal original audio; exact output hashes"
+  },
+  "coverage": {
+    "current_package": "one Windows 11 / RX 6800 XT / three-monitor system at1440p/DPI96",
+    "inherited_1080": "Actual1080 component evidence with identical engine/provider/launcher/assets; not a new final-package1080 run",
+    "inherited_other": "Original-media extraction, save-writing and other focus cases explicitly attributed, not newly rerun",
+    "not_claimed": [
+      "fresh fleet setup",
+      "new-save roundtrip",
+      "fresh disc/updater test",
+      "full campaign",
+      "exhaustive screenshot/Win+D matrix",
+      "universal GPU/Windows/display support"
+    ],
+    "unsupported": [
+      "multiplayer",
+      "live resizing",
+      "monitor hotplug"
+    ],
+    "required": "primary physical desktop origin0,0; one size per launch; dimension safety bounds are not a support list"
+  },
+  "historical_status_override": "This external exact-hash approval supplements embedded candidate/pending/held records, without changing tested ZIP/runtime.",
+  "asset_wording_clarification": "Nine authorized replacement visual payloads and restored video deltas ARE included; no complete original retail game executable/archive, original soundtrack/decoder, official updater or disc image is supplied.",
+  "licensing": "Newly authored project code/docs MIT only; third-party licenses preserved; restored visuals authorized for project distribution, not blanket MIT; original game/trademark/audio/codec rights remain separate.",
+  "history": "Complete private backup verified; new private delta mapped onto existing publicf7bc25b, private proof paths/device IDs redacted and public metadata hashes refreshed. Production unchanged; see SOURCE-MAP.json.",
+  "excluded": [
+    "complete original game/media/updater/audio/decoder",
+    "encoder/SDK tools",
+    "unintegrated texture/model/portrait experiments",
+    "private raw evidence/logs/device IDs/backups/application refs",
+    "public-source verification ZIP"
+  ],
+  "prior_releases_unchanged": [
+    "v1.10-alpha",
+    "int-20261018.1"
+  ],
+  "publication_receipt": "PUBLICATION.json is added after upload/download verification"
+}

@@ -27,6 +27,10 @@ original files/media and the official patch. No no-CD or DRM bypass is included.
 - **RAD Game Tools / Bink:** original game's movie technology; no encoder, SDK or
   replacement commercial decoder is distributed by this release.
 
+The 1.15 Alpha wrapper continues the same DDrawCompat BSD-0-Clause lineage with
+adaptive output and menu repairs. Restored visual content is unchanged from 1.10;
+no new artwork, codec tool or asset-authoring dependency is introduced.
+
 Newly project-authored integration/build/install/release code is MIT, with
 [explicit scope/exceptions](LICENSING.md). Third-party licenses remain in force.
 Publication clearance for an executable delta

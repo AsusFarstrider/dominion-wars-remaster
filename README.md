@@ -1,108 +1,102 @@
 # Dominion Wars Remaster
 
 A faithful fan restoration of *Star Trek: Deep Space Nine – Dominion Wars* (2001),
-preserving its original QUANTUM engine, campaigns, gameplay and Star Trek atmosphere
-while addressing presentation and technical limitations. This is not a remake.
+preserving its original QUANTUM engine, missions, gameplay and Star Trek atmosphere
+while improving presentation and addressing technical limitations. This is not a remake.
 
 > **Early Development — Experimental Builds**
 >
-> The remaster is barely underway. Many planned improvements are not implemented,
-> and experimental builds may have visual problems, bugs or incomplete features.
-> This is not a finished remaster. You're welcome to follow development, try test
-> builds when published, and tell us what works—or doesn't—on your computer.
+> This remaster is still in its earliest stages. Many planned improvements are not
+> implemented. Builds may contain visual problems, bugs or incomplete features.
+> Testing covers very few systems—not universal Windows or GPU compatibility.
+> You're welcome to follow development, try an alpha and tell us what works—or doesn't.
 
-## Development status
+## Download and play
 
-The new experimental player build is **Remastered 1.10 Alpha**, integration
-**int-20261029.1**. It targets a **2560×1440 primary display at desktop origin (0,0)
-only**, without changing your desktop resolution. Other display modes are refused
-before launch. Testing is limited to one Windows 11 / Radeon RX 6800 XT computer
-with three monitors; other GPUs, drivers and Windows builds still need testing.
+[**Download Remastered 1.15 Alpha**](https://github.com/AsusFarstrider/dominion-wars-remaster/releases/tag/v1.15-alpha)
+— integration **int-20261030.1**.
 
-> **Known bug:** In a mission, do not choose **Esc → Main Menu**. It opens an old,
-> top-left menu that does not respond to mouse clicks. Close and relaunch the game
-> instead. This path is broken in this release; see [known issues](docs/KNOWN-ISSUES.md).
+Choose **dominion-wars-remastered-1.15-alpha-int-20261030.1.zip** from the release
+assets, not GitHub's automatic source archive. Extract it fully, read the separate
+**READ-ME-FIRST-1.15-ALPHA.md**, then double-click **Install Dominion Wars Remaster.cmd**.
+Keep your original working game and choose a **new destination**. After successful
+verification, use the installed desktop shortcut or **Play Dominion Wars Remaster.cmd**.
 
-Get the [1.10 Alpha player download](https://github.com/AsusFarstrider/dominion-wars-remaster/releases/tag/v1.10-alpha),
-not GitHub's automatic source ZIP. See [release notes](docs/RELEASE-NOTES.md).
-The [earlier original-assets experiment](https://github.com/AsusFarstrider/dominion-wars-remaster/releases/tag/int-20261018.1)
-remains available separately and unchanged; it does not contain these restorations.
+You need legitimate **North American retail / official 1.04** game data: original
+mounted media plus the full official updater, or a supported verified original,
+Modernizer or remaster installation. The game and updater are not supplied.
+No Git, Python, compiler or encoder is needed by players. See [installation](docs/INSTALL.md).
+
+The launcher uses your current **primary physical display at desktop origin (0,0)**,
+without changing its mode. One size is selected per launch; no live resizing,
+resolution switching or monitor hotplug. Actual **1920×1080 and 2560×1440** were
+tested on the same Windows 11 / AMD RX 6800 XT computer at **96 DPI**. The final
+packaged manual pass was at 1440p; 1080p evidence is inherited from matching
+components. Other modes, aspect ratios, 4K, high DPI and other GPUs remain unverified.
 
 The separate [Dominion Wars Modernizer](https://github.com/AsusFarstrider/dominion-wars-modern)
-installs and runs the original game on modern Windows. The remaster builds on that
-foundation; its experimental improvements and testing are not Modernizer releases.
-
-## What we're working toward
-
-Preserve the original experience while removing limitations that prevent it from
-looking and playing its best. Keep missions, mechanics, balance, recognizable UI
-and satisfactory original artwork. Improve resolution/UI behavior, selected art,
-ship geometry, effects, compatibility and modest quality-of-life issues where useful.
-These are goals, not a list of finished features.
+focuses on installing and running the original game. Its accomplishments and tests
+are not automatically remaster results.
 
 ## Current progress
 
-| Area | Status in 1.10 Alpha |
+| Area | Status in 1.15 Alpha |
 |---|---|
-| Resolution/interface | Experimental native 2560×1440 rendering/UI/HUD assembly; original-density HUD artwork retained |
-| Opening and Main artwork | Restored opening cards, three opening movies, Main background and six Main button banks included |
-| Startup and input | Production launch with recording off, shared Remastered 1.10 label, no forced desktop resolution change |
-| Gameplay | Owner approved the new recording-off trial with the Esc → Main Menu bug deferred; not a clean-exit or full-campaign pass |
-| Installation | Verified media/official-patch or supported existing-install workflow; installs a separate copy |
-| Ship textures/models/portraits | Not restored in this release; specialist experiments are not automatically included |
-| Broader restoration | In development/planned; no finished campaign restoration or universal hardware support |
+| Resolution/interface | Adaptive current-primary output with native UI/HUD assembly; original-density HUD art and fonts retained |
+| Opening/Main visuals | Restored cards, three opening movies, Main background and six button banks |
+| Menu repairs | Mission Esc → Main Menu re-entry and Preferences responsiveness repairs passed the current manual check |
+| Gameplay/input | Short existing-save mission, HUD/radar/camera, paused Alt-Tab and normal quit passed on one computer |
+| Installation | Separate-copy installer, verified originals, repair/removal/recovery; original-media evidence inherited from the unchanged foundation |
+| Ship art/models/portraits | Not restored in this release; specialist experiments are not automatically included |
+| Full restoration | In development; no complete restored campaign or universal compatibility claim |
 
-This is a limited native-1440p pilot, **not arbitrary-resolution support** or a
-completed first-mission restoration. Restored buttons add about 231 MiB of cached
-image data to a 32-bit game. Report memory problems, slowdowns or missing art.
-See [known limitations](docs/KNOWN-ISSUES.md).
+The owner passed the current packaged manual check; game and launcher exited 0.
+This is not a fresh fleet-setup run, new-save roundtrip, full campaign or exhaustive
+screen/input test. Multiplayer remains **unsupported**. Restored button art caches
+about 231 MiB in the 32-bit process. See [known issues](docs/KNOWN-ISSUES.md).
 
-## Downloading and testing
-
-Download **dominion-wars-remastered-1.10-alpha-int-20261029.1.zip** from the
-[1.10 Alpha release assets](https://github.com/AsusFarstrider/dominion-wars-remaster/releases/tag/v1.10-alpha),
-then extract it fully. Use that player ZIP—not the repository source download.
-See [installation](docs/INSTALL.md) and
-[testing](docs/TESTING.md). You must supply legitimate North American original
-media and the full official 1.04 updater, or a supported verified original/Modernizer
-installation. No complete game executable, original archive, original soundtrack,
-official updater or DRM bypass is supplied. Restored movie video is included as
-deltas; the original soundtrack is reconstructed from your verified local files.
-
-Run **Install Dominion Wars Remaster.cmd**, choose a new destination, then use the
-installed desktop shortcut. No PowerShell knowledge, Git, Python or encoder is
-needed to install and play. Read the release's **READ-ME-FIRST-1.10-ALPHA.md**:
-it supplements the ZIP's unchanged, creation-time internal-trial wording.
-
-Keep your working original installation. The remaster installs to a separate new
-directory; do not overlay a test build onto your only working game.
+The fixed-1440p [1.10 Alpha](https://github.com/AsusFarstrider/dominion-wars-remaster/releases/tag/v1.10-alpha)
+and [first original-assets experiment](https://github.com/AsusFarstrider/dominion-wars-remaster/releases/tag/int-20261018.1)
+remain unchanged. The Esc → Main Menu bug documented for 1.10 is repaired in 1.15.
+Keep different builds in separate folders; do not mix their EXEs, wrappers or launchers.
 
 ## Help us test
 
-You don't need programming skills. Playing on another computer and reporting a
-success or problem is useful. Include the build ID, Windows version, CPU/GPU,
-driver, screen/monitor layout and what happened. Screenshots/logs help when available;
-review them for personal information before sharing. Don't upload game files or saves
-publicly. [Issues](https://github.com/AsusFarstrider/dominion-wars-remaster/issues/new/choose)
-includes simple templates for bugs, graphics/resolution and feedback/successful tests.
+You don't need programming skills. Playing on another computer and reporting
+successes is useful too. Include the build/version, Windows, CPU/GPU/driver,
+physical resolution, monitor layout/DPI, disc edition and exact steps/results.
+Screenshots and logs help; review personal paths and device identifiers before
+sharing. Never upload original game files.
+Use [Issues](https://github.com/AsusFarstrider/dominion-wars-remaster/issues/new/choose)
+and the [testing guide](docs/TESTING.md).
 
-## Roadmap and technical information
+## Direction and technical documentation
 
-Our initial major milestone is a **complete, faithfully restored first Federation
-mission**, including associated menus, UI, ships, environment and required assets.
-There is no promised completion date. See [roadmap](docs/ROADMAP.md),
-[integration architecture](integration/docs/ARCHITECTURE.md) and
-[build instructions](integration/README.md). Historical technical notes contain
-experimental results and are not promises about the public download.
+Preserve the original experience: missions, mechanics, balance, recognizable UI,
+artistic direction and satisfactory original artwork. Improve selected textures,
+geometry, effects, compatibility and modest quality-of-life issues where useful.
+
+Our first major milestone remains a **complete, faithfully restored first Federation
+mission**, including associated menus, interface, ships, environment and required
+assets. It has not been achieved; there is no promised completion date.
+
+See [roadmap](docs/ROADMAP.md), [release notes](docs/RELEASE-NOTES.md),
+[integration architecture](integration/docs/ARCHITECTURE.md),
+[build procedure](integration/docs/NATIVE-BUILD.md) and
+[public-source provenance](docs/PUBLIC-SOURCE.md). Research notes describe experiments,
+not necessarily the public download.
 
 ## Credits and legal information
 
-Unofficial fan project; not affiliated with or endorsed by the original game's
-developers, publishers or Star Trek rights holders. Rights in the game and Star
-Trek remain with their respective owners. See [credits/distribution](docs/CREDITS.md).
-Newly project-authored integration/build/install/release code is MIT; existing
-third-party licenses remain applicable. See [scope and exceptions](docs/LICENSING.md).
-Restored visuals are distributed with the creator's permission for this project,
-not under a blanket MIT artwork license. Original game and trademark rights are
-not transferred. See
-[publication audit](docs/PUBLICATION-AUDIT.md) for source/history review.
+Unofficial fan restoration, not affiliated with or endorsed by the original game's
+developers, publishers or Star Trek rights holders. Original rights remain with
+their respective owners. No complete original game EXE/archive, original soundtrack,
+decoder, official updater, disc image or DRM bypass is supplied. Original movie audio
+is reconstructed locally from verified owner files; authorized replacement visuals
+are included.
+
+MIT covers only newly project-authored code/docs—not original game material,
+trademarks, all artwork or third-party components. Restored visuals have the
+creator's permission for project distribution; third-party licenses are retained.
+See [credits](docs/CREDITS.md), [license scope](docs/LICENSING.md) and
+[publication audit](docs/PUBLICATION-AUDIT.md).

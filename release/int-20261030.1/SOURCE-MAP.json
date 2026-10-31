@@ -1,0 +1,276 @@
+{
+  "schema": 1,
+  "original_source_revision": "8a32bcc36117442fffda89cd42580382f3305216",
+  "private_parent": "4b59a98cd99a8ddd1d1ab812919e0ac4cd886dc0",
+  "public_parent": "f7bc25b1a8965435d45fdfe825a372131436c252",
+  "public_prepared_source_revision": "aa8e82ebd511f19aa94e7a3fd7d5ccb48d49aa75",
+  "private_backup_sha256": "c16a68e667b9f9dd017a53c21c6075405a3be9decc26f8f936eb5dc3db4a4071",
+  "original_zip_sha256": "09b76f38aea263f13c9f596683968972a26f787b70ccc7b1ea9326f568eabd35",
+  "changed_source_paths": 787,
+  "production_bytes_unchanged": true,
+  "original_worktrees_unchanged": true,
+  "redactions": [
+    {
+      "path": "integration/components/intake-adaptive-20261030.1/evidence/card-contract-snapshots/assets.json",
+      "reasons": [
+        "personal-profile-prefix-only",
+        "public-only-metadata-reference-refresh"
+      ],
+      "original_sha256": "0cdd8cdec3a6d4c040fd1c81e6d416f4a68930ae9d8a357461a9f447de1bc10f",
+      "public_sha256": "8a5ab014559565aa137f695f544a79050023ff5b008336e42eca063b65d224d5"
+    },
+    {
+      "path": "integration/components/intake-adaptive-20261030.1/evidence/card-validation-sources/prepare_art.py",
+      "reasons": [
+        "personal-profile-prefix-only"
+      ],
+      "original_sha256": "0175a1c88a3b4d17728dda81c201be1ea26e6e82f10334696b3710ced24686ba",
+      "public_sha256": "7a1da66fd00c9eb8c6da08482b19ca678d4d1a9fc56995a40b1331dd549f61ca"
+    },
+    {
+      "path": "integration/components/intake-adaptive-20261030.1/evidence/gizmo-contract-snapshots/asset-report.json",
+      "reasons": [
+        "personal-profile-prefix-only"
+      ],
+      "original_sha256": "6fb86e9e78e8a868774396a900ce315ab6ab02d85c96b1996508eff515e53119",
+      "public_sha256": "325c9273da6925b994c131aee8cb31a8dfbdc9377f0f3e4a6a87ebd196bc017e"
+    },
+    {
+      "path": "integration/components/intake-adaptive-20261030.1/evidence/gizmo-contract-snapshots/assets.json",
+      "reasons": [
+        "personal-profile-prefix-only",
+        "public-only-metadata-reference-refresh"
+      ],
+      "original_sha256": "880e4841ff7bb7d429783d01d39adf6adda0196bf5514a695dd9f36d8db66189",
+      "public_sha256": "f6eb863b09a55b2ac4dd8e37268ea5f022b069cb0fd77a5309fc80228e5d81c4"
+    },
+    {
+      "path": "integration/components/intake-adaptive-20261030.1/evidence/gizmo-contract-snapshots/gizmo-main-contract-01-manifest.json",
+      "reasons": [
+        "public-only-metadata-reference-refresh"
+      ],
+      "original_sha256": "10ba1b7541b8e5454e45c0a6c7b3aa5e905a6b11396f401c2dcc4017e483b2fa",
+      "public_sha256": "45b9c138e30c75810e64c3823cc72fe0d54714bed963e7ba0351883b56c74fce"
+    },
+    {
+      "path": "integration/components/intake-adaptive-20261030.1/evidence/gizmo-contract-snapshots/history-receipt.json",
+      "reasons": [
+        "personal-profile-prefix-only"
+      ],
+      "original_sha256": "d42c65337ac7ed2c905d009e2f97ce69ef9c909a00ca0403c5158c1854686e61",
+      "public_sha256": "5696142c35f99a8b2c9cf9b9651a4015d79720319ded1b6c58691c7ad21d42d5"
+    },
+    {
+      "path": "integration/components/intake-adaptive-20261030.1/evidence/gizmo-validation-sources/prepare_background.py",
+      "reasons": [
+        "personal-profile-prefix-only"
+      ],
+      "original_sha256": "2c618b11eb91cb5a81fb728cf568a488577e118c7df2530e78d409c539ca6174",
+      "public_sha256": "0c245db973f61c0e6c93d30165af8ac6edc975d6e385328688d0727b364a222b"
+    },
+    {
+      "path": "integration/components/intake-adaptive-20261030.1/evidence/gpu-hook-contract-snapshots/gizmo-v5-asset-report.json",
+      "reasons": [
+        "personal-profile-prefix-only"
+      ],
+      "original_sha256": "445800453a2627f117ec889c75bc19310f67143ff5de7289b1d10983d9a57d24",
+      "public_sha256": "c15fb7284d6adb71894b9cdef1ffeef4c7ea12310f65123ae0816417b966f154"
+    },
+    {
+      "path": "integration/components/intake-adaptive-20261030.1/evidence/gpu-hook-contract-snapshots/gizmo-v5-preparation.json",
+      "reasons": [
+        "personal-profile-prefix-only"
+      ],
+      "original_sha256": "fb80673e50ce158d80d427e2fdbdc6c8fd3ca5b3711142680473c83353dc5409",
+      "public_sha256": "cc630bebc029b83967554113d49f96e34b9e654375caecf2df1b7196b951d993"
+    },
+    {
+      "path": "integration/components/intake-adaptive-20261030.1/evidence/hd-contract-snapshots/history-independent-receipt.json",
+      "reasons": [
+        "personal-profile-prefix-only"
+      ],
+      "original_sha256": "9b3547651e47f95fb8d1219975622fb08c58b28fbeff9ba0e97a604652b6f54d",
+      "public_sha256": "00aed334a0709ebb7d60c37a64893cb5ce046146de17348108c5d2161ac306f6"
+    },
+    {
+      "path": "integration/components/intake-adaptive-20261030.1/evidence/hd-contract-snapshots/history-receipt.json",
+      "reasons": [
+        "personal-profile-prefix-only"
+      ],
+      "original_sha256": "925756b5ca08efd63d731171753bc48f19aa33ebf61c71bfe76bb34926fea08f",
+      "public_sha256": "544d7459d5a7e96a2f6676ac7945f9166f26ba162351231e277370053218d0ff"
+    },
+    {
+      "path": "integration/components/intake-adaptive-20261030.1/evidence/opening-contract-snapshots/OPENING-FLOW-EXTENSION-PLAN-03.md",
+      "reasons": [
+        "personal-profile-prefix-only"
+      ],
+      "original_sha256": "9766373160d54d40a5335a9d4e88ac3577d5e94f7d2b67a923d4332d07f5a05a",
+      "public_sha256": "90ac77f0e931e2d1ee14e010e1f41701e40420d6cd667f4cb37f4a9f17fb1234"
+    },
+    {
+      "path": "integration/components/intake-adaptive-20261030.1/evidence/production-contract-snapshots/asset-report.json",
+      "reasons": [
+        "personal-profile-prefix-only"
+      ],
+      "original_sha256": "bd44fe00809090e93ce517d3c644df6b34cffb0b0ed03364d9d46390df5daffb",
+      "public_sha256": "7b4a71417d8c37290873eb1a10b34f0e76bf083308f4b988f022214a6dee62ee"
+    },
+    {
+      "path": "integration/components/intake-adaptive-20261030.1/evidence/production-contract-snapshots/assets.json",
+      "reasons": [
+        "personal-profile-prefix-only"
+      ],
+      "original_sha256": "364e0299971147f004d7888145acfb03c18688d258c1140667aa5e19587d13c3",
+      "public_sha256": "05369f518bad10ccfbb769c458a11f28a94ba58101fd0ee29f83b7e65f1e5510"
+    },
+    {
+      "path": "integration/components/intake-adaptive-20261030.1/evidence/production-contract-snapshots/history-receipt.json",
+      "reasons": [
+        "personal-profile-prefix-only"
+      ],
+      "original_sha256": "8ca1efbce69924ef69b8dc28c3716c11e246b56cc11987498360d8b3c1caa86f",
+      "public_sha256": "c78df5893aee95807f3daca809239a0fb913bfc3274471f4c291ec3c6df8e038"
+    },
+    {
+      "path": "integration/components/intake-adaptive-20261030.1/handoff/CHECKSUMS.json",
+      "reasons": [
+        "public-only-metadata-reference-refresh"
+      ],
+      "original_sha256": "562f62ae1eadd8881078be3f6e72f6be364d53c3458d4686ae2eb1ac08486be5",
+      "public_sha256": "da3b2ee3f933f94bba155a113cb950ea2cf20fe76e7b1c2cf4160ffe01ebf0a3"
+    },
+    {
+      "path": "integration/components/intake-adaptive-20261030.1/handoff/component.json",
+      "reasons": [
+        "public-only-metadata-reference-refresh"
+      ],
+      "original_sha256": "26244aae31d835569da39cfadff694639d96747679e2fb56b8a1c61d7fe090af",
+      "public_sha256": "73e14ef28202e5b079e84f260594c31945e569c1849ddb8e9d009a83794fba58"
+    },
+    {
+      "path": "integration/components/intake-adaptive-20261030.1/handoff/evidence/audit_run.py",
+      "reasons": [
+        "personal-profile-prefix-only"
+      ],
+      "original_sha256": "073fa0250eff1d2ae91c2725160b56ece953a19597303785cd59c400354f33a9",
+      "public_sha256": "0b43e3c8575c28156cfa115544e2b7d49eea364cf5533995c1ec6fdda8b85d9b"
+    },
+    {
+      "path": "integration/components/intake-adaptive-20261030.1/handoff/evidence/failed-preflight-01/output-selection.json",
+      "reasons": [
+        "unique-device-identity-to-consistent-public-alias"
+      ],
+      "original_sha256": "331688d62881ca14c6c9c4ae855b294d0f60cb99e2168d88e7e8c148fada018f",
+      "public_sha256": "7fae012c9645569b04f30b6a99d06506a2c6fabb58bf2837f27b94fbbc66d003"
+    },
+    {
+      "path": "integration/components/intake-adaptive-20261030.1/handoff/evidence/failed-preflight-01/receipt.json",
+      "reasons": [
+        "public-only-metadata-reference-refresh"
+      ],
+      "original_sha256": "5807892c655ad7bf176a52d7159fd667d5326610b4f12bb6588d0d7ec4968005",
+      "public_sha256": "7081563d240c5e4b0f773e67d9ff40b9401d1f85b091b67a5cd2af8e4bc63647"
+    },
+    {
+      "path": "integration/components/intake-adaptive-20261030.1/handoff/evidence/live-1920x1080-01/acceptance.json",
+      "reasons": [
+        "personal-profile-prefix-only",
+        "unique-device-identity-to-consistent-public-alias",
+        "public-only-metadata-reference-refresh"
+      ],
+      "original_sha256": "c5a33f0c8841b15b05066188438fcd612d80969ee38b2b0502910577dfb2e428",
+      "public_sha256": "ad329909db7f5a6dd1d78f1c82641d11fce380fc0d2af20e1348ac27472d0ed8"
+    },
+    {
+      "path": "integration/components/intake-adaptive-20261030.1/handoff/evidence/live-1920x1080-01/launcher-output.log",
+      "reasons": [
+        "personal-profile-prefix-only"
+      ],
+      "original_sha256": "8187de43f6c4e141b573cdaea6d6ac11d73df129f8ca38bed9d6e85f0d88900d",
+      "public_sha256": "1b4388b5d6e0ed9ccfcac2ad82bff6fa286887af236755f492d4a4f3933707c9"
+    },
+    {
+      "path": "integration/components/intake-adaptive-20261030.1/handoff/evidence/live-1920x1080-01/output-selection.json",
+      "reasons": [
+        "unique-device-identity-to-consistent-public-alias"
+      ],
+      "original_sha256": "e0b69686257b22ab0936dd5e8465e218ba3404e86b6abfd5c77d1f5194d192f5",
+      "public_sha256": "ef7247624b2eecd9d29271cfcba9f1bd47aacaaa047c02cf103850f6746f3df4"
+    },
+    {
+      "path": "integration/components/intake-adaptive-20261030.1/handoff/evidence/live-1920x1080-01/result.json",
+      "reasons": [
+        "unique-device-identity-to-consistent-public-alias"
+      ],
+      "original_sha256": "e1c200a0f915aea5bb6930924035f3162ace6645be5e2e97fc931ad464b3b9e4",
+      "public_sha256": "81f55003e308264f99f9fee1c7f6d94551b466a75a91bba8bd12099062476b85"
+    },
+    {
+      "path": "integration/components/intake-adaptive-20261030.1/handoff/evidence/live-2560x1440-01/acceptance.json",
+      "reasons": [
+        "personal-profile-prefix-only",
+        "unique-device-identity-to-consistent-public-alias",
+        "public-only-metadata-reference-refresh"
+      ],
+      "original_sha256": "a475848e8ce072625d7f9418e445d20140d07a63d1ded6603f05beeabc198e38",
+      "public_sha256": "24ed924ea587f8470147839dea6e36c7a18ef1b5828a41dae85533e67d3727a7"
+    },
+    {
+      "path": "integration/components/intake-adaptive-20261030.1/handoff/evidence/live-2560x1440-01/launcher-output.log",
+      "reasons": [
+        "personal-profile-prefix-only"
+      ],
+      "original_sha256": "be018f49169372289c2cdfbd7cf014dbcfc16b64806be5d8df4735b88fa69496",
+      "public_sha256": "e62da134d6a02756bb6b4f705cd2903e0b83ec7561bf18ac8255d8450fb1a98c"
+    },
+    {
+      "path": "integration/components/intake-adaptive-20261030.1/handoff/evidence/live-2560x1440-01/output-selection.json",
+      "reasons": [
+        "unique-device-identity-to-consistent-public-alias"
+      ],
+      "original_sha256": "331688d62881ca14c6c9c4ae855b294d0f60cb99e2168d88e7e8c148fada018f",
+      "public_sha256": "7fae012c9645569b04f30b6a99d06506a2c6fabb58bf2837f27b94fbbc66d003"
+    },
+    {
+      "path": "integration/components/intake-adaptive-20261030.1/handoff/evidence/live-2560x1440-01/result.json",
+      "reasons": [
+        "unique-device-identity-to-consistent-public-alias"
+      ],
+      "original_sha256": "811b360bce7cd555e3eead57b2185a85a8ccf455a4f041f672b284edf210abed",
+      "public_sha256": "d09d25951306a673b798f6636537ace215ce3fc537b66d6b81fa75aed9eeb65e"
+    },
+    {
+      "path": "integration/components/intake-adaptive-20261030.1/handoff/evidence/sampler-provenance.json",
+      "reasons": [
+        "personal-profile-prefix-only"
+      ],
+      "original_sha256": "33dd57e2b1315c70699c6cff141940a684340e822087a9d3147fbd224cd02edc",
+      "public_sha256": "74794d66ab7ab6a11fb7079f2bc38a7e9696f23391ff936a5ab2a3593f780795"
+    },
+    {
+      "path": "integration/components/intake-adaptive-20261030.1/qfr-source.json",
+      "reasons": [
+        "personal-profile-prefix-only",
+        "public-only-metadata-reference-refresh"
+      ],
+      "original_sha256": "9dd1b04e08ebaffa6fbb2e39bbe22ddd0eed7866612c8a68795c01ef537f7af9",
+      "public_sha256": "443d084cfa444c7fc96a40f7141a0e40c3a6a57f209da10b742186df8ed9fc44"
+    },
+    {
+      "path": "integration/components/intake-adaptive-20261030.1/source-lock.json",
+      "reasons": [
+        "public-only-metadata-reference-refresh"
+      ],
+      "original_sha256": "dded69659e37016882c042eec5b87c5a45a0bc549c6365cbdb37f988a832c0ce",
+      "public_sha256": "d087fc82c79eecedc5b13fd3177e0130f6af493b74d1d6da5d29907b74d99066"
+    }
+  ],
+  "unique_devices_aliased": 2,
+  "published_refs_unchanged": true,
+  "note": "Public parent retains prior docs/tags/receipts; only new private integration/decision delta imported. Production unchanged. Original tested ZIP retains original private source/lock identity; public reconstruction changes provenance only.",
+  "record_type": "approved_runtime_source_publication_mapping",
+  "final_original_approval_revision": "ba88c517c08578e6060e43f6803ebba3621d7db3",
+  "final_public_approval_revision": "89495847bfde5af2dd9e90043c3fe83ef16a6c56",
+  "final_backup_complete_and_verified": true
+}

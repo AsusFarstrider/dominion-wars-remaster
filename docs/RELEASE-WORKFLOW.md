@@ -1,6 +1,15 @@
 # Integration to experimental release
 
 Master integrates; Release documents/audits/packages; the user authorizes release.
+
+Current release: 1.15 Alpha / int-20261030.1, tag v1.15-alpha. Original runtime source
+8a32bcc36117442fffda89cd42580382f3305216 and unchanged ZIP
+09b76f38aea263f13c9f596683968972a26f787b70ccc7b1ea9326f568eabd35 are bound by
+the [external approval supplement](../release/int-20261030.1/RELEASE-RECORD.json).
+New public source continues prior f7bc25b with explicit private-to-public mapping;
+do not push the private original branch or change prior releases. Exact player
+ZIP, readable notice, approval, checksum, source map and final receipt accompany
+the prerelease. The approved ZIP is never silently rebuilt to change status wording.
 An internal baseline is not automatically a public download. No independent merge
 of specialist artifacts, replacement build or runtime change is allowed here.
 

@@ -1,3 +1,40 @@
+# Known limitations — 1.15 Alpha / int-20261030.1
+
+- Very early development on one Windows 11 / AMD RX 6800 XT / three-monitor
+  computer. Other GPUs, drivers and Windows builds still need testing.
+- Actual 1920×1080 and 2560×1440 component tests at 96 DPI; current packaged manual
+  pass at 1440p. Final-package 1080p, other modes/aspects, 4K and high DPI are not
+  validated. Launch bounds are safety checks, **not a supported-resolution list**.
+- Primary physical display must be at desktop origin (0,0). One size is selected
+  before startup; no live resizing, resolution switching or hotplug support.
+- North American retail official 1.04 inputs only. Multiplayer remains unsupported.
+- Mission acceptance used an existing save. No fresh fleet-setup run, new-save
+  roundtrip, full campaign, new disc/updater run or exhaustive Win+D/capture matrix
+  was performed on this exact package. Inherited component evidence is labelled.
+- Original-density HUD art/fonts and original control geometry remain. Ship art,
+  models and captain portraits are not restored in this release.
+- Restored button banks cache about 231 MiB in a 32-bit process. Report memory
+  problems, missing art, slowdowns and regressions after Windows/GPU-driver updates.
+- Recording is off; a bounded renderer safety ledger remains. Pause before Alt-Tab.
+- Unsigned scripts/legacy helpers can trigger security warnings. Do not disable
+  security as an installation step. Keep working originals and backed-up saves.
+- Staging/backups are deliberately retained and require several GB. Use this
+  package's Verify/Repair/Remove/Recover operations, not mixed files or standalone
+  Modernizer removal. The earlier advanced Repair -NoDesktopShortcut ownership
+  edge has not been independently cleared; use ordinary Repair.
+- Embedded candidate/pending metadata is historical. Exact-hash external approval
+  supplements it; the tested ZIP was not silently repackaged.
+
+## Fixed since 1.10
+
+The mission **Esc → Main Menu** legacy-size/non-clickable re-entry and Preferences
+responsiveness issues are repaired. The current human packaged test passed these
+paths and normal quit (game/launcher exit 0). Report regressions, but do not apply
+the old 1.10 avoidance warning to this build as though the repair were absent.
+
+---
+
+## Historical 1.10 limitations — not the current 1.15 status
 # Known limitations — 1.10 Alpha / int-20261029.1
 
 ## Mission → Main Menu is broken

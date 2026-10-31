@@ -1,85 +1,91 @@
-# Installing an experimental remaster build
+# Installing 1.15 Alpha
 
-These steps describe **Remastered 1.10 Alpha / int-20261029.1**,
-not a source checkout. Get the named ZIP from the
-[experimental release](https://github.com/AsusFarstrider/dominion-wars-remaster/releases/tag/v1.10-alpha).
-Read the separate **READ-ME-FIRST-1.10-ALPHA.md** release attachment. The unchanged
-ZIP calls itself an internal trial; the external acceptance record approves those
-exact bytes with the known limitations below, rather than silently repackaging it.
+Get **dominion-wars-remastered-1.15-alpha-int-20261030.1.zip** from
+[the 1.15 Alpha release](https://github.com/AsusFarstrider/dominion-wars-remaster/releases/tag/v1.15-alpha).
+GitHub's source ZIP is not an installer. Read the separate
+**READ-ME-FIRST-1.15-ALPHA.md** release notice: later exact-package approval
+supplements the ZIP's historical candidate/pending metadata without changing it.
 
 ## Before starting
 
-- Back up saves and keep your working original/Modernizer installation.
-- Set your primary monitor to physical **2560×1440**, at desktop origin **(0,0)**.
-  This native pilot refuses other primary-display modes and does not resize your
-  desktop. It is not a 1080p or 4K release. Other monitor layouts/DPI are unproven.
-- Supply legitimate North American retail media, mounted as a Windows CD/DVD drive,
-  and the full North American `ds9dw1to4.exe` updater; or use a supported verified
-  original/Modernizer installation. Raw image files are not mounted by the installer.
-  The historical [TrekCore downloads page](https://gaming.trekcore.com/dominionwars/downloads.html)
-  lists **Official Patch (v1.01 to v1.04)**. Incremental and other-region updates
-  are not substitutes. The official updater is not included in our download.
-- Use a writable folder and allow several GB of spare space for retained staging
-  and backups. No Python, Git or SDK is needed by players.
-- Use ordinary local game/source/destination directories. Cloud placeholders,
-  junctions and other reparse-point paths are refused; a OneDrive-synced game
-  directory may be rejected. Prefer the default local application-data destination.
-- Testing is currently limited to one Windows 11/AMD system. Other configurations
-  are welcome for future testing, not guaranteed to work.
+- Keep a working original/Modernizer game and back up saves.
+- Supply legitimate North American retail media mounted as a Windows drive plus
+  the full official `ds9dw1to4.exe` updater, or a supported verified original,
+  Modernizer or remaster installation. The updater is not included. Raw disc
+  images are not mounted by this installer; drive letters are not fixed.
+  [TrekCore's download archive](https://gaming.trekcore.com/dominionwars/downloads.html)
+  lists the full official v1.01-to-v1.04 patch; incremental/other-region patches
+  are not substitutes.
+- Use ordinary writable local folders. Cloud placeholders, junctions and reparse
+  paths may be refused. Allow several GB for game copies, staging and backups.
+- Make the intended display primary at desktop origin (0,0) before launching.
+  Actual 1080p and 1440p component tests cover one Windows 11 / RX 6800 XT computer
+  at 96 DPI. Final packaged manual acceptance was 1440p; other modes/hardware/DPI
+  remain unverified. The launcher does not change the desktop resolution.
 
-## Install and play
+## Install and launch
 
-1. Download **dominion-wars-remastered-1.10-alpha-int-20261029.1.zip** and extract it fully.
-   Do not run inside the ZIP or download GitHub's source archive as an installer.
-2. Close other Dominion Wars sessions. Run **Install Dominion Wars Remaster.cmd**.
-3. If your usual Modernizer installation is detected, choose whether to clone it or
-   use original media. With media, supply the official updater when requested and
-   complete its normal wizard. Drive letters are not fixed.
-4. Use a NEW destination. The default is `%LOCALAPPDATA%\Dominion Wars Remaster`.
-   Source files are verified and copied; the original installation is not modified.
-5. Wait for successful completion, then use the build-labelled **Dominion Wars
-   Remaster** desktop shortcut or **Play Dominion Wars Remaster.cmd** in the new game.
+1. Extract the entire player ZIP into a normal writable folder.
+2. Close other Dominion Wars sessions. Double-click **Install Dominion Wars Remaster.cmd**.
+3. Select a supported existing installation or original media. Supply the official
+   updater if prompted and complete its normal wizard.
+4. Choose a **NEW destination**; the default is
+   `%LOCALAPPDATA%\Dominion Wars Remaster`. If that already contains an experiment,
+   choose another folder rather than overwriting it.
+5. After successful verification, use the new build-labelled desktop shortcut or
+   **Play Dominion Wars Remaster.cmd** inside the installed game.
 
-Recognized `*.sav` files outside internal `.dw-*` folders are copied, not moved.
-Other mods and custom-file formats are not automatically imported. Unsupported
-versions, modified immutable input files and reparse-point sources are refused.
-Keep legitimate media available where the original game requires it.
+No PowerShell knowledge, Git, Python or encoder is needed to install and play.
+Original inputs are verified and copied, not modified. Recognized `*.sav` files
+outside internal `.dw-*` folders are copied, not moved. Other mods and custom
+formats are not silently imported. Unsupported inputs/modified immutable originals
+are refused. Keep legitimate media available where the original game requires it.
 
-The package installs restored opening/Main art and reconstructs three restored
-movies using original audio packets from your verified files. It does not require
-separate private artwork, an encoder or a developer toolchain. Recording is off.
+Nine authorized replacement visual payloads and three movie video deltas are
+included. Original compressed audio is reconstructed from verified local movies.
+The embedded Read Me's phrase "No game assets" means no complete original retail
+game assets; it must not be read as saying replacement visuals are absent.
 
-**In a mission, avoid Esc → Main Menu.** That path opens an unresponsive old menu
-in the top-left corner. Close and relaunch instead; save beforehand where possible.
-If the broken screen is already open, try Alt+F4 or end only the game's ds9dw.exe
-in Task Manager. Unsaved progress may be lost. Do not mix old/new EXEs or remove
-the HD safety configuration while keeping HD movies installed.
+A single size is selected at startup from the primary physical display. Do not
+resize, change display modes or hotplug monitors while playing. Pause before
+Alt-Tab. Do not mix this adaptive engine/wrapper/launcher/profile with 1.10's
+fixed-1440p files, or remove HD safety configuration while retaining HD movies.
+Multiplayer remains unsupported.
 
-## Verify, repair or return to the compatible original
+## Verify, repair or undo
 
-Run **Verify Dominion Wars Remaster.cmd** inside the installed game to verify it.
-Advanced package commands, run from the extracted package in Windows PowerShell:
+Use **Verify Dominion Wars Remaster.cmd** inside the installed game. Keep the
+extracted package. For Repair/Remove, open Windows PowerShell in its folder:
 
 ```powershell
-.\Remaster.ps1 -Action Repair -Destination 'D:\Games\Dominion Wars Remaster'
-.\Remaster.ps1 -Action Remove -Destination 'D:\Games\Dominion Wars Remaster'
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Remaster.ps1 -Action Repair -Destination 'D:\Games\Dominion Wars Remaster 1.15'
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Remaster.ps1 -Action Remove -Destination 'D:\Games\Dominion Wars Remaster 1.15'
 ```
 
-The example path is not required. Repair stages a verified replacement and retains
-the previous installation/saves. Remove rebuilds a compatible original without the
-remaster layer; launch that with **Play Dominion Wars.cmd**. It is not a recursive
-deletion of the game. The previous remaster and saves remain in a sibling backup.
-Only an owned, unchanged remaster shortcut is moved into that backup; modified
-shortcuts are preserved. Do not use standalone Modernizer repair/removal on remaster
-files. Avoid the advanced `Repair -NoDesktopShortcut` combination in this release.
+Replace the example destination with your actual installed folder. Repair stages a
+verified replacement and retains the previous installation/saves. Remove rebuilds
+a compatible original in that separate destination; use **Play Dominion Wars.cmd**
+afterward. The previous remaster/saves remain in a sibling backup. This is not a
+recursive deletion and does not delete your original game. Managed shortcut removal
+is ownership-checked; modified shortcuts are preserved. Use ordinary Repair;
+the earlier advanced `Repair -NoDesktopShortcut` ownership edge is not independently
+cleared by this release.
 
-Update by installing from the supported remaster source into a NEW destination,
-not by overwriting an existing experiment. Staging/backups are not automatically
-deleted. Failed/interrupted operations retain diagnostics and may require explicit
-journal recovery; see the [exact advanced procedure](../integration/docs/INSTALL.md).
+Update by installing from a supported source into a NEW destination. Backups and
+failed staging are retained, not automatically deleted. Use this package's lifecycle
+operations, not standalone Modernizer repair/removal on remaster files.
+See the [advanced recovery procedure](../integration/docs/INSTALL.md) if an
+interrupted operation needs its printed transaction journal.
 
-Session/focus logs: `.dw-remaster\runs` in the installed game. Startup/recovery
-diagnostics: `.dw-launcher`. Installer foundation logs are in the retained staging
-path printed by the operation. Review personal paths before sharing logs.
-The bounded renderer safety ledger is in
-`%LOCALAPPDATA%\Dominion Wars Remastered\Rendering`; it is not full gameplay recording.
+## Troubleshooting
+
+Session logs are in the installed `.dw-remaster\runs`; startup/recovery diagnostics
+in `.dw-launcher`; the bounded renderer ledger in
+`%LOCALAPPDATA%\Dominion Wars Remastered\Rendering`. Installer/staging/transaction
+paths are printed by the operation. Retain relevant errors; review personal paths
+and monitor identifiers before sharing logs.
+
+Unsigned scripts/legacy helpers may attract antivirus warnings. Do not disable
+Windows security as an installation step. Report version/build, Windows,
+GPU/driver, monitor layout/physical mode/DPI, disc edition and exactly where the
+failure occurred. See [testing](TESTING.md) and [known issues](KNOWN-ISSUES.md).

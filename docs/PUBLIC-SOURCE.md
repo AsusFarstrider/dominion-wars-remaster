@@ -1,3 +1,62 @@
+# Public source and the approved 1.15 ZIP
+
+Original tested runtime revision:
+`8a32bcc36117442fffda89cd42580382f3305216`.
+Public mapped counterpart:
+`aa8e82ebd511f19aa94e7a3fd7d5ccb48d49aa75`.
+Master's final metadata maps from `ba88c517c08578e6060e43f6803ebba3621d7db3`
+to `89495847bfde5af2dd9e90043c3fe83ef16a6c56`.
+
+The continuation retains prior public `f7bc25b` ancestry and all released tags.
+A complete private original-history bundle was verified first. Personal profile
+prefixes and unique monitor IDs in proof were masked; public metadata hash
+relationships were refreshed. Production wrapper/launcher/engine source and all
+approved player payloads remain unchanged. See
+[mapping](../release/int-20261030.1/SOURCE-MAP.json).
+
+Evidence collection helpers contain workspace-specific paths. Their public prefix
+substitutions preserve logic/suffixes; they are not a portable player prerequisite.
+Snapshot collector constants refer to original private collection-time proof.
+Do not weaken their checks to make redacted evidence pretend to be identical.
+Use the committed frozen intake for the supported package-build workflow.
+
+## Developer build
+
+Players need none of this; use [installation](INSTALL.md). Developers should use
+a **short checkout path** and Git long-path support because nested provenance
+filenames can exceed Windows' default limit:
+
+```powershell
+git -c core.longpaths=true clone https://github.com/AsusFarstrider/dominion-wars-remaster.git D:/src/dw-remaster
+```
+
+See [build prerequisites](../integration/docs/NATIVE-BUILD.md). Verify and extract
+the exact approved player ZIP. Use its unchanged original source lock to recover
+private asset inputs, then the public intake to build:
+
+```powershell
+New-Item -ItemType Directory -Path 'D:/Private/new-1.15-original-lock' -ErrorAction Stop
+Copy-Item -LiteralPath 'D:/Extracted-1.15/third_party/native-component-source-lock.json' -Destination 'D:/Private/new-1.15-original-lock/source-lock.json'
+python -B integration/tools/materialize_native_inputs.py --intake 'D:/Private/new-1.15-original-lock' --package 'D:/Extracted-1.15' --original-game 'D:/Owned/Verified-1.04' --output 'D:/Private/new-1.15-inputs'
+python -B integration/tools/build_native_remaster.py --intake 'integration/components/intake-adaptive-20261030.1' --decision 'versioning/decisions/version-review-20261030-1.15.json' --original-game 'D:/Owned/Verified-1.04' --asset-inputs 'D:/Private/new-1.15-inputs' --output 'D:/Private/new-1.15-build'
+```
+
+Paths are examples; output directories must be new and private, outside source.
+The original-lock helper intentionally refuses a mismatched public lock. Do not
+relax that check: package/private and redacted/public provenance are distinct.
+Use a clean committed checkout. Original files are read, not edited.
+
+An independent build from public metadata revision `8949584` passed and matched
+the approved game patch, media/art, wrapper, installer and launcher. Its identity,
+rendering-config version-hash binding, public lock, manifest and checksums differ.
+The exact approved ZIP retains original source/lock identity; do not claim a new
+build at redacted HEAD reproduces those provenance bytes. Byte-identical wrapper
+recompilation is not claimed; the reviewed binary and matching source are pinned.
+Never upload a private verification build in place of the approved download.
+
+---
+
+## Historical 1.10 source record
 # Public source and the approved 1.10 ZIP
 
 The player ZIP is the exact, tested original artifact from source

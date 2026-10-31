@@ -1,40 +1,56 @@
 # Help test Dominion Wars Remaster
 
-Follow [installation](INSTALL.md) using the named experimental player ZIP.
-A source download is not a
-substitute. Keep an original installation and copied saves separate from testing.
+Use the named **1.15 Alpha / int-20261030.1** player ZIP and the
+[installation guide](INSTALL.md), not GitHub's source download. Keep a working
+original and copied saves separate. Install each experiment into a new folder.
 
-Start with the first Federation mission:
+Start with a short single-player session:
 
-For **1.10 Alpha**, use a physical 2560×1440 primary monitor at origin (0,0).
-Do not test the known-broken **Esc → Main Menu** path: close/relaunch instead.
-The older int-20261018.1 package is a separate experiment, not a display fallback
-that can be overlaid onto 1.10. Keep installations separate.
+1. Check opening picture/audio, natural endings and skips, Main buttons and
+   **Remastered 1.15**. Distinguish naturally watched videos from skipped ones.
+2. Check Preferences and returning to Main.
+3. Try loading an existing save; also report fresh briefing/fleet/mission setup
+   separately if you test it.
+4. Check HUD/radar/selection, movement, zoom/camera, Space and control clicks.
+5. Check mission **Esc → Main Menu** and returning to Preferences. These paths
+   are repaired in 1.15, unlike 1.10; report any regression precisely.
+6. Pause before Alt-Tab and test your screenshot/focus workflow if desired.
+7. Report save/write/load and normal quit separately. A loaded existing save does
+   not establish a new-save roundtrip.
 
-1. Check restored openings (sound, natural endings and skips), Main button
-   idle/hover/click states, the Remastered 1.10 label, briefing, fleet and loading.
-2. Check ship selection, movement, rotation/zoom, Space, minimap and HUD clicks.
-3. Look for displaced controls, trails, missing art or wrongly stretched ships.
-4. Try your normal screenshot/focus-return workflow. Pause manually before leaving
-   if needed: automatic pause is not supported. Pausing can hide the ship.
-5. Save, load, resume control and quit normally. Check desktop and file recovery.
+These are requests for volunteer coverage, not statements that every path has
+already passed. Do not resize, switch resolution or hotplug a monitor while the
+game runs. Multiplayer is unsupported. Stop after corruption/repeated crashes;
+retain logs instead of mixing files or repeatedly modifying the installation.
+Don't run game tests from multiple development chats simultaneously.
 
-These are test requests, not claims every path works. Stop after corruption or
-repeated crashes; retain logs instead of repeatedly modifying the installation.
-Don't run tests from two development chats/installations simultaneously.
+## What is already known
 
-Report successes too, especially on new hardware. Include build ID/commit, Windows,
-CPU/GPU/driver, screen resolution, scaling, monitor arrangement/primary display,
-reproduction steps, expected/actual behavior and optional screenshots/logs. Say
-which steps you skipped. A successful launch is not a campaign-stability result.
-Never post original game files, credentials or unreviewed personal logs.
+One Windows 11 / AMD RX 6800 XT / three-monitor computer at 96 DPI has actual
+1920×1080 and 2560×1440 component evidence. The current packaged human test was
+1440p and passed opening/audio/version, Preferences, an existing-save mission,
+HUD/radar/selection/camera, paused Alt-Tab, Esc → Main Menu and normal quit.
+Game and launcher exited 0 with managed files verified. The automated UI attempt
+was incomplete; this is a **human manual pass**, not an agent gameplay pass.
 
-The earlier combined baseline recorded Windows 11 Home build 26300, RX 6800 XT
-driver 32.0.21045.5002, primary 2560×1440 at origin (0,0), with two 1080p secondary
-monitors. That's one computer, not three hardware tests. Modernizer's separate
-Windows 10/GTX 670 smoke does not validate this remaster.
-The 1.10 owner approval is also limited to that known machine; those earlier
-Windows/driver details are historical, not a newly remeasured 1.10 configuration.
+1080p evidence is inherited from byte-identical engine/provider/launcher/asset
+components, not a newly run final 1080p package. Fresh-media extraction, new-save
+writing and other focus cases have explicitly inherited coverage. No full campaign,
+fresh fleet run, new-save roundtrip or exhaustive screenshot/Win+D matrix is claimed.
 
-See [limitations](KNOWN-ISSUES.md) and the detailed
-[integration evidence scope](../integration/docs/TESTING.md).
+## Report success as well as failure
+
+Use [GitHub Issues](https://github.com/AsusFarstrider/dominion-wars-remaster/issues/new/choose).
+Include:
+
+- Build/version (1.15 Alpha / int-20261030.1), or commit if known.
+- Windows version/build, CPU, GPU and driver version.
+- Physical screen resolution, scaling/DPI, monitor layout and primary display.
+- Disc edition, exact steps, expected/actual result and what you skipped.
+- Screenshots/logs if available; executable hash if useful and easy to obtain.
+
+You don't need programming skills. A successful test on previously untested
+hardware is valuable. Review personal paths/device identifiers before sharing logs.
+Never upload original game files, private credentials or unreviewed saves.
+See [limitations](KNOWN-ISSUES.md); passing admission bounds does not establish
+support for 4K, other aspect ratios, high DPI or other GPU vendors.

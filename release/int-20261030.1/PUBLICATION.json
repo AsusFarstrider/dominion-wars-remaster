@@ -1,0 +1,121 @@
+{
+  "record_schema": 1,
+  "record_type": "verified_publication_receipt",
+  "repository": "https://github.com/AsusFarstrider/dominion-wars-remaster",
+  "release_url": "https://github.com/AsusFarstrider/dominion-wars-remaster/releases/tag/v1.15-alpha",
+  "tag": "v1.15-alpha",
+  "tag_target_documentation_commit": "51564474c9f36e9a6e7970c9dadfa990b99af6ca",
+  "published_at_utc": "2026-10-31T15:28:36Z",
+  "published_local_date": "2026-10-31",
+  "local_timezone": "America/New_York",
+  "is_draft": false,
+  "is_prerelease": true,
+  "integration_build_id": "int-20261030.1",
+  "remaster_version": "1.15",
+  "release_stage": "alpha",
+  "original_runtime_source_revision": "8a32bcc36117442fffda89cd42580382f3305216",
+  "public_mapped_runtime_source_revision": "aa8e82ebd511f19aa94e7a3fd7d5ccb48d49aa75",
+  "original_approval_metadata_revision": "ba88c517c08578e6060e43f6803ebba3621d7db3",
+  "public_mapped_approval_metadata_revision": "89495847bfde5af2dd9e90043c3fe83ef16a6c56",
+  "package": {
+    "name": "dominion-wars-remastered-1.15-alpha-int-20261030.1.zip",
+    "bytes": 182161058,
+    "sha256": "09b76f38aea263f13c9f596683968972a26f787b70ccc7b1ea9326f568eabd35",
+    "manifest_sha256": "9bbb5a7d32e78a66ceb6647bff6157820f2f2357c860727305aaf2591e94e9cf",
+    "identity_sha256": "a33d323d50d889ef96fbe55df6aa7f7b3da2af86255da89959328f3b124f777e",
+    "download_url": "https://github.com/AsusFarstrider/dominion-wars-remaster/releases/download/v1.15-alpha/dominion-wars-remastered-1.15-alpha-int-20261030.1.zip",
+    "uploaded_github_digest_matches": true,
+    "download_round_trip_matches": true,
+    "runtime_or_zip_changed_for_publication": false
+  },
+  "approval": "Direct human release/update authority and Master exact-hash approval confirmed in APPROVAL.json; public RELEASE-RECORD.json supplements embedded historical pending/candidate status.",
+  "current_human_acceptance": {
+    "result": "All checks passed; quit normally",
+    "clarification": "Tested mission using a save game file",
+    "acceptance_sha256": "274ecb4331ef2581b708b3947efd27a75018e4c665c7d29ff047fb53472aaae8",
+    "process_and_launcher_exit": 0,
+    "managed_files_verified": true,
+    "current_packaged_mode": "2560x1440/DPI96",
+    "agent_gameplay_pass_claimed": false
+  },
+  "validation_scope": {
+    "current": "Opening/audio/version, Preferences, existing-save mission HUD/radar/camera/selection, paused Alt-Tab, Esc Main return and normal quit",
+    "inherited_1080": "Actual1920x1080 matching-component acceptance, not a fresh final-package1080 run",
+    "inherited_other": "Fresh media/updater, save-writing and other focus cases attributed to unchanged components",
+    "not_claimed": [
+      "fresh fleet traversal",
+      "new-save roundtrip",
+      "full campaign",
+      "universal display/GPU/Windows support",
+      "new exhaustive Win+D/capture matrix"
+    ],
+    "unsupported": [
+      "multiplayer",
+      "live resize",
+      "hotplug"
+    ],
+    "required": "primary physical desktop origin0,0; one startup-selected size"
+  },
+  "master_automated_evidence": {
+    "python_integration": 19,
+    "python_policy": 19,
+    "winps_checks": 95,
+    "rebuilt_native_assertions": 2177,
+    "installer_lifecycle_checks": 29,
+    "independent_original_source_zip_byte_identical": true
+  },
+  "release_audit": {
+    "zip_members": 562,
+    "checksums_verified": 561,
+    "manifest_files_verified": 560,
+    "crc_pass": true,
+    "source_blobs_scanned_through_tag": 991,
+    "credential_pattern_matches": 0,
+    "personal_profile_pattern_matches": 0,
+    "restricted_game_media_paths": 0,
+    "audio_packets_source_copy_only": [
+      225,
+      601,
+      281
+    ],
+    "audio_headers_source_copy_only": true,
+    "literal_original_audio_bytes": 0,
+    "authorized_visual_payloads": 9,
+    "relative_document_links_resolve": true
+  },
+  "source_privacy": {
+    "complete_private_history_backup_verified": true,
+    "backup_sha256": "c16a68e667b9f9dd017a53c21c6075405a3be9decc26f8f936eb5dc3db4a4071",
+    "public_parent": "f7bc25b1a8965435d45fdfe825a372131436c252",
+    "redacted_or_rehashed_proof_metadata_paths": 31,
+    "unique_monitor_identities_aliased": 2,
+    "evidence_helper_path_prefixes_only": true,
+    "production_code_and_binaries_unchanged": true,
+    "public_lock_files_verified": 1777,
+    "master_worktrees_unchanged": true,
+    "source_mapping": "SOURCE-MAP.json",
+    "published_refs": "reviewed public master and v1.15-alpha only; private refs excluded"
+  },
+  "public_source_reproduction": {
+    "build_pass": true,
+    "verified_revision": "89495847bfde5af2dd9e90043c3fe83ef16a6c56",
+    "game_patch_media_art_wrapper_installer_launcher_match": true,
+    "differences": "identity, rendering-config version-hash binding, public metadata lock, manifest/checksums only",
+    "private_verification_zip_not_published": true,
+    "bit_identical_original_zip_from_redacted_head_claimed": false
+  },
+  "licensing": "MIT limited to newly authored project code/docs; third-party licenses retained; creator authorized replacement visuals for project distribution, not blanket MIT or transfer of original game/trademark/audio/codec rights",
+  "excluded": [
+    "original complete retail game executable/archive/media/updater",
+    "original soundtrack/decoder",
+    "encoder/SDK tools",
+    "unintegrated asset experiments",
+    "raw private proof/monitor identifiers/logs/backups/application refs",
+    "private verification ZIP"
+  ],
+  "prior_releases_unchanged": [
+    "v1.10-alpha",
+    "int-20261018.1"
+  ],
+  "prior_1_10_zip_digest_verified": "fdd3f3ee6bc619bcc841324ec7d3841fc6188379904301590293714de4a007ee"
+}

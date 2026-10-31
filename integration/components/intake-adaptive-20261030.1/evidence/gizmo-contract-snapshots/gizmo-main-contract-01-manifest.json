@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-27",
+  "disposition": "bounded_Gizmo_startup_profile_and_Main_foreground_coverage_design",
+  "files": [
+    {
+      "path": "E:\\Codex\\research\\quantum-engine-kb\\scripts\\audit_gizmo_main_contract.py",
+      "sha256": "9112f147160a446519e34986d22c91298917d4df89d2af152ffce0723992f69c"
+    },
+    {
+      "path": "E:\\Codex\\research\\quantum-engine-kb\\docs\\GIZMO-AND-MAIN-NATIVE-CONTRACT-01.md",
+      "sha256": "6af77aebed10713fadfb121cae766b6b60226fc99362775fca99730a4c1505df"
+    },
+    {
+      "path": "E:\\Codex\\research\\quantum-engine-kb\\evidence\\gizmo-main-contract-01\\audit.json",
+      "sha256": "064cad933998bfd374dc2dfb3293cb5283c03d593cfeee2b68694c73950b8ea9"
+    },
+    {
+      "path": "E:\\Codex\\research\\quantum-engine-kb\\evidence\\gizmo-main-contract-01\\gizmo-offline-history-receipt.json",
+      "sha256": "5696142c35f99a8b2c9cf9b9651a4015d79720319ded1b6c58691c7ad21d42d5"
+    }
+  ]
+}

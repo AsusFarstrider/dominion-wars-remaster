@@ -1,0 +1,3968 @@
+{
+  "assets": [
+    {
+      "input": "movies/Paramount.bik",
+      "kind": "bink-delta",
+      "sha256": "5a3506e3f48190073591c1349f4e35dbfe8dde9d2ded19364fa865817deecff3",
+      "size": 62576052,
+      "target": "rs/Video/Paramount.bik"
+    },
+    {
+      "input": "movies/GizmoLogo.bik",
+      "kind": "bink-delta",
+      "sha256": "b506781006eddd97fe6f86108d67259639f8044cbd5bcf71fcd0734a14013688",
+      "size": 73633988,
+      "target": "rs/Video/GizmoLogo.bik"
+    },
+    {
+      "input": "movies/SSLogo1.bik",
+      "kind": "bink-delta",
+      "sha256": "910eb6d55755c72c67a557138634fc344fff25560cba7e267899ed9a9904bc50",
+      "size": 38982612,
+      "target": "rs/Video/SSLogo1.bik"
+    },
+    {
+      "input": "art/title.dwcard",
+      "kind": "runtime",
+      "sha256": "3818d7e2a72b634585edfb4134fe64869fce6d7d26757f8e255e24ce79b816bf",
+      "size": 7372816,
+      "target": "rs/Remaster/OpeningCards/title.dwcard"
+    },
+    {
+      "input": "art/publisher.dwcard",
+      "kind": "runtime",
+      "sha256": "4b89bd1608a09db212401246b91584fb398275599e91b1c7c575f2e9d31055c5",
+      "size": 7372816,
+      "target": "rs/Remaster/OpeningCards/publisher.dwcard"
+    },
+    {
+      "input": "art/main.dwcard",
+      "kind": "runtime",
+      "sha256": "94a131d5b71bec90e3d747a6475c18ece4ad6efdc98b5310b9daa74c7d3c0bcd",
+      "size": 7372816,
+      "target": "rs/Remaster/OpeningCards/main.dwcard"
+    },
+    {
+      "input": "art/new_game.dwbank",
+      "kind": "runtime",
+      "sha256": "aa75785a8e503cf1d1bbe2dcb757f071149507840ac0a6801dc1ca86c4d50a83",
+      "size": 40320160,
+      "target": "rs/Remaster/MainButtons/new_game.dwbank"
+    },
+    {
+      "input": "art/load_game.dwbank",
+      "kind": "runtime",
+      "sha256": "7c23f348098db88db9b5307b12b14ee9a82cf4e04a595c268b2b2a8ab07d9001",
+      "size": 40320160,
+      "target": "rs/Remaster/MainButtons/load_game.dwbank"
+    },
+    {
+      "input": "art/multiplayer.dwbank",
+      "kind": "runtime",
+      "sha256": "2814a429864fcbd77788e5ce4a6332bb6a549b16d83f0e056245942227ef8b04",
+      "size": 40320160,
+      "target": "rs/Remaster/MainButtons/multiplayer.dwbank"
+    },
+    {
+      "input": "art/preferences.dwbank",
+      "kind": "runtime",
+      "sha256": "d0f3c2747b916c9c1f6ca955a391fd2ddb51f95029a9b8d40a0d8faa1eb9834b",
+      "size": 40320160,
+      "target": "rs/Remaster/MainButtons/preferences.dwbank"
+    },
+    {
+      "input": "art/credits.dwbank",
+      "kind": "runtime",
+      "sha256": "f62e8d6c060b6ab645b1af130ea0db8ff1d2a56c3c7b4e92f24568c98a970d5f",
+      "size": 40320160,
+      "target": "rs/Remaster/MainButtons/credits.dwbank"
+    },
+    {
+      "input": "art/quit.dwbank",
+      "kind": "runtime",
+      "sha256": "ca5575fa6534a6772b053bedcee15881b8daf50de43d6ba010f1316bff002bf5",
+      "size": 40320160,
+      "target": "rs/Remaster/MainButtons/quit.dwbank"
+    }
+  ],
+  "component_sha256": "73e14ef28202e5b079e84f260594c31945e569c1849ddb8e9d009a83794fba58",
+  "engine_dimensions": [
+    800,
+    600
+  ],
+  "files": [
+    {
+      "path": "build_engine.py",
+      "sha256": "d0c6b3275e877580d62ae402248544f3022848a69553392d0c1465cf6c5e5576",
+      "size": 6799
+    },
+    {
+      "path": "ddraw.dll",
+      "sha256": "7694f070e24b4e1f80b27356a1087c056c04d519a63bab54b12f19e17f72b720",
+      "size": 7049216
+    },
+    {
+      "path": "evidence/adaptive-contract-snapshots/DYNAMIC-OUTPUT-SOURCE-REVIEW-01.md",
+      "sha256": "ee68397ce3c3cfd96f21d6855f76867c355abd31f276e863553096922701f1e7",
+      "size": 6647
+    },
+    {
+      "path": "evidence/adaptive-contract-snapshots/LAUNCH-DIMENSION-BINDING-REVIEW-01.md",
+      "sha256": "6a3d230a389d2d7e46df9f97d7fa1a8883f0fb4756a94c0121397d2cce92a686",
+      "size": 9111
+    },
+    {
+      "path": "evidence/adaptive-contract-snapshots/RUNTIME-OUTPUT-GENERALIZATION-10.md",
+      "sha256": "8359d969c0ad5b428021b84849b9271e48e23a2917513825dd41a516a22faa71",
+      "size": 10555
+    },
+    {
+      "path": "evidence/adaptive-validation/EscMenuTests/obj/EscMenuTests.Build.CppClean.log",
+      "sha256": "178f34f0cedd6105121c6cf435c884e64f32eeebbe9a20939b6adb949626fa86",
+      "size": 140
+    },
+    {
+      "path": "evidence/adaptive-validation/EscMenuTests-build.log",
+      "sha256": "babd8cb83778a7d99c1786af508fb4862de5cb26f2d2232a2c8e112110e94686",
+      "size": 163
+    },
+    {
+      "path": "evidence/adaptive-validation/EscMenuTests.log",
+      "sha256": "5ec262704aa8fd6db8cc7976812fb9d6baa9dc0a986b4a82df8299392afd6296",
+      "size": 90
+    },
+    {
+      "path": "evidence/adaptive-validation/HudAssemblyTests/obj/HudAssemblyTests.Build.CppClean.log",
+      "sha256": "72c5c2ac8e6c567da6832fe1f96b64440491cbe1463ad31b277b90dd12fe22ea",
+      "size": 148
+    },
+    {
+      "path": "evidence/adaptive-validation/HudAssemblyTests-build.log",
+      "sha256": "f3d097b2eb0fac17acd1995b8071c52f645863ba3ec2701485236de6582a4ac0",
+      "size": 179
+    },
+    {
+      "path": "evidence/adaptive-validation/HudAssemblyTests.log",
+      "sha256": "6fa2c1c5623ee0af7f78ffab5f01421f12d170a642038130db5a01fabad2dc19",
+      "size": 95
+    },
+    {
+      "path": "evidence/adaptive-validation/launcher-powershell.log",
+      "sha256": "b24e8201839b2aca50d3ecb7ef281e25eb1b6892d31518fcbbb66ad745261570",
+      "size": 90
+    },
+    {
+      "path": "evidence/adaptive-validation/launcher-python.log",
+      "sha256": "d17dc850eef8cd6b19380fb66885b46160efbf0a34369a7e36f7bda10bcbeef7",
+      "size": 881
+    },
+    {
+      "path": "evidence/adaptive-validation/OpeningControllerTests/obj/OpeningControllerTests.Build.CppClean.log",
+      "sha256": "86bc987e50a8bb11e2fa4b3f76b561e715f329499c66d062d8b3dc977901d2b9",
+      "size": 160
+    },
+    {
+      "path": "evidence/adaptive-validation/OpeningControllerTests-build.log",
+      "sha256": "2ab8f53a337748752a14cbb6d9594e9c07bc62c9368916c4fe20a5c29a380afc",
+      "size": 203
+    },
+    {
+      "path": "evidence/adaptive-validation/OpeningControllerTests.log",
+      "sha256": "749a965217ad3e27c35aa1a7220b213fb66a808dca9f4b04807aaf61d112667d",
+      "size": 69
+    },
+    {
+      "path": "evidence/adaptive-validation/OutputModeTests/obj/OutputModeTests.Build.CppClean.log",
+      "sha256": "91d87c0569c58fabb0c940f4b09861d0c73eff1447b68c8f1bb289f46e44716b",
+      "size": 146
+    },
+    {
+      "path": "evidence/adaptive-validation/OutputModeTests-build.log",
+      "sha256": "149f8b2f0a9aed30395101744fdb867afd4b4e4afd80f10d7c2e82ba30c1aea0",
+      "size": 175
+    },
+    {
+      "path": "evidence/adaptive-validation/OutputModeTests.log",
+      "sha256": "e673053f309819fea8d970b9383b2f6bd7b5e6cf668d61d3fa098bf596e855c2",
+      "size": 120
+    },
+    {
+      "path": "evidence/adaptive-validation/results.json",
+      "sha256": "723b3d8467cdae08ce957e7f63762de74b9ad85d43c9415bc3e37d56dc36beb9",
+      "size": 2476
+    },
+    {
+      "path": "evidence/adaptive-validation/RuntimePolicyTests/obj/RuntimePolicyTests.Build.CppClean.log",
+      "sha256": "7b0156968ed673b186681d8fbe267d58cbe47e538f8851a6a14cd47a3035541d",
+      "size": 152
+    },
+    {
+      "path": "evidence/adaptive-validation/RuntimePolicyTests-build.log",
+      "sha256": "e98ce8aae7e870548069d96c013fe5e7e8cecd37bb2f72c95705d08af268d230",
+      "size": 187
+    },
+    {
+      "path": "evidence/adaptive-validation/RuntimePolicyTests.log",
+      "sha256": "f51ed767bbd84ea93cee47b468d22778370b33abafe7ed1a31c1615cbd54e34b",
+      "size": 84
+    },
+    {
+      "path": "evidence/adaptive-validation/wrapper-clean-build.log",
+      "sha256": "30697fd7d19e3839774952b66984d4ccf1de2b857f5e65c78b3419e471ad6e12",
+      "size": 7042
+    },
+    {
+      "path": "evidence/adaptive-validation-sources/AdaptiveCases.h",
+      "sha256": "0c48edce310b7c380d5429f0c35e85a3f7735e79650eddb4bb5aee9cec20e70c",
+      "size": 2632
+    },
+    {
+      "path": "evidence/adaptive-validation-sources/fixture-provenance.json",
+      "sha256": "1e6b9f79c2d7819688031542659c9f61ae27068297af0d7e786b2d33d6b12344",
+      "size": 564
+    },
+    {
+      "path": "evidence/adaptive-validation-sources/FixtureSites.h",
+      "sha256": "36727e96a2867f6fa0cbc31b995370022086663f473c1dbf59e5f9627adde05d",
+      "size": 1680
+    },
+    {
+      "path": "evidence/adaptive-validation-sources/freeze.py",
+      "sha256": "f16a32c0ba51be6bd88309c72896d74bddfb4aeedcf62a380147a9a3cd4d17c1",
+      "size": 4642
+    },
+    {
+      "path": "evidence/adaptive-validation-sources/opening-tests/AdaptiveCases.h",
+      "sha256": "0c48edce310b7c380d5429f0c35e85a3f7735e79650eddb4bb5aee9cec20e70c",
+      "size": 2632
+    },
+    {
+      "path": "evidence/adaptive-validation-sources/opening-tests/BackdropCases.h",
+      "sha256": "bf9089a3987a1fca8794407bf895d64508ccbd29b8c4e92044ec3da7a097d9a3",
+      "size": 8776
+    },
+    {
+      "path": "evidence/adaptive-validation-sources/opening-tests/CardCases.h",
+      "sha256": "e4481d116ddba1b05d5e011e0c029b9ff979dc7dba5e4e63538fc01f020374be",
+      "size": 4882
+    },
+    {
+      "path": "evidence/adaptive-validation-sources/opening-tests/HdCases.h",
+      "sha256": "27d44f48f6bab7f5a75fa2e7c149cd479ed07d36f2cf221ceaaee2a62db4ce6d",
+      "size": 9226
+    },
+    {
+      "path": "evidence/adaptive-validation-sources/opening-tests/NativeButtonCases.h",
+      "sha256": "9f0616071d01fd25efd14a6b02b804dcbe0ed3b109e652eff222b04b2a5d5a90",
+      "size": 4627
+    },
+    {
+      "path": "evidence/adaptive-validation-sources/opening-tests/OpeningControllerTests.cpp",
+      "sha256": "1dc47348666c8d27e25d2a59b8d2d50369280ad769ff1d0cc20b624fbcaebbd1",
+      "size": 20195
+    },
+    {
+      "path": "evidence/adaptive-validation-sources/opening-tests/OpeningControllerTests.vcxproj",
+      "sha256": "6d1966cb16e2047a33696d74e342123394f6fa48cb2861bf4d5181a39735863c",
+      "size": 1754
+    },
+    {
+      "path": "evidence/adaptive-validation-sources/opening-tests/RuntimeTestMemory.h",
+      "sha256": "b2d53d696a912d32f5c30547127dacd86b526776f6106b6475682f35762e7dbd",
+      "size": 186
+    },
+    {
+      "path": "evidence/adaptive-validation-sources/opening-tests/SsCases.h",
+      "sha256": "0dfcf8bf29f6dd1b2de26265e8fed05685f281974f57ffc6914ce818df7e6629",
+      "size": 1867
+    },
+    {
+      "path": "evidence/adaptive-validation-sources/OutputModeFixture.cpp",
+      "sha256": "213a4297e9b3219c3ef16bf02e7729c462f1f647bcee0e888cbf1510d2531b10",
+      "size": 8073
+    },
+    {
+      "path": "evidence/adaptive-validation-sources/OutputModeTests.cpp",
+      "sha256": "8f30191dbe40d6afba49c7e961d9ce030b657cbfdefa337f0ee6eb63115fe8fc",
+      "size": 7462
+    },
+    {
+      "path": "evidence/adaptive-validation-sources/OutputModeTests.vcxproj",
+      "sha256": "beac91fc180fe17b6454afbc34f347c2d253cf94eaefe85c20627afc7caae5b5",
+      "size": 1751
+    },
+    {
+      "path": "evidence/adaptive-validation-sources/policy-tests/RuntimePolicyTests.cpp",
+      "sha256": "6e2da92e54c60e3ddb5b0784491d77b6241fc0407baac7177d7d520604e0280d",
+      "size": 11107
+    },
+    {
+      "path": "evidence/adaptive-validation-sources/policy-tests/RuntimePolicyTests.vcxproj",
+      "sha256": "05557f75e90d628d5a0cafe1d750fce3c470d4c51df602652d229b5243fca456",
+      "size": 1636
+    },
+    {
+      "path": "evidence/adaptive-validation-sources/Prepare-Trial.ps1",
+      "sha256": "2ccccc76ae5aa84d2c1cfa60318ed94c689a48326c0ca08be8fb4b146d65b0ba",
+      "size": 4789
+    },
+    {
+      "path": "evidence/adaptive-validation-sources/prepare.py",
+      "sha256": "6e8f42ec211a2fa070c2fbc08c4531f127d44a691b07ec038a61f1c380f4297b",
+      "size": 755
+    },
+    {
+      "path": "evidence/adaptive-validation-sources/prepare_fixture.py",
+      "sha256": "590f9d52aa2f9e7a49357ae6e48d8d9ed5e5754bb6e13222f4d32e4f4e4b9408",
+      "size": 1444
+    },
+    {
+      "path": "evidence/adaptive-validation-sources/prepare_opening_tests.py",
+      "sha256": "aa1854e9372b130ecdebc01a437a35a81e33bef6078f01472d3e9ff5826dfe4c",
+      "size": 575
+    },
+    {
+      "path": "evidence/adaptive-validation-sources/validate.py",
+      "sha256": "6156d64c52ce769467e77ed2375a328d7c2d3d56b1ee8591a0d0d239cef507fd",
+      "size": 4319
+    },
+    {
+      "path": "evidence/assembly-contract-snapshots/bottom-hud-contract-01-manifest.json",
+      "sha256": "e96b55af46718fde2fded2615a4b6d8891bcc160971867311b8fd2f0f36d9006",
+      "size": 2629
+    },
+    {
+      "path": "evidence/assembly-contract-snapshots/BOTTOM-HUD-IMPLEMENTATION-CONTRACT-01.md",
+      "sha256": "44e25363eb4f707d8d199c8258655083f8c4b883cf1d9f186a0163700839fd5e",
+      "size": 10261
+    },
+    {
+      "path": "evidence/assembly-contract-snapshots/hud-assembly-hook-sites-01.json",
+      "sha256": "c3e98442d60795abdb0878fc48cfbbc43391d1fd3c754a943fa2de324ebd5974",
+      "size": 5469
+    },
+    {
+      "path": "evidence/assembly-contract-snapshots/hud-assembly-inventory-01.json",
+      "sha256": "657064ad3005d8bb1ed9c046a08c34c7f55745e373dd46e9000bac272bc6d6ba",
+      "size": 3891
+    },
+    {
+      "path": "evidence/assembly-contract-snapshots/original-windows.json",
+      "sha256": "cb7ede853e1482271647cc0ad313aec65317ac576de6f539ec4af5420f2f11c4",
+      "size": 848541
+    },
+    {
+      "path": "evidence/assembly-contract-snapshots/SHARED-HUD-LAYOUT-INTERFACE-06.md",
+      "sha256": "db1de1c2073007579de83fa5c864f74faac49e8dc8cf33a35be47568f21d7ac7",
+      "size": 13691
+    },
+    {
+      "path": "evidence/assembly-validation-sources/freeze_source.py",
+      "sha256": "1d360673e3b587d4709dccc3ded1733ed168bbf4f09f6fba0f7e99282b99cc3f",
+      "size": 5297
+    },
+    {
+      "path": "evidence/assembly-validation-sources/generate_sites.py",
+      "sha256": "e7d5de70527d52751dc748441a8ec492bbecb0c5e35efa7458cb01bd93d1588b",
+      "size": 2217
+    },
+    {
+      "path": "evidence/assembly-validation-sources/HudAssemblyTests.cpp",
+      "sha256": "04c1fe756d048e261276bd80cf8600210b7711b410f6719e9dab2af6d96e2ae3",
+      "size": 15005
+    },
+    {
+      "path": "evidence/assembly-validation-sources/HudAssemblyTests.vcxproj",
+      "sha256": "6c5812ace353e2cfed0cbd97f4778c0a42f518599d2b1b6ba312246eba36fb48",
+      "size": 1686
+    },
+    {
+      "path": "evidence/assembly-validation-sources/prepare_work.py",
+      "sha256": "2d125ef9c81d9cf48939ef9e247852e07c29ceacb1800f859f3d22f4fdb1d35a",
+      "size": 947
+    },
+    {
+      "path": "evidence/assembly-validation-sources/RuntimeTestMemory.h",
+      "sha256": "b2d53d696a912d32f5c30547127dacd86b526776f6106b6475682f35762e7dbd",
+      "size": 186
+    },
+    {
+      "path": "evidence/captain-contract-snapshots/CAPTAIN-GROUP-ENGINE-HANDOFF-01.md",
+      "sha256": "5896620448bd1f54f6886a079bf8620e29bd7e6e02c068e26c479a98d260a097",
+      "size": 7381
+    },
+    {
+      "path": "evidence/captain-contract-snapshots/HUD-ESCAPE-AND-STRIP-HANDOFF-01.md",
+      "sha256": "e8b67c1e5ea5ab5c71b00c1c8010f6bb2013521dcaac3bf17157ead3965664e7",
+      "size": 5310
+    },
+    {
+      "path": "evidence/captain-contract-snapshots/PRE-HUD-ARCHITECTURE-REASSESSMENT-01.md",
+      "sha256": "5b98d0cae912c826fec17e1611bc30c6cc011f1bcc1efc2bb97f776c9dcb8b28",
+      "size": 10335
+    },
+    {
+      "path": "evidence/captain-validation-sources/audit_run.py",
+      "sha256": "6c78b1a8ce8c7382fd05fda97f6c11751b2c1a1d796441e6217578fba10652fe",
+      "size": 3612
+    },
+    {
+      "path": "evidence/captain-validation-sources/finalize_run.py",
+      "sha256": "d845cc82024f421057ed3175f8d408f5b84b335948a2df56344a6a4f0dc56bd4",
+      "size": 1744
+    },
+    {
+      "path": "evidence/captain-validation-sources/freeze_retry.py",
+      "sha256": "8d010a9432ab50a08a5b52ac5af3809889d6cc3b47a7858829fe58afdb930239",
+      "size": 4158
+    },
+    {
+      "path": "evidence/captain-validation-sources/freeze_source.py",
+      "sha256": "9db52276c1403e3c12fb4a46b8155e349a570ea7f6c800585d4a989c5a009690",
+      "size": 4733
+    },
+    {
+      "path": "evidence/captain-validation-sources/HudCaptainTests.cpp",
+      "sha256": "7f72bd0db3be7bf59dc32147eb235c7cfdd838be6345f0675ca52a3d5234b14f",
+      "size": 12858
+    },
+    {
+      "path": "evidence/captain-validation-sources/HudCaptainTests.vcxproj",
+      "sha256": "c54369d104183403acf6b02a5a8ecc2b673ab4020b021049d2ebca23a249a253",
+      "size": 1684
+    },
+    {
+      "path": "evidence/captain-validation-sources/Launch-HudCaptains.ps1",
+      "sha256": "0afe55b38e5cee49e2ccf4716874b3fa8867d18e7743cbbb36814d6ee6e4289a",
+      "size": 880
+    },
+    {
+      "path": "evidence/captain-validation-sources/prepare_retry.py",
+      "sha256": "7811c1a8d8fb50783d3ea9cf9790941865d3a637b4abae925c3597b28d346e85",
+      "size": 967
+    },
+    {
+      "path": "evidence/captain-validation-sources/prepare_work.py",
+      "sha256": "edf1fd616898bebfb272d8638b647ffa218b746f121f19c4167c64327913bbb4",
+      "size": 988
+    },
+    {
+      "path": "evidence/captain-validation-sources/RuntimeTestMemory.h",
+      "sha256": "b2d53d696a912d32f5c30547127dacd86b526776f6106b6475682f35762e7dbd",
+      "size": 186
+    },
+    {
+      "path": "evidence/card-contract-snapshots/assets.json",
+      "sha256": "8a5ab014559565aa137f695f544a79050023ff5b008336e42eca063b65d224d5",
+      "size": 3041
+    },
+    {
+      "path": "evidence/card-contract-snapshots/inventory.json",
+      "sha256": "9b1d3b92b96d436709454edd41a3a516fd8262eeb64d68b0c91d9cd516a83589",
+      "size": 8795
+    },
+    {
+      "path": "evidence/card-contract-snapshots/opening-card-contract-01-manifest.json",
+      "sha256": "06ff99332584ed6bd2e26aa7c8b22c49d975f4be8b607838e8ea99a7cf668e74",
+      "size": 1148
+    },
+    {
+      "path": "evidence/card-contract-snapshots/OPENING-CARD-REPLACEMENT-CONTRACT-01.md",
+      "sha256": "29a5c66ccb07981a5e969e5eb337da1ee20b184bb30304ad22e2840b61e59c82",
+      "size": 5769
+    },
+    {
+      "path": "evidence/card-validation-sources/CardCases.h",
+      "sha256": "e4481d116ddba1b05d5e011e0c029b9ff979dc7dba5e4e63538fc01f020374be",
+      "size": 4882
+    },
+    {
+      "path": "evidence/card-validation-sources/freeze_validate.py",
+      "sha256": "21d46b20c9e88f1912e7b1fff57c5be13fda77916d8d82a3d95f88d43321138f",
+      "size": 6184
+    },
+    {
+      "path": "evidence/card-validation-sources/HdCases.h",
+      "sha256": "27d44f48f6bab7f5a75fa2e7c149cd479ed07d36f2cf221ceaaee2a62db4ce6d",
+      "size": 9226
+    },
+    {
+      "path": "evidence/card-validation-sources/implement.py",
+      "sha256": "b41055a90abdf047e403ba45c0ccbc44ba4e89b9fb8f19a1caac9ec7f1a3034a",
+      "size": 6382
+    },
+    {
+      "path": "evidence/card-validation-sources/OpeningControllerTests.cpp",
+      "sha256": "7869d8e27917a1e63646fff8b2fd2cc3cf010e33ee490257ee0e347b4166fcc3",
+      "size": 19668
+    },
+    {
+      "path": "evidence/card-validation-sources/OpeningControllerTests.vcxproj",
+      "sha256": "6d1966cb16e2047a33696d74e342123394f6fa48cb2861bf4d5181a39735863c",
+      "size": 1754
+    },
+    {
+      "path": "evidence/card-validation-sources/prepare_art.py",
+      "sha256": "7a1da66fd00c9eb8c6da08482b19ca678d4d1a9fc56995a40b1331dd549f61ca",
+      "size": 2741
+    },
+    {
+      "path": "evidence/card-validation-sources/prepare_work.py",
+      "sha256": "ca9b3dab1d0151ddb06db32664f90e5d012a4539bff2ade9714d98158bfd7b45",
+      "size": 801
+    },
+    {
+      "path": "evidence/card-validation-sources/RuntimeTestMemory.h",
+      "sha256": "b2d53d696a912d32f5c30547127dacd86b526776f6106b6475682f35762e7dbd",
+      "size": 186
+    },
+    {
+      "path": "evidence/esc-menu-contract-snapshots/audit.json",
+      "sha256": "1b665f81904c16f9cb7382e16890905d05ea96029e8fd172a4aedd365f2de7db",
+      "size": 1337
+    },
+    {
+      "path": "evidence/esc-menu-contract-snapshots/ESC-MAIN-REENTRY-CONTRACT-01.md",
+      "sha256": "a8976ac5611b7f36daeee496b8de0583c614316d7cfe73431b6962c07f39ff30",
+      "size": 5771
+    },
+    {
+      "path": "evidence/esc-menu-validation-sources/audit_state.py",
+      "sha256": "d7b11057394f8db3dc5a18004b70a5ac517775d4dfb140155464da3d1ff64c44",
+      "size": 2754
+    },
+    {
+      "path": "evidence/esc-menu-validation-sources/freeze.py",
+      "sha256": "59f4f9b4b9ed457e29224392f870b4b47361818f5c6237f837a74ac4f627f0dd",
+      "size": 5368
+    },
+    {
+      "path": "evidence/esc-menu-validation-sources/Launch-Reproduction.ps1",
+      "sha256": "fda8d4f34707a9669c4dcf3e2e0418bcf2886dbed5ca0d2d1cac3830f9a62a12",
+      "size": 793
+    },
+    {
+      "path": "evidence/esc-menu-validation-sources/prepare.py",
+      "sha256": "94edaabe381a87ab798e9cee2a480b40d30d06f9e65f6fe856a26710c6ad1322",
+      "size": 1017
+    },
+    {
+      "path": "evidence/esc-menu-validation-sources/prepare_tests.py",
+      "sha256": "d4ec754563cc5ea5bf0ccef5daf6d48051697983a178f970c78a1a5a9349d070",
+      "size": 4289
+    },
+    {
+      "path": "evidence/esc-menu-validation-sources/sample_state.py",
+      "sha256": "7436703a2d69089c68ed259941efdffde6e3ba92db0b82ff2c8c736d06b8105c",
+      "size": 4565
+    },
+    {
+      "path": "evidence/esc-menu-validation-sources/tests/EscMenuTests.cpp",
+      "sha256": "9dd45f2a7278e201fff30c519add2e9d20b5fb3f63b3f9a3f01bfba4acd3f33a",
+      "size": 36697
+    },
+    {
+      "path": "evidence/esc-menu-validation-sources/tests/EscMenuTests.vcxproj",
+      "sha256": "c34b91b1bc3a41c72ad3ba6cb6fd947cb19c4d12c2f467e83b9bba52fbeeec44",
+      "size": 1686
+    },
+    {
+      "path": "evidence/esc-menu-validation-sources/tests/RuntimeTestMemory.h",
+      "sha256": "637b5427b7b8c12a5cb93f31038ea6162091528f360423221bcb220dd1964490",
+      "size": 362
+    },
+    {
+      "path": "evidence/esc-perf-contract-snapshots/ESC-MAIN-CHILD-SOURCE-REVIEW-03.md",
+      "sha256": "cde088b006fcefc663158ca6d7ca42662731a313f904c0bb449cb2727f03e44f",
+      "size": 3237
+    },
+    {
+      "path": "evidence/esc-perf-contract-snapshots/ORDERED-PAINT-AXIS-CACHE-REVIEW-01.md",
+      "sha256": "1e5e0f930960213e9cd8a36a62200fb0878bfdb02d0278a2f7a3eca9a6ce4789",
+      "size": 3384
+    },
+    {
+      "path": "evidence/esc-perf-validation-sources/audit_state.py",
+      "sha256": "d7b11057394f8db3dc5a18004b70a5ac517775d4dfb140155464da3d1ff64c44",
+      "size": 2754
+    },
+    {
+      "path": "evidence/esc-perf-validation-sources/freeze.py",
+      "sha256": "59f4f9b4b9ed457e29224392f870b4b47361818f5c6237f837a74ac4f627f0dd",
+      "size": 5368
+    },
+    {
+      "path": "evidence/esc-perf-validation-sources/freeze_perf.py",
+      "sha256": "6ae47e5514680f3a4699b867056218f60541d6f415a591b8fa826d81272780b2",
+      "size": 5650
+    },
+    {
+      "path": "evidence/esc-perf-validation-sources/Launch-Reproduction.ps1",
+      "sha256": "79e7882abe979e532c08ae17876cc752b8ab939fd13c74be1811a377032727f6",
+      "size": 852
+    },
+    {
+      "path": "evidence/esc-perf-validation-sources/OrderedMapTests.cpp",
+      "sha256": "04b8fbc549a4ffbdc294192cf09a689324fd62d65aef05add7b550ab4e86143c",
+      "size": 4016
+    },
+    {
+      "path": "evidence/esc-perf-validation-sources/OrderedMapTests.vcxproj",
+      "sha256": "32bc01826e4b856b1dedd219e357f3702bfdb0ff0fa2cecb04ff7af6906dff9a",
+      "size": 1670
+    },
+    {
+      "path": "evidence/esc-perf-validation-sources/OrderedPerf.cpp",
+      "sha256": "e0a637d1b00e7ffbdd339a53dda75e6f8064ef76dfe88a19c05864d5245db6f3",
+      "size": 1291
+    },
+    {
+      "path": "evidence/esc-perf-validation-sources/OrderedPerf.vcxproj",
+      "sha256": "7550ef8f6dced5a32749098b0fa242fe40a6b94377f8aed5b008d14a1e817e64",
+      "size": 1650
+    },
+    {
+      "path": "evidence/esc-perf-validation-sources/Prepare-CorrectedTrial.ps1",
+      "sha256": "f91dd3a6101f5596e81fb6a0bf42bd223c92ac0fdd4a4bb2fadc2e8580b1f24b",
+      "size": 3632
+    },
+    {
+      "path": "evidence/esc-perf-validation-sources/prepare.py",
+      "sha256": "94edaabe381a87ab798e9cee2a480b40d30d06f9e65f6fe856a26710c6ad1322",
+      "size": 1017
+    },
+    {
+      "path": "evidence/esc-perf-validation-sources/prepare_ordered_tests.py",
+      "sha256": "4ce03e40ab10cd0de5c0ae5f75f6df5f0f4341da612513c122e3bed5a486f87d",
+      "size": 657
+    },
+    {
+      "path": "evidence/esc-perf-validation-sources/prepare_perf.py",
+      "sha256": "7436034ee34ea1e191e3eb4891bbb12899cf5e46245bb9f7d0db19ada49210e5",
+      "size": 667
+    },
+    {
+      "path": "evidence/esc-perf-validation-sources/prepare_tests.py",
+      "sha256": "d4ec754563cc5ea5bf0ccef5daf6d48051697983a178f970c78a1a5a9349d070",
+      "size": 4289
+    },
+    {
+      "path": "evidence/esc-perf-validation-sources/reference-provenance.json",
+      "sha256": "38a385a1f89fc00976cf9a5d9df8c19174c1b395523a238c5eab7e5164488351",
+      "size": 195
+    },
+    {
+      "path": "evidence/esc-perf-validation-sources/ReferenceOrderedPaint.h",
+      "sha256": "e75c72060cbfd42425f728ea7f4c4a80805de3cb09d5481686421a19df7b32ca",
+      "size": 5359
+    },
+    {
+      "path": "evidence/esc-perf-validation-sources/sample_state.py",
+      "sha256": "7436703a2d69089c68ed259941efdffde6e3ba92db0b82ff2c8c736d06b8105c",
+      "size": 4565
+    },
+    {
+      "path": "evidence/esc-perf-validation-sources/tests/EscMenuTests.cpp",
+      "sha256": "9dd45f2a7278e201fff30c519add2e9d20b5fb3f63b3f9a3f01bfba4acd3f33a",
+      "size": 36697
+    },
+    {
+      "path": "evidence/esc-perf-validation-sources/tests/EscMenuTests.vcxproj",
+      "sha256": "c34b91b1bc3a41c72ad3ba6cb6fd947cb19c4d12c2f467e83b9bba52fbeeec44",
+      "size": 1686
+    },
+    {
+      "path": "evidence/esc-perf-validation-sources/tests/RuntimeTestMemory.h",
+      "sha256": "637b5427b7b8c12a5cb93f31038ea6162091528f360423221bcb220dd1964490",
+      "size": 362
+    },
+    {
+      "path": "evidence/gizmo-contract-snapshots/asset-report.json",
+      "sha256": "325c9273da6925b994c131aee8cb31a8dfbdc9377f0f3e4a6a87ebd196bc017e",
+      "size": 4038
+    },
+    {
+      "path": "evidence/gizmo-contract-snapshots/assets.json",
+      "sha256": "f6eb863b09a55b2ac4dd8e37268ea5f022b069cb0fd77a5309fc80228e5d81c4",
+      "size": 1437
+    },
+    {
+      "path": "evidence/gizmo-contract-snapshots/GIZMO-AND-MAIN-NATIVE-CONTRACT-01.md",
+      "sha256": "6af77aebed10713fadfb121cae766b6b60226fc99362775fca99730a4c1505df",
+      "size": 10317
+    },
+    {
+      "path": "evidence/gizmo-contract-snapshots/gizmo-main-contract-01-manifest.json",
+      "sha256": "45b9c138e30c75810e64c3823cc72fe0d54714bed963e7ba0351883b56c74fce",
+      "size": 959
+    },
+    {
+      "path": "evidence/gizmo-contract-snapshots/history-receipt.json",
+      "sha256": "5696142c35f99a8b2c9cf9b9651a4015d79720319ded1b6c58691c7ad21d42d5",
+      "size": 1019
+    },
+    {
+      "path": "evidence/gizmo-contract-snapshots/MAIN-BACKGROUND-SOURCE-REVIEW-02.md",
+      "sha256": "21ae2385b261a8109ce432cf5ff9ca7ad6d668d3ca3fd9c0929b0b186dfb2243",
+      "size": 1464
+    },
+    {
+      "path": "evidence/gizmo-contract-snapshots/MAIN-FLAGS13-CONTRACT-01.md",
+      "sha256": "9572b80c67ccadf9b02f125dcf2316468b3f8e4104e970e21d49a3206439a31c",
+      "size": 4222
+    },
+    {
+      "path": "evidence/gizmo-contract-snapshots/MAIN-FOREGROUND-COVERAGE-ADDENDUM-01.md",
+      "sha256": "8cf5334240e4ce25530d7c2e29f46d68003e963b49318d204a3ab7b64578c8f1",
+      "size": 4073
+    },
+    {
+      "path": "evidence/gizmo-validation-sources/add_receipts.py",
+      "sha256": "a7310bc7a954a855f84536d7709c39e6f1dda57a0107a156ec5019059c198f70",
+      "size": 3758
+    },
+    {
+      "path": "evidence/gizmo-validation-sources/audit_run.py",
+      "sha256": "da7ab6c6de2e910f24d151b078abd4a0504746a2036ca13b56fcd2dc07f207cd",
+      "size": 6495
+    },
+    {
+      "path": "evidence/gizmo-validation-sources/BackdropCases.h",
+      "sha256": "bf9089a3987a1fca8794407bf895d64508ccbd29b8c4e92044ec3da7a097d9a3",
+      "size": 8776
+    },
+    {
+      "path": "evidence/gizmo-validation-sources/canvas-tests/CanvasRuntimeTests.cpp",
+      "sha256": "684b5f15cd3a90e1e96372c5c6535d17745964f691dd972d32dbe8aedeeabfc8",
+      "size": 33226
+    },
+    {
+      "path": "evidence/gizmo-validation-sources/canvas-tests/CanvasRuntimeTests.vcxproj",
+      "sha256": "23d991e7f4a4ecbfc6b8948b2c6f3f7c90daee2c421f23c0e803b898356be374",
+      "size": 1698
+    },
+    {
+      "path": "evidence/gizmo-validation-sources/canvas-tests/RuntimeTestMemory.h",
+      "sha256": "637b5427b7b8c12a5cb93f31038ea6162091528f360423221bcb220dd1964490",
+      "size": 362
+    },
+    {
+      "path": "evidence/gizmo-validation-sources/CardCases.h",
+      "sha256": "e4481d116ddba1b05d5e011e0c029b9ff979dc7dba5e4e63538fc01f020374be",
+      "size": 4882
+    },
+    {
+      "path": "evidence/gizmo-validation-sources/finalize_run.py",
+      "sha256": "683da4c216bff7c32382ad69b78fc699f17373acf988b759777f8af38fbba873",
+      "size": 4692
+    },
+    {
+      "path": "evidence/gizmo-validation-sources/fix_coverage_gap.py",
+      "sha256": "638ef12f73484110653f5906e9378a3817c164866e7221e45936090bdb405328",
+      "size": 4369
+    },
+    {
+      "path": "evidence/gizmo-validation-sources/freeze_validate.py",
+      "sha256": "ed5f96bf4a9c3be1e08c439e3447f89c0c44d9e1fb8811dca0c1495caa5c9620",
+      "size": 8349
+    },
+    {
+      "path": "evidence/gizmo-validation-sources/HdCases.h",
+      "sha256": "27d44f48f6bab7f5a75fa2e7c149cd479ed07d36f2cf221ceaaee2a62db4ce6d",
+      "size": 9226
+    },
+    {
+      "path": "evidence/gizmo-validation-sources/implement_gizmo.py",
+      "sha256": "b2f7c302161535077ad3bd09edf73e569e3c28ad84acb29fb22ca53699aa5038",
+      "size": 3032
+    },
+    {
+      "path": "evidence/gizmo-validation-sources/implement_main.py",
+      "sha256": "b9f563d1e823fc7f37bb15c2da37c7324a0ba24f09ff7ab5127263f539a8e1b0",
+      "size": 4655
+    },
+    {
+      "path": "evidence/gizmo-validation-sources/Launch-GizmoMain.ps1",
+      "sha256": "36f258a564e4044e3c4c4c5b2732a7a1edec6cd157e6053a74aa614a30fc4605",
+      "size": 1222
+    },
+    {
+      "path": "evidence/gizmo-validation-sources/OpeningControllerTests.cpp",
+      "sha256": "c6fde9798386c90e1536a134bdbecdcae6317ac7b1c413ecdedf8a88e5865cb4",
+      "size": 19719
+    },
+    {
+      "path": "evidence/gizmo-validation-sources/OpeningControllerTests.vcxproj",
+      "sha256": "6d1966cb16e2047a33696d74e342123394f6fa48cb2861bf4d5181a39735863c",
+      "size": 1754
+    },
+    {
+      "path": "evidence/gizmo-validation-sources/prepare_background.py",
+      "sha256": "0c245db973f61c0e6c93d30165af8ac6edc975d6e385328688d0727b364a222b",
+      "size": 2009
+    },
+    {
+      "path": "evidence/gizmo-validation-sources/prepare_work.py",
+      "sha256": "4feea4bf19ae7587f2f3477d0972a2c4bf3218f2eb063fca66df8e5f39afc5c7",
+      "size": 817
+    },
+    {
+      "path": "evidence/gizmo-validation-sources/RuntimeTestMemory.h",
+      "sha256": "b2d53d696a912d32f5c30547127dacd86b526776f6106b6475682f35762e7dbd",
+      "size": 186
+    },
+    {
+      "path": "evidence/gpu-hook-contract-snapshots/gizmo-v5-asset-report.json",
+      "sha256": "c15fb7284d6adb71894b9cdef1ffeef4c7ea12310f65123ae0816417b966f154",
+      "size": 4038
+    },
+    {
+      "path": "evidence/gpu-hook-contract-snapshots/gizmo-v5-HANDOFF.md",
+      "sha256": "1b8fe936b41a80ac3dd312c301f03d63a5f26ddbba2a52a0c4e883d94e4aca77",
+      "size": 1486
+    },
+    {
+      "path": "evidence/gpu-hook-contract-snapshots/gizmo-v5-preparation.json",
+      "sha256": "cc630bebc029b83967554113d49f96e34b9e654375caecf2df1b7196b951d993",
+      "size": 9130
+    },
+    {
+      "path": "evidence/gpu-hook-contract-snapshots/GPU-VISITOR-OFF-REVIEW-01.md",
+      "sha256": "96da0d2dfde029e8a929e99e59a4bf575e0833881d6df2cda9a93b031c1317ff",
+      "size": 4469
+    },
+    {
+      "path": "evidence/gpu-hook-contract-snapshots/PRODUCTION-RECORDER-DEPENDENCY-DIAGNOSIS-01.md",
+      "sha256": "ee81db0ce11833b12e64a2d4a61aa1593fa8f68760f959447bea4eb3075a0b44",
+      "size": 3982
+    },
+    {
+      "path": "evidence/gpu-hook-validation-sources/freeze.py",
+      "sha256": "aa23560fb1c71da3c0815d7aa305a9b8d0d55cb851d457bf552b286b58f4fdd2",
+      "size": 7323
+    },
+    {
+      "path": "evidence/gpu-hook-validation-sources/GpuVisitorTests.cpp",
+      "sha256": "5a1bfa198bc97652576c122ca41eb2fa3545ed17097c5665fa0bf9822bade0cf",
+      "size": 7110
+    },
+    {
+      "path": "evidence/gpu-hook-validation-sources/GpuVisitorTests.vcxproj",
+      "sha256": "ec393b44023ac7407e3deb193c66e6364ee94a3b986a0d6a5602ffe5306b28e1",
+      "size": 1651
+    },
+    {
+      "path": "evidence/gpu-hook-validation-sources/prepare.py",
+      "sha256": "06121cf3c0a828976d403ac5e1cc1fa022f32390fb36f260b6c8088fdb6ea2ae",
+      "size": 2427
+    },
+    {
+      "path": "evidence/gpu-hook-validation-sources/README.md",
+      "sha256": "631c65ab19e9aafdff129a21b8bbcbb2f3f8186987472784ba66eadd992dfd4e",
+      "size": 5050
+    },
+    {
+      "path": "evidence/gpu-hook-validation-sources/stubs/Common/Hook.h",
+      "sha256": "2f6bd993c30bc36c50a3ca0bf77626ebb4abb12f455b8f860c1a841023155f69",
+      "size": 207
+    },
+    {
+      "path": "evidence/gpu-hook-validation-sources/stubs/Common/Log.h",
+      "sha256": "271113ca76384e03b1b354682349a16fcc7de6428c2f2f5b8c974096ac9b8342",
+      "size": 449
+    },
+    {
+      "path": "evidence/gpu-hook-validation-sources/stubs/Research/FlightRecorder/Hooks.h",
+      "sha256": "6da3ffac64e38b4dd4e97dedf041cc5c1f6f1f54178a5c7f099ada62d2937a52",
+      "size": 513
+    },
+    {
+      "path": "evidence/gpu-hook-validation-sources/stubs/Research/NativeProbe/Probe.h",
+      "sha256": "a4fcb110470d12fcc853f51462a0c3a1042fde62f1bdc2d72b3a90b5d2b32a4a",
+      "size": 200
+    },
+    {
+      "path": "evidence/hd-contract-snapshots/HD-VIDEO-OUTPUT-CONTRACT-07.md",
+      "sha256": "a608ed8135afa8323381b25a50478c033c558a05d7062f3a9849f4c604a8e23b",
+      "size": 11331
+    },
+    {
+      "path": "evidence/hd-contract-snapshots/HD-VIDEO-WORK-01-GEOMETRY-REVIEW-08.md",
+      "sha256": "22fdfb8001a569cbb5a4a17bad1d0580b2fd3bf209a398740d662b54e4566a75",
+      "size": 3926
+    },
+    {
+      "path": "evidence/hd-contract-snapshots/history-independent-receipt.json",
+      "sha256": "00aed334a0709ebb7d60c37a64893cb5ce046146de17348108c5d2161ac306f6",
+      "size": 1007
+    },
+    {
+      "path": "evidence/hd-contract-snapshots/history-receipt.json",
+      "sha256": "544d7459d5a7e96a2f6676ac7945f9166f26ba162351231e277370053218d0ff",
+      "size": 976
+    },
+    {
+      "path": "evidence/hd-contract-snapshots/PARAMOUNT-1440-HISTORY-RESULT-02.md",
+      "sha256": "6560a55b0187620b68f51bf1f766fe21de26d06e67f4381a49c5de27edbd7a02",
+      "size": 2143
+    },
+    {
+      "path": "evidence/hd-contract-snapshots/PARAMOUNT-1440-NATIVE-COPY-DESIGN-01.md",
+      "sha256": "9c288098fc0ee0ed2182ee230966a97b7d47dbaebc82ab0923746889334f5c3b",
+      "size": 10760
+    },
+    {
+      "path": "evidence/hd-validation-sources/freeze_validate.py",
+      "sha256": "529843d7e6869cc8035400f17ec5ed8802bf89c81a03ee0b06ff161053c094d5",
+      "size": 6553
+    },
+    {
+      "path": "evidence/hd-validation-sources/harden.py",
+      "sha256": "da66885ee7b23b00e20ca44e6180398142abd9d6a9fccccc9d17ba4c7d721d45",
+      "size": 2709
+    },
+    {
+      "path": "evidence/hd-validation-sources/HdCases.h",
+      "sha256": "27d44f48f6bab7f5a75fa2e7c149cd479ed07d36f2cf221ceaaee2a62db4ce6d",
+      "size": 9226
+    },
+    {
+      "path": "evidence/hd-validation-sources/implement.py",
+      "sha256": "da21cd9ce3dd193867a792c9fbc04d1302efe357e126c4c339fb2f7e64a5a61f",
+      "size": 13368
+    },
+    {
+      "path": "evidence/hd-validation-sources/OpeningControllerTests.cpp",
+      "sha256": "a9d8fe21efc5794edc3c2099127c5ef0b6c1e5c16684a7efa983d5e3045fc233",
+      "size": 19625
+    },
+    {
+      "path": "evidence/hd-validation-sources/OpeningControllerTests.vcxproj",
+      "sha256": "6d1966cb16e2047a33696d74e342123394f6fa48cb2861bf4d5181a39735863c",
+      "size": 1754
+    },
+    {
+      "path": "evidence/hd-validation-sources/prepare_work.py",
+      "sha256": "498bf67ff9db2fb38d60ead98dc622e2a8ef2997019cd14f1565c794076ca9b0",
+      "size": 809
+    },
+    {
+      "path": "evidence/hd-validation-sources/receipts.py",
+      "sha256": "80f647709146e47b5d3d3555dd68be6401cd9abfde75718da183c0bb2319dd28",
+      "size": 3966
+    },
+    {
+      "path": "evidence/hd-validation-sources/RuntimeTestMemory.h",
+      "sha256": "b2d53d696a912d32f5c30547127dacd86b526776f6106b6475682f35762e7dbd",
+      "size": 186
+    },
+    {
+      "path": "evidence/hd-validation-sources/safety_review_fixes.py",
+      "sha256": "3882e293d32c4806300ae53f0670bfc157481b2dd62aa016c10f0dde989509a7",
+      "size": 2410
+    },
+    {
+      "path": "evidence/opening-contract-snapshots/BINK-NATIVE-FIT-CONTRACT-01.md",
+      "sha256": "ee4f9f84c5ae279cdadf96121709e3a1e962a373c5b23ee75076ad5efc692952",
+      "size": 27913
+    },
+    {
+      "path": "evidence/opening-contract-snapshots/DEPARTURE-AND-DETACHED-LOADING-HANDOFF-01.md",
+      "sha256": "e18502af13cd207fc162d9a485dbdff26ad3ab664d2478d42ee3630129ecb36d",
+      "size": 4449
+    },
+    {
+      "path": "evidence/opening-contract-snapshots/LOADING-PROGRESS-ENGINE-HANDOFF-01.md",
+      "sha256": "4725451ee9e2557346b4f4ebcda28bf6c86c4fb1f5df4c8a56d414683182ef89",
+      "size": 5003
+    },
+    {
+      "path": "evidence/opening-contract-snapshots/OPENING-FLOW-ENGINE-HANDOFF-01.md",
+      "sha256": "fff5feb97001c9514b8a6446a3490aa9d5a9688b61d44ad27ec112a1703db13c",
+      "size": 13427
+    },
+    {
+      "path": "evidence/opening-contract-snapshots/OPENING-FLOW-EXTENSION-PLAN-03.md",
+      "sha256": "90ac77f0e931e2d1ee14e010e1f41701e40420d6cd667f4cb37f4a9f17fb1234",
+      "size": 13151
+    },
+    {
+      "path": "evidence/opening-contract-snapshots/PREFERENCES-SLIDER-INPUT-05.md",
+      "sha256": "4b10a6e1d087e41b536ac861c5416d3cad37e5c04a1c776c12faab71e35816d7",
+      "size": 4031
+    },
+    {
+      "path": "evidence/opening-contract-snapshots/REMAINING-MENU-ENGINE-HANDOFF-01.md",
+      "sha256": "fbb4e62917d378295457811b87d5ad7369b959990b92ccf80c1f2ae14c76ebf3",
+      "size": 9280
+    },
+    {
+      "path": "evidence/opening-contract-snapshots/STATE27-MENU-ENGINE-HANDOFF-01.md",
+      "sha256": "ace9b95bec25846ac21b0fc741d21ce3a97bfa6086e0804e406331ef68fe9d80",
+      "size": 4868
+    },
+    {
+      "path": "evidence/opening-contract-snapshots/SUBMENU-REUSE-MAP-04.md",
+      "sha256": "08c17ffc6be6769a26f262cba95b15e3a22a5715facf1ca83017b1af5b3be289",
+      "size": 9600
+    },
+    {
+      "path": "evidence/opening-validation-sources/audit_submenus.py",
+      "sha256": "d5f4c55afe0d992185ed28acbcc53b6d54e6f2b0e7a0744795906dd075c9ad0b",
+      "size": 3245
+    },
+    {
+      "path": "evidence/opening-validation-sources/finalize_submenu_run.py",
+      "sha256": "528b711dee3db95bd10584aeb3f2516a50d69fdce81abcd1a272a555decb4e5d",
+      "size": 2685
+    },
+    {
+      "path": "evidence/opening-validation-sources/freeze_recorder.py",
+      "sha256": "91a38f08e4edca24105155b3d372afe174e228d8534ceefdaf05451ebfef27ca",
+      "size": 4579
+    },
+    {
+      "path": "evidence/opening-validation-sources/freeze_source.py",
+      "sha256": "923a8bbd676869f411c6868335029c23307e31222737293173b892f59a324585",
+      "size": 4242
+    },
+    {
+      "path": "evidence/opening-validation-sources/freeze_submenus.py",
+      "sha256": "41abc30659127854aab8e296ac29e2b19974ad560b394276d60f2658e21ff1fc",
+      "size": 5545
+    },
+    {
+      "path": "evidence/opening-validation-sources/Launch-OpeningFlow.ps1",
+      "sha256": "4f26dc25279022fae0e4d3c09e3089263961b375fc18a62a2e30dfebe451c99d",
+      "size": 1968
+    },
+    {
+      "path": "evidence/opening-validation-sources/Launch-Submenus.ps1",
+      "sha256": "9ba04689da1064dc551558f1cb075a7ef75288358e266554dfad519c7047915c",
+      "size": 4488
+    },
+    {
+      "path": "evidence/opening-validation-sources/OpeningControllerTests.cpp",
+      "sha256": "b3b9f0ae8890de5e3ce20f62d0d71af44feb019e27efde1a23c7fe5e9c0c347e",
+      "size": 19546
+    },
+    {
+      "path": "evidence/opening-validation-sources/OpeningControllerTests.vcxproj",
+      "sha256": "6d1966cb16e2047a33696d74e342123394f6fa48cb2861bf4d5181a39735863c",
+      "size": 1754
+    },
+    {
+      "path": "evidence/opening-validation-sources/OpeningTests.cpp",
+      "sha256": "10c1b8cf43a37c74b6282284bae2e8121a9a665c4b5f8832085fced9f3da8f02",
+      "size": 3817
+    },
+    {
+      "path": "evidence/opening-validation-sources/OpeningTests.vcxproj",
+      "sha256": "85d72a7d713585c434b14319508378a020eb5b938ad05b7b3dbaaa9da80b8d82",
+      "size": 1793
+    },
+    {
+      "path": "evidence/opening-validation-sources/prepare_session.py",
+      "sha256": "ad7762f1617d480bb45d194da13b3e61cb5ee28336767dd408d96f52cfcbf7bf",
+      "size": 2671
+    },
+    {
+      "path": "evidence/opening-validation-sources/prepare_submenus.py",
+      "sha256": "df2a9f68d584da40f30422d98dea381f4db7793ec7c32a4f9c18b74650ab6b5e",
+      "size": 2287
+    },
+    {
+      "path": "evidence/opening-validation-sources/QueuePressureTests.cpp",
+      "sha256": "c4da258759a10a270bd46312d2183d9d2d6d323ca424d7ebff88915718cf861c",
+      "size": 860
+    },
+    {
+      "path": "evidence/opening-validation-sources/QueuePressureTests.vcxproj",
+      "sha256": "68c9f35528d716e18326c58355f82ea6d190ff221ef5592265db7c2c8e9bfc91",
+      "size": 1530
+    },
+    {
+      "path": "evidence/opening-validation-sources/recover_recording.py",
+      "sha256": "8375d91a569db32155f7d1194bb1371cd4f47f67d966c81fbdde82724b5a0192",
+      "size": 5124
+    },
+    {
+      "path": "evidence/opening-validation-sources/RuntimeTestMemory.h",
+      "sha256": "b2d53d696a912d32f5c30547127dacd86b526776f6106b6475682f35762e7dbd",
+      "size": 186
+    },
+    {
+      "path": "evidence/opening-validation-sources/validate_source.py",
+      "sha256": "4af320bdd084e5989294e4c6a9f3840bb7323909cb9be00329e11c5ef344164d",
+      "size": 7181
+    },
+    {
+      "path": "evidence/production-contract-snapshots/asset-report.json",
+      "sha256": "7b4a71417d8c37290873eb1a10b34f0e76bf083308f4b988f022214a6dee62ee",
+      "size": 4013
+    },
+    {
+      "path": "evidence/production-contract-snapshots/assets.json",
+      "sha256": "05369f518bad10ccfbb769c458a11f28a94ba58101fd0ee29f83b7e65f1e5510",
+      "size": 109379
+    },
+    {
+      "path": "evidence/production-contract-snapshots/history-receipt.json",
+      "sha256": "c78df5893aee95807f3daca809239a0fb913bfc3274471f4c291ec3c6df8e038",
+      "size": 1023
+    },
+    {
+      "path": "evidence/production-contract-snapshots/identity.schema.json",
+      "sha256": "472e8e6dff0060cf8c09d6a77288bfa8691d0961197d0867610dc83ccf93435e",
+      "size": 1859
+    },
+    {
+      "path": "evidence/production-contract-snapshots/MAIN-BUTTONS-AND-SSLOGO-CONTRACT-01.md",
+      "sha256": "9d2f34eaa1ed01a509bfd3ea420ee609034b1a9ba299ec83c5f92e3b64fd8c28",
+      "size": 7192
+    },
+    {
+      "path": "evidence/production-contract-snapshots/PRODUCTION-LABEL-STARTUP-REVIEW-01.md",
+      "sha256": "36a3227bb17492c984b64a4c88c06c67600972c0d298cf462c0f3d7c6494ad08",
+      "size": 5665
+    },
+    {
+      "path": "evidence/production-contract-snapshots/PRODUCTION-ORDERED-MAIN-REVIEW-01.md",
+      "sha256": "4c521cd519012834bf1ebadf49a9d4facd4ae968439644bc6814a073a1d5cc9a",
+      "size": 5216
+    },
+    {
+      "path": "evidence/production-contract-snapshots/PRODUCTION-ORDERED-MAIN-REVIEW-02.md",
+      "sha256": "884b7e301ba231a667586663bd5008ac41f295860ef61a8dbe4b1dca27291012",
+      "size": 3506
+    },
+    {
+      "path": "evidence/production-validation-sources/canvas-tests/CanvasRuntimeTests.cpp",
+      "sha256": "2e3fcfdc764caf2f195976b10d2922420c555ff4291cc5b00fc6927487d1ff1b",
+      "size": 33340
+    },
+    {
+      "path": "evidence/production-validation-sources/canvas-tests/CanvasRuntimeTests.vcxproj",
+      "sha256": "23d991e7f4a4ecbfc6b8948b2c6f3f7c90daee2c421f23c0e803b898356be374",
+      "size": 1698
+    },
+    {
+      "path": "evidence/production-validation-sources/canvas-tests/RuntimeTestMemory.h",
+      "sha256": "637b5427b7b8c12a5cb93f31038ea6162091528f360423221bcb220dd1964490",
+      "size": 362
+    },
+    {
+      "path": "evidence/production-validation-sources/freeze_validate.py",
+      "sha256": "7892b8efddea0962ea02816887cd8de9a7fcd3e355d958d260a40408b833ead7",
+      "size": 8569
+    },
+    {
+      "path": "evidence/production-validation-sources/hud-tests/HudAssemblyTests.cpp",
+      "sha256": "04c1fe756d048e261276bd80cf8600210b7711b410f6719e9dab2af6d96e2ae3",
+      "size": 15005
+    },
+    {
+      "path": "evidence/production-validation-sources/hud-tests/HudAssemblyTests.vcxproj",
+      "sha256": "6c5812ace353e2cfed0cbd97f4778c0a42f518599d2b1b6ba312246eba36fb48",
+      "size": 1686
+    },
+    {
+      "path": "evidence/production-validation-sources/hud-tests/RuntimeTestMemory.h",
+      "sha256": "b2d53d696a912d32f5c30547127dacd86b526776f6106b6475682f35762e7dbd",
+      "size": 186
+    },
+    {
+      "path": "evidence/production-validation-sources/opening-tests/BackdropCases.h",
+      "sha256": "bf9089a3987a1fca8794407bf895d64508ccbd29b8c4e92044ec3da7a097d9a3",
+      "size": 8776
+    },
+    {
+      "path": "evidence/production-validation-sources/opening-tests/CardCases.h",
+      "sha256": "e4481d116ddba1b05d5e011e0c029b9ff979dc7dba5e4e63538fc01f020374be",
+      "size": 4882
+    },
+    {
+      "path": "evidence/production-validation-sources/opening-tests/HdCases.h",
+      "sha256": "27d44f48f6bab7f5a75fa2e7c149cd479ed07d36f2cf221ceaaee2a62db4ce6d",
+      "size": 9226
+    },
+    {
+      "path": "evidence/production-validation-sources/opening-tests/NativeButtonCases.h",
+      "sha256": "9f0616071d01fd25efd14a6b02b804dcbe0ed3b109e652eff222b04b2a5d5a90",
+      "size": 4627
+    },
+    {
+      "path": "evidence/production-validation-sources/opening-tests/OpeningControllerTests.cpp",
+      "sha256": "5d7fe9bff9f8f515eb236f711488352c51765d82625b8971782244f4bb8b4fc7",
+      "size": 20142
+    },
+    {
+      "path": "evidence/production-validation-sources/opening-tests/OpeningControllerTests.vcxproj",
+      "sha256": "6d1966cb16e2047a33696d74e342123394f6fa48cb2861bf4d5181a39735863c",
+      "size": 1754
+    },
+    {
+      "path": "evidence/production-validation-sources/opening-tests/RuntimeTestMemory.h",
+      "sha256": "b2d53d696a912d32f5c30547127dacd86b526776f6106b6475682f35762e7dbd",
+      "size": 186
+    },
+    {
+      "path": "evidence/production-validation-sources/opening-tests/SsCases.h",
+      "sha256": "0dfcf8bf29f6dd1b2de26265e8fed05685f281974f57ffc6914ce818df7e6629",
+      "size": 1867
+    },
+    {
+      "path": "evidence/production-validation-sources/OrderedPaintTests.cpp",
+      "sha256": "cd344ed06b69c1d45cb13e333dbc2c364932bc20318f7a92510b2903a7c054e0",
+      "size": 6535
+    },
+    {
+      "path": "evidence/production-validation-sources/OrderedPaintTests.vcxproj",
+      "sha256": "e13c386192c255d6c91e70c36268876fcb25f1f718368fac83fdf51bb69dddc6",
+      "size": 1646
+    },
+    {
+      "path": "evidence/production-validation-sources/prepare_buttons.py",
+      "sha256": "db2a1df4f0f44a66849ca158547a7726c8acc10e0526f3f212978097f5476ab9",
+      "size": 3701
+    },
+    {
+      "path": "evidence/production-validation-sources/prepare_work.py",
+      "sha256": "cf2beaa7b8a7aed20ee6d16167925a24e5a0174d6ae7a141aa706ccf76943ac9",
+      "size": 748
+    },
+    {
+      "path": "evidence/production-validation-sources/RUNTIME-CONTRACT.md",
+      "sha256": "fdfaf184a116c5f15aeb8e803be816313c64f742df5af6e446984f7797752f55",
+      "size": 3924
+    },
+    {
+      "path": "evidence/production-validation-sources/RuntimePolicyTests.cpp",
+      "sha256": "73cf48fcf6cfcc218d9f97c8388e72f1e59443bfe44eed29937f1f046e5292ba",
+      "size": 10270
+    },
+    {
+      "path": "evidence/production-validation-sources/RuntimePolicyTests.vcxproj",
+      "sha256": "05557f75e90d628d5a0cafe1d750fce3c470d4c51df602652d229b5243fca456",
+      "size": 1636
+    },
+    {
+      "path": "evidence/production-validation-sources/TransitionRuntimeTests.cpp",
+      "sha256": "75e431152ae5b18c1cf12a7cf16818b25a97f0390a0a1856b6ef2ae6e107c790",
+      "size": 2365
+    },
+    {
+      "path": "evidence/production-validation-sources/TransitionRuntimeTests.vcxproj",
+      "sha256": "cf68521475073890a6807ceb48e0b6dd6aa5c31f639355a072cbaf90c87845fa",
+      "size": 1699
+    },
+    {
+      "path": "evidence/production-validation-sources/wire_runtime.py",
+      "sha256": "d1cf4e31e4e07c56c3a50c8e8ddcfece90d3afa3387e790813f6a05cf3a4d4de",
+      "size": 7442
+    },
+    {
+      "path": "evidence/production-validation-sources/WORKING-NOTES.md",
+      "sha256": "682fae2f7da6b33b9aaf54474e8a9334f1e1f608b5cf3d4c87f540258eb0583d",
+      "size": 5726
+    },
+    {
+      "path": "evidence/transition-contract-snapshots/SELECTION-VISUAL-RETIREMENT-CONTRACT-01.md",
+      "sha256": "e02994f8d0891a6e45a1a9de0fd37cdf3f1d22275ae36fd120bedf57d2f8575e",
+      "size": 11612
+    },
+    {
+      "path": "evidence/transition-validation-sources/Core.h",
+      "sha256": "3dc8144bc69d4069e46309418d73a84573ede287fda7db6f43cdd65e4198cc0b",
+      "size": 2252
+    },
+    {
+      "path": "evidence/transition-validation-sources/TransitionState.h",
+      "sha256": "5ed40bbdc07c617ef08c621e814b62e2b16f0243243f17ce80c2ea032c64c3cd",
+      "size": 3280
+    },
+    {
+      "path": "evidence/transition-validation-sources/TransitionStateTests.cpp",
+      "sha256": "d9f4f7548f78cbc9be1f92290a3696653d3065578ae31f220b266fcb1474749b",
+      "size": 3152
+    },
+    {
+      "path": "evidence/transition-validation-sources/TransitionStateTests.vcxproj",
+      "sha256": "e1757875aa615bb87325c72acd4b6b131e8f4fc1847517d2cebd65b8dbe1a089",
+      "size": 1418
+    },
+    {
+      "path": "handoff/CHECKSUMS.json",
+      "sha256": "da3b2ee3f933f94bba155a113cb950ea2cf20fe76e7b1c2cf4160ffe01ebf0a3",
+      "size": 7112
+    },
+    {
+      "path": "handoff/component.json",
+      "sha256": "73e14ef28202e5b079e84f260594c31945e569c1849ddb8e9d009a83794fba58",
+      "size": 57781
+    },
+    {
+      "path": "handoff/engine-build-provenance/integration/components/intake-20261018.1/launcher/build_input_window_v1.py",
+      "sha256": "e47ce4485af9c1b1b0402eb18ba5d00fcec090be118acff6cfae33beb5fc1913",
+      "size": 3198
+    },
+    {
+      "path": "handoff/engine-build-provenance/integration/components/intake-20261018.1/launcher/input-window-patch-v2.json",
+      "sha256": "084273b42eeaef138006f8c7b548308bb6e812e80aaacf3409c24bba4f326f30",
+      "size": 934
+    },
+    {
+      "path": "handoff/engine-build-provenance/rendering-research/native-resolution/build_engine.py",
+      "sha256": "d0c6b3275e877580d62ae402248544f3022848a69553392d0c1465cf6c5e5576",
+      "size": 6799
+    },
+    {
+      "path": "handoff/engine-recipe.json",
+      "sha256": "2822f8efa34d542d4216431ea14741ca647d5ad88495b29e316d367539cb9d81",
+      "size": 5958
+    },
+    {
+      "path": "handoff/evidence/Apply-LauncherFix.ps1",
+      "sha256": "42b3a4951126dfb8a6f1c01f25eaf60512bed9ab47089a8374c1983b9014393d",
+      "size": 2469
+    },
+    {
+      "path": "handoff/evidence/audit_run.py",
+      "sha256": "0b43e3c8575c28156cfa115544e2b7d49eea364cf5533995c1ec6fdda8b85d9b",
+      "size": 4583
+    },
+    {
+      "path": "handoff/evidence/failed-preflight-01/helper-error.log",
+      "sha256": "cbaab9cbf7acbe3fd886a06eaa3dc1cb67da19d1c76364790b3c7a773148572b",
+      "size": 429
+    },
+    {
+      "path": "handoff/evidence/failed-preflight-01/helper-output.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "handoff/evidence/failed-preflight-01/output-selection.json",
+      "sha256": "7fae012c9645569b04f30b6a99d06506a2c6fabb58bf2837f27b94fbbc66d003",
+      "size": 407
+    },
+    {
+      "path": "handoff/evidence/failed-preflight-01/receipt.json",
+      "sha256": "7081563d240c5e4b0f773e67d9ff40b9401d1f85b091b67a5cd2af8e4bc63647",
+      "size": 624
+    },
+    {
+      "path": "handoff/evidence/fixture-provenance.json",
+      "sha256": "1e6b9f79c2d7819688031542659c9f61ae27068297af0d7e786b2d33d6b12344",
+      "size": 564
+    },
+    {
+      "path": "handoff/evidence/freeze.py",
+      "sha256": "f16a32c0ba51be6bd88309c72896d74bddfb4aeedcf62a380147a9a3cd4d17c1",
+      "size": 4642
+    },
+    {
+      "path": "handoff/evidence/investigation.md",
+      "sha256": "fdb9c27ac7c503f60fc3cbd7e6b37a2ff16ff4ba408e8f7388c1200ed0b5226d",
+      "size": 8887
+    },
+    {
+      "path": "handoff/evidence/Launch-Trial.ps1",
+      "sha256": "962264e5f2a95bace9248d9bf9181084dd0825bdd5343c718faceda494309668",
+      "size": 1722
+    },
+    {
+      "path": "handoff/evidence/live-1920x1080-01/acceptance.json",
+      "sha256": "ad329909db7f5a6dd1d78f1c82641d11fce380fc0d2af20e1348ac27472d0ed8",
+      "size": 5549
+    },
+    {
+      "path": "handoff/evidence/live-1920x1080-01/events.ndjson",
+      "sha256": "17e813b9dc7dbe2964130ba10fad03cceef1b46438a90ad39d5b8979e494496f",
+      "size": 153325
+    },
+    {
+      "path": "handoff/evidence/live-1920x1080-01/focus.log",
+      "sha256": "dd7b47cef5039026ad3a3c36552ed4b3084d0549ee3d5d92c97ee7945ef27911",
+      "size": 491
+    },
+    {
+      "path": "handoff/evidence/live-1920x1080-01/helper-error.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "handoff/evidence/live-1920x1080-01/launcher-error.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "handoff/evidence/live-1920x1080-01/launcher-output.log",
+      "sha256": "1b4388b5d6e0ed9ccfcac2ad82bff6fa286887af236755f492d4a4f3933707c9",
+      "size": 526
+    },
+    {
+      "path": "handoff/evidence/live-1920x1080-01/output-selection.json",
+      "sha256": "ef7247624b2eecd9d29271cfcba9f1bd47aacaaa047c02cf103850f6746f3df4",
+      "size": 406
+    },
+    {
+      "path": "handoff/evidence/live-1920x1080-01/rendering.ndjson",
+      "sha256": "857196812c50c72fdc98da39343aaaa281fb05e5fbc390d7bb4d1314b902b2d9",
+      "size": 2677
+    },
+    {
+      "path": "handoff/evidence/live-1920x1080-01/result.json",
+      "sha256": "81f55003e308264f99f9fee1c7f6d94551b466a75a91bba8bd12099062476b85",
+      "size": 1870
+    },
+    {
+      "path": "handoff/evidence/live-1920x1080-01/sampler-error.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "handoff/evidence/live-1920x1080-01/sampler.log",
+      "sha256": "6aa7f72728b82b83f98760ff423f4d75490852e6059f81c60381e7e9d9bda6da",
+      "size": 5244
+    },
+    {
+      "path": "handoff/evidence/live-2560x1440-01/acceptance.json",
+      "sha256": "24ed924ea587f8470147839dea6e36c7a18ef1b5828a41dae85533e67d3727a7",
+      "size": 5584
+    },
+    {
+      "path": "handoff/evidence/live-2560x1440-01/events.ndjson",
+      "sha256": "58708138ca5863dd7d7b8ecf534f6e5033ff8353a78f8de57847a83e39e5387f",
+      "size": 146451
+    },
+    {
+      "path": "handoff/evidence/live-2560x1440-01/focus.log",
+      "sha256": "53a8195ac0744d017edb4895f3687f22bd9afba79c0ecebcd29833e77b594a7c",
+      "size": 491
+    },
+    {
+      "path": "handoff/evidence/live-2560x1440-01/helper-error.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "handoff/evidence/live-2560x1440-01/launcher-error.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "handoff/evidence/live-2560x1440-01/launcher-output.log",
+      "sha256": "e62da134d6a02756bb6b4f705cd2903e0b83ec7561bf18ac8255d8450fb1a98c",
+      "size": 528
+    },
+    {
+      "path": "handoff/evidence/live-2560x1440-01/output-selection.json",
+      "sha256": "7fae012c9645569b04f30b6a99d06506a2c6fabb58bf2837f27b94fbbc66d003",
+      "size": 407
+    },
+    {
+      "path": "handoff/evidence/live-2560x1440-01/rendering.ndjson",
+      "sha256": "d6e4601771e7842800caa865b2c7da0fe15b713fcf9dbcf4435e78ad3fb371ff",
+      "size": 2560
+    },
+    {
+      "path": "handoff/evidence/live-2560x1440-01/result.json",
+      "sha256": "d09d25951306a673b798f6636537ace215ce3fc537b66d6b81fa75aed9eeb65e",
+      "size": 1871
+    },
+    {
+      "path": "handoff/evidence/live-2560x1440-01/sampler-error.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "handoff/evidence/live-2560x1440-01/sampler.log",
+      "sha256": "e2874bffe94024b09464d3678b7480238521428ae491cc41e80618ddfe0f42da",
+      "size": 5033
+    },
+    {
+      "path": "handoff/evidence/package_handoff.py",
+      "sha256": "1271c679b2370e6e6bbfde8af39a89e71c2e5075d5963e75fbdee237ddb651d6",
+      "size": 5295
+    },
+    {
+      "path": "handoff/evidence/Prepare-Trial.ps1",
+      "sha256": "2ccccc76ae5aa84d2c1cfa60318ed94c689a48326c0ca08be8fb4b146d65b0ba",
+      "size": 4789
+    },
+    {
+      "path": "handoff/evidence/prepare.py",
+      "sha256": "6e8f42ec211a2fa070c2fbc08c4531f127d44a691b07ec038a61f1c380f4297b",
+      "size": 755
+    },
+    {
+      "path": "handoff/evidence/prepare_fixture.py",
+      "sha256": "590f9d52aa2f9e7a49357ae6e48d8d9ed5e5754bb6e13222f4d32e4f4e4b9408",
+      "size": 1444
+    },
+    {
+      "path": "handoff/evidence/prepare_opening_tests.py",
+      "sha256": "aa1854e9372b130ecdebc01a437a35a81e33bef6078f01472d3e9ff5826dfe4c",
+      "size": 575
+    },
+    {
+      "path": "handoff/evidence/prepare_sampler.py",
+      "sha256": "91e83d2ca8597fa199bdac7c6c5042cb0e9d41369b81cff4e43b003d0c0c5c8d",
+      "size": 2682
+    },
+    {
+      "path": "handoff/evidence/sample_output.py",
+      "sha256": "c26d5a02698aa7c75b70396eb0c6294db25ccc190ca47a4a8b3beea78bc515fc",
+      "size": 6314
+    },
+    {
+      "path": "handoff/evidence/sampler-provenance.json",
+      "sha256": "74794d66ab7ab6a11fb7079f2bc38a7e9696f23391ff936a5ab2a3593f780795",
+      "size": 464
+    },
+    {
+      "path": "handoff/evidence/validate.py",
+      "sha256": "6156d64c52ce769467e77ed2375a328d7c2d3d56b1ee8591a0d0d239cef507fd",
+      "size": 4319
+    },
+    {
+      "path": "handoff/evidence/validate_handoff.py",
+      "sha256": "7739c30d11724c6cc3359754c2044ff11cd29d40625e57c40f218c5e6ae1c2db",
+      "size": 2936
+    },
+    {
+      "path": "handoff/launcher-source/changes.patch",
+      "sha256": "5ba481706d769164b5c86504d39df4403b6b9eabbdfe91b99ac1adeefe2fc325",
+      "size": 2143
+    },
+    {
+      "path": "handoff/launcher-source/README.md",
+      "sha256": "bf18010e12a68540782affd05b9969ac966bd261ed01d824e979e5f15ae85c87",
+      "size": 3587
+    },
+    {
+      "path": "handoff/launcher-source/runtime/Launch-Remaster.ps1",
+      "sha256": "46617a9b2d976e0c5bef1eba3f20b8b2c77e8bd927bf5a62b94a7fe71ebe3592",
+      "size": 6542
+    },
+    {
+      "path": "handoff/launcher-source/runtime/Remaster.Core.psm1",
+      "sha256": "0db55a56d8014b2b5e7f8c1b4c1f7558bb1d8323503446232a40e6750186f12a",
+      "size": 16843
+    },
+    {
+      "path": "handoff/launcher-source/runtime/Watch-RemasterFocus.ps1",
+      "sha256": "78778adfe1740624fe52afccb075d670f4581c71b93027ae1c8b7477b5f2d812",
+      "size": 8071
+    },
+    {
+      "path": "handoff/launcher-source/source-receipt.json",
+      "sha256": "274025aa3ca8d7e619f3904c292b8d54eaf3c66e438a2d0965102beb4423e1ac",
+      "size": 2575
+    },
+    {
+      "path": "handoff/launcher-source/tests/Test-AdaptiveDisplay.ps1",
+      "sha256": "b86870abfa15f0371b4255c8365f584f9a59d64d11eeab3030b753e5bbc724b9",
+      "size": 5924
+    },
+    {
+      "path": "handoff/launcher-source/tests/Test-FocusIdentity.ps1",
+      "sha256": "d106ba830b0b1767cc5885c2a4eff42f091f9456d862480b7fcd2e0c2676cc9c",
+      "size": 3608
+    },
+    {
+      "path": "handoff/launcher-source/tests/test_scope.py",
+      "sha256": "fca72e1573c2888f0d33d29a4bc5868016462270517741083e8af2878d952636",
+      "size": 1675
+    },
+    {
+      "path": "handoff/launcher-source/upstream/Launch-Remaster.ps1",
+      "sha256": "46617a9b2d976e0c5bef1eba3f20b8b2c77e8bd927bf5a62b94a7fe71ebe3592",
+      "size": 6542
+    },
+    {
+      "path": "handoff/launcher-source/upstream/Remaster.Core.psm1",
+      "sha256": "6575db2a607b97a62fec1a7a79c6f796f4b70b1baf8ee44565154f8c1c00980c",
+      "size": 16040
+    },
+    {
+      "path": "handoff/launcher-source/upstream/Watch-RemasterFocus.ps1",
+      "sha256": "fd3f76945d7b731f881fdfff25bc4e641b932110ac59fbd157e58024d618e565",
+      "size": 7603
+    },
+    {
+      "path": "handoff/launcher-source.patch",
+      "sha256": "f844ba0a053f26e6f399b31118b27eafc83b5f15d2eea8ef1b8d32da4e6c0cfc",
+      "size": 11396
+    },
+    {
+      "path": "handoff/patch-validation.json",
+      "sha256": "3e35c49a1189a0644061e136db02e74cc31197fc00ffc61e03e3247fde498e99",
+      "size": 412
+    },
+    {
+      "path": "handoff/provider-source.patch",
+      "sha256": "fa380c7b1a23287e3d4c5e7d25a809fea52f2bf1467b56d92a839ce90bf0ea2e",
+      "size": 34648
+    },
+    {
+      "path": "handoff/README.md",
+      "sha256": "ca73169c4e45e62f4ef9c445674f585aedb61b46b290141f2c6c7bba25e15d30",
+      "size": 6668
+    },
+    {
+      "path": "qfr-source.json",
+      "sha256": "443d084cfa444c7fc96a40f7141a0e40c3a6a57f209da10b742186df8ed9fc44",
+      "size": 135498
+    },
+    {
+      "path": "tests/RUNTIME-CONTRACT.md",
+      "sha256": "fdfaf184a116c5f15aeb8e803be816313c64f742df5af6e446984f7797752f55",
+      "size": 3924
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/arrow.bmp",
+      "sha256": "ab554b7eb851227a38861509c07aed93e40b890d2c4fd7a79016cf0e87f77563",
+      "size": 310
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Common/BitSet.h",
+      "sha256": "e06ed74875145af0c3535c948ce3c17bf1a588a7552d72a2df2fa6687f5251ed",
+      "size": 987
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Common/Comparison.h",
+      "sha256": "b9856e06a6f01699836b8a3d0a690748e182dc8a5035579b7d439317c153fe3c",
+      "size": 1341
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Common/CompatPtr.h",
+      "sha256": "c821c158eb9a37cb4e86b82e877f188aa5dffa70cf3cd72ff54866d1fd361a37",
+      "size": 1228
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Common/CompatQueryInterface.h",
+      "sha256": "459619b862a466ebb24eb0881e81d47ba3bfa3e483659333efa63188722605a0",
+      "size": 4271
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Common/CompatRef.h",
+      "sha256": "692a299b47522367533891a191fb10bb9660ba4ecfcf5ee7575c7e000fbbcf2f",
+      "size": 518
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Common/CompatVtable.h",
+      "sha256": "0de4d28c596705ba34c9b796c0a1b45f90074be17bff9a00665e09a5ca90ab3c",
+      "size": 1444
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Common/CompatWeakPtr.h",
+      "sha256": "f58d944ac3910a54a3311a9d9805fbe500a2905b85ab7bc4872a6c8733680cf5",
+      "size": 814
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Common/Disasm.cpp",
+      "sha256": "fd39ab796bb7002a8249eccdd08df07568234f23922de4780fc380ce63218b26",
+      "size": 28503
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Common/Disasm.h",
+      "sha256": "be4b5b6029b76303d82c93fd49729aa86b22154f77765ebbdedd794629f6a847",
+      "size": 98
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Common/Hook.cpp",
+      "sha256": "6ddc1dcc0a8503ad479d2fbac01a19f66a94d1f7f51382a8ac1d8cfe3a2d5176",
+      "size": 10675
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Common/Hook.h",
+      "sha256": "2698e353dd2c784aaaaf484e0685ce56105d945b30d2a480c496078165522117",
+      "size": 1580
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Common/HResultException.h",
+      "sha256": "92f4421ab8579b04cc4b72061d90fcfbe76d5c5691555aeb830d297bca80276d",
+      "size": 221
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Common/Log.cpp",
+      "sha256": "a1bd5196ff15de1027e4cfd894430591e07f6beea2f1eadf1e64e3022d307904",
+      "size": 3161
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Common/Log.h",
+      "sha256": "dd21f47b6a8bc2a09c23edf0b581403273c88a4e3a79fb9ccaba9c4f5e40d41a",
+      "size": 10799
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Common/Path.cpp",
+      "sha256": "fe45eb3c2bb779e2796c41382b300fc328a17ce4577117d3cf6c37977faf6e65",
+      "size": 1698
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Common/Path.h",
+      "sha256": "18766a235cbf9c4f347f5691bb95200cff51c618e91e958dc585e58edbe54df5",
+      "size": 706
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Common/Rect.cpp",
+      "sha256": "3c6cfe138aa4d3b9b5532091889f36d786aace1555bf56d92777fe9486c574a8",
+      "size": 1329
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Common/Rect.h",
+      "sha256": "c93c0738002c159e866e2269c32c50e88ad6ae17ffab85c5b03308340edb94fd",
+      "size": 493
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Common/ScopedCriticalSection.h",
+      "sha256": "1fda1808eade023b6f5b19befd94f667ea123007c53b4ff999121f5c7dc297c3",
+      "size": 538
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Common/ScopedSrwLock.h",
+      "sha256": "df63498f8e053d3190eb4784a211746c7fd617f639f3afe80c566605b343b2de",
+      "size": 684
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Common/ScopedThreadPriority.h",
+      "sha256": "71e27ef4e83059cd72e99ab1b3aaef15fc28998e15431a53618a17b7d0e5c5cf",
+      "size": 407
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Common/Time.cpp",
+      "sha256": "d62c5c5aa7849f8dbee3a84ccb54524e80e46f4618cacc1dd5d3c2cf537b7965",
+      "size": 2033
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Common/Time.h",
+      "sha256": "6c9060e2d00fb06879a7527d3756b50e72fdd450660672cb64307abed0d26b4b",
+      "size": 486
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Common/Vector.h",
+      "sha256": "7094e998a473beee463e1bfc63bcd181c44d3b4588228753dcab64a33a941cee",
+      "size": 4785
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Common/VtableHookVisitor.h",
+      "sha256": "ce6ab75e7c9de2c47f313d6682816cbd3b94a1278bc64465f28aa24926f22c8d",
+      "size": 7656
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Common/VtableSizeVisitor.h",
+      "sha256": "31ab1d4974c2369c2d26abd8bef68d85d9ddd01ccb45e22f4cc3d97dea4b6638",
+      "size": 405
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Common/VtableVisitor.h",
+      "sha256": "b90edea84c97a4183533fbdbf7a0ca13027a86ff9968d4fce4dd273fac33603d",
+      "size": 578
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/AtomicSetting.cpp",
+      "sha256": "b53b0992dd13ba7235c550dc148b43c6357d120fafa9789ce34aeb150ee7e3a3",
+      "size": 482
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/AtomicSetting.h",
+      "sha256": "251013cd669c35a9d49f7075f1e383334e41b9126869639d4999b75256552bce",
+      "size": 409
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/BoolSetting.h",
+      "sha256": "a4fdffb6d293110b43aabc103588689249b684060c6198d8471bf0a2e8338eba",
+      "size": 310
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Config.cpp",
+      "sha256": "314019b2083edb146256e5820ce455b497332194d811eaaf01bd1ca6ce2b9961",
+      "size": 5560
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/EnumListSetting.cpp",
+      "sha256": "11d7248f680c321dd37b4b58988df307cca11f95c35960b6b24eaaef93ac46f2",
+      "size": 803
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/EnumListSetting.h",
+      "sha256": "2826fa273b867d3c05a9a94223b3bf6eaad317ccda2b8c92aaaef58610cb674c",
+      "size": 525
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/EnumSetting.cpp",
+      "sha256": "a03360afd7f13b28fb39ba85e11df0d218926f48f5a7353fbbcc85f39183dd12",
+      "size": 636
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/EnumSetting.h",
+      "sha256": "8ddf29d8e25118f03841b3bdc3e43966eb05c241aea29375df9960cfbd188b8d",
+      "size": 294
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/FormatListSetting.cpp",
+      "sha256": "d43016af78ce06209048e0a7da6c206ca07468cea6d8082f7b47205901992f08",
+      "size": 2292
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/FormatListSetting.h",
+      "sha256": "c252c9eb975c015a89a4e44945450a9c1ed51f11efae4f975a591dad0a41abe8",
+      "size": 834
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/HotKeySetting.h",
+      "sha256": "43ed203ef9d21dc6669a4ccc17c269a8bbb86bc611d6d3910c3fe3952958910d",
+      "size": 580
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/IntSetting.h",
+      "sha256": "6114f15cf83479d7c4e948de64603f645915776579df8f1cb933e2b56160ac84",
+      "size": 698
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/ListSetting.cpp",
+      "sha256": "bfbef5670a7d0a71924ca6de2cdbe82a65d3ff66717fd9e8b661c241afefc98e",
+      "size": 1165
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/ListSetting.h",
+      "sha256": "88514b94ade1d2edf8c0cfb92e6f180b3a026b314a54ec4065e5ea830ca96eff",
+      "size": 551
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/MappedSetting.h",
+      "sha256": "e1d58f56c31aa60bfdfec1f343eadfa88eca0e0c636f33d68888fff2cb6dc8ec",
+      "size": 2097
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Parser.cpp",
+      "sha256": "72099d149d228cf06044e8012b24e0f02da8e3534bfdc6d5113f155b5c518039",
+      "size": 6946
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Parser.h",
+      "sha256": "adacec6820565955a041e7033ac8cd0f496880e1e9cacc4b08714ebd206aaab8",
+      "size": 836
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Setting.cpp",
+      "sha256": "1c90154a05645694374c662691e569f892740986f039707773479524a4a874e6",
+      "size": 2321
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Setting.h",
+      "sha256": "0bc09d9050cea0132a44487895807801d6bef70816d9139ebabfc7ba52596046",
+      "size": 1539
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/AlternatePixelCenter.h",
+      "sha256": "b9b6d6b3310e7ddcf8ed7619bc5df51835197670b30725b5b4386a7cafded850",
+      "size": 666
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/AltTabFix.h",
+      "sha256": "8e5aa0477cffb93e8685f485fa7df884a720a388990fd141b4ec40f826db6757",
+      "size": 616
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/Antialiasing.cpp",
+      "sha256": "cedaf5d0ef6d70940a6181cfc4da3e5bccea85c5cf59d5b249cf00da2bc9582f",
+      "size": 637
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/Antialiasing.h",
+      "sha256": "add9bf5001ae5e714aba1134b6f91613b54bd35cc7edba3d401bb8856f6c30c4",
+      "size": 305
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/BltFilter.h",
+      "sha256": "3f55fb9374810bfd7abc5aa56ea0178707fc816e59bbd5b550f1d084c56876f8",
+      "size": 341
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/CapsPatches.cpp",
+      "sha256": "7ed449767e94efed1b20d51752ad835a51d93d72773000a8688bed88d2d43e8e",
+      "size": 8581
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/CapsPatches.h",
+      "sha256": "099bcea98ed60a3f51ad1f894152f7321230cb67a429d4ac549da81269106c0d",
+      "size": 946
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/ColorKeyMethod.cpp",
+      "sha256": "1ad99836733928e738efc2ef0a5d57d9986b0713bd4381d3261b908b02af2db7",
+      "size": 397
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/ColorKeyMethod.h",
+      "sha256": "0f065b69bf4905ebbf9dd5295200658701c0dbbae0b37c69af8604da27dd3ed6",
+      "size": 347
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/CompatFixes.cpp",
+      "sha256": "42c1d2ac47d3ed4b7040164775226a56416fd3c1423922f9549e88cefb30408b",
+      "size": 770
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/CompatFixes.h",
+      "sha256": "fe14d1d2304dac41a3bb36027ecf16e52829c7ce3b59647b064b537b969bbb9c",
+      "size": 671
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/ConfigHotKey.h",
+      "sha256": "c797d982f2d46ff66723df2e5d97fe5448880e0c681ef51b2cde3bab7bbaf50e",
+      "size": 288
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/ConfigRows.cpp",
+      "sha256": "ec43824fac898e2af7f24638f34f47a1682ff056e5fc4c31420e84058e65731f",
+      "size": 2079
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/ConfigRows.h",
+      "sha256": "f798b641d935111d17c537df6dcaa7a7329f3cad84dfcf4d1501bbf7ef99532d",
+      "size": 497
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/ConfigTransparency.h",
+      "sha256": "af67d5ef4641c789ef1e60dbf25fe4a9944c6341ccd36e6af522e3dd2682a93f",
+      "size": 654
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/CpuAffinity.cpp",
+      "sha256": "da3ccd5b46e5e7e4e24925b8aa91313b76a2d26c16217c247df876465f0e02f5",
+      "size": 712
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/CpuAffinity.h",
+      "sha256": "3fab29b9c3faf7671b52dab8e8ec64aaff3f10884f9378ff0006d61a28751b56",
+      "size": 422
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/CpuAffinityRotation.h",
+      "sha256": "0a231fc3f8d55ca6294b882b138e3e90f98de455490101b0cff7e6cc54c85f7b",
+      "size": 324
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/CrashDump.h",
+      "sha256": "487a8f5ccb1b193081b53b5626d59b3542cec3b31970df6a37be4688f72ef043",
+      "size": 748
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/DepthFormat.h",
+      "sha256": "d203b0dc815da50068aa590cc5b454101d5526c81ce936c06f9d23396eb26fb4",
+      "size": 379
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/DesktopColorDepth.h",
+      "sha256": "ccee9a78d6f159a0a81bdfb257afb2ea1e3a20fd96b07fc152c0e3a33c6bbf11",
+      "size": 428
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/DesktopResolution.cpp",
+      "sha256": "749fae95e47ddec6392c0854da6136d83587babb9ff338c02e584a3786f9b336",
+      "size": 832
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/DesktopResolution.h",
+      "sha256": "1d72c5387c15618d03b5d67599d5f87e4c2a4aaf16e8f0dcec91ff5e8596432d",
+      "size": 503
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/DisplayAspectRatio.cpp",
+      "sha256": "7c1d80bcfa4cb39884e1ab1bb6901b237b7210eb998e0cac990cd0d5bbb97574",
+      "size": 1086
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/DisplayAspectRatio.h",
+      "sha256": "75656c673dbde696b5470efb189f34c6df83cc2b62eca8e2749a1fdd666604ea",
+      "size": 577
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/DisplayFilter.cpp",
+      "sha256": "bdd39fd0a681ab83b5ad400ccc576fb08e1975259f0ff4da2bc231830d93f0cf",
+      "size": 4903
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/DisplayFilter.h",
+      "sha256": "2e76874e89a8a334a6da8b4c50bdf412f189b939a1b82b0f8309086ee60393d7",
+      "size": 954
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/DisplayRefreshRate.cpp",
+      "sha256": "f928e0a2052dbe525dec0376de08dbddb496e853890be422c5e972d1f74be919",
+      "size": 684
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/DisplayRefreshRate.h",
+      "sha256": "b94c1c8e5e5d37b02d399e1d12dae97ec64b37437a932534bb0056e90719ecd7",
+      "size": 453
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/DisplayResolution.cpp",
+      "sha256": "d07bbcb8ff7aa9693035d5a5fae30034778803ae41c68df00e1011a5ba029769",
+      "size": 820
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/DisplayResolution.h",
+      "sha256": "84854f47e8d0836735813587b20580a6d978401904b3730be49de0317a15c6eb",
+      "size": 499
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/DpiAwareness.h",
+      "sha256": "c6d2bca7345e68532f4d1bec13f99cc9be19817a4858bd2f30a96f3a6d5e52ce",
+      "size": 657
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/EnableDDrawCompat.h",
+      "sha256": "5b4c6ddf238c21f7f3ea89e16e9ca4f6575d3288ad5092895e36d6a17a209ec1",
+      "size": 314
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/FontAntialiasing.h",
+      "sha256": "05e8829ff7f6b15b2bbdf66a9d9dd2550cf67abc6b4385e28d42f315c12c6ee5",
+      "size": 370
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/ForceD3D9On12.h",
+      "sha256": "5618c28526e73591f0153336ec70508c66f5f15ffdf4dc338fbd785baf73b836",
+      "size": 365
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/FpsLimiter.cpp",
+      "sha256": "ef3920179f5e38013aeb1ebf2108aa3620d61c29fee0b430809c17daf1d5dd78",
+      "size": 376
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/FpsLimiter.h",
+      "sha256": "2331eea3274b83fe4a4b558822bf5f3e2585df91f84c32b062a8e66ddbf9f1fd",
+      "size": 340
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/FullscreenMode.h",
+      "sha256": "273b8e6b8d87c07711d97764b189f7962735d50fd50ed09e8366559e8ee39bec",
+      "size": 577
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/GdiInterops.cpp",
+      "sha256": "d404b27a2684a36cfaa35c8574a6cbac2304395e017a41b76dd803e41970e09d",
+      "size": 790
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/GdiInterops.h",
+      "sha256": "74a200c4e8dc5e4389b49abbf4286fde69b22c1ccb4ef5f4021c571be70d7d84",
+      "size": 668
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/LogLevel.h",
+      "sha256": "53f2994f7ddf6c5a808725fa4eb62f9065a5e581efa02d3d2aca66aad3d5b4fa",
+      "size": 414
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/MousePollingRate.h",
+      "sha256": "b72c4a2c33fad5e310ea829b9a53e3480c71811fd947f3744a1e79c3cf9cfef2",
+      "size": 479
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/MouseSensitivity.h",
+      "sha256": "0d901834ed8dc300a3ac6db82146ea2df2eaa94733f6966dd9a28ecbae8beb1d",
+      "size": 594
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/PalettizedTextures.h",
+      "sha256": "bb1d700a554a5bd2c18a8572e3b5dcb747c7c4ce022b51ca3e17f6e32e6689d5",
+      "size": 320
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/PresentDelay.h",
+      "sha256": "bd0c5b289199118fddd7dcb6143e83fc8262e304373cff0a8481b0cf5da718d3",
+      "size": 438
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/RenderColorDepth.h",
+      "sha256": "a51199704fa133136a8819abc253b183526cfd14d52c4a6bbf84a0c8ea5a7c84",
+      "size": 584
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/ResolutionScale.cpp",
+      "sha256": "765346a7d8af60b9330d26f4b27b48dced227e0c81e7e9536d7ee19e30848fcb",
+      "size": 934
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/ResolutionScale.h",
+      "sha256": "ae343272107ebb3b5f6977286568ffdd6c2f5179ef7c4ec4f06dccf32315162a",
+      "size": 546
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/ResolutionScaleFilter.h",
+      "sha256": "f7c163297eddd329a13294b61c6f4f21cf50858ef7428bd7b2cf9be2424857d8",
+      "size": 433
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/SoftwareDevice.h",
+      "sha256": "a7e64da3b64b87ca90ae498026e2c88f814cb65f19a76622226d236e137b8b03",
+      "size": 492
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/SpriteAltPixelCenter.h",
+      "sha256": "5f8fc7299582b64f101769dad395ae4235d965e8a6557789664d1b916377e784",
+      "size": 829
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/SpriteDetection.cpp",
+      "sha256": "b67ed672a3a7ca08884da9a2b429463cb3a12d73261f08fb79abe9d70eed2c4a",
+      "size": 391
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/SpriteDetection.h",
+      "sha256": "b5a6d64613a6480501031b5d977b90a754e12c7c5463bed78ca5f409879a484a",
+      "size": 352
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/SpriteFilter.cpp",
+      "sha256": "98e69c860e53c9dde780f79978602c64ceb7cfd6aa3da11cf56b09f27908e3bf",
+      "size": 317
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/SpriteFilter.h",
+      "sha256": "946e7c0f461cf36fbf79a08ddd4dc3fd747b08bf6175c692774e2b8bbf6194f5",
+      "size": 247
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/SpriteTexCoord.cpp",
+      "sha256": "f54f147f7fa3abdfa76543d7762492b4a94953f1862a6c7d18f72a690b936ac8",
+      "size": 392
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/SpriteTexCoord.h",
+      "sha256": "528164a391f0264e3a0b37c0be13aca423f007efa41133ccd3cb83e80c6ceef3",
+      "size": 351
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/StatsAggregateTime.h",
+      "sha256": "93c364a5d644a88297bca61f56a08d391295b2258e303f2954d411e4970f614a",
+      "size": 322
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/StatsColumns.h",
+      "sha256": "d93589e1483a62728cae77d2e873dd3238a5b656e892f93c119383955a3c8db5",
+      "size": 427
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/StatsHotKey.h",
+      "sha256": "c8849620714d1713e011109e9b4f61ea627ce40487d4e1590d54fe2572dab691",
+      "size": 283
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/StatsPosX.h",
+      "sha256": "f23501909f937c9cdef8f86fc60ffe5fe16d8aaa8a98d7edd2837a8aa2656a24",
+      "size": 674
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/StatsPosY.h",
+      "sha256": "08f9a0de954aecb44ea03b25a013a209ca93ba75148cf1a520e3a80e3525c45a",
+      "size": 670
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/StatsRows.h",
+      "sha256": "f2ab9313e2bee3214cb81ccf0a62635703189658b6c661f22c186fd62933d5b2",
+      "size": 1072
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/StatsTransparency.h",
+      "sha256": "e837c360589bbceb33d7176a0037aa4eda96159b5f53631f2bd322494d88aa83",
+      "size": 649
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/StatsUpdateRate.h",
+      "sha256": "c197f7eab9ef0b13e6f653b5d2d6680cf0f6e1d10e2a8107aa2ac844e1e7ea8b",
+      "size": 307
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/SupportedDepthFormats.cpp",
+      "sha256": "e8dde9668d90425cd10f182eb18005eb8586d9a7b25a3793a188158a9e160e58",
+      "size": 555
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/SupportedDepthFormats.h",
+      "sha256": "143ff177d643ee5257065538a001c02be87b404a6eff18cb3095905017a881b0",
+      "size": 285
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/SupportedDevices.cpp",
+      "sha256": "0282879c43b92e413c8ef52af4bc4b148613c0db06723b81267487b3d2a3d1e5",
+      "size": 1392
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/SupportedDevices.h",
+      "sha256": "4cfb2d8a3549fcb114df35e148dbcab0b9b038657c7d5af63e9a312ac193798f",
+      "size": 518
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/SupportedRefreshRates.cpp",
+      "sha256": "8e36ad9bf3c7c80aa377e666a28fa204f7b85cffe13282729da1d8cbecdca7c9",
+      "size": 813
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/SupportedRefreshRates.h",
+      "sha256": "322ffe734c99a41773ac109d578eee0b3f77b413f7ec5dcef712b603c152371b",
+      "size": 632
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/SupportedResolutions.cpp",
+      "sha256": "0ff63aeccce4629600b7e60630e1fce060956d73b86cc658f171d6f8e4763464",
+      "size": 795
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/SupportedResolutions.h",
+      "sha256": "d176de38ff146b0c4dab87a0d6a70809b7165ba0be2bf051b9916a0883bf07f8",
+      "size": 556
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/SupportedTextureFormats.cpp",
+      "sha256": "51f3517b151c9327fea8f273bf118a9c308337805d8917742cdb4a62f0c316c2",
+      "size": 1215
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/SupportedTextureFormats.h",
+      "sha256": "767077ad975cd7e7210c41d6f2cff39a17259fd4bed122590e656ab95f5e6463",
+      "size": 293
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/SurfacePatches.cpp",
+      "sha256": "90f9eae3923431415e58d1243dd03738c8ac8dce0150de7881f81abfae67cce2",
+      "size": 1618
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/SurfacePatches.h",
+      "sha256": "7e5c7309086f364607c3ffa2a7af7ba139e2b71513de43b601dc40af791d2cfa",
+      "size": 486
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/TerminateHotKey.h",
+      "sha256": "bdac0c999628bf5fa4b77e40ec799ec478f92d501ec49c39a6faa7b8e01aa412",
+      "size": 306
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/TextureFilter.cpp",
+      "sha256": "1ef541014207f4b549df696e563c7b5fea913da6d0b094cf404a6eb869d001af",
+      "size": 669
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/TextureFilter.h",
+      "sha256": "b944931504eab8ab93026a4f77127eaab9845b42084d7b97cbda0f82e3ecf3cd",
+      "size": 487
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/ThreadPriorityBoost.h",
+      "sha256": "8d65a42e81346ff382833d4450b6a957fbeeb009418041f13467e0874e173252",
+      "size": 398
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/VertexBufferMemoryType.h",
+      "sha256": "feac68c928480c6d8034c0cff70a71b25aec2281fdbcb711bce2a620dd56d8c1",
+      "size": 521
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/VertexFixup.h",
+      "sha256": "8de5bc3c07311a3a75bfc289a077e7fb58f68b36b2ab55f5620895dfd23e84ea",
+      "size": 335
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/ViewportEdgeFix.h",
+      "sha256": "c9f9d6d697bbc98bf95bda9213e343338f213700a987b922c610b8fa5fadc7cd",
+      "size": 530
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/VSync.cpp",
+      "sha256": "2a1c7204648a1307bc4eedfd21a3570d42c36d0eac4da0f3c2739653222ab55f",
+      "size": 401
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/VSync.h",
+      "sha256": "d4421bf1773a6f09006e56f444630da57bb6454c042c24ff01ff9af4bbbe8c94",
+      "size": 306
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/WinVersionLie.cpp",
+      "sha256": "e1ce8b9cf4adc513dd87955eaf0701e46e988b276609a7a745ce0e4d0a178bd5",
+      "size": 738
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Config/Settings/WinVersionLie.h",
+      "sha256": "18c8bd7f62f34de470fc12e0ba3ad145aaa2b2a99739b182e74e0e0b57004dd5",
+      "size": 459
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/Adapter.cpp",
+      "sha256": "f80e905ef2e50e9b76a108e5d8f76230ef8a58472ef821f851bba6c37ab96a45",
+      "size": 16163
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/Adapter.h",
+      "sha256": "c26a43fa93a8748a7fbe1ec46809bffef6ab1c13157d24a9cabb4280a3f29bde",
+      "size": 3041
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/AdapterCallbacks.cpp",
+      "sha256": "e08834c07cd305d346644bcac5d4bcd51e416466668a2c296ebb638549c3dc31",
+      "size": 611
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/AdapterCallbacks.h",
+      "sha256": "7269ea557bae2e2078ecac302162fc9f6c35be3128f46ccc0a64d39432c49424",
+      "size": 240
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/AdapterFuncs.cpp",
+      "sha256": "dd9e6277c7e42aaec991f79afb8aeb139c291e9c9dc859cb0a2d498276093f6c",
+      "size": 1217
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/AdapterFuncs.h",
+      "sha256": "25df8ad45e026936e242da0fd435e79820538937dfe9d15d709cbc5aed3ab1ca",
+      "size": 228
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/Device.cpp",
+      "sha256": "2d2cd1a0d13bbc6d48b5fe2d3133164908e9cecd0ad5850703850708c4cccd1a",
+      "size": 16933
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/Device.h",
+      "sha256": "35f0e049779bc443ce7890e3a5ffd41ffc5682ba7d4aca8de13b032b2a888f43",
+      "size": 4630
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/DeviceCallbacks.cpp",
+      "sha256": "7d6dd264c3faa6bae1a411bde4167c86c08cb4c25739f4df59aab8f9916ea824",
+      "size": 601
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/DeviceCallbacks.h",
+      "sha256": "6d54bbc88a4ea20a55b5a00afa58c3942bb925fd6486b96fa5110f79481f0b8d",
+      "size": 237
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/DeviceFuncs.cpp",
+      "sha256": "29fceabc523a07ef89603e2b71bcc3203021d9b311ce6bd3fc1280ce90115419",
+      "size": 3935
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/DeviceFuncs.h",
+      "sha256": "ac72de9d115aaa70e8fc5a0411776d15d08624dac63e944aa94aef46bec453c6",
+      "size": 225
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/DeviceState.cpp",
+      "sha256": "8c64476d77ff4049fcc988429cd89043702b5515dc251634a3fd2b2da6f44d0e",
+      "size": 49512
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/DeviceState.h",
+      "sha256": "ae5b1d5cfe47a86e6c4fc0fb8e9504681943c0204572de4059b052469a9e9d75",
+      "size": 10117
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/DrawPrimitive.cpp",
+      "sha256": "0db673f0b0b11ab46228bd688f6b9c6639985dfa29c8ef3929f0fa3274628027",
+      "size": 36289
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/DrawPrimitive.h",
+      "sha256": "e345fe82106e7918e342e4ab6d9e9ccf8a3c54ed237f11419ac0ec57022cfab3",
+      "size": 3403
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/FormatInfo.cpp",
+      "sha256": "634d815df893acaec9c97e51817ec7ed3ac1b12464ce116bc09540c74d42949d",
+      "size": 7645
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/FormatInfo.h",
+      "sha256": "f32a29cf01308628ba1dbab7c461570ac2a2013fb3deb2b9cae29cda7bc24ce8",
+      "size": 1434
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/Hooks.cpp",
+      "sha256": "0cd98492d94b19748aaf412111bc1264e878c748ab240cb09e8e45e493bccb9a",
+      "size": 6575
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/Hooks.h",
+      "sha256": "52edd35e847fc2b8549f59dd41742c0c35a76f147115b02d9e4f4071eef570e0",
+      "size": 63
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/KernelModeThunks.cpp",
+      "sha256": "8c6f53207332d6958dfea7388996b84563ac52d7c7ee208c21db88b4131d1395",
+      "size": 18902
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/KernelModeThunks.h",
+      "sha256": "1216cd29a278fb2cac95dd8bfffa08c2b578f814b60cbda1421ec447da983d39",
+      "size": 798
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/Log/AdapterCallbacksLog.cpp",
+      "sha256": "06149f9afdb87dde4648da76ba5d50450fde2c71d11ac72c0f7ca3153524dd40",
+      "size": 464
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/Log/AdapterCallbacksLog.h",
+      "sha256": "4b9143f2942dc1be3e5627179433f86662865b395acf3bba060b8ccd2b4f8e3b",
+      "size": 287
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/Log/AdapterFuncsLog.cpp",
+      "sha256": "8a5b48e6240a2e53fef95598ccbe6af41c8690088146587489af86c79dd2bd7a",
+      "size": 4070
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/Log/AdapterFuncsLog.h",
+      "sha256": "3f0f7e92bd59a167f589a55678570c54efb61a7f541b41f97703628115dc91ee",
+      "size": 409
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/Log/CommonLog.cpp",
+      "sha256": "59aa9705acd1751b99f9871561a1636c20819aaf34a6d900b27d5cca3106b3e3",
+      "size": 5124
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/Log/CommonLog.h",
+      "sha256": "62a3a4d533b3f55d7e511ed321a676511a3ab4f328905c242fd7cc1fa2f02264",
+      "size": 522
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/Log/DeviceCallbacksLog.cpp",
+      "sha256": "ca83f7c0b15a653e6f50c3ee88401af875f90d1a164feca26405b75f3c1f98ab",
+      "size": 3532
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/Log/DeviceCallbacksLog.h",
+      "sha256": "7202b9be74cbb2cedc49c572d171019f3e0bce0a7ce2d5da6e9203e001b43ac6",
+      "size": 846
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/Log/DeviceFuncsLog.cpp",
+      "sha256": "cd99486e17ac205dc34412bf0a0ded31885a950b663b5bac3b1c5e5f8530de57",
+      "size": 17504
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/Log/DeviceFuncsLog.h",
+      "sha256": "70b468b86152054500eb097761a6ce535c5316768baf97f64da88332f106ce59",
+      "size": 3461
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/Log/KernelModeThunksLog.cpp",
+      "sha256": "8ff2addadd7cf295632bbda4a1193e800de33c6103709d2f5fc857de08db830e",
+      "size": 5613
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/Log/KernelModeThunksLog.h",
+      "sha256": "febf07f9f9b16b78623fea034831d1fe8088a4a85e0399c87f1b25dc8ebc5a6b",
+      "size": 1460
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/MetaShader.cpp",
+      "sha256": "c839f10402745ea5a4afc2e0c2fc52df8197e042225508a4924ee2c0082f5250",
+      "size": 50020
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/MetaShader.h",
+      "sha256": "4b5237651ccdac4783b006b54f6183367bccfd4a0bbd8f6bb124aac4594e34cb",
+      "size": 7097
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/Resource.cpp",
+      "sha256": "90a360201c59382075a16a956dc25c6f0b8969f1789c47c62d39ee06f12ee331",
+      "size": 63743
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/Resource.h",
+      "sha256": "667bef24963061fe7aad33e2cbd5082a6a0aaeaf75ac79884c7c77b6504c2834",
+      "size": 6466
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/ResourceDeleter.h",
+      "sha256": "1c9b3fc12879fc33fa8eea15394ff4537a42623b34e7773921b7d1fcee76b0b4",
+      "size": 431
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/ScopedCriticalSection.cpp",
+      "sha256": "e60d82cb533d18a444e9adc850762f48872b96a6fb9c56fa9d2efc0b4e47564d",
+      "size": 757
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/ScopedCriticalSection.h",
+      "sha256": "8461ce20e76459f8226d7221363386619d7130de3a8eb8f78e4e4c27f28f73ef",
+      "size": 283
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/ShaderAssembler.cpp",
+      "sha256": "d6e7c04ba38d1a21522dcf95c348a3b39d90a2ed4abbb110adc7105600e4d5d2",
+      "size": 24078
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/ShaderAssembler.h",
+      "sha256": "4101131d7aec58fbbf3fbc31b8442a9dac3941e11beff9041fa3276a6a49534d",
+      "size": 1629
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/ShaderBlitter.cpp",
+      "sha256": "effdf28f29c9b7acfc005675fc98f443259ccf74e8aa9e2691bde07f4fdcd2c6",
+      "size": 39211
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/ShaderBlitter.h",
+      "sha256": "c5ec67816d53401fc6ea27daf2dece8e25414be733c1e354c8678f0645b246bf",
+      "size": 7676
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/ShaderCompiler.cpp",
+      "sha256": "4d813fe41dfc85121f5afc7acd13727295a908c4d80f113cfc7c73a2322adb24",
+      "size": 49503
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/ShaderCompiler.h",
+      "sha256": "7f9ae49d2f62173a7d33f13f0db6972accc2dd1fbacdf2c48a7f896f82a91814",
+      "size": 4620
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/SurfaceRepository.cpp",
+      "sha256": "309dd7e45acc260c44977eb3ccf54c88cd07238058cf804dfba8655abe82c0af",
+      "size": 14159
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/SurfaceRepository.h",
+      "sha256": "4d249a92f040f89b533d0589089fa8874560b4bb35e3c58992e0484687dd921a",
+      "size": 3953
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/Visitors/AdapterCallbacksVisitor.h",
+      "sha256": "99a44b775ad6f34c817bee79099060f30f815072c36cead65070643002d69841",
+      "size": 455
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/Visitors/AdapterFuncsVisitor.h",
+      "sha256": "2bdc85e7d08dd0cdf08dcec22aa76783eab16785e2a47ff1aa1d6c10e080edfb",
+      "size": 357
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/Visitors/DeviceCallbacksVisitor.h",
+      "sha256": "3175d03799aedfa32ee70a51deed90748473f8a7a11d95c41cd13a8902264f35",
+      "size": 3382
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/D3dDdi/Visitors/DeviceFuncsVisitor.h",
+      "sha256": "fbcd6a72066597029ed896bd84113a75a6ed24bc1b7dc789688fe29bf9242c0b",
+      "size": 5476
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/Blitter.cpp",
+      "sha256": "75a32393eedf38bf8d7c4b6d1d9354d3b76c5573be23d6619672c2c0d4a80197",
+      "size": 25471
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/Blitter.h",
+      "sha256": "97cbfac97b79127895e4c6a20951be3455874705f7d4f02fef44d750079a9b33",
+      "size": 422
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/Comparison.h",
+      "sha256": "cfade16a2b28c4b0adc4f382d31241a9b462a9f6916c44eb176b4b5b63186a5b",
+      "size": 263
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/DirectDraw.cpp",
+      "sha256": "19800fc298f53c938dad193b18067261dab6765742e62759869d97f5d2df6378",
+      "size": 14635
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/DirectDraw.h",
+      "sha256": "62a35d9a5ba7297c8079c85c3d41dc8443b5dc6815489453da52baf8b4a73c7c",
+      "size": 1460
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/DirectDrawClipper.cpp",
+      "sha256": "7c885e0976749a5f23fef3ea7e1774508452faf321fa08c30e0c8f827b4d8b59",
+      "size": 1256
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/DirectDrawClipper.h",
+      "sha256": "3733c65ad71f1e62580363bfd78b8ffc907e4df00a8bba8d278637e61077a3e9",
+      "size": 323
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/DirectDrawGammaControl.cpp",
+      "sha256": "1888a6b6ab812abfd2dd846f4087b9491b39dfe1df172e23e41c5857d6e0b73e",
+      "size": 1520
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/DirectDrawGammaControl.h",
+      "sha256": "e4085e425a8755beae7eae8cf6ae05d437f1c52fe42b46d1da248306f251c1bf",
+      "size": 167
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/DirectDrawPalette.cpp",
+      "sha256": "c55da394da01073c4a72c47e5d8811acca5d5bb5dc35031bf0450dde8f11b7a5",
+      "size": 1821
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/DirectDrawPalette.h",
+      "sha256": "e9f077e4fbde32c9731730d2b1df818bc712d08903b9f5edc948fbd3f03836f6",
+      "size": 188
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/DirectDrawSurface.cpp",
+      "sha256": "bfded2fe4860a1bd7402d5e4b2136750ba68c5f0c97b5787bbfb422da21cf321",
+      "size": 4060
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/DirectDrawSurface.h",
+      "sha256": "015e183b2cd0fe12929a276130aa0f3ed12b9be27da5bac9af8a99db873fac85",
+      "size": 2125
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/Hooks.cpp",
+      "sha256": "26dc2533fe27742f20600f64bca00974db26b3d2bcd04cb8b1ee7d4d04706b06",
+      "size": 3880
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/Hooks.h",
+      "sha256": "6411cecd56cfdf80e7174448452780d7cbc5cca51de00deaeec0e90c156aab7c",
+      "size": 144
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/IReleaseNotifier.cpp",
+      "sha256": "819dfe08e7f83fb8f483ae5f9a4f5edc04d8e11ca3a81f825685f19b0730df06",
+      "size": 220
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/IReleaseNotifier.h",
+      "sha256": "49ba0a6114f4872c3d18ad077bf7ba4bea4a1685a38d3aed8f495adec2ab095d",
+      "size": 730
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/Log.cpp",
+      "sha256": "93d995a39885c55eaa3fa7763cb1b8cdb91c5dfbb681655db244674efa432407",
+      "size": 3797
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/Log.h",
+      "sha256": "addda87c42757f0613cf63b01eec5427462c3abaa1106f77acf570bf6c3e1b33",
+      "size": 668
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/LogUsedResourceFormat.cpp",
+      "sha256": "6f7cebd69087c94788d75e3db9e7bd215ac7220499fb22ab1ef144c3a4e5a7ff",
+      "size": 5055
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/LogUsedResourceFormat.h",
+      "sha256": "e5e7e0ff476ad77b3409ff1f0cc03bef75d1d5d094762fc6f1dfcd579e0789d7",
+      "size": 423
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/RealPrimarySurface.cpp",
+      "sha256": "cf5ee5dadfe34d44eb067102e2515226d14d89d6971f250a09b7e59fd3fc41a6",
+      "size": 25149
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/RealPrimarySurface.h",
+      "sha256": "2083623889183e02864e556dccddb6a78988a7e705388744478013d305c1ae0d",
+      "size": 1287
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/ScopedThreadLock.h",
+      "sha256": "4f582d0be986a14bd7b9354a80c966879fd9c107a97f9db920b604a9e35b2406",
+      "size": 262
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/Surfaces/PrimarySurface.cpp",
+      "sha256": "acd954c84359ed27ca4a43096086b6ac086db243576d0c4f35e272af80181a66",
+      "size": 10849
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/Surfaces/PrimarySurface.h",
+      "sha256": "591be701d68421ca4bd07322b0f7c486ff4b562fa1b3c472b270b0c1dd126721",
+      "size": 1412
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/Surfaces/PrimarySurfaceImpl.cpp",
+      "sha256": "0e5808b66baa2309db0afa3451c946d779f753b39b5e3ab7f6f622295340a5c7",
+      "size": 13238
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/Surfaces/PrimarySurfaceImpl.h",
+      "sha256": "39dd57f970ffd171d48489bf0fd24516e157076daadfa884705377fce752de16",
+      "size": 1761
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/Surfaces/Surface.cpp",
+      "sha256": "8fbc3f58ff1b2e717c44d85e5f7e8f127e7676f60dd83a16963b47a638fb6805",
+      "size": 8065
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/Surfaces/Surface.h",
+      "sha256": "bcc0659957c763040ffee987e36ab67c5fc85c638c7fb687cc5297b6498f6327",
+      "size": 2270
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/Surfaces/SurfaceImpl.cpp",
+      "sha256": "fa9aeb9d193ddae1447a4944fe980e2933f2e9bfe6ae634621146909bc0f6a8e",
+      "size": 10535
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/Surfaces/SurfaceImpl.h",
+      "sha256": "ed2582b85274f79c43e8d4a7560d64bffcf2ecd55da333417a590be2547c0cae",
+      "size": 2017
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/Surfaces/TagSurface.cpp",
+      "sha256": "ebb7f0b6ef08aa52d3152c1d7140d120a9af57d50f9437ca76a086f0dd04cabb",
+      "size": 4344
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/Surfaces/TagSurface.h",
+      "sha256": "b633b81984d663fb005c2f12eb983a518bd91b51f1db6e582c3334c8a5d609f8",
+      "size": 1118
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/Types.h",
+      "sha256": "f47cad6b7082ae0ca10086bf5224fb7ec6a39d9f3e46b46458db3500562cf9cd",
+      "size": 2025
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/Visitors/CapsVisitor.h",
+      "sha256": "d1c09b3a0d76d94c533348be5f244a6dbe6f999681c69250326fb10a42c25451",
+      "size": 1696
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/Visitors/DirectDrawClipperVtblVisitor.h",
+      "sha256": "aaad9882c26b89b82e4ee2d274e5e127d9abc4ba441f816925f9b6082135fa80",
+      "size": 450
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/Visitors/DirectDrawGammaControlVtblVisitor.h",
+      "sha256": "1e63a7795a48363fb3ebab6ed49aa4825855c6d0c036ff12e7e6140085bb57cc",
+      "size": 356
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/Visitors/DirectDrawPaletteVtblVisitor.h",
+      "sha256": "8dd06398dee5bb01899ca4b04456d27583573b98d221803745756fb30cabde6a",
+      "size": 394
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/Visitors/DirectDrawSurfaceVtblVisitor.h",
+      "sha256": "08b16d3a8c7dbdd5fb3f9c117cb3faf2ff8e74ea2c48d0821e1540ace653dd3f",
+      "size": 2573
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDraw/Visitors/DirectDrawVtblVisitor.h",
+      "sha256": "80acfbd7063dd040a39713882f22c6f88692313925ee6b06a94d17f7cf75f7f1",
+      "size": 1829
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDrawCompat.rc",
+      "sha256": "4d48bd920cf07a9a762177be5aa567f926c78101f983f9921938b7163554c5d2",
+      "size": 1086
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDrawCompat.vcxproj",
+      "sha256": "c4e44c40ba32afc96be7a0c5f84511474cd7e85a97332cab36cb9aae992cbede",
+      "size": 31156
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/DDrawCompat.vcxproj.filters",
+      "sha256": "6a59672e740d01ebcd82607e4a11f41351828d4f0a54efa912c33604efb89ff8",
+      "size": 51333
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Direct3d/Direct3d.cpp",
+      "sha256": "19ad9e6a59ba2d99efb65848eece35bbd480430f67ffa8088d4b77c0d27fa5db",
+      "size": 8167
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Direct3d/Direct3d.h",
+      "sha256": "37fb517adfe70d9a47814ee505376291d9b192d92679ecbab9da7c15ac791e42",
+      "size": 320
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Direct3d/Direct3dDevice.cpp",
+      "sha256": "d45942fc53b890a7e80ea16f4b2cca7303f0c65f2dcf8921b6c133c4f056fd72",
+      "size": 11000
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Direct3d/Direct3dDevice.h",
+      "sha256": "1d1e9d1108b71296b5053b7248981bf209522559c1bbd9faf359537d7ff24dd6",
+      "size": 293
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Direct3d/Direct3dExecuteBuffer.cpp",
+      "sha256": "e0553aa91aa9b7d45bf07f70a32132357f98220c2cc479cf76cf2a355a58b75e",
+      "size": 527
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Direct3d/Direct3dExecuteBuffer.h",
+      "sha256": "8a3d16df8840c08d94912e54e2eac2fb93daef5482fbfc87e8a2cf237e23a4a0",
+      "size": 195
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Direct3d/Direct3dLight.cpp",
+      "sha256": "fcaec844ed2dc7885c6144ee71c2ab10e0ef91e3e7c220d07ef10839ad9548df",
+      "size": 479
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Direct3d/Direct3dLight.h",
+      "sha256": "d676309ae5d55a6cfb9258f0caa6e580ea311793b4e0ca3afc75a28c58614d4c",
+      "size": 179
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Direct3d/Direct3dMaterial.cpp",
+      "sha256": "27c67d518315fdae7bd2ddc58d71b4456e0112f65ffa19ce2bbf3a059318d5e3",
+      "size": 687
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Direct3d/Direct3dMaterial.h",
+      "sha256": "d2a024635ea58210dfb00a9a6aac2494228054b5b3be3a69e520de83ff274c91",
+      "size": 180
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Direct3d/Direct3dTexture.cpp",
+      "sha256": "ee6c40a159fa2c49894efb003be8532b515ddaec512ea6474de554a87b676135",
+      "size": 622
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Direct3d/Direct3dTexture.h",
+      "sha256": "921d8c47449dceb6ca51f92616f7f4a16f543d549c51ae6da6fb65b65fe91612",
+      "size": 179
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Direct3d/Direct3dVertexBuffer.cpp",
+      "sha256": "cdd26ae77abb591792663b46b58874fea15819534f5d32507fb9283fc273c787",
+      "size": 896
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Direct3d/Direct3dVertexBuffer.h",
+      "sha256": "a154f225f8eb6157b0425b2a33f333fb46d253422455b2304d166dca666974c4",
+      "size": 184
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Direct3d/Direct3dViewport.cpp",
+      "sha256": "a6971819be0e23d2feeeb7d3783f3461cf3d8a9cd5124bc41fc76498855ce36b",
+      "size": 687
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Direct3d/Direct3dViewport.h",
+      "sha256": "dfd2c18847568cbfe63643bd24a366a05e93d8ab154e761825958b2eb44b1219",
+      "size": 180
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Direct3d/Hooks.cpp",
+      "sha256": "9e74f90ca05c99bfd63246443498a39ea2f0ee8b3974cbd3aa907b4ff57231bf",
+      "size": 9027
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Direct3d/Hooks.h",
+      "sha256": "fb1eb9ea10974288629eac73db8b9d991187cba4444dc7de4c745227735f03fb",
+      "size": 174
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Direct3d/Log.cpp",
+      "sha256": "0b5ab75d3c6cf1253ae0cca684250acacdee27b4dc3bb8a8b0499f588e43d91c",
+      "size": 16515
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Direct3d/Log.h",
+      "sha256": "f88f91b08b5bb6ea306be1c01eeb611a4a0c3738018a34e70f372a53e8558f00",
+      "size": 2546
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Direct3d/Visitors/CapsVisitor.h",
+      "sha256": "034c159e89b236ac0c289ce45967c8825b24ab9a65f25bc64809e0e312149644",
+      "size": 2518
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Direct3d/Visitors/Direct3dDeviceVtblVisitor.h",
+      "sha256": "322755db949df7b015f78da9e99486234173ef0d3936e8872b5359e170caa0bc",
+      "size": 4785
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Direct3d/Visitors/Direct3dExecuteBufferVtblVisitor.h",
+      "sha256": "6b61b55340c2887b6e3bd7363eaa97b392101560f09524237001ced7849a3b8d",
+      "size": 535
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Direct3d/Visitors/Direct3dLightVtblVisitor.h",
+      "sha256": "8dab6122f9aec2fae7c56de254816db30464b7e0b9956aeb15eda83646c87ad3",
+      "size": 384
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Direct3d/Visitors/Direct3dMaterialVtblVisitor.h",
+      "sha256": "6cbd9dd847a000c0100dfdae893a92dfe5f9001f927f4d29a9cab987d62542c7",
+      "size": 1039
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Direct3d/Visitors/Direct3dTextureVtblVisitor.h",
+      "sha256": "3ef589b7dbd641d9c0ef66704739a9d0487706905737345bdafbc6c3feaf3cd9",
+      "size": 750
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Direct3d/Visitors/Direct3dVertexBufferVtblVisitor.h",
+      "sha256": "c9966f43afc3ffc9ad3a8eea9c3f15129bad1f742eadbc48466fae13641bb9ec",
+      "size": 747
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Direct3d/Visitors/Direct3dViewportVtblVisitor.h",
+      "sha256": "afc4fd25e224fc71329bbb98bc0c8cb3570f1440b672b740b1e2b5aa3f52fb37",
+      "size": 1322
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Direct3d/Visitors/Direct3dVtblVisitor.h",
+      "sha256": "714bf9a081412b1cac3f0fa06c364dac00b95978e83730f84723b3a30444d100",
+      "size": 1761
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Dll/Dll.cpp",
+      "sha256": "b8d184508d458741ad7a1a5d68c2c605eded8fcefaed73a749d2a54cefd452af",
+      "size": 1703
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Dll/Dll.h",
+      "sha256": "c7fe10399fada6d40d50da4336a1376342b78a1ca0e6127168be532595636fc9",
+      "size": 2426
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Dll/DllMain.cpp",
+      "sha256": "f8ba751454753a5a5359bb9908028498f8476c837f6e25e869e1b7b24ec5c7f0",
+      "size": 14213
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/Caret.cpp",
+      "sha256": "62a0b70017a792e58a238882697e27e1e20ed33230ddeb09d7dc952fe27d5054",
+      "size": 2920
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/Caret.h",
+      "sha256": "ef3cb31461a2cfc6ce524263e2ad13fdefa2e3cdc1e624da2ac12e1c47f459a7",
+      "size": 104
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/CompatDc.cpp",
+      "sha256": "6f53bc4059942408fe30627eba458fb7f10905264e47d668bc9f2a8296a155ed",
+      "size": 1314
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/CompatDc.h",
+      "sha256": "193e1f341bb79d1bb6b7d3cba907f0c1c240915d32dc30979b5a3c476b5ad87b",
+      "size": 463
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/Cursor.cpp",
+      "sha256": "da94271f0bf4e92f4323d0504835ec7acf6e1c7ca8b8df5961ef7403af464285",
+      "size": 6821
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/Cursor.h",
+      "sha256": "53a9e9e1b71ebe08e9daeebdb4670bc8dbebc63e961f71abfd371bff5073ccf5",
+      "size": 359
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/Dc.cpp",
+      "sha256": "c8981948d7c0489eca6534fbea718cc5ad0440769631900257d0a236fd2b3a43",
+      "size": 7075
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/Dc.h",
+      "sha256": "15df3765ebba5fade5ef45ce6c5ae79d388bc0ee64e71baf88e43fd359826243",
+      "size": 194
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/DcFunctions.cpp",
+      "sha256": "92fa77e0d089e40fefefff0285e3e9616bda3af0bc02afb51b9aab17f6d7c1a7",
+      "size": 16183
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/DcFunctions.h",
+      "sha256": "5ec3c51e7a185ad4b98206e8d03e1e34a8cef1ccf21390eafb83bffe7e99cd14",
+      "size": 297
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/DominionWarsFocus.cpp",
+      "sha256": "2b7f3bbfa0cee05e977c013f5375c1e6ef6a3a39cbfcd22186355f6a5a49cd47",
+      "size": 7897
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/DominionWarsFocus.h",
+      "sha256": "25f24befdc48b3562e1d6b52828fe5486d71abc42f07965db71d6bdd856ce3a8",
+      "size": 162
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/DominionWarsFocusPolicy.h",
+      "sha256": "3da9dc390bc2b7c4a623f86489fcd69ffa3aa86eabc491fd2da01cdf5f82d0f6",
+      "size": 2392
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/Font.cpp",
+      "sha256": "acf5f56779d720cb1fba5e0683ba82b6de159d3c9e05cfc0199f9809c4aa294f",
+      "size": 3526
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/Font.h",
+      "sha256": "e9863ac426f7da197e4c254c21291a299e586a03c6fe830d88cad80fac7983c1",
+      "size": 235
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/Gdi.cpp",
+      "sha256": "843fd2e6597d82dabd1a1495f8085be26963d7bc8a56024cf6f2260d010defcb",
+      "size": 4764
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/Gdi.h",
+      "sha256": "06bc153e740ff5d08d9df827cdefb5e741ab2f55570ef6ad3332a05c70a6feb2",
+      "size": 514
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/GuiThread.cpp",
+      "sha256": "800cd252762bf877bb295049e495cf86c25b89aad90b0e22ae1a814040bff9ad",
+      "size": 16513
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/GuiThread.h",
+      "sha256": "4fae2733d01f0ddf141280aa9aef8c11bcbf3ce595ce44e55953eab3651ac3ec",
+      "size": 1011
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/Icon.cpp",
+      "sha256": "0de16e9fe88f7ba75435713f8ba7ca7102df5067c36b0785c2121f3da84d93b1",
+      "size": 4579
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/Icon.h",
+      "sha256": "c150bf46ca03f03760bdeaba9ee700c6d50c9159c369e2cd4b3687d493f35f47",
+      "size": 86
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/Palette.cpp",
+      "sha256": "3c6f2453c52d0857c77d1f661205ad56923023d87c02e1e814d0b80190ededd6",
+      "size": 9353
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/Palette.h",
+      "sha256": "15b7d896e07bc4fdf60e094b9b6945dbe615b2555a2590017b1556ad39378769",
+      "size": 323
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/PresentationWindow.cpp",
+      "sha256": "0ae0c6a57bf345d169074cb210947679cb3e65e6a7aa15a13fea976fd252f503",
+      "size": 2251
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/PresentationWindow.h",
+      "sha256": "38a0ab156592b2c24790def2a184299c874fbc5f1efc7c81829eb573786cfa7d",
+      "size": 177
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/Region.cpp",
+      "sha256": "7493f1ec6f0373679519e2a2e38b5fe7489fc3e4160cce1157f39f6fdfa0f264",
+      "size": 3472
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/Region.h",
+      "sha256": "9c66389ca5ed1890126891f260b79e037ce1fb4487d8ee9ff82b1428c4e73169",
+      "size": 1042
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/ScrollBar.cpp",
+      "sha256": "873cd62a0ff0878be756c131887b37c6deb5b79c2130df34d990415abf4bd73b",
+      "size": 7135
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/ScrollBar.h",
+      "sha256": "f134037ee9b4fd76e3d7f09b34cdddb4c6bae1e0eb5965878055a9bddbfaa13d",
+      "size": 835
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/ScrollFunctions.cpp",
+      "sha256": "d6d32f31f329af02e808f88329a5a028ec5657160a5bc50416e21daf67cb13f3",
+      "size": 2033
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/ScrollFunctions.h",
+      "sha256": "874aa5a2658a5f0e98eaf1f78cf4817e021bb244493492e859f2bb71aa618e26",
+      "size": 121
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/TitleBar.cpp",
+      "sha256": "dd7b2468c423b8d59ac505c5344a35e62271f8cfe004ddabbd2472600d70267e",
+      "size": 3874
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/TitleBar.h",
+      "sha256": "22d6db700475f9ae3b13189284d63b00ac5a78e1e278c7c391b6798178eece30",
+      "size": 549
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/User32WndProcs.cpp",
+      "sha256": "4aebecdc3be9b686e72aaf9cff41a9475965db28fd0acc5f9ee9a7302a565384",
+      "size": 20146
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/User32WndProcs.h",
+      "sha256": "96d839cbeda4ff85f64d1d6870e66ea72343049b316133af94be906727920b7d",
+      "size": 96
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/VirtualScreen.cpp",
+      "sha256": "2c4e4ac5d0afd2d633323de421399a7df2e9bdc0067995bb850de0b3abd20100",
+      "size": 10924
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/VirtualScreen.h",
+      "sha256": "8c8ccf405817a75e685d343b8fa9deec7b0e37e0b6256165acedeb1c684dcf0c",
+      "size": 618
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/Window.cpp",
+      "sha256": "a8486b9ba460168cd9f4b77be3552fd6762c61b6053b8ba48c364db8b24f144f",
+      "size": 21915
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/Window.h",
+      "sha256": "fbfa1534c3a4706e9ccf2d283b0a6485ceb5549316d18d116f49d9cb95d99527",
+      "size": 1358
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/WinProc.cpp",
+      "sha256": "a6bdc48772d335d8d1d99179bdf63e95bbc0368adc43c72eca16c7fe427cb1ef",
+      "size": 36587
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Gdi/WinProc.h",
+      "sha256": "69ec8b237b5af650b820603fadf3ff18e4b53ba3f57fee160687fb4de8563e12",
+      "size": 399
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/genversion.ps1",
+      "sha256": "95c910c725e19bf417647833cc53b856a731a221906d83dc114ec8b74b00de28",
+      "size": 824
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Input/HotKey.cpp",
+      "sha256": "5f018a28e62f58e6b78d08354585c83312550d5ada9e1e58938e8faf98f8474d",
+      "size": 7536
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Input/HotKey.h",
+      "sha256": "b5330434d0b19871a85d203674192ca1d46440f7f1db067d9db2bf55a285ecca",
+      "size": 370
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Input/Input.cpp",
+      "sha256": "dde3e3be778fcb3f8d1a7aa2225f816211ba1c6f61a0914fd4f7ff0a06cb1db3",
+      "size": 26474
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Input/Input.h",
+      "sha256": "e361d398ce75a3662549fe91e18a540513b6e3dcaca7ebbf40db5f1d010f8817",
+      "size": 836
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/ButtonControl.cpp",
+      "sha256": "d451a8d2f12de265359f342a8ff0956d6594e61017151c5b3bee9b671ce795aa",
+      "size": 1024
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/ButtonControl.h",
+      "sha256": "21976fc78a71fd47fdadce7defbe5116fe2f8ad6840f8a6ea11a40d94774feed",
+      "size": 559
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/ComboBoxControl.cpp",
+      "sha256": "110786604ed48e5f052c67bc9cfb17e3f262e432fdf56344abd1d1533fe79f1b",
+      "size": 965
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/ComboBoxControl.h",
+      "sha256": "988bf405570523487544ea54b3eb8764b01daa3cd6e7aae56b71fec430516e68",
+      "size": 674
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/ComboBoxDropDown.cpp",
+      "sha256": "29cf21d51e02c5043abaa0fcc4c7522a36305410b71b85b8e36b685dbf483c64",
+      "size": 5639
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/ComboBoxDropDown.h",
+      "sha256": "2b5ee8efaef70323862ad8f75068a5ab65e3e67dc381e1ea1c2610792d06ff97",
+      "size": 1066
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/ConfigWindow.cpp",
+      "sha256": "177e345a0c32bdd476f974632cdfb7b19dbaa346aba0b933e5d37e841ab95598",
+      "size": 12599
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/ConfigWindow.h",
+      "sha256": "d04c21cc55fc0461cd827c7e379c74a9ab366135228c76eeb4b2de32d92077a7",
+      "size": 2164
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/Control.cpp",
+      "sha256": "e309465799868f13fc4c8848526d7b90e4d4806a5163388b0c61fb00c7cb0333",
+      "size": 4238
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/Control.h",
+      "sha256": "844f61382755a98f3eb139ff07ccd25cd6cd0aa38ede45f855096d7d05f905da",
+      "size": 1806
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/LabelControl.cpp",
+      "sha256": "7e95d1f6d086fb51ea89378b7fe55eff86f0e6abcd59cf7c17439a8a022e8414",
+      "size": 2551
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/LabelControl.h",
+      "sha256": "df1622bf136a920b034deb6ec159e1286d5e532551d021e51d1b5067411613d3",
+      "size": 750
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/ScrollBarControl.cpp",
+      "sha256": "6b26854233425b39ddc9c77a6aa0559443ec4b617dc910fb487b84c1b27abdc2",
+      "size": 5504
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/ScrollBarControl.h",
+      "sha256": "33708bc5102544416e4c26dae2e50deb90bf94c975d8efbb8e681b14fd0ec36e",
+      "size": 1410
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/SettingControl.cpp",
+      "sha256": "e528881860acbe8ab70783f2386a3ad02454b6850b97bb7f949987b4d244a24d",
+      "size": 4160
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/SettingControl.h",
+      "sha256": "b244a3ba6c5c56a5dd993ef9a6131c997e4733aa2ef34f8f644b5f6754ad5b3e",
+      "size": 1706
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/ShaderSettingControl.cpp",
+      "sha256": "c6bf4a95a49a6e1c9ed78d90ac298b922e1b30aa44d8cccbb57f0570beaf7d52",
+      "size": 2615
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/ShaderSettingControl.h",
+      "sha256": "374728b7822a85368cf9dea083e015bdc8442301bdf4d1ba478091a13e325611",
+      "size": 1073
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/ShaderStatusControl.cpp",
+      "sha256": "aa7d1fb4430ef05aedf45061a5e54b5ddb6b2fe24cbd9f5a933f20ea625de840",
+      "size": 2556
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/ShaderStatusControl.h",
+      "sha256": "108e878a15d81142fb3500c1397fa57d1b1a9064c1323ec314ca9f522cedd11d",
+      "size": 493
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/StatsControl.cpp",
+      "sha256": "c672bf21a1780152c3e71892f1de39977e84a00b0b93f651ec12396958b2fee6",
+      "size": 1970
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/StatsControl.h",
+      "sha256": "8639e0a6037e893ab3d11c0727e0f5d8073803fb47c14646aa7c66439722341c",
+      "size": 664
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/StatsEventCount.cpp",
+      "sha256": "11f59be1c1b31eee91952d986b10c2b053d71f8f586039e0fcc70c0b8e5976a3",
+      "size": 752
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/StatsEventCount.h",
+      "sha256": "18397151ea3be23d549590cc3e99d5176de3e6d5b4e7b99ab32f88b532c37b97",
+      "size": 554
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/StatsEventGroup.cpp",
+      "sha256": "e316d0cb9e3eeaa487cdbc1504c767a76333aa10eb9dbcd7fcb66c1f4c8bb9a0",
+      "size": 505
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/StatsEventGroup.h",
+      "sha256": "0672951c46b78ecadbd82f71e4a8227d192a35e23784bd5b50081afd03514100",
+      "size": 389
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/StatsEventRate.cpp",
+      "sha256": "9686ce1a3ca7b2af0c4ba1f1d4f493c6474124e838d3ced046c648c58b5b2bbc",
+      "size": 443
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/StatsEventRate.h",
+      "sha256": "7ccc9c17d727233bb507c7a9e20804502cfa13772f412498e759f7d13778f168",
+      "size": 325
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/StatsEventTime.cpp",
+      "sha256": "44f8af7f9e8d279350461735fdc01b684dfd2270fd16d331c4f03726a9f1c7df",
+      "size": 490
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/StatsEventTime.h",
+      "sha256": "3a3f115544f79ef38fd74998fc4093033a1cd7cfadf985b8d191b6490b59561e",
+      "size": 409
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/StatsQueue.cpp",
+      "sha256": "8cd625047e60385b7ac00e8722ef93376c5c0ccb6914f6516fdbfb6b2211a647",
+      "size": 4803
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/StatsQueue.h",
+      "sha256": "4162f584d0761dd03bc5149e133e275fe0c506802d5cc537126219d186fc9d57",
+      "size": 2064
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/StatsTimer.cpp",
+      "sha256": "e7bd749736b4d7e6a0611fb31d6e7acb18cdde651c7f147bef0db6a574ca3d51",
+      "size": 1106
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/StatsTimer.h",
+      "sha256": "ac3a5ee08030706e9afb30cf1de2bfe354aa86ae1a0bcccda6e0dfd9759770de",
+      "size": 511
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/StatsWindow.cpp",
+      "sha256": "62a8491fcfb0e41bdab6831ec528bb7abd491541fc193ffd06d25d60906c6c72",
+      "size": 6779
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/StatsWindow.h",
+      "sha256": "064f5fe6a09e13637e6037915c34047a78725e79a975aa13803b53569e848e46",
+      "size": 1371
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/Steam.cpp",
+      "sha256": "b62fe8f5a27e225cd181d3fcb1b3faedacb93694bf4fe0a0edd92465d56bcf10",
+      "size": 11806
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/Steam.h",
+      "sha256": "1ae3900e6e54b2536c9bf17f2a9f8fc1bede2f56bcf38424d133ebca7fa16eb3",
+      "size": 514
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/Window.cpp",
+      "sha256": "bc629cecfca5e3c854120c30bd0ad0b22cc3c8c06b8cd101483a2c32761c01a3",
+      "size": 6307
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Overlay/Window.h",
+      "sha256": "7ce36c0aa33c8ed76ad3b6d7e42e89689000d2fc2d61e3ca70f799b9becdb086",
+      "size": 1308
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Remaster/ButtonImage.h",
+      "sha256": "1ccff6763ee39d4fb60af2d40f929bb50bb80b1d55a8e4ee549764fc7b8e6d2c",
+      "size": 1329
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Remaster/Identity.h",
+      "sha256": "6da670a55f1d066b62281f7304c2879d7830d194ed005b5becf3a506fa452bb0",
+      "size": 5959
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Remaster/MainButtons.cpp",
+      "sha256": "ad923876473903fad9584a1f4e87e7b1b045909bfde69515e3192452ad46be95",
+      "size": 4001
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Remaster/MainButtons.h",
+      "sha256": "8f355f881fa7c7c2e8767362627e40cfee0cccd3b777b9a1850a388d32f29bc5",
+      "size": 3183
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Remaster/OrderedPaint.h",
+      "sha256": "aaf16e1d511acb97d339b90c47a3fe972a284989b56bc7bb3c96c62b58b34abd",
+      "size": 6179
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Remaster/OutputMode.cpp",
+      "sha256": "28c76cfb195d3e2cd9cc7b1c696518c0271d4cf05f3893c0171f77d1a0f1cb69",
+      "size": 7915
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Remaster/OutputMode.h",
+      "sha256": "1a6047545266a1fc287b8bf7e592bdb16e6b287308a65533405db2d1368ef202",
+      "size": 1133
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Remaster/OutputSites.h",
+      "sha256": "b007e95d494ee091a8c8a15b96ad184bead25b3cf37ff637c5fe71d862ddbfb4",
+      "size": 1650
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Remaster/Runtime.cpp",
+      "sha256": "bbdb4ff2d58bea9f05c5ac31eddf6ef912a731d96569582302db43880ec69ff8",
+      "size": 6944
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Remaster/Runtime.h",
+      "sha256": "6ee2bba8f39dabf5c52584f4dac3f56915c190971790951cc772ed90135b9a3d",
+      "size": 1648
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Remaster/VersionLabel.h",
+      "sha256": "b2ab3688c90314f52b8aa2725efa7fdf7ecb89b27d748112031278727b86c396",
+      "size": 3237
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/FlightRecorder/Delta.h",
+      "sha256": "cb8e968507b6a8ba58d051d1acb1775c38bdfda981a513724f274cc2b8e79934",
+      "size": 2666
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/FlightRecorder/Driver.cpp",
+      "sha256": "a64daab2aa16d13efb92946c02ec9913696aa8d4eacc3bb932bae441cff1917a",
+      "size": 26051
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/FlightRecorder/Driver.h",
+      "sha256": "298692b00f575380740ac285b02a3f777b480a6df0c6440172957c289b2cecf0",
+      "size": 739
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/FlightRecorder/Durability.h",
+      "sha256": "2250dd2317a66d317022dec762daad9c998a91da052f7c7e27c0eb443ea20ae6",
+      "size": 2975
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/FlightRecorder/Engine.cpp",
+      "sha256": "35145e38f155c8e6c9e61ce2affeedd8ecb5474ad3a0d7a545a1d49f429aa108",
+      "size": 5497
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/FlightRecorder/Hooks.h",
+      "sha256": "6252fedd5f8ac387d165deeacb65a10e6d2b4eb8ce170864278f55b055ffc549",
+      "size": 486
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/FlightRecorder/Lifecycle.cpp",
+      "sha256": "794807a33b9f6e253d6d9971922916ba8acf7c359bfb26d9373c4d87ea41cb2c",
+      "size": 2716
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/FlightRecorder/Queue.h",
+      "sha256": "1ebcc612613480d9d9efdd4a44e3cf75ea7317a644c776720623866fbb2dfb81",
+      "size": 1942
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/FlightRecorder/Recorder.cpp",
+      "sha256": "5cde7bed5e2d06161af6f1da501a698ce92064dc3738a33d7059ac391287faca",
+      "size": 18842
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/FlightRecorder/Recorder.h",
+      "sha256": "e05c9c7b3b199e97756ad79b0be141e85887aaa835270d5e8116d80ca0f7213c",
+      "size": 1979
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/HudAssembly/HudAssembly.cpp",
+      "sha256": "c92fc5ae73a9801071b4218e43764e38020cae1252b0a39c9f91471b2085b94e",
+      "size": 29454
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/HudAssembly/HudAssembly.h",
+      "sha256": "e04f67e2c24e1ebe024cdc5d48384ad1f016782fc78513c0081109117cd60e92",
+      "size": 1106
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/HudAssembly/Layout.h",
+      "sha256": "00ff0d5e74683da78ba5277ddd6abb13f14ea16f5753d6f4a89087ac81fd8a0c",
+      "size": 1848
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/HudAssembly/Sites.h",
+      "sha256": "9696de5b5a5903dc974c1728e7d70e3b669c6bac08443ab3e019308f30af6bbe",
+      "size": 1112
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/HudCaptain/Core.h",
+      "sha256": "296243b36d1997a07f067c1f69e00e8d268650697586dd7235289821021cd88e",
+      "size": 1745
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/HudCaptain/HudCaptain.cpp",
+      "sha256": "87f1aa7a163963c319a0f888a815fd6f43be50bdb6b2c71fb1cc089af5849782",
+      "size": 18116
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/HudCaptain/HudCaptain.h",
+      "sha256": "70c6dfc9764cda696cf358413c87052310735bd127bda6ffabe95c1b396f8bbf",
+      "size": 1123
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/MenuCanvas/Canvas565.h",
+      "sha256": "f480342c34bd21721d49b7304881cdb77a217b70ecfdc7a4e6a870b797f61660",
+      "size": 5471
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/MenuCanvas/CanvasHookSites.h",
+      "sha256": "fb5764077670d945112aae566cceb7f8da520ad766b20c26ae408a716649e148",
+      "size": 595
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/MenuCanvas/CanvasRuntime.cpp",
+      "sha256": "b4fa7e3af9bb538dbe08dfb615fabcec4e29dd2cb508c6dacb6a9b92046beb0d",
+      "size": 32552
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/MenuCanvas/CanvasRuntime.h",
+      "sha256": "25119fc404dfbae11243d819c5874e3e09dc76123b567a2e127e74480cfd7a99",
+      "size": 416
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/MenuCanvas/ForegroundMask.h",
+      "sha256": "9d6c610ff3e3094f3b97d10ba419bb54ae8b60238da911258b3927ad6b81ca2c",
+      "size": 1335
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/MenuCanvas/InputPolicy.h",
+      "sha256": "70a77ea749c0f2b02acb53ac7e842edf0f479565c75ce8273645180ac08ccd39",
+      "size": 882
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/MenuCanvas/MainBackdrop.h",
+      "sha256": "cc35ee5079335d8077e7aebcda40a99bbdcff967fb612d8f41d7387cfe54c743",
+      "size": 15032
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/MenuCanvas/MenuFamilies.h",
+      "sha256": "80195247bbbb10b5eb474a7010e458e1958473f17f4013da95e214a4ae438db1",
+      "size": 2392
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/MenuCanvas/PredicateBridge.h",
+      "sha256": "f5efc2adddb4c5d06491212c0cc1aa81e45ba8d943a5973781b9b838afbcdbd3",
+      "size": 743
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/MenuCanvas/ProducerSites.h",
+      "sha256": "7e27b283458e045e57554408c40aa6157ad78de74e37c39efc8bc6d0378cde9b",
+      "size": 317
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/MenuCanvas/PublicationState.h",
+      "sha256": "027651373024f42da56f43e91fa58d673e1228bd36976d4a48763dfc480b5c69",
+      "size": 1130
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/MenuCanvas/quantum_font_research.h",
+      "sha256": "2dd35deb9cccf438d5f459af28f9689945ddf5312ad97bd17b0806cf56fe4a57",
+      "size": 2495
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/MenuCanvas/ScopeUnlock.h",
+      "sha256": "661d804ffca43d436967a33ff9a1b9d36c654688c7c664e357fb9804e3577bf8",
+      "size": 508
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/MenuCanvas/ui_canvas.hpp",
+      "sha256": "1660f3684ea99ba82aa158b04136a92b7559c11e372025ee4e0e2ee706e8bac3",
+      "size": 5177
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/MenuProbe/Bridge.h",
+      "sha256": "3e3cd8d90a436731a1d9b92f9bb45930c770b53b6236d95d2a452c7b975c7e8e",
+      "size": 653
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/MenuProbe/Core.h",
+      "sha256": "3dc8144bc69d4069e46309418d73a84573ede287fda7db6f43cdd65e4198cc0b",
+      "size": 2252
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/MenuProbe/HookSites.h",
+      "sha256": "9e03424a9e3ac5601c1b49c4caa3ceab232d0426280d5995214303c69e6fd1cc",
+      "size": 1176
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/MenuProbe/Probe.cpp",
+      "sha256": "d156314009f50b26ee8a4a7be85e10fbb47d839c4a78e7b8662a5520c86712ce",
+      "size": 17416
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/MenuProbe/Probe.h",
+      "sha256": "257ced3afb8beaaec879f7b96e5772789365cbcaa8b5219db9d6c3b9e98dd4f2",
+      "size": 402
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/MenuProbe/TransitionProbe.cpp",
+      "sha256": "845a3046061bc5b2898a65b210ca8bed22b4cc3a27ef3e0e4ef68d710681ffb4",
+      "size": 8242
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/MenuProbe/TransitionProbe.h",
+      "sha256": "d2b54cbdf255f3dbfdc190a6759f1736285babd9dfbd4fa0a8ea1588ada9bd34",
+      "size": 164
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/MenuProbe/TransitionSites.h",
+      "sha256": "4ea95cb6a09563a08474ef3e6494be78c4c99980aa35ca21f1c941c14a542558",
+      "size": 504
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/MenuProbe/TransitionState.h",
+      "sha256": "5ed40bbdc07c617ef08c621e814b62e2b16f0243243f17ce80c2ea032c64c3cd",
+      "size": 3280
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/NativeProbe/CounterBank.h",
+      "sha256": "c59a0b2a4e29a83d3b0bc31a9699a0a38b446d46ba7c770b8d6bba31cfd091c8",
+      "size": 1010
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/NativeProbe/EngineIdentity.h",
+      "sha256": "a36f084b262a4bdab33c44f72faf8078be039fc5aae74696831d69c54f7b5703",
+      "size": 591
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/NativeProbe/Probe.cpp",
+      "sha256": "544d1e41d6937446d44b934a82c7d5053b15ecbe985de643c8725104dd1767fa",
+      "size": 20176
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/NativeProbe/Probe.h",
+      "sha256": "18e68cc4d1f8caa51ab6f57f9dd57fbfb8c7e7630953cad483131f561cc90c60",
+      "size": 1701
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/OpeningFlow/CardImage.h",
+      "sha256": "bcc9f3824680d48895e2e369af5236b65a88e1f2092792dd5cfa75cfac08b057",
+      "size": 2308
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/OpeningFlow/HdHistory.h",
+      "sha256": "5cc47667a401fdcdd0f2c3a2cfbbce24103275c100148335a0c9ead26ebedb42",
+      "size": 2922
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/OpeningFlow/OpeningCore.h",
+      "sha256": "c0ef7cf255a60b6d540fa7d44db6436766aafb901f6093ba6b8dd612446e5503",
+      "size": 2030
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/OpeningFlow/OpeningFlow.cpp",
+      "sha256": "47005d9febf5e5e3578c7ae5e000589f7a77e1a2761132275d2e0423b2ed853f",
+      "size": 61610
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Research/OpeningFlow/OpeningFlow.h",
+      "sha256": "c5f1adf4b0b4ee3ad57adf5274e9413fa50647fb1f2b0c6ce20b11cf96f39528",
+      "size": 942
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/AlphaBlend.hlsl",
+      "sha256": "7d76df0fffa24f68611fe2c2284c5dd266fd01c3947a52dee48cf5b5f3f7901a",
+      "size": 343
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/Bilinear.hlsl",
+      "sha256": "bab6582423feabca94992c64aeb8084a48f35a378fffa40eecbc93c3911a45d7",
+      "size": 162
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/ColorKey.hlsl",
+      "sha256": "6a1f8fbabd80db329b0767ae37c7e7aeb55588f2ec581af2d57279b0d8b76463",
+      "size": 335
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/ColorKeyBlend.hlsl",
+      "sha256": "4cecc0d73618cd5926aa4f137b20c3d20d55139a05863bd5c7674b9260ecec47",
+      "size": 342
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/Convolution.hlsli",
+      "sha256": "db1c4c5069d0ef4a485b2410a1b7b352e679c449e884e20fdb851a86d1b6d852",
+      "size": 4558
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/CubicConvolution.hlsli",
+      "sha256": "8e634e9b9b01a259cfb7a29cec92b7c8cd18a37b62c144c7f4c5277cd3a8fecd",
+      "size": 347
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/CubicConvolution2.hlsl",
+      "sha256": "b6b41af2dd66c468273919b369ae1620faf78663479c2f9fcc59cfe24d51f392",
+      "size": 66
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/CubicConvolution3.hlsl",
+      "sha256": "49c67248a5673eb76b02d347ad112e9bbf4522da45fe5c279060d002cd7a4be6",
+      "size": 66
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/CubicConvolution4.hlsl",
+      "sha256": "0f007a3d5bea3a483e61c8c868d34b1a370195b662b1609149158e640b4605f5",
+      "size": 66
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/DepthConvert.hlsli",
+      "sha256": "a084379321d8ab5dc14ec05314ffed5f550a5a7bd52efbd641e1b55a854cfac7",
+      "size": 1304
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/DepthCopy.hlsl",
+      "sha256": "c1d50e65e72a6b21cb4df389f42c28a92fb923a579867e8afeafa0c2104d31dc",
+      "size": 179
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/DepthCopyPcf.hlsli",
+      "sha256": "1716516a66fdf8b5f0d6d9cabc52d29c2582a9401a56bb630166b277338f4733",
+      "size": 175
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/DepthCopyPcf16.hlsl",
+      "sha256": "cd481ecc00841589e5cf9facc08e9e63d6a14b29eb4d9a0ec672e5559b51cc44",
+      "size": 111
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/DepthCopyPcf24.hlsl",
+      "sha256": "f5ac5a2e2d08ef73ca963303aed313862872745782238f037e0a66964cda2923",
+      "size": 115
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/DepthLockRef.hlsli",
+      "sha256": "fe110dc4c73e15a0ba01342551be02ff681638814f27a45dbddb33a98cc29f04",
+      "size": 355
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/DepthLockRef16.hlsl",
+      "sha256": "f410bcd46aa76a43db8569cf1799df4fb06f5faacb1615902837ddd07f73a850",
+      "size": 79
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/DepthLockRef24.hlsl",
+      "sha256": "4438563c24321e4a2ac7fc949dd4f316758c8974c937848185e4031c029ebb7b",
+      "size": 79
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/DepthRead.hlsli",
+      "sha256": "9bf784f64e0eb01570dc659ceb2fdc0bd8f802aab0388f232cbc84caccdfac6f",
+      "size": 146
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/DepthRead16.hlsl",
+      "sha256": "f093df9259bcd2f033a04e5d002cbc5d972c942481d63d0df95f04dc2b962af6",
+      "size": 76
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/DepthRead24.hlsl",
+      "sha256": "e29d551b679f804e766cd6dcbf24175dabc0c287e492cea8c4ffe946ec3b8071",
+      "size": 76
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/DepthReadPcf.hlsli",
+      "sha256": "fbb4f1045428cb9562131eddaedb42ecf57dac77b35fb57f2424bec27a49a384",
+      "size": 148
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/DepthReadPcf16.hlsl",
+      "sha256": "7def7fc980958202bdf16b549b429c5202d07a5d419d06d0025c84b74a400f9b",
+      "size": 111
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/DepthReadPcf24.hlsl",
+      "sha256": "5621556f3e76a7c23da94b95e4cbdd410e6a84465a8931dc4c1a564ca45ab4d7",
+      "size": 115
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/DepthWrite.hlsli",
+      "sha256": "7d0b103f220406f8b469556c2c69767c39377aa2fe7fc3518883e2601d811ebe",
+      "size": 185
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/DepthWrite16.hlsl",
+      "sha256": "42618914ada36875acdf726c4677866e2fdbcb913ae52f574e4102107a7bf348",
+      "size": 77
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/DepthWrite24.hlsl",
+      "sha256": "7c892c9960f10439bdf028a3c09a68f795640f7dbae2c5c40c88f365edcb4281",
+      "size": 77
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/DrawCursor.hlsl",
+      "sha256": "ff581bf4f4e49b9f335939b8dd84bbbcff44161c9578c2780393a1bffbbb4bf8",
+      "size": 595
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/Lanczos.hlsl",
+      "sha256": "b553e5057694ccb6c41ec64da9b5f2b4e1f9a219de77f7c3e96435e97c9695e7",
+      "size": 277
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/LockRef.hlsl",
+      "sha256": "b16e3ed42b577b0e74b0420c5762156e670c99bd727fe369099e37dcffcdcbee",
+      "size": 321
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/PaletteLookup.hlsl",
+      "sha256": "61040f867f18cee5e7015c8eea636d626c67ecd2c497f610177aa80a847bd9ab",
+      "size": 201
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/Point.hlsl",
+      "sha256": "22c949c6005c5448af81f19bdaffba3cf9d592d68a7e8d937cf07571a3c673ca",
+      "size": 109
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/PointNoFilter.hlsl",
+      "sha256": "9b6b054ab8851d803940f75de7498e25f404f59cae65f49a40f4235b00ff2512",
+      "size": 48
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/TextureSampler.hlsl",
+      "sha256": "0df221a65996c9592f6a14671a815b31478bba875f4ea91ae76afef2097d9105",
+      "size": 133
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Shaders/VertexFixup.hlsl",
+      "sha256": "ddc3f761cee928f99392033cf8bcac461fadb2fe085cef92cf1a0208001ff538",
+      "size": 814
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Win32/DisplayMode.cpp",
+      "sha256": "79c2e8e3827b07a60cb9cc2805ff12e9ca086c2136158bb828be7dc75c491b92",
+      "size": 34979
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Win32/DisplayMode.h",
+      "sha256": "cd0dc7ab1f5e96d3ceda206e68697a9dc673bd294887123e5a45ae340e15afc8",
+      "size": 1218
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Win32/DpiAwareness.cpp",
+      "sha256": "0e4463f57f2b63ad0c5fc1576bac39d0d208643f7f66199824b96330df00da36",
+      "size": 5795
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Win32/DpiAwareness.h",
+      "sha256": "0a1f7b4b91db875ce47493652f555fa473136764d030cff247cf44fe1f1f4dd6",
+      "size": 493
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Win32/Log.cpp",
+      "sha256": "1231ba32a0d0500e328e98297edc1f69bc3fd3e24feb3259d29644150e90d52f",
+      "size": 33539
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Win32/Log.h",
+      "sha256": "66a4dd14f3599ee160f5740755b75af6f9b4001e1cae0861ef9bc40404dd0334",
+      "size": 4181
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Win32/MemoryManagement.cpp",
+      "sha256": "9d4f92a614313af54f105ab726d3d18a42b269bf6e6839349230feb2ba9301a7",
+      "size": 2262
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Win32/MemoryManagement.h",
+      "sha256": "552d6341b82d2a829311a6f671f7838a2afb441ff475aab6b11a1f0adec8ab4a",
+      "size": 100
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Win32/Registry.cpp",
+      "sha256": "4b9f4f2486c0e71b55e76d0e30f6e10754c2842d5e386718dc1f538d20a69798",
+      "size": 15522
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Win32/Registry.h",
+      "sha256": "d0eecb15fe113285b3214acda71143adcd8e43c381a4953148e6957e172f31f9",
+      "size": 92
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Win32/Thread.cpp",
+      "sha256": "dd2757d393cf66b2e1fbfea3a915381d04d8fbfdd0b47d4dc78c63b0b8860b15",
+      "size": 17246
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Win32/Thread.h",
+      "sha256": "3e8c390374985cd59b0b44052034e808df8966a355a783deb2abd7f8b71b31a1",
+      "size": 220
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Win32/Version.cpp",
+      "sha256": "aaf1b3c43dc5ad23b2d7147841cca094127031bba9cd394af5ee2dd9a175d475",
+      "size": 5224
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Win32/Version.h",
+      "sha256": "be6de3c0ae1a49d2177fa34b199bac7e1390efcefbda1d7a440bac6127ff8b16",
+      "size": 91
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Win32/Winmm.cpp",
+      "sha256": "d1466806330c9381f9f1d253ccd2126613c49166069997ec608212869e16beae",
+      "size": 1452
+    },
+    {
+      "path": "wrapper-source/DDrawCompat/Win32/Winmm.h",
+      "sha256": "abb3651128382b4ea034dc3ef02b5d987841dd2a7fdaeadd9731fb45ea1aac98",
+      "size": 89
+    },
+    {
+      "path": "wrapper-source/DDrawCompat.sln",
+      "sha256": "1e50aeb62ec2be41986d7396c4e7efaf59c2485ea8d811f9ff2525288cf1c33c",
+      "size": 1099
+    },
+    {
+      "path": "wrapper-source/LICENSE.txt",
+      "sha256": "d82c3e995bd48af26672368fa72ae397874b707abb012960eaef9987932bd6a8",
+      "size": 617
+    },
+    {
+      "path": "wrapper-source/README.md",
+      "sha256": "014dd34ae6e063af016f92f68e9c7ed7d0089bfd332881bdd448a75c3102332f",
+      "size": 4033
+    },
+    {
+      "path": "wrapper-source/Tools/DDrawCompat.ini",
+      "sha256": "8c58dbe060f0ce43d64ba68d0f9c5434b79ae145f2032817eeceaffbb124928a",
+      "size": 2256
+    },
+    {
+      "path": "wrapper-source/Tools/game.exe.manifest",
+      "sha256": "3ab947853cf2df2b119838c5677963a0b1491ae2717d731a8cd0ff389c8a202d",
+      "size": 256
+    },
+    {
+      "path": "wrapper-source/Tools/InstallDDrawCOMRedirection.reg",
+      "sha256": "9e04cbf887ed26c9ac6166fd3e4db921128bdabe50e9d515d376d97a4a27b652",
+      "size": 3898
+    },
+    {
+      "path": "wrapper-source/Tools/UninstallDDrawCOMRedirection.reg",
+      "sha256": "7aa8f11ebe1b2ef6e2c3c0b12cfcd43c72ce5e73f528f6ab999b3691ed2fd047",
+      "size": 1186
+    }
+  ],
+  "live_acceptance": "two modes; one computer; external pinned receipts",
+  "native_engine_sha256": "e81aacb185e755c6478c06516bf0d442b7b95edc1f3a3603bfc7ecda1c777023",
+  "previous_intake_sha256": "6107a5fcad00d13e89094c583e4a3e18642853941ac0be7c2ca15a390c90418e",
+  "rendering_profile": "native-display-v1",
+  "restored_visual_authorization": "Owner confirmed October28: created by self/ChatGPT and may be released; original game/audio/trademark rights not transferred.",
+  "schema": 1,
+  "source_manifest_sha256": "443d084cfa444c7fc96a40f7141a0e40c3a6a57f209da10b742186df8ed9fc44",
+  "wrapper_sha256": "7694f070e24b4e1f80b27356a1087c056c04d519a63bab54b12f19e17f72b720"
+}

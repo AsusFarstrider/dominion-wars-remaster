@@ -1,0 +1,12 @@
+{
+  "outcome": "focus helper refused neutral engine; no game process observed",
+  "game_started": false,
+  "sampler_started": false,
+  "result_json_present": false,
+  "run": "E:\\Codex\\remaster-build-tests\\adaptive-output-20261030-01\\.dw-remaster\\runs\\20261031T030504835Z-6d1b54a9e44c4b9dac691df94aa22294",
+  "files": {
+    "helper-error.log": "cbaab9cbf7acbe3fd886a06eaa3dc1cb67da19d1c76364790b3c7a773148572b",
+    "helper-output.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "output-selection.json": "7fae012c9645569b04f30b6a99d06506a2c6fabb58bf2837f27b94fbbc66d003"
+  }
+}

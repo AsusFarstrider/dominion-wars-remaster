@@ -1,0 +1,6 @@
+2026-10-31T03:10:10.0774673Z Ready; waiting for exact latest research game; no input sent on initial focus.
+2026-10-31T03:10:12.2945514Z Watching PID=27748
+2026-10-31T03:10:39.5994969Z Requested game-only minimization; queued=True; foreground=ChatGPT; no display API used
+2026-10-31T03:10:44.5265547Z Posted game-only Alt release after focus return; count=1
+2026-10-31T03:10:44.5659527Z Return modifier mask=0x0; physical Windows keys up
+2026-10-31T03:11:00.5902777Z Helper completed.

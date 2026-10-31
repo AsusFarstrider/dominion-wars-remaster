@@ -1,0 +1,151 @@
+--- a/runtime/Launch-Remaster.ps1
++++ b/runtime/Launch-Remaster.ps1
+@@ -6,6 +6,7 @@
+ Import-Module (Join-Path $GameRoot 'Remaster.Core.psm1') -Force
+ $helper=$null;$child=$null;$mutex=$null;$owns=$false;$code=1
+ $prior=@{}
++$outputSelection=$null
+ try {
+     if(-not $VerifyOnly){Assert-RemasterIdle}
+     $state=Test-RemasterInstalled $GameRoot
+@@ -18,6 +19,11 @@
+         Initialize-DominionWarsDisplay
+         $physicalMode=[DominionWarsDisplayMode]::GetCurrent([DominionWarsDisplayMode]::GetPrimaryDevice())
+         Assert-RemasterOutput $manifest $physicalMode
++        if($manifest.rendering.profile -ceq 'native-display-v1') {
++            $outputDevice=[DominionWarsDisplayMode]::GetPrimaryDevice()
++            $outputMode=[DominionWarsDisplayMode]::GetCurrent($outputDevice)
++            $outputSelection=Get-RemasterOutputSelection $manifest $outputMode $outputDevice ([DominionWarsDisplayMode]::GetDeviceIdentity($outputDevice))
++        }
+     }
+     # The native recenter patch is validated only for the primary origin (0,0).
+     Add-Type -AssemblyName System.Windows.Forms
+@@ -31,13 +37,18 @@
+     if(-not $owns){throw 'Another remaster launcher is active.'}
+     $run=Join-Path $GameRoot ('.dw-remaster\runs\'+[DateTime]::UtcNow.ToString('yyyyMMddTHHmmssfffZ')+'-'+[guid]::NewGuid().ToString('N'))
+     $null=New-Item -ItemType Directory -Path $run
+-    $clearNames=@('PSModulePath','DW_EXPERIMENTAL_FOCUS_GUARD','DW_EXPERIMENTAL_FOCUS_DESKTOP','DW_FOCUS_DEVICE','DW_FOCUS_DEVICE_IDENTITY','DW_FOCUS_ORIGINAL_MODE','DW_RESOLUTION_TELEMETRY','DW_DRAW_TELEMETRY','DW_PROJECTION_TELEMETRY','DW_COORDINATE_PROBE')+@([Environment]::GetEnvironmentVariables('Process').Keys | Where-Object {$_ -like 'QFR_*'})
++    $clearNames=@('PSModulePath','DW_EXPERIMENTAL_FOCUS_GUARD','DW_EXPERIMENTAL_FOCUS_DESKTOP','DW_FOCUS_DEVICE','DW_FOCUS_DEVICE_IDENTITY','DW_FOCUS_ORIGINAL_MODE','DW_REMASTER_OUTPUT_WIDTH','DW_REMASTER_OUTPUT_HEIGHT','DW_RESOLUTION_TELEMETRY','DW_DRAW_TELEMETRY','DW_PROJECTION_TELEMETRY','DW_COORDINATE_PROBE')+@([Environment]::GetEnvironmentVariables('Process').Keys | Where-Object {$_ -like 'QFR_*'})
+     foreach($name in ($clearNames | Select-Object -Unique)) {
+         $prior[$name]=[Environment]::GetEnvironmentVariable($name,'Process')
+         [Environment]::SetEnvironmentVariable($name,$null,'Process')
+     }
+     $env:PSModulePath=Join-Path $env:WINDIR 'System32\WindowsPowerShell\v1.0\Modules'
+     $env:DW_EXPERIMENTAL_FOCUS_GUARD='1'
++    if($outputSelection){
++        Set-RemasterOutputEnvironment $outputSelection
++        Write-RemasterJson (Join-Path $run 'output-selection.json') $outputSelection
++        Write-Host ("Selected primary physical output {0}x{1}; no desktop mode change or live resize." -f $outputSelection.width,$outputSelection.height)
++    }
+     $engine=Join-Path $env:WINDIR 'System32\WindowsPowerShell\v1.0\powershell.exe'
+     $helperArgs='-NoProfile -ExecutionPolicy Bypass -File "'+(Join-Path $GameRoot 'Watch-RemasterFocus.ps1')+'" -GamePath "'+(Join-Path $GameRoot 'ds9dw.exe')+'" -LogPath "'+(Join-Path $run 'focus.log')+'"'
+     $helper=Start-Process -FilePath $engine -ArgumentList $helperArgs -WindowStyle Hidden -PassThru -RedirectStandardOutput (Join-Path $run 'helper-output.log') -RedirectStandardError (Join-Path $run 'helper-error.log')
+@@ -49,11 +60,17 @@
+     }
+     Write-Host "Launching $displayName; no startup desktop mode change. Pause manually before changing focus."
+     $argsChild='-NoProfile -ExecutionPolicy Bypass -File "'+(Join-Path $GameRoot 'Launch-NoDesktopSwitch.ps1')+'" -GamePath "'+(Join-Path $GameRoot 'ds9dw.exe')+'" -GraphicsBackend Profile -VisualPreset Baseline'
++    if($outputSelection){
++        $recheckDevice=[DominionWarsDisplayMode]::GetPrimaryDevice()
++        $recheckMode=[DominionWarsDisplayMode]::GetCurrent($recheckDevice)
++        Assert-RemasterOutputUnchanged $outputSelection $recheckMode $recheckDevice ([DominionWarsDisplayMode]::GetDeviceIdentity($recheckDevice))
++    }
+     $child=Start-Process -FilePath $engine -ArgumentList $argsChild -WorkingDirectory $GameRoot -WindowStyle Hidden -PassThru -RedirectStandardOutput (Join-Path $run 'launcher-output.log') -RedirectStandardError (Join-Path $run 'launcher-error.log')
+     $null=$child.Handle;$child.WaitForExit();$child.Refresh();$code=$child.ExitCode
+     if(-not $helper.WaitForExit(5000)){Stop-Process -Id $helper.Id -ErrorAction SilentlyContinue}
+     $null=Test-RemasterInstalled $GameRoot
+     $result=[ordered]@{build_id=$state.build_id;launcher_exit=$code;managed_files_verified=$true;recorded_utc=[DateTime]::UtcNow.ToString('o');automatic_pause=$false}
++    if($outputSelection){$result.output_selection=$outputSelection}
+     if($identity){$result.version_identity=$identity;$result.version_identity_sha256=$manifest.version_identity.sha256}
+     Write-RemasterJson (Join-Path $run 'result.json') $result
+     Write-Host "Session complete (exit $code). Logs: $run"
+--- a/runtime/Remaster.Core.psm1
++++ b/runtime/Remaster.Core.psm1
+@@ -77,9 +77,70 @@
+     }
+     return $identity
+ }
++
++function ConvertTo-RemasterOutputDimension($Value,[int]$Minimum,[string]$Name) {
++    if($Value -isnot [int] -and $Value -isnot [long] -and $Value -isnot [uint32] -and $Value -isnot [uint64]){throw "$Name must be an integer physical-pixel dimension"}
++    if($Value -lt $Minimum -or $Value -gt 8192){throw "$Name outside native-display-v1 bounds"}
++    return [int]$Value
++}
++function Get-RemasterOutputSelection($Manifest,$Mode,[string]$Device,[string]$DeviceIdentity) {
++    if(-not $Manifest.PSObject.Properties['rendering'] -or $Manifest.rendering.profile -cne 'native-display-v1'){throw 'Expected explicit native-display-v1 capability'}
++    # Prototype stable native800 control; the startup hook belongs to Rendering.
++    # Test-RemasterInstalled must still validate the actual EXE and provider DLL.
++    if(-not $Manifest.PSObject.Properties['engine'] -or $Manifest.engine.output_sha256 -cne 'e81aacb185e755c6478c06516bf0d442b7b95edc1f3a3603bfc7ecda1c777023'){throw 'Adaptive capability requires the exact stable prototype engine'}
++    foreach($name in @('width','height')){
++        if($Manifest.rendering.PSObject.Properties[$name]){throw 'Adaptive capability must not declare fixed width/height'}
++    }
++    if($Mode.dmPositionX -ne 0 -or $Mode.dmPositionY -ne 0){throw 'Adaptive prototype requires primary physical origin (0,0)'}
++    $width=ConvertTo-RemasterOutputDimension $Mode.dmPelsWidth 800 'Width'
++    $height=ConvertTo-RemasterOutputDimension $Mode.dmPelsHeight 600 'Height'
++    if(([long]$width * [long]$height) -gt 67108864){throw 'Selected output exceeds native-display-v1 64 Mi-pixel budget'}
++    return [pscustomobject][ordered]@{
++        schema='native-display-selection-1';profile='native-display-v1'
++        width=$width;height=$height;device=$Device;device_identity=$DeviceIdentity
++        position_x=[int]$Mode.dmPositionX;position_y=[int]$Mode.dmPositionY
++        refresh=[int]$Mode.dmDisplayFrequency;orientation=[int]$Mode.dmDisplayOrientation
++        bits_per_pixel=[int]$Mode.dmBitsPerPel
++        source='primary-current-physical-mode';live_resize=$false
++    }
++}
++function Assert-RemasterOutputUnchanged($Selection,$Mode,[string]$Device,[string]$DeviceIdentity) {
++    if($Selection.schema -cne 'native-display-selection-1' -or $Selection.profile -cne 'native-display-v1'){throw 'Invalid selected output contract'}
++    if(-not $Selection.device -or -not $Selection.device_identity -or $Device -cne $Selection.device -or $DeviceIdentity -cne $Selection.device_identity){throw 'Primary display identity changed before launch; no game launched'}
++    foreach($pair in @(
++        @('width','dmPelsWidth'),@('height','dmPelsHeight'),
++        @('position_x','dmPositionX'),@('position_y','dmPositionY'),
++        @('refresh','dmDisplayFrequency'),@('orientation','dmDisplayOrientation'),
++        @('bits_per_pixel','dmBitsPerPel')
++    )){
++        if($Selection.($pair[0]) -ne $Mode.($pair[1])){throw 'Primary physical mode changed before launch; no game launched'}
++    }
++}
++function Set-RemasterOutputEnvironment($Selection) {
++    if($Selection.schema -cne 'native-display-selection-1' -or $Selection.profile -cne 'native-display-v1'){throw 'Invalid selected output contract'}
++    $width=ConvertTo-RemasterOutputDimension $Selection.width 800 'Width'
++    $height=ConvertTo-RemasterOutputDimension $Selection.height 600 'Height'
++    if(([long]$width * [long]$height) -gt 67108864){throw 'Selected output exceeds native-display-v1 64 Mi-pixel budget'}
++    # Validate both before changing either. Never write user/machine environment.
++    [Environment]::SetEnvironmentVariable('DW_REMASTER_OUTPUT_WIDTH',$width.ToString([Globalization.CultureInfo]::InvariantCulture),'Process')
++    [Environment]::SetEnvironmentVariable('DW_REMASTER_OUTPUT_HEIGHT',$height.ToString([Globalization.CultureInfo]::InvariantCulture),'Process')
++}
++
++function Get-RemasterFocusExpectedHash($Manifest) {
++    # Keep the existing DE3 focus identity for nonadaptive/legacy callers.
++    # E81 is admitted only by the explicit adaptive capability and matching
++    # managed engine identity; never broaden the helper to a two-hash allowlist.
++    if($Manifest.PSObject.Properties['rendering'] -and $Manifest.rendering.profile -ceq 'native-display-v1'){
++        if(-not $Manifest.PSObject.Properties['engine'] -or $Manifest.engine.output_sha256 -cne 'e81aacb185e755c6478c06516bf0d442b7b95edc1f3a3603bfc7ecda1c777023'){throw 'Adaptive focus identity requires the exact stable prototype engine'}
++        return 'E81AACB185E755C6478C06516BF0D442B7B95EDC1F3A3603BFC7ECDA1C777023'
++    }
++    return 'DE3E3EDE7A9B4CE65A891201547F36413F3A880E4DF3F28FB8A81E51F687ABC6'
++}
++
+ function Assert-RemasterOutput($Manifest,$Mode) {
+     if(-not $Manifest.PSObject.Properties['rendering']){return}
+     $render=$Manifest.rendering
++    if($render.profile -ceq 'native-display-v1'){$null=Get-RemasterOutputSelection $Manifest $Mode;return}
+     if($render.profile -cne 'native-1440-v1' -or $render.width -ne 2560 -or $render.height -ne 1440){throw 'Unsupported managed rendering profile'}
+     if($Mode.dmPositionX -ne 0 -or $Mode.dmPositionY -ne 0 -or $Mode.dmPelsWidth -ne $render.width -or $Mode.dmPelsHeight -ne $render.height) {
+         throw 'Native 1440p Alpha requires the PRIMARY display at physical 2560x1440 and origin (0,0). Game not launched; no display mode was changed. Use the separate compatible-original installation on other displays.'
+--- a/runtime/Watch-RemasterFocus.ps1
++++ b/runtime/Watch-RemasterFocus.ps1
+@@ -2,6 +2,15 @@
+ $ErrorActionPreference='Stop'
+ $expected='DE3E3EDE7A9B4CE65A891201547F36413F3A880E4DF3F28FB8A81E51F687ABC6'
+ $gameFull=[IO.Path]::GetFullPath($GamePath)
++$gameRoot=Split-Path -Parent $gameFull
++$manifestPath=Join-Path $gameRoot '.dw-remaster\manifest.json'
++if(Test-Path -LiteralPath $manifestPath){
++ $focusManifest=Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Json
++ if($focusManifest.PSObject.Properties['rendering'] -and $focusManifest.rendering.profile -ceq 'native-display-v1'){
++  Import-Module (Join-Path $gameRoot 'Remaster.Core.psm1') -Force
++  $expected=Get-RemasterFocusExpectedHash $focusManifest
++ }
++}
+ if((Get-FileHash -LiteralPath $gameFull).Hash -ne $expected){throw 'Unexpected game image'}
+ Add-Type @'
+ using System;

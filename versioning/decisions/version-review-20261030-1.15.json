@@ -1,0 +1,26 @@
+{
+  "id": "version-review-20261030-1.15",
+  "owner": "Master Integration",
+  "status": "candidate-proposal-pending-integrated-acceptance",
+  "proposed_remaster_version": "1.15",
+  "release_stage": "alpha",
+  "integration_build_id": "int-20261030.1",
+  "flavor": "native-display-restored-v7-gizmo-v5",
+  "in_game_label": "Remastered 1.15",
+  "official_original_game_version": "1.04",
+  "rationale": "Meaningful reach improvement: one engine and coordinated launcher now select the physical primary output at launch, removing the fixed1440 prerequisite. Actual1080/1440 one-system component passes include coherent movies/menu/HUD/input/focus plus mission-menu and Preferences repairs. Numeric advancement is conditional on integrated package acceptance, not routine repair or an estimate of completion.",
+  "evidence_before_new_live_test": [
+    "handoffs/master/rendering-adaptive-output-20261030: pinned two-mode human passes, same eight runtime files, both exit0",
+    "Frozen provider467-file source and Launcher v2 three-file contract reviewed by Master",
+    "Neutral E81 engine recipe, original soundtrack reconstruction and approved visual versions retained"
+  ],
+  "remaining_gates": [
+    "New frozen intake and committed reproducible package",
+    "Managed install/clone/repair/remove/recovery and input/version/profile tests",
+    "Bounded agent-run combined smoke with honest attribution of inherited human tests"
+  ],
+  "known_scope": "Primary-origin0, one immutable launch size; actual1080/1440 same system DPI96; other modes/GPU/highDPI unvalidated; multiplayer unsupported.",
+  "current_baseline_changed": false,
+  "version_advancement_approved": false,
+  "publication_authorized_by_this_record": false
+}

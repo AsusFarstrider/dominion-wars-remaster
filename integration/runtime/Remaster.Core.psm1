@@ -77,9 +77,70 @@ function Get-RemasterIdentity([string]$GameRoot,$Manifest) {
     }
     return $identity
 }
+
+function ConvertTo-RemasterOutputDimension($Value,[int]$Minimum,[string]$Name) {
+    if($Value -isnot [int] -and $Value -isnot [long] -and $Value -isnot [uint32] -and $Value -isnot [uint64]){throw "$Name must be an integer physical-pixel dimension"}
+    if($Value -lt $Minimum -or $Value -gt 8192){throw "$Name outside native-display-v1 bounds"}
+    return [int]$Value
+}
+function Get-RemasterOutputSelection($Manifest,$Mode,[string]$Device,[string]$DeviceIdentity) {
+    if(-not $Manifest.PSObject.Properties['rendering'] -or $Manifest.rendering.profile -cne 'native-display-v1'){throw 'Expected explicit native-display-v1 capability'}
+    # Prototype stable native800 control; the startup hook belongs to Rendering.
+    # Test-RemasterInstalled must still validate the actual EXE and provider DLL.
+    if(-not $Manifest.PSObject.Properties['engine'] -or $Manifest.engine.output_sha256 -cne 'e81aacb185e755c6478c06516bf0d442b7b95edc1f3a3603bfc7ecda1c777023'){throw 'Adaptive capability requires the exact stable prototype engine'}
+    foreach($name in @('width','height')){
+        if($Manifest.rendering.PSObject.Properties[$name]){throw 'Adaptive capability must not declare fixed width/height'}
+    }
+    if($Mode.dmPositionX -ne 0 -or $Mode.dmPositionY -ne 0){throw 'Adaptive prototype requires primary physical origin (0,0)'}
+    $width=ConvertTo-RemasterOutputDimension $Mode.dmPelsWidth 800 'Width'
+    $height=ConvertTo-RemasterOutputDimension $Mode.dmPelsHeight 600 'Height'
+    if(([long]$width * [long]$height) -gt 67108864){throw 'Selected output exceeds native-display-v1 64 Mi-pixel budget'}
+    return [pscustomobject][ordered]@{
+        schema='native-display-selection-1';profile='native-display-v1'
+        width=$width;height=$height;device=$Device;device_identity=$DeviceIdentity
+        position_x=[int]$Mode.dmPositionX;position_y=[int]$Mode.dmPositionY
+        refresh=[int]$Mode.dmDisplayFrequency;orientation=[int]$Mode.dmDisplayOrientation
+        bits_per_pixel=[int]$Mode.dmBitsPerPel
+        source='primary-current-physical-mode';live_resize=$false
+    }
+}
+function Assert-RemasterOutputUnchanged($Selection,$Mode,[string]$Device,[string]$DeviceIdentity) {
+    if($Selection.schema -cne 'native-display-selection-1' -or $Selection.profile -cne 'native-display-v1'){throw 'Invalid selected output contract'}
+    if(-not $Selection.device -or -not $Selection.device_identity -or $Device -cne $Selection.device -or $DeviceIdentity -cne $Selection.device_identity){throw 'Primary display identity changed before launch; no game launched'}
+    foreach($pair in @(
+        @('width','dmPelsWidth'),@('height','dmPelsHeight'),
+        @('position_x','dmPositionX'),@('position_y','dmPositionY'),
+        @('refresh','dmDisplayFrequency'),@('orientation','dmDisplayOrientation'),
+        @('bits_per_pixel','dmBitsPerPel')
+    )){
+        if($Selection.($pair[0]) -ne $Mode.($pair[1])){throw 'Primary physical mode changed before launch; no game launched'}
+    }
+}
+function Set-RemasterOutputEnvironment($Selection) {
+    if($Selection.schema -cne 'native-display-selection-1' -or $Selection.profile -cne 'native-display-v1'){throw 'Invalid selected output contract'}
+    $width=ConvertTo-RemasterOutputDimension $Selection.width 800 'Width'
+    $height=ConvertTo-RemasterOutputDimension $Selection.height 600 'Height'
+    if(([long]$width * [long]$height) -gt 67108864){throw 'Selected output exceeds native-display-v1 64 Mi-pixel budget'}
+    # Validate both before changing either. Never write user/machine environment.
+    [Environment]::SetEnvironmentVariable('DW_REMASTER_OUTPUT_WIDTH',$width.ToString([Globalization.CultureInfo]::InvariantCulture),'Process')
+    [Environment]::SetEnvironmentVariable('DW_REMASTER_OUTPUT_HEIGHT',$height.ToString([Globalization.CultureInfo]::InvariantCulture),'Process')
+}
+
+function Get-RemasterFocusExpectedHash($Manifest) {
+    # Keep the existing DE3 focus identity for nonadaptive/legacy callers.
+    # E81 is admitted only by the explicit adaptive capability and matching
+    # managed engine identity; never broaden the helper to a two-hash allowlist.
+    if($Manifest.PSObject.Properties['rendering'] -and $Manifest.rendering.profile -ceq 'native-display-v1'){
+        if(-not $Manifest.PSObject.Properties['engine'] -or $Manifest.engine.output_sha256 -cne 'e81aacb185e755c6478c06516bf0d442b7b95edc1f3a3603bfc7ecda1c777023'){throw 'Adaptive focus identity requires the exact stable prototype engine'}
+        return 'E81AACB185E755C6478C06516BF0D442B7B95EDC1F3A3603BFC7ECDA1C777023'
+    }
+    return 'DE3E3EDE7A9B4CE65A891201547F36413F3A880E4DF3F28FB8A81E51F687ABC6'
+}
+
 function Assert-RemasterOutput($Manifest,$Mode) {
     if(-not $Manifest.PSObject.Properties['rendering']){return}
     $render=$Manifest.rendering
+    if($render.profile -ceq 'native-display-v1'){$null=Get-RemasterOutputSelection $Manifest $Mode;return}
     if($render.profile -cne 'native-1440-v1' -or $render.width -ne 2560 -or $render.height -ne 1440){throw 'Unsupported managed rendering profile'}
     if($Mode.dmPositionX -ne 0 -or $Mode.dmPositionY -ne 0 -or $Mode.dmPelsWidth -ne $render.width -or $Mode.dmPelsHeight -ne $render.height) {
         throw 'Native 1440p Alpha requires the PRIMARY display at physical 2560x1440 and origin (0,0). Game not launched; no display mode was changed. Use the separate compatible-original installation on other displays.'

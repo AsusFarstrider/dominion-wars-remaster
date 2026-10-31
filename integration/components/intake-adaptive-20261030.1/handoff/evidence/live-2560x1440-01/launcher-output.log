@@ -1,0 +1,8 @@
+Launcher started; backend=Profile; visual preset=Baseline; requested=unchanged-desktop; diagnostics=False
+Primary=\\.\DISPLAY3; original=2560x1440@165; default-adapter D3D12=True
+Selected 2560x1440@165; backend selection persists when explicitly changed.
+Independent display recovery armed; state=C:\Users\Example\AppData\Local\Dominion Wars Modernizer\DisplayRecovery\session-10.json
+No-switch experiment: no display mode applied before launch.
+Game PID=27748
+Game exit code=0
+Original desktop mode restored (AlreadyRestored).

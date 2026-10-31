@@ -1,0 +1,187 @@
+
+  Generating version information
+  Version: v0.7.1-opening1 (same as previous build)
+  compilation header save succeeded; see E:\Codex\research\dominion-rendering\dynamic-output-work-01\Build\Release\Shaders\DepthRead16.h
+  compilation header save succeeded; see E:\Codex\research\dominion-rendering\dynamic-output-work-01\Build\Release\Shaders\DepthCopyPcf24.h
+  compilation header save succeeded; see E:\Codex\research\dominion-rendering\dynamic-output-work-01\Build\Release\Shaders\ColorKeyBlend.h
+  compilation header save succeeded; see E:\Codex\research\dominion-rendering\dynamic-output-work-01\Build\Release\Shaders\DepthCopyPcf16.h
+  compilation header save succeeded; see E:\Codex\research\dominion-rendering\dynamic-output-work-01\Build\Release\Shaders\DepthLockRef24.h
+  compilation header save succeeded; see E:\Codex\research\dominion-rendering\dynamic-output-work-01\Build\Release\Shaders\ColorKey.h
+  compilation header save succeeded; see E:\Codex\research\dominion-rendering\dynamic-output-work-01\Build\Release\Shaders\DepthReadPcf16.h
+  compilation header save succeeded; see E:\Codex\research\dominion-rendering\dynamic-output-work-01\Build\Release\Shaders\DepthReadPcf24.h
+  compilation header save succeeded; see E:\Codex\research\dominion-rendering\dynamic-output-work-01\Build\Release\Shaders\DepthRead24.h
+  compilation header save succeeded; see E:\Codex\research\dominion-rendering\dynamic-output-work-01\Build\Release\Shaders\DepthCopy.h
+  compilation header save succeeded; see E:\Codex\research\dominion-rendering\dynamic-output-work-01\Build\Release\Shaders\AlphaBlend.h
+  compilation header save succeeded; see E:\Codex\research\dominion-rendering\dynamic-output-work-01\Build\Release\Shaders\DepthLockRef16.h
+  compilation header save succeeded; see E:\Codex\research\dominion-rendering\dynamic-output-work-01\Build\Release\Shaders\DepthWrite16.h
+  compilation header save succeeded; see E:\Codex\research\dominion-rendering\dynamic-output-work-01\Build\Release\Shaders\DepthWrite24.h
+  compilation header save succeeded; see E:\Codex\research\dominion-rendering\dynamic-output-work-01\Build\Release\Shaders\DrawCursor.h
+  compilation header save succeeded; see E:\Codex\research\dominion-rendering\dynamic-output-work-01\Build\Release\Shaders\LockRef.h
+  compilation header save succeeded; see E:\Codex\research\dominion-rendering\dynamic-output-work-01\Build\Release\Shaders\PaletteLookup.h
+  compilation header save succeeded; see E:\Codex\research\dominion-rendering\dynamic-output-work-01\Build\Release\Shaders\Bilinear.h
+  compilation header save succeeded; see E:\Codex\research\dominion-rendering\dynamic-output-work-01\Build\Release\Shaders\PointNoFilter.h
+  compilation header save succeeded; see E:\Codex\research\dominion-rendering\dynamic-output-work-01\Build\Release\Shaders\TextureSampler.h
+  compilation header save succeeded; see E:\Codex\research\dominion-rendering\dynamic-output-work-01\Build\Release\Shaders\VertexFixup.h
+  compilation header save succeeded; see E:\Codex\research\dominion-rendering\dynamic-output-work-01\Build\Release\Shaders\Point.h
+  compilation header save succeeded; see E:\Codex\research\dominion-rendering\dynamic-output-work-01\Build\Release\Shaders\Lanczos.h
+  compilation header save succeeded; see E:\Codex\research\dominion-rendering\dynamic-output-work-01\Build\Release\Shaders\CubicConvolution2.h
+  compilation header save succeeded; see E:\Codex\research\dominion-rendering\dynamic-output-work-01\Build\Release\Shaders\CubicConvolution3.h
+  compilation header save succeeded; see E:\Codex\research\dominion-rendering\dynamic-output-work-01\Build\Release\Shaders\CubicConvolution4.h
+  Disasm.cpp
+  Log.cpp
+  Hook.cpp
+  Path.cpp
+  Rect.cpp
+  Time.cpp
+  AtomicSetting.cpp
+  Config.cpp
+  EnumListSetting.cpp
+  EnumSetting.cpp
+  FormatListSetting.cpp
+  ListSetting.cpp
+  Parser.cpp
+  Setting.cpp
+  Antialiasing.cpp
+  CapsPatches.cpp
+  ColorKeyMethod.cpp
+  CompatFixes.cpp
+  ConfigRows.cpp
+  CpuAffinity.cpp
+  DesktopResolution.cpp
+  DisplayAspectRatio.cpp
+  DisplayFilter.cpp
+  DisplayRefreshRate.cpp
+  DisplayResolution.cpp
+  FpsLimiter.cpp
+  GdiInterops.cpp
+  ResolutionScale.cpp
+  SpriteDetection.cpp
+  SpriteFilter.cpp
+  SpriteTexCoord.cpp
+  SupportedDepthFormats.cpp
+  SupportedDevices.cpp
+  SupportedRefreshRates.cpp
+  SupportedResolutions.cpp
+  SupportedTextureFormats.cpp
+  SurfacePatches.cpp
+  TextureFilter.cpp
+  VSync.cpp
+  WinVersionLie.cpp
+  Adapter.cpp
+  AdapterCallbacks.cpp
+  AdapterFuncs.cpp
+  Device.cpp
+  DeviceCallbacks.cpp
+  DeviceFuncs.cpp
+  DeviceState.cpp
+  DrawPrimitive.cpp
+  FormatInfo.cpp
+  Hooks.cpp
+  KernelModeThunks.cpp
+  MetaShader.cpp
+  Resource.cpp
+  ScopedCriticalSection.cpp
+  ShaderAssembler.cpp
+  ShaderBlitter.cpp
+  ShaderCompiler.cpp
+  SurfaceRepository.cpp
+  AdapterCallbacksLog.cpp
+  AdapterFuncsLog.cpp
+  CommonLog.cpp
+  DeviceCallbacksLog.cpp
+  DeviceFuncsLog.cpp
+  KernelModeThunksLog.cpp
+  Blitter.cpp
+  DirectDraw.cpp
+  DirectDrawClipper.cpp
+  DirectDrawGammaControl.cpp
+  DirectDrawPalette.cpp
+  DirectDrawSurface.cpp
+  Hooks.cpp
+  IReleaseNotifier.cpp
+  Log.cpp
+  LogUsedResourceFormat.cpp
+  RealPrimarySurface.cpp
+  PrimarySurface.cpp
+  PrimarySurfaceImpl.cpp
+  Surface.cpp
+  SurfaceImpl.cpp
+  TagSurface.cpp
+  Direct3d.cpp
+  Direct3dDevice.cpp
+  Direct3dExecuteBuffer.cpp
+  Direct3dLight.cpp
+  Direct3dMaterial.cpp
+  Direct3dTexture.cpp
+  Direct3dVertexBuffer.cpp
+  Direct3dViewport.cpp
+  Hooks.cpp
+  Log.cpp
+  Recorder.cpp
+  Driver.cpp
+  Lifecycle.cpp
+  Engine.cpp
+  Probe.cpp
+  Probe.cpp
+  TransitionProbe.cpp
+  CanvasRuntime.cpp
+  OpeningFlow.cpp
+  Runtime.cpp
+  OutputMode.cpp
+  MainButtons.cpp
+  HudCaptain.cpp
+  HudAssembly.cpp
+  DllMain.cpp
+  Dll.cpp
+  CompatDc.cpp
+  Cursor.cpp
+  Font.cpp
+  Gdi.cpp
+  Caret.cpp
+  Dc.cpp
+  DcFunctions.cpp
+  GuiThread.cpp
+  Icon.cpp
+  PresentationWindow.cpp
+  User32WndProcs.cpp
+  Palette.cpp
+  Region.cpp
+  ScrollBar.cpp
+  ScrollFunctions.cpp
+  TitleBar.cpp
+  VirtualScreen.cpp
+  Window.cpp
+  WinProc.cpp
+  DominionWarsFocus.cpp
+  HotKey.cpp
+  Input.cpp
+  ButtonControl.cpp
+  ComboBoxControl.cpp
+  ComboBoxDropDown.cpp
+  ShaderSettingControl.cpp
+  ShaderStatusControl.cpp
+  ConfigWindow.cpp
+  Control.cpp
+  LabelControl.cpp
+  ScrollBarControl.cpp
+  SettingControl.cpp
+  StatsControl.cpp
+  StatsEventCount.cpp
+  StatsEventGroup.cpp
+  StatsEventTime.cpp
+  StatsQueue.cpp
+  StatsEventRate.cpp
+  StatsTimer.cpp
+  StatsWindow.cpp
+  Steam.cpp
+  Window.cpp
+  DisplayMode.cpp
+  DpiAwareness.cpp
+  Log.cpp
+  MemoryManagement.cpp
+  Registry.cpp
+  Thread.cpp
+  Version.cpp
+  Winmm.cpp
+     Creating library E:\Codex\research\dominion-rendering\dynamic-output-work-01\Build\Release\ddraw.lib and object E:\Codex\research\dominion-rendering\dynamic-output-work-01\Build\Release\ddraw.exp
+  DDrawCompat.vcxproj -> E:\Codex\research\dominion-rendering\dynamic-output-work-01\Release\ddraw.dll

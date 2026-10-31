@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-25",
+  "disposition": "bounded_source_contract_for_shared_HUD_assembly_not_runtime_acceptance",
+  "original_and_native_sha256": [
+    "03c20a3535d0209111ff9f3b90eba403e059df2be7e784d2746abf1535c1be6a",
+    "de3e3ede7a9b4ce65a891201547f36413f3a880e4df3f28fb8a81e51f687abc6"
+  ],
+  "original_windows_identical_in_native_except_known_projection_initializer": true,
+  "protected_baselines_unchanged": true,
+  "new_exports": false,
+  "game_or_build_executed": false,
+  "files": [
+    {
+      "path": "E:\\Codex\\research\\quantum-engine-kb\\scripts\\map_bottom_hud_contract.py",
+      "sha256": "043c5689f584e4a3228da6ad1754d10374f73d6366ac5031b5b5cf6d29139ac7"
+    },
+    {
+      "path": "E:\\Codex\\research\\quantum-engine-kb\\evidence\\bottom-hud-contract-01\\static-owners.json",
+      "sha256": "acefb4970a946abf9bfa8036db12645e8c11bca0ad569d220976e0f99c2cccb5"
+    },
+    {
+      "path": "E:\\Codex\\research\\quantum-engine-kb\\evidence\\bottom-hud-contract-01\\original-windows.json",
+      "sha256": "cb7ede853e1482271647cc0ad313aec65317ac576de6f539ec4af5420f2f11c4"
+    },
+    {
+      "path": "E:\\Codex\\research\\quantum-engine-kb\\docs\\BOTTOM-HUD-IMPLEMENTATION-CONTRACT-01.md",
+      "sha256": "44e25363eb4f707d8d199c8258655083f8c4b883cf1d9f186a0163700839fd5e"
+    },
+    {
+      "path": "E:\\Codex\\research\\quantum-engine-kb\\exports\\annotated-initial-2\\targets\\00401860\\decompiled.c",
+      "sha256": "a5fcf0a6dd8e9be45b66c0adaa16edec3d80dd06ccc98eed22e7729b24872c3b"
+    },
+    {
+      "path": "E:\\Codex\\research\\quantum-engine-kb\\exports\\annotated-initial-2\\targets\\00429030\\decompiled.c",
+      "sha256": "9a7fe466edd53e11b9d7523ed9ab8c2d6c800323c547f1aac256d6bf436d5870"
+    },
+    {
+      "path": "E:\\Codex\\research\\quantum-engine-kb\\exports\\expanded\\targets\\00479c60\\decompiled.c",
+      "sha256": "f8f3d38e3ee436dc3c273dac07f657c743aeb5b93d0e3f8f78df5fc0a47dfb27"
+    },
+    {
+      "path": "E:\\Codex\\research\\quantum-engine-kb\\exports\\resolution-lifecycle-05\\targets\\004022a0\\decompiled.c",
+      "sha256": "ab83984338eddb2001609a173e6d9215625bb12f8569180ae6cdb5c47796794f"
+    },
+    {
+      "path": "E:\\Codex\\research\\quantum-engine-kb\\exports\\selection-input-contract-01\\targets\\0041d9f0\\instructions.json",
+      "sha256": "3dc35f69b1faefd3c20a21beccee105b2b0becf7a618660ac9958b9dd9113307"
+    },
+    {
+      "path": "E:\\Codex\\research\\dominion-resolution\\SHARED-HUD-LAYOUT-INTERFACE-06.md",
+      "sha256": "f0a344cc9d19867a7a591874447436646c3c4310f773cf1c35ed2ae9a42e161a"
+    }
+  ]
+}

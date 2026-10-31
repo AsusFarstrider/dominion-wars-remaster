@@ -14,6 +14,11 @@ $manifest=[pscustomobject]@{build_id=$identity.integration_build_id;source_revis
 $got=Get-RemasterIdentity $directory $manifest
 Check ($got.remaster_version -ceq '1.10')
 Check ($got.in_game_label -ceq 'Remastered 1.10')
+$identity.remaster_version='1.15';$identity.in_game_label='Remastered 1.15'
+Write-RemasterJson $path $identity;$manifest.version_identity.sha256=Get-RemasterHash $path
+Check ((Get-RemasterIdentity $directory $manifest).in_game_label -ceq 'Remastered 1.15')
+$identity.remaster_version='1.10';$identity.in_game_label='Remastered 1.10'
+Write-RemasterJson $path $identity;$manifest.version_identity.sha256=Get-RemasterHash $path
 Refused {Get-RemasterIdentity $directory ([pscustomobject]@{build_id='legacy'})}
 $manifest.version_identity.sha256='0'*64
 Refused {Get-RemasterIdentity $directory $manifest}

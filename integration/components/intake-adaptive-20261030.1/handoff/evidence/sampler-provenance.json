@@ -1,0 +1,6 @@
+{
+  "parent": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\rendering-research\\esc-menu-fix\\sample_state.py",
+  "parent_sha256": "7436703a2d69089c68ed259941efdffde6e3ba92db0b82ff2c8c736d06b8105c",
+  "sampler_sha256": "c26d5a02698aa7c75b70396eb0c6294db25ccc190ca47a4a8b3beea78bc515fc",
+  "scope": "Read-only process/window metadata; awareness change is sampler-only. No game writes, injected hooks, pixel capture, or display changes."
+}

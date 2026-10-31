@@ -1,0 +1,38 @@
+--- a/Remaster.Core.psm1
++++ b/Remaster.Core.psm1
+@@ -124,6 +124,17 @@
+     # Validate both before changing either. Never write user/machine environment.
+     [Environment]::SetEnvironmentVariable('DW_REMASTER_OUTPUT_WIDTH',$width.ToString([Globalization.CultureInfo]::InvariantCulture),'Process')
+     [Environment]::SetEnvironmentVariable('DW_REMASTER_OUTPUT_HEIGHT',$height.ToString([Globalization.CultureInfo]::InvariantCulture),'Process')
++}
++
++function Get-RemasterFocusExpectedHash($Manifest) {
++    # Keep the existing DE3 focus identity for nonadaptive/legacy callers.
++    # E81 is admitted only by the explicit adaptive capability and matching
++    # managed engine identity; never broaden the helper to a two-hash allowlist.
++    if($Manifest.PSObject.Properties['rendering'] -and $Manifest.rendering.profile -ceq 'native-display-v1'){
++        if(-not $Manifest.PSObject.Properties['engine'] -or $Manifest.engine.output_sha256 -cne 'e81aacb185e755c6478c06516bf0d442b7b95edc1f3a3603bfc7ecda1c777023'){throw 'Adaptive focus identity requires the exact stable prototype engine'}
++        return 'E81AACB185E755C6478C06516BF0D442B7B95EDC1F3A3603BFC7ECDA1C777023'
++    }
++    return 'DE3E3EDE7A9B4CE65A891201547F36413F3A880E4DF3F28FB8A81E51F687ABC6'
+ }
+ 
+ function Assert-RemasterOutput($Manifest,$Mode) {
+--- a/Watch-RemasterFocus.ps1
++++ b/Watch-RemasterFocus.ps1
+@@ -2,6 +2,15 @@
+ $ErrorActionPreference='Stop'
+ $expected='DE3E3EDE7A9B4CE65A891201547F36413F3A880E4DF3F28FB8A81E51F687ABC6'
+ $gameFull=[IO.Path]::GetFullPath($GamePath)
++$gameRoot=Split-Path -Parent $gameFull
++$manifestPath=Join-Path $gameRoot '.dw-remaster\manifest.json'
++if(Test-Path -LiteralPath $manifestPath){
++ $focusManifest=Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Json
++ if($focusManifest.PSObject.Properties['rendering'] -and $focusManifest.rendering.profile -ceq 'native-display-v1'){
++  Import-Module (Join-Path $gameRoot 'Remaster.Core.psm1') -Force
++  $expected=Get-RemasterFocusExpectedHash $focusManifest
++ }
++}
+ if((Get-FileHash -LiteralPath $gameFull).Hash -ne $expected){throw 'Unexpected game image'}
+ Add-Type @'
+ using System;

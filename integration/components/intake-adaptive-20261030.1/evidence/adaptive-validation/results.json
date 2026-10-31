@@ -1,0 +1,63 @@
+{
+  "status": "offline checks only; game not launched",
+  "results": [
+    {
+      "name": "RuntimePolicyTests",
+      "exit_code": 0,
+      "log_sha256": "f51ed767bbd84ea93cee47b468d22778370b33abafe7ed1a31c1615cbd54e34b",
+      "receipt": "successful preceding invocation; command is defined in validate.py"
+    },
+    {
+      "name": "OutputModeTests",
+      "exit_code": 0,
+      "log_sha256": "e673053f309819fea8d970b9383b2f6bd7b5e6cf668d61d3fa098bf596e855c2",
+      "receipt": "successful preceding invocation; command is defined in validate.py"
+    },
+    {
+      "name": "OpeningControllerTests",
+      "exit_code": 0,
+      "log_sha256": "749a965217ad3e27c35aa1a7220b213fb66a808dca9f4b04807aaf61d112667d",
+      "receipt": "successful preceding invocation; command is defined in validate.py"
+    },
+    {
+      "name": "HudAssemblyTests",
+      "exit_code": 0,
+      "log_sha256": "6fa2c1c5623ee0af7f78ffab5f01421f12d170a642038130db5a01fabad2dc19",
+      "receipt": "successful preceding invocation; command is defined in validate.py"
+    },
+    {
+      "name": "EscMenuTests",
+      "exit_code": 0,
+      "log_sha256": "5ec262704aa8fd6db8cc7976812fb9d6baa9dc0a986b4a82df8299392afd6296",
+      "receipt": "successful preceding invocation; command is defined in validate.py"
+    },
+    {
+      "name": "launcher-python",
+      "exit_code": 0,
+      "log_sha256": "d17dc850eef8cd6b19380fb66885b46160efbf0a34369a7e36f7bda10bcbeef7",
+      "receipt": "successful preceding invocation; command is defined in validate.py"
+    },
+    {
+      "name": "launcher-powershell",
+      "exit_code": 0,
+      "log_sha256": "b24e8201839b2aca50d3ecb7ef281e25eb1b6892d31518fcbbb66ad745261570",
+      "receipt": "successful preceding invocation; command is defined in validate.py"
+    },
+    {
+      "name": "wrapper-clean-build",
+      "command": [
+        "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/MSBuild.exe",
+        "E:\\Codex\\research\\dominion-rendering\\dynamic-output-work-01\\DDrawCompat.sln",
+        "/t:Rebuild",
+        "/p:Configuration=Release",
+        "/p:Platform=x86",
+        "/p:PlatformToolset=v145",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "exit_code": 0,
+      "log_sha256": "30697fd7d19e3839774952b66984d4ccf1de2b857f5e65c78b3419e471ad6e12"
+    }
+  ],
+  "wrapper_sha256": "7694f070e24b4e1f80b27356a1087c056c04d519a63bab54b12f19e17f72b720"
+}

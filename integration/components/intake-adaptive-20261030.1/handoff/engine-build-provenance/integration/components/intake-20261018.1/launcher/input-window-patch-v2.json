@@ -1,0 +1,15 @@
+{
+  "base_sha256": "827d3183e25c542dda3fccc0d2261e532065c155af4dceed0a46f59b2d377357",
+  "candidate_sha256": "fb972d8fbabd6dcc929e78f74a8c3c158ea2f8a8a66dbc040291e643a9e91cd7",
+  "hook_va": "0x49e5ee",
+  "displaced_bytes": "66a1e49eab00668b0de69eab00",
+  "stub_va": "0xabd200",
+  "stub_bytes": "9c6083ec108d042450ff35a487a300ff1578d24b0085c00f84450000008b4424082b04248b54240c2b54240483f8010f8c2d0000003dff7f00000f8f2200000083fa010f8c1900000081faff7f00000f8f0d00000066a3e49eab00668915e69eab0083c410619d66a1e49eab00668b0de69eab00e982139eff",
+  "hwnd_address": "0xa387a4",
+  "runtime_validated": false,
+  "scope": "Refresh mouse-recenter cache from GetClientRect at recenter use",
+  "limitations": [
+    "Original screen-coordinate warp assumes client origin at desktop zero; nonzero-origin windows not handled here.",
+    "Invalid HWND/API failure retains original cache; no desktop or rendering dimensions changed."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schema": "quantum-esc-reentry-readonly-state-1",
+  "capture": "E:\\Codex\\research\\dominion-rendering\\esc-menu-state-01\\events.ndjson",
+  "sha256": "aaa3ea9a124bf06d4be75c70a92cd79b53a979f616ccfcb5e75d5702ce3e66d1",
+  "snapshots": 184,
+  "main_snapshots": 113,
+  "first_main_sequence": 72,
+  "first_main_elapsed": 18.776,
+  "last_main_sequence": 184,
+  "pre_callback": "0x47DDC0",
+  "post_callback": 0,
+  "observed_rejection": "CanvasRuntime::screen requires pre==0; captured re-entry pre==47DDC0",
+  "sampler_footer": {
+    "kind": "sampler_end",
+    "snapshots": 184,
+    "changes_after_limit": 0,
+    "hardware_or_pixel_evidence": false
+  },
+  "exit_event": {
+    "kind": "process_exit",
+    "exit_code": 4294967295
+  },
+  "exit_interpretation": "Rendering force-closed only the stuck isolated copy after read-only capture; not a normal-quit or spontaneous-crash result",
+  "limitations": [
+    "Sampler reads external process memory; not render publication, per-call execution, pixel capture or exhaustive event trace.",
+    "Snapshot sequence is consecutive and cap suppressed no changes; 200ms sampling may miss intermediate game transitions.",
+    "No internal publication flags or original button image/event-mask fields were collected; do not claim those memory values were observed."
+  ]
+}

@@ -32,16 +32,33 @@ def checked_file(path, digest):
     return data
 
 
-def native_engine(original, expected):
+def rendering_settings(lock):
+    profile = lock.get('rendering_profile', 'native-1440-v1')
+    identities = {
+        'native-1440-v1': ('de3e3ede7a9b4ce65a891201547f36413f3a880e4df3f28fb8a81e51f687abc6', (2560, 1440)),
+        'native-display-v1': ('e81aacb185e755c6478c06516bf0d442b7b95edc1f3a3603bfc7ecda1c777023', (800, 600)),
+    }
+    if profile not in identities:
+        raise ValueError('Unsupported frozen rendering capability')
+    expected, dimensions = identities[profile]
+    if lock['native_engine_sha256'] != expected or tuple(lock.get('engine_dimensions', dimensions)) != dimensions:
+        raise ValueError('Profile/engine identity or recipe dimensions disagree')
+    rendering = dict(profile=profile, source_manifest_sha256=lock['source_manifest_sha256'], recording='off')
+    if profile == 'native-1440-v1':
+        rendering.update(width=2560, height=1440)
+    return rendering, dimensions
+
+
+def native_engine(original, expected, dimensions=(2560, 1440)):
     spec = importlib.util.spec_from_file_location('frozen_native_engine', NATIVE / 'build_engine.py')
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     # Only relocate the helper's workspace-root dependency. Its exact frozen
     # recipe and existing input-stub emitter remain unchanged and hash-pinned.
     module.ROOT = ROOT.parent
-    engine, report = module.build(original, 2560, 1440)
+    engine, report = module.build(original, *dimensions)
     if sha(engine) != expected:
-        raise ValueError('Native engine differs from reviewed DE3E chain')
+        raise ValueError('Native engine differs from the selected reviewed chain')
     return engine, report
 
 
@@ -67,8 +84,10 @@ def main():
     BUILD_ID, FLAVOR, DECISION = (decision[k] for k in ('integration_build_id', 'flavor', 'id'))
     if not re.fullmatch(r'int-[0-9]{8}\.[1-9][0-9]*(?:-[a-z0-9-]+)?', BUILD_ID):
         raise ValueError('Invalid integration build ID')
-    if (decision['proposed_remaster_version'], decision['release_stage'], decision['in_game_label']) != ('1.10', 'alpha', 'Remastered 1.10'):
-        raise ValueError('This builder requires the selected 1.10 Alpha candidate decision')
+    version = decision['proposed_remaster_version']
+    if (not isinstance(version, str) or not re.fullmatch(r'1\.(?:0[5-9]|[1-9][0-9])', version)
+            or decision['release_stage'] != 'alpha' or decision['in_game_label'] != 'Remastered ' + version):
+        raise ValueError('Expected an explicit two-digit pre-2.00 Alpha candidate decision')
     digits = BUILD_ID[4:12]
     build_date = date(int(digits[:4]), int(digits[4:6]), int(digits[6:])).isoformat()
     lock = json.loads((NATIVE / 'source-lock.json').read_text())
@@ -88,7 +107,10 @@ def main():
     revision, tree_hash, dirty = source_identity(False)
     tree_hash = sha(data_json(dict(integration=tree_hash, version_decision=sha(decision_bytes),
                                   identity_schema=sha((ROOT.parent / 'versioning/identity.schema.json').read_bytes()))))
-    engine, composition = native_engine((args.original_game / 'ds9dw.exe').read_bytes(), lock['native_engine_sha256'])
+    rendering, dimensions = rendering_settings(lock)
+    rendering_profile = rendering['profile']
+    adaptive = rendering_profile == 'native-display-v1'
+    engine, composition = native_engine((args.original_game / 'ds9dw.exe').read_bytes(), lock['native_engine_sha256'], dimensions)
     package = args.output / 'package'
     package.mkdir(parents=True)
     put(args.output / 'private/generated-ds9dw.exe', engine)
@@ -105,6 +127,8 @@ def main():
 
     for path in sorted((ROOT / 'runtime').iterdir()):
         if path.is_file():
+            if path.name == 'Watch-RemasterFocus.ps1' and not adaptive:
+                continue  # Legacy builds retain their original generated helper.
             runtime_put(path.name, path.read_bytes())
     for name in ('Launch-NoDesktopSwitch.ps1', 'DominionWarsLauncher.psm1', 'Restore-DominionWarsDesktop.ps1'):
         data = (FOUNDATION / 'launcher' / name).read_bytes()
@@ -118,16 +142,17 @@ def main():
     old = "$expected='FB972D8FBABD6DCC929E78F74A8C3C158EA2F8A8A66DBC040291E643A9E91CD7'"
     if helper.count(old) != 1:
         raise ValueError('Unexpected focus helper anchor')
-    runtime_put('Watch-RemasterFocus.ps1', helper.replace(old, "$expected='" + sha(engine).upper() + "'").encode())
+    if not adaptive:
+        runtime_put('Watch-RemasterFocus.ps1', helper.replace(old, "$expected='" + sha(engine).upper() + "'").encode())
     runtime_put('ddraw.dll', (NATIVE / 'ddraw.dll').read_bytes())
     runtime_put('DDrawCompat-LICENSE.txt', (NATIVE / 'wrapper-source/LICENSE.txt').read_bytes())
     identity = dict(schema=1, product='Dominion Wars Remastered', original_game_version='1.04',
-                    remaster_version='1.10', release_stage='alpha', integration_build_id=BUILD_ID,
+                    remaster_version=version, release_stage='alpha', integration_build_id=BUILD_ID,
                     source_revision=revision, flavor=FLAVOR, version_decision_id=DECISION,
-                    in_game_label='Remastered 1.10')
+                    in_game_label=decision['in_game_label'])
     identity_bytes = data_json(identity)
     runtime_put('version.json', identity_bytes)
-    config = dict(schema=1, profile='native-1440-v1', engine_sha256=sha(engine), version_sha256=sha(identity_bytes),
+    config = dict(schema=1, profile=rendering_profile, engine_sha256=sha(engine), version_sha256=sha(identity_bytes),
                   recording='off', paramount_hd=True, gizmo_hd=True, ss_hd=True, publisher_card=True,
                   title_card=True, main_background=True, main_buttons=True)
     runtime_put('Remaster.Rendering.json', data_json(config))
@@ -169,17 +194,16 @@ def main():
             put(package / 'third_party/DDrawCompat-source' / path.relative_to(NATIVE / 'wrapper-source'), path.read_bytes())
     put(package / 'third_party/native-component-source-lock.json', (NATIVE / 'source-lock.json').read_bytes())
     put(package / 'third_party/runtime-contract.md', (NATIVE / 'tests/RUNTIME-CONTRACT.md').read_bytes())
-    put(package / 'Read Me First.md', (ROOT / 'docs/NATIVE-1440-TRIAL.md').read_bytes())
+    put(package / 'Read Me First.md', (ROOT / 'docs' / ('ADAPTIVE-ALPHA.md' if adaptive else 'NATIVE-1440-TRIAL.md')).read_bytes())
     put(package / 'version-decision.json', decision_bytes)
     files = [dict(path=p.relative_to(package).as_posix(), size=p.stat().st_size, sha256=sha(p.read_bytes()))
              for p in sorted(package.rglob('*')) if p.is_file()]
     manifest = dict(schema=1, product='Dominion Wars Remaster', build_id=BUILD_ID, build_date=build_date,
                     flavor=FLAVOR, status='integration-candidate', source_revision=revision,
-                    source_tree_sha256=tree_hash, uncommitted_source=dirty, remaster_version='1.10',
+                    source_tree_sha256=tree_hash, uncommitted_source=dirty, remaster_version=version,
                     release_stage='alpha', in_game_label=identity['in_game_label'], version_decision_id=DECISION,
                     version_identity=dict(target='version.json', sha256=sha(identity_bytes)),
-                    rendering=dict(profile='native-1440-v1', width=2560, height=1440, source_manifest_sha256=lock['source_manifest_sha256'],
-                                   recording='off', mode_policy='primary physical2560x1440 at0,0; refuse otherwise'),
+                    rendering=dict(rendering, mode_policy=('current physical primary at0,0; one immutable size per launch' if adaptive else 'primary physical2560x1440 at0,0; refuse otherwise')),
                     modernizer_commit=base_lock['modernizer_commit'],
                     intake_lock_sha256=sha((NATIVE / 'source-lock.json').read_bytes()),
                     engine=dict(path='patches/engine.json', input_sha256=patch['input_sha256'], output_sha256=patch['output_sha256']),
@@ -189,11 +213,11 @@ def main():
                                      player='Windows PowerShell5.1; no Git/Python/compiler/encoder needed'),
                     approvals=dict(internal_baseline='pending user acceptance', public_release='held'),
                     combined_validation=dict(automated='pending managed package tests', gameplay='pending', version_display='pending'),
-                    known_limits=['One-system evidence only', 'Native1440 pilot only', 'Multiplayer unsupported',
+                    known_limits=['One-system evidence only', ('Actual1080/1440 DPI96 only; other modes unvalidated; primary-origin0 only; no live resize' if adaptive else 'Native1440 pilot only'), 'Multiplayer unsupported',
                                   'v7 banks cache about231MiB; new combined live test pending', 'No universal Windows/GPU claims'])
     put(package / 'manifest.json', data_json(manifest))
     put(package / 'CHECKSUMS.json', data_json({p.relative_to(package).as_posix(): sha(p.read_bytes()) for p in sorted(package.rglob('*')) if p.is_file()}))
-    archive_path = args.output / ('dominion-wars-remastered-1.10-alpha-' + BUILD_ID + '.zip')
+    archive_path = args.output / ('dominion-wars-remastered-' + version + '-alpha-' + BUILD_ID + '.zip')
     with zipfile.ZipFile(archive_path, 'x', zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
         for path in sorted(package.rglob('*')):
             if path.is_file():

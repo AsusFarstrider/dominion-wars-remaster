@@ -1,0 +1,491 @@
+--- a/DDrawCompat/DDrawCompat.vcxproj
++++ b/DDrawCompat/DDrawCompat.vcxproj
+@@ -448,6 +448,7 @@
+     <ClCompile Include="Research\MenuCanvas\CanvasRuntime.cpp" />
+     <ClCompile Include="Research\OpeningFlow\OpeningFlow.cpp" />
+     <ClCompile Include="Remaster\Runtime.cpp" />
++    <ClCompile Include="Remaster\OutputMode.cpp" />
+     <ClCompile Include="Remaster\MainButtons.cpp" />
+       <ClCompile Include="Research\HudCaptain\HudCaptain.cpp" />
+       <ClCompile Include="Research\HudAssembly\HudAssembly.cpp" />
+--- a/DDrawCompat/Dll/DllMain.cpp
++++ b/DDrawCompat/Dll/DllMain.cpp
+@@ -1,4 +1,5 @@
+ #include <Remaster/Runtime.h>
++#include <Remaster/OutputMode.h>
+ #include <Research/FlightRecorder/Driver.h>
+ #include <Research/OpeningFlow/OpeningFlow.h>
+ #include <string>
+@@ -373,6 +374,7 @@
+ 
+ 		// Fail process initialization rather than exposing an HD asset to legacy Copy.
+ 		if (!Remaster::load())return FALSE;
++		if (!Remaster::Output::installStartup(lpvReserved!=nullptr)){Remaster::note("startup_refused","checked early output hook failed");return FALSE;}
+ 		if (!OpeningFlow::installSafety())return FALSE;
+ 		if (Remaster::enabled() && !Config::enableDDrawCompat.get()){Remaster::note("startup_refused","managed renderer requires DDrawCompat");return FALSE;}
+ 
+--- a/DDrawCompat/Remaster/Identity.h
++++ b/DDrawCompat/Remaster/Identity.h
+@@ -53,11 +53,14 @@
+     else {v.version=text(o,"remaster_version");if(!matches(v.version,"(1\\.(0[5-9]|[1-9][0-9])|([2-9]|[1-9][0-9]+)\\.[0-9]{2})")||v.label!="Remastered "+v.version)throw std::runtime_error("remaster label mismatch");}
+     if(v.label.empty()||v.label.size()>80)throw std::runtime_error("label length");return v;
+ }
+-struct Options {std::string engine,versionHash;bool recording=false,paramount=false,gizmo=false,ss=false,publisher=false,title=false,main=false,buttons=false;};
++struct Options {std::string engine,versionHash;bool recording=false,paramount=false,gizmo=false,ss=false,publisher=false,title=false,main=false,buttons=false,dynamicOutput=false;};
+ inline Options options(const std::string& bytes){const auto o=FlatJson(bytes).parse();
+-    if(o.size()!=12||field(o,"schema",Atom::integer).text!="1"||text(o,"profile")!="native-1440-v1")throw std::runtime_error("rendering schema/profile");
++    const auto profile=text(o,"profile");
++    if(o.size()!=12||field(o,"schema",Atom::integer).text!="1"||(profile!="native-1440-v1"&&profile!="native-display-v1"))throw std::runtime_error("rendering schema/profile");
+     Options v;v.engine=text(o,"engine_sha256");v.versionHash=text(o,"version_sha256");const auto mode=text(o,"recording");
+-    if(v.engine!="de3e3ede7a9b4ce65a891201547f36413f3a880e4df3f28fb8a81e51f687abc6"||!matches(v.versionHash,"[a-f0-9]{64}")||(mode!="off"&&mode!="compact"))throw std::runtime_error("rendering identity/recording");
++    v.dynamicOutput=profile=="native-display-v1";
++    const auto expected=v.dynamicOutput?"e81aacb185e755c6478c06516bf0d442b7b95edc1f3a3603bfc7ecda1c777023":"de3e3ede7a9b4ce65a891201547f36413f3a880e4df3f28fb8a81e51f687abc6";
++    if(v.engine!=expected||!matches(v.versionHash,"[a-f0-9]{64}")||(mode!="off"&&mode!="compact"))throw std::runtime_error("rendering identity/recording");
+     v.recording=mode=="compact";v.paramount=flag(o,"paramount_hd");v.gizmo=flag(o,"gizmo_hd");v.ss=flag(o,"ss_hd");v.publisher=flag(o,"publisher_card");v.title=flag(o,"title_card");v.main=flag(o,"main_background");v.buttons=flag(o,"main_buttons");return v;
+ }
+ inline Identity boundIdentity(const Options& config,const std::string& bytes,const std::string& actualHash){
+--- a/DDrawCompat/Remaster/OrderedPaint.h
++++ b/DDrawCompat/Remaster/OrderedPaint.h
+@@ -3,6 +3,7 @@
+ #include <Research/MenuCanvas/Canvas565.h>
+ #include <algorithm>
+ #include <cmath>
++#include <new>
+ namespace Remaster {
+ // Ordered owned foreground only. Palette conversion has already happened via
+ // QUANTUM. Immutable RGBA frames bypass the logical raster but keep its geometry.
+@@ -49,6 +50,18 @@
+         for(const auto& op:ops)if(op.sprite.storage){if(!op.sprite.valid())return false;
+             const auto sb=reinterpret_cast<uintptr_t>(op.sprite.pixels()),se=sb+size_t(op.sprite.width)*op.sprite.height*4;
+             if(sb<de&&db<se)return false;}
++        // Raw modal panels can cover millions of output pixels. The inverse
++        // rounded-edge partition is separable: calculate each physical column
++        // and row once, using the same authoritative inverse as before.
++        std::unique_ptr<uint16_t[]> columns,rows;
++        if(std::any_of(ops.begin(),ops.end(),[](const Op& op){return !op.sprite.storage;})) {
++            columns.reset(new(std::nothrow) uint16_t[dst.width]);
++            rows.reset(new(std::nothrow) uint16_t[dst.height]);
++            if(!columns||!rows)return false; // No destination writes yet.
++            const auto content=plan.content_bounds();
++            for(auto x=content.left;x<content.right;++x){const auto q=plan.inverse_pixel({x,content.top});if(!q)return false;columns[size_t(x)]=uint16_t(q->x);}
++            for(auto y=content.top;y<content.bottom;++y){const auto q=plan.inverse_pixel({content.left,y});if(!q)return false;rows[size_t(y)]=uint16_t(q->y);}
++        }
+         size_t count=0;
+         for(const auto& op:ops){auto clipped=dw::ui::intersect(op.rect,op.clip);if(!clipped)continue;
+             const auto dest=plan.map_rect(*clipped);if(!dest)continue;const auto full=plan.map_rect(op.rect);if(!full)continue;
+@@ -57,8 +70,8 @@
+                     const double sx=(double(x-full->left)+0.5)*op.sprite.width/double(full->right-full->left)-0.5;
+                     const double sy=(double(y-full->top)+0.5)*op.sprite.height/double(full->bottom-full->top)-0.5;
+                     blend(op.sprite,sx,sy,pixel);memcpy(p,&pixel,2);++count;
+-                }else{const auto q=plan.inverse_pixel({x,y});if(!q)return false;
+-                    const auto at=size_t(q->y-op.rect.top)*size_t(op.rect.right-op.rect.left)+size_t(q->x-op.rect.left);
++                }else{
++                    const auto at=size_t(rows[size_t(y)]-op.rect.top)*size_t(op.rect.right-op.rect.left)+size_t(columns[size_t(x)]-op.rect.left);
+                     if(op.mask[at]){memcpy(p,&op.colors[at],2);++count;}}
+             }
+         }if(written)*written=count;return true;
+--- a/DDrawCompat/Remaster/Runtime.cpp
++++ b/DDrawCompat/Remaster/Runtime.cpp
+@@ -1,4 +1,5 @@
+ #include "Runtime.h"
++#include "OutputMode.h"
+ #include <Research/NativeProbe/Probe.h>
+ #include <bcrypt.h>
+ #include <filesystem>
+@@ -58,9 +59,10 @@
+ }
+ void initialize() noexcept {if(!enabled())return;const DWORD old=GetLastError();static std::once_flag once;
+     try{std::call_once(once,[]{DEVMODEW mode{};mode.dmSize=sizeof(mode);
+-        if(!EnumDisplaySettingsW(nullptr,ENUM_CURRENT_SETTINGS,&mode)||mode.dmPelsWidth!=2560||mode.dmPelsHeight!=1440){
+-            note("output_refused","native-1440-v1 requires primary physical2560x1440; no desktop mode change attempted");
+-            MessageBoxW(nullptr,L"This experimental native profile requires a 2560 x 1440 primary display. Use the separate compatible profile on other displays.",L"Dominion Wars Remastered",MB_OK|MB_ICONERROR);ExitProcess(0x4E10);}
++        const auto width=config.dynamicOutput?Output::session.width:2560u,height=config.dynamicOutput?Output::session.height:1440u;
++        if((config.dynamicOutput&&!Output::bound)||!EnumDisplaySettingsW(nullptr,ENUM_CURRENT_SETTINGS,&mode)||mode.dmPelsWidth!=width||mode.dmPelsHeight!=height||mode.dmPosition.x||mode.dmPosition.y){
++            note("output_refused","physical primary mode differs from immutable launch binding; no desktop mode change attempted");
++            MessageBoxW(nullptr,L"The primary display changed or does not match this rendering profile. Restart with a supported launch configuration. No desktop mode was changed.",L"Dominion Wars Remastered",MB_OK|MB_ICONERROR);ExitProcess(0x4E10);}
+         NativeProbe::install();if(!functionalReady()){note("startup_refused","functional hook set incomplete");ExitProcess(0x4E11);}
+         note("functional_ready","native/UI/canvas/opening/HUD active independently of recording");
+     });}catch(...){note("startup_refused","initialization exception");ExitProcess(0x4E12);}
+--- a/DDrawCompat/Research/MenuCanvas/CanvasRuntime.cpp
++++ b/DDrawCompat/Research/MenuCanvas/CanvasRuntime.cpp
+@@ -90,6 +90,17 @@
+     return t.w>=800&&t.h>=600&&read(t.outer+0x46,clip)&&clip[0]<=0&&clip[1]<=0&&
+         clip[2]>=0&&clip[3]>=0&&int32_t(clip[0])+clip[2]>=800&&int32_t(clip[1])+clip[3]>=600;
+ }
++bool menuInputFilters(const MenuCanvas::Family& f,uint32_t before,uint32_t after) {
++    if(after)return false;
++    if(!before)return true;
++    // A mission return retains the original default input filter. For these
++    // exact menu IDs (>0xA0), 47DDC0 only takes its cursor/default fall-through;
++    // it is not an unknown UI owner. Preserve its original invocation and data.
++    uint32_t commandMode=1;
++    if(before!=0x47DDC0||!read(0x718690,commandMode)||commandMode||f.id<=0xA0)return false;
++    for(const auto& b:f.buttons)if(b.id<=0xA0)return false;
++    return true;
++}
+ const MenuCanvas::Family* screen(bool rendering=false,uint32_t provedPending=0) {
+     uint32_t state=0,pending=0,input=0,secondary=0,draw=0,scene=1,pre=1,post=1;uint16_t mode=0;
+     MenuProbe::Node root{},global{};
+@@ -99,7 +110,7 @@
+     const bool valid=
+         read(0x713834,input)&&input==0x42A210&&read(0x713838,secondary)&&secondary==0x42A230&&
+         read(0x71383C,draw)&&draw==0x42A290&&read(0x713840,scene)&&scene==0&&
+-        read(0x5F7ED4,pre)&&pre==0&&read(0x5F7ED0,post)&&post==0&&
++        read(0x5F7ED4,pre)&&read(0x5F7ED0,post)&&menuInputFilters(*f,pre,post)&&
+         read(0x713DE8,mode)&&mode!=15&&MenuProbe::node(reader,f->root,root)&&
+         root.id==f->id&&root.flags==f->flags&&root.x==0&&root.y==0&&root.w==800&&root.h==600&&
+         root.parent==0x5F7ED8&&root.next==0&&root.child==f->firstButton+5*0x90&&root.draw==f->draw&&root.input==0&&
+--- a/DDrawCompat/Research/MenuProbe/Probe.cpp
++++ b/DDrawCompat/Research/MenuProbe/Probe.cpp
+@@ -147,7 +147,8 @@
+     LastError preserve;if(!Remaster::feature(Remaster::Feature::ui,L"QFR_UI_PROBE"))return;
+     try{
+         compact=Remaster::feature(Remaster::Feature::opening,L"QFR_OPENING_FLOW");
+-        if(identity!="de3e3ede7a9b4ce65a891201547f36413f3a880e4df3f28fb8a81e51f687abc6"){gap("UI_probe_engine_not_native1440_allowlist");return;}
++        const bool launchEngine=Remaster::enabled()&&Remaster::config.dynamicOutput&&identity==Remaster::config.engine;
++        if(identity!="de3e3ede7a9b4ce65a891201547f36413f3a880e4df3f28fb8a81e51f687abc6"&&!launchEngine){gap("UI_probe_engine_not_admitted");return;}
+         for(size_t i=0;i<std::size(sites);++i){uint8_t bytes[16]{};if(!read(sites[i].va,bytes,sites[i].size)||memcmp(bytes,sites[i].bytes,sites[i].size)){gap("UI_hook_original_bytes_mismatch");return;}}
+         void* hooks[]={reinterpret_cast<void*>(&h0),reinterpret_cast<void*>(&h1),reinterpret_cast<void*>(&h2),reinterpret_cast<void*>(&h3),reinterpret_cast<void*>(&h4),reinterpret_cast<void*>(&h5),reinterpret_cast<void*>(&h6),reinterpret_cast<void*>(&h7),reinterpret_cast<void*>(&h8),reinterpret_cast<void*>(&h9),reinterpret_cast<void*>(&h10),reinterpret_cast<void*>(&h11),reinterpret_cast<void*>(&h12),reinterpret_cast<void*>(&h13),reinterpret_cast<void*>(&h14)};
+         for(size_t i=0;i<std::size(sites);++i){originals[i]=reinterpret_cast<void*>(sites[i].va);const auto prior=originals[i];Compat::hookFunction(originals[i],hooks[i],sites[i].name);if(prior==originals[i]){gap("UI_hook_installation_failed_observation_disabled");return;}}
+--- a/DDrawCompat/Research/NativeProbe/Probe.cpp
++++ b/DDrawCompat/Research/NativeProbe/Probe.cpp
+@@ -1,4 +1,5 @@
+ #include <Remaster/Runtime.h>
++#include <Remaster/OutputMode.h>
+ #include <Research/MenuProbe/Probe.h>
+ #include <Research/MenuCanvas/CanvasRuntime.h>
+ // Bounded, metadata-only native-mode observations. No drawing or mode changes.
+@@ -26,6 +27,7 @@
+ auto& counterMutex=*new std::mutex;
+ std::atomic<uint64_t> epoch{0},apiSerial{0},overflow{0};
+ const Identity::Engine* selected=nullptr;
++Identity::Engine launchSelected{};
+ LONGLONG tick(){LARGE_INTEGER v{};QueryPerformanceCounter(&v);return v.QuadPart;}
+ std::string n(const char* k,int64_t v){return ",\""+std::string(k)+"\":"+std::to_string(v);}
+ std::string arr(const uint32_t* v,size_t size){std::string r="[";for(size_t i=0;i<size;++i){if(i)r+=",";r+=std::to_string(v[i]);}return r+"]";}
+@@ -241,6 +243,10 @@
+         const char* hex="0123456789abcdef";std::string identity;for(auto b:digest){identity+=hex[b>>4];identity+=hex[b&15];}
+         for(const auto& e:Identity::engines)if(identity==e.sha)selected=&e;
+         if(!selected){gap("executable_identity_not_in_immutable_allowlist");return;}
++        if(Remaster::enabled()&&Remaster::config.dynamicOutput){
++            if(!Remaster::Output::bound||identity!=Remaster::Output::neutralEngine){gap("runtime_output_not_bound_to_neutral_engine");return;}
++            launchSelected=*selected;launchSelected.width=Remaster::Output::session.width;launchSelected.height=Remaster::Output::session.height;selected=&launchSelected;
++        }
+         Qfr::event("native_probe_mode",",\"schema\":\"quantum-native-observation-1\",\"exe_sha256\":"+Qfr::quote(identity)+n("request_width",selected->width)+
+             n("request_height",selected->height)+",\"hybrid_comparison\":"+(selected->hybrid?"true":"false")+
+             ",\"metadata_only\":true,\"samples_per_key\":4,\"counter_key_limit_per_category\":32768,\"counter_category_limit\":16,\"omissions\":[\"CPU/GPU pixel payloads\",\"unselected API/driver calls\",\"most repeated metadata after four samples; counters retained subject to explicit category overflow\",\"engine initialization before first DirectDraw export\"],\"mode_mismatch_policy\":\"abort before original mode application; exit0x4E01\"");
+--- a/DDrawCompat/Research/OpeningFlow/HdHistory.h
++++ b/DDrawCompat/Research/OpeningFlow/HdHistory.h
+@@ -5,6 +5,7 @@
+ #include <vector>
+ #include <algorithm>
+ #include <stdexcept>
++#include <memory>
+ namespace OpeningFlow {
+ struct HdHistory {
+     static constexpr size_t guard=64;
+@@ -13,6 +14,8 @@
+     std::vector<uint16_t> pixels;
+     bool initialized=false,quarantined=false;
+     uint64_t revision=0;
++    std::unique_ptr<MenuCanvas::Plan> outputPlan;
++    unsigned outputWidth=0,outputHeight=0;
+     HdHistory(unsigned w,unsigned h):width(w),height(h),pitch(w*2) {
+         if(!MenuCanvas::validSize(w,h)||w%4||h%2||uint64_t(w)*h>8ull*1024*1024)
+             throw std::invalid_argument("HD history extent");
+@@ -40,5 +43,14 @@
+             pixels.data()+guard+size_t(y)*width,pitch);
+         return true;
+     }
++    bool present(MenuCanvas::WriteView dst) {
++        if(dst.width==width&&dst.height==height)return identity(dst);
++        if(!initialized||quarantined||!intact()||!MenuCanvas::validView(dst.pixels,dst.bytes,dst.pitch,dst.width,dst.height))return false;
++        if(!outputPlan||outputWidth!=dst.width||outputHeight!=dst.height){
++            auto next=MenuCanvas::Plan::fit(width,height,dst.width,dst.height);if(!next)return false;
++            outputPlan=std::make_unique<MenuCanvas::Plan>(std::move(*next));outputWidth=dst.width;outputHeight=dst.height;
++        }
++        return outputPlan->compose({pixels.data()+guard,size_t(pitch)*height,pitch,width,height},dst)&&intact();
++    }
+ };
+ }
+--- a/DDrawCompat/Research/OpeningFlow/OpeningFlow.cpp
++++ b/DDrawCompat/Research/OpeningFlow/OpeningFlow.cpp
+@@ -145,7 +145,7 @@
+     auto p=MenuCanvas::Plan::fit(800,600,t.w,t.h);if(!p)return false;
+     plan=std::make_unique<MenuCanvas::Plan>(std::move(*p));planW=t.w;planH=t.h;return true;
+ }
+-struct Publication {uint64_t generation=0,epoch=0;const Spec* spec=nullptr;uint32_t surface=0;bool interactive=false;uint32_t hdHandle=0;uint64_t hdLifetime=0;uint32_t cardResource=0,cardW=0,cardH=0;};
++struct Publication {uint64_t generation=0,epoch=0;const Spec* spec=nullptr;uint32_t surface=0;bool interactive=false;uint32_t hdHandle=0;uint64_t hdLifetime=0;uint32_t cardResource=0,targetW=0,targetH=0;};
+ Publication uiPublication,moviePublication;
+ std::set<uint32_t> uiMembers;
+ thread_local bool completing=false,copyingVideo=false;
+@@ -314,7 +314,7 @@
+             error("native_background_failed_after_write_no_snapshot_fallback");
+         }else if(card) {
+             surfaces[now.surface].scaled=true;uiMembers=std::move(nodes);uiPublication={++serial,epoch,p.spec,now.surface,false};
+-            uiPublication.cardResource=card->resource;uiPublication.cardW=now.w;uiPublication.cardH=now.h;
++            uiPublication.cardResource=card->resource;uiPublication.targetW=now.w;uiPublication.targetH=now.h;
+             copied=card->image->compose(view(d));if(copied)cardPixels(*card,d);
+         }else {
+         if(p.backdrop)trace("native_main_background_legacy_fallback",n("scope",p.backdrop->scope)+",\"fresh_original_repaint\":true");
+@@ -333,7 +333,7 @@
+     surfaces[now.surface].scaled=true;
+     uiPublication={++serial,epoch,p.spec,now.surface,!mainMonitor&&!p.directLoading&&context()==p.spec};++frames;
+     if(card) {
+-        uiPublication.cardResource=card->resource;uiPublication.cardW=now.w;uiPublication.cardH=now.h;
++        uiPublication.cardResource=card->resource;uiPublication.targetW=now.w;uiPublication.targetH=now.h;
+         const auto fit=dw::ui::Canvas::fit({0,0,card->image->width(),card->image->height()},{0,0,now.w,now.h});
+         const auto bounds=fit->content_bounds();
+         trace("native_card_commit",n("generation",serial)+n("root",p.spec->root)+n("resource",card->resource)+n("surface",now.surface)+
+@@ -511,7 +511,8 @@
+     hdRequested=Remaster::feature(Remaster::Feature::hd,L"QFR_HD_MOVIE");
+     try {
+         wchar_t path[32768]{};if(!GetModuleFileNameW(nullptr,path,32768)||!dllIdentity())return false;
+-        if(!fileIdentity(path,"de3e3ede7a9b4ce65a891201547f36413f3a880e4df3f28fb8a81e51f687abc6")||
++        const auto engine=Remaster::enabled()?Remaster::config.engine.c_str():"de3e3ede7a9b4ce65a891201547f36413f3a880e4df3f28fb8a81e51f687abc6";
++        if(!fileIdentity(path,engine)||
+            (!Remaster::enabled()&&(!fileIdentity(std::filesystem::path(path).parent_path()/L"rs/Video/Paramount.bik",
+                "5a3506e3f48190073591c1349f4e35dbfe8dde9d2ded19364fa865817deecff3")||
+            !fileIdentity(std::filesystem::path(path).parent_path()/L"rs/Video/GizmoLogo.bik",
+@@ -661,7 +662,7 @@
+         const bool nativeCard=address==s->root&&publication.cardResource&&cardFor(*s)&&
+             publication.cardResource==value(s->root+0x50);
+         bool admitted=known&&publication.interactive&&publication.epoch==epoch&&publication.spec==s&&context()==s&&inputDepth==1&&!pass.spec&&!completing&&!copyingVideo&&(!publication.cardResource||nativeCard);
+-        Target t{};admitted=admitted&&target(t)&&t.surface==publication.surface&&(hd?(t.w==2560&&t.h==1440):nativeCard?(t.w==publication.cardW&&t.h==publication.cardH):(plan&&planW==t.w&&planH==t.h));
++        Target t{};admitted=admitted&&target(t)&&t.surface==publication.surface&&((hd||nativeCard)?(t.w==publication.targetW&&t.h==publication.targetH):(plan&&planW==t.w&&planH==t.h));
+         const auto sp=frame[3]+4;int32_t x=0,y=0,px=0,py=0;const auto& node=chain.nodes.front();
+         int64_t accumulatedX=0,accumulatedY=0;
+         for(size_t i=1;i<chain.nodes.size();++i){accumulatedX+=chain.nodes[i].x;accumulatedY+=chain.nodes[i].y;}
+@@ -700,7 +701,7 @@
+                     const auto i=movies.find(moviePublication.hdHandle);
+                     moviePublication.interactive=moviePublication.interactive&&i!=movies.end()&&i->second->lifetime==moviePublication.hdLifetime&&
+                         i->second->hd&&i->second->hd->initialized&&!i->second->hd->quarantined&&
+-                        t.w==i->second->hd->width&&t.h==i->second->hd->height;
++                        t.w==moviePublication.targetW&&t.h==moviePublication.targetH;
+                     trace("native_hd_unlock",n("lifetime",moviePublication.hdLifetime)+n("token",lease.token)+n("surface",object)+n("hr",hr)+
+                         ",\"published\":"+(moviePublication.interactive?"true":"false"));
+                 }
+@@ -742,8 +743,7 @@
+         const auto savedEpoch=epoch,token=lease.token;
+         const bool owner=movieOwner(c,pointer,slot,media)&&c==&specs[0]&&media==value(0x749020+4*owned->profile->resource);
+         const bool output=owner&&lease.active&&lease.epoch==epoch&&target(t)&&lease.surface==t.surface&&
+-            lease.d.lpSurface==destination&&lease.d.lPitch==pitch&&format(lease.d,t)&&
+-            t.w==history.width&&t.h==history.height;
++            lease.d.lpSurface==destination&&lease.d.lPitch==pitch&&format(lease.d,t);
+         // A transient lost output cannot redirect decoding into native memory.
+         // The known source buffer remains valid independently of that lease.
+         if(owner)owned->hdBound=true;
+@@ -756,11 +756,14 @@
+             movieOwner(c,pointer,slot,media)&&target(current)&&current.surface==t.surface&&current.w==t.w&&current.h==t.h;
+         bool written=false;
+         if(publish) {
+-            // Exact1:1 rows: source history never traverses800x600 or global menu fit.
+-            written=history.identity(view(lease.d));
++            // Decode history always stays at source resolution; only presentation
++            // fits it to the current native target, preserving aspect and margins.
++            surfaces[t.surface].scaled=true;
++            written=history.present(view(lease.d));
+             if(written){surfaces[t.surface].scaled=true;moviePublication={++serial,epoch,c,t.surface,false,pointer,owned->lifetime};lease.written=true;
++                moviePublication.targetW=t.w;moviePublication.targetH=t.h;
+                 const auto frame=value(pointer+12);
+-                if(Qfr::enabled()&&(!owned->hdReceipts||frame==owned->profile->frames/2||(frame>=owned->profile->frames-5&&owned->hdReceipts<3))) {
++                if(Qfr::enabled()&&t.w==history.width&&t.h==history.height&&(!owned->hdReceipts||frame==owned->profile->frames/2||(frame>=owned->profile->frames-5&&owned->hdReceipts<3))) {
+                     ++owned->hdReceipts;
+                     const size_t bytes=size_t(history.pitch)*history.height;
+                     std::vector<unsigned char> packed(bytes);
+@@ -785,7 +788,7 @@
+             n("source_pitch",history.pitch)+n("source_x",0)+n("source_y",0)+n("original_x",x)+n("original_y",y)+n("copy_flags",copyFlags)+n("result",result)+
+             n("target_width",t.w)+n("target_height",t.h)+n("target_pitch",lease.d.lPitch)+n("surface",lease.surface)+
+             ",\"history_valid\":"+(history.initialized?"true":"false")+",\"guards_intact\":"+(history.intact()?"true":"false")+
+-            ",\"identity_written\":"+(written?"true":"false")+",\"native_writes_withheld\":"+(!written?"true":"false"));
++            ",\"fitted_written\":"+(written?"true":"false")+",\"identity_output\":"+((t.w==history.width&&t.h==history.height)?"true":"false")+",\"native_writes_withheld\":"+(!written?"true":"false"));
+         SetLastError(after);return result;
+     }catch(...) {
+         if(owned&&owned->hd)owned->hd->quarantined=true;
+--- /dev/null
++++ b/DDrawCompat/Remaster/OutputMode.h
+@@ -0,0 +1,25 @@
++#pragma once
++#include <array>
++#include <bit>
++#include <cstdint>
++#include <string_view>
++namespace Remaster::Output {
++inline constexpr const char* neutralEngine="e81aacb185e755c6478c06516bf0d442b7b95edc1f3a3603bfc7ecda1c777023";
++struct Size {uint32_t width=0,height=0;};
++inline Size session{};
++inline bool bound=false;
++inline bool valid(Size s) noexcept {
++    return s.width>=800&&s.height>=600&&s.width<=8192&&s.height<=8192&&uint64_t(s.width)*s.height<=64ull*1024*1024;
++}
++inline bool decimal(std::wstring_view text,uint32_t& value) noexcept {
++    if(text.empty()||text.size()>4||text.front()==L'0')return false;
++    uint32_t n=0;for(wchar_t c:text){if(c<L'0'||c>L'9')return false;n=n*10+uint32_t(c-L'0');}value=n;return true;
++}
++inline bool parse(std::wstring_view width,std::wstring_view height,Size& result) noexcept {
++    Size s{};if(!decimal(width,s.width)||!decimal(height,s.height)||!valid(s))return false;result=s;return true;
++}
++inline uint32_t projectionBits(Size s) noexcept {
++    return std::bit_cast<uint32_t>(float(2.0*(800.0/s.width)*((double(s.height)-154.0)/446.0)));
++}
++bool installStartup(bool staticLoad) noexcept;
++}
+--- /dev/null
++++ b/DDrawCompat/Remaster/OutputSites.h
+@@ -0,0 +1,24 @@
++#pragma once
++#include <array>
++#include <cstdint>
++namespace Remaster::Output {
++enum class Axis {width,height,projection};
++struct Site {uint32_t address;unsigned offset,length;Axis axis;std::array<unsigned char,10> expected;};
++inline constexpr std::array<Site,15> sites{{
++ {0x428c84,1,5,Axis::height,{0x68,0x58,0x2,0x0,0x0}}, // initial application layout
++ {0x428c89,1,5,Axis::width,{0x68,0x20,0x3,0x0,0x0}}, // initial application layout
++ {0x42b5b5,6,10,Axis::width,{0xc7,0x5,0xd0,0x37,0x71,0x0,0x20,0x3,0x0,0x0}}, // mission default writer
++ {0x42b5bf,6,10,Axis::height,{0xc7,0x5,0xd4,0x37,0x71,0x0,0x58,0x2,0x0,0x0}}, // mission default writer
++ {0x4a6480,3,7,Axis::width,{0xc7,0x41,0x8,0x20,0x3,0x0,0x0}}, // screen-object default
++ {0x4a6487,3,7,Axis::height,{0xc7,0x41,0xc,0x58,0x2,0x0,0x0}}, // screen-object default
++ {0x433498,1,5,Axis::height,{0x68,0x58,0x2,0x0,0x0}}, // initial screen request
++ {0x43349d,1,5,Axis::width,{0x68,0x20,0x3,0x0,0x0}}, // initial screen request
++ {0x4ad865,1,5,Axis::height,{0x68,0x58,0x2,0x0,0x0}}, // generic application reset request
++ {0x4ad86a,1,5,Axis::width,{0x68,0x20,0x3,0x0,0x0}}, // generic application reset request
++ {0x429883,1,5,Axis::height,{0x68,0x58,0x2,0x0,0x0}}, // initial input SetRect bottom
++ {0x429888,1,5,Axis::width,{0x68,0x20,0x3,0x0,0x0}}, // initial input SetRect right
++ {0x4292d9,1,5,Axis::height,{0x68,0x58,0x2,0x0,0x0}}, // application transition mode request
++ {0x4292de,1,5,Axis::width,{0x68,0x20,0x3,0x0,0x0}}, // application transition mode request
++ {0x40117a,6,10,Axis::projection,{0xc7,0x5,0x8,0x3,0x4f,0x0,0x0,0x0,0x0,0x40}}, // mission projection m11
++}};
++}
+--- /dev/null
++++ b/DDrawCompat/Remaster/OutputMode.cpp
+@@ -0,0 +1,129 @@
++#include "Runtime.h"
++#include "OutputMode.h"
++#include "OutputSites.h"
++#include <Windows.h>
++#include <array>
++#include <cstring>
++#include <limits>
++
++namespace Remaster::Output {
++namespace {
++constexpr uintptr_t entryAddress=0x4B085A;
++constexpr std::array<unsigned char,5> entryBytes{0x55,0x8B,0xEC,0x6A,0xFF};
++void* entryTrampoline=nullptr;
++bool installed=false;
++struct LastError {DWORD value=GetLastError();~LastError(){SetLastError(value);}};
++bool read(uintptr_t address,void* dest,size_t bytes) noexcept {
++    SIZE_T got=0;return ReadProcessMemory(GetCurrentProcess(),reinterpret_cast<void*>(address),dest,bytes,&got)&&got==bytes;
++}
++bool relative(uintptr_t from,uintptr_t to,int32_t& result) noexcept {
++    const auto delta=int64_t(to)-int64_t(from);
++    if(delta<std::numeric_limits<int32_t>::min()||delta>std::numeric_limits<int32_t>::max())return false;
++    result=int32_t(delta);return true;
++}
++bool jump(unsigned char* dest,uintptr_t address,uintptr_t target) noexcept {
++    int32_t delta=0;if(!relative(address+5,target,delta))return false;
++    dest[0]=0xE9;std::memcpy(dest+1,&delta,4);return true;
++}
++[[noreturn]] void fail(const char* reason) noexcept {
++    note("native_output_refused",reason);
++    MessageBoxW(nullptr,L"The selected display could not be bound safely before game startup. See the Rendering diagnostic ledger. No desktop mode was changed.",L"Dominion Wars Remastered",MB_OK|MB_ICONERROR);
++    ExitProcess(0x4E20);
++}
++struct Page {uintptr_t address=0;DWORD old=0;bool changed=false;};
++bool bindOperands(Size size) noexcept {
++    // Prepare and validate the complete recipe before changing any instruction.
++    std::array<uint32_t,sites.size()> values{};
++    std::array<Page,32> pages{};size_t count=0;
++    SYSTEM_INFO system{};GetSystemInfo(&system);const auto granule=uintptr_t(system.dwPageSize);
++    if(!granule||(granule&(granule-1)))return false;
++    for(size_t i=0;i<sites.size();++i){const auto& s=sites[i];std::array<unsigned char,10> current{};
++        if(s.length>current.size()||s.offset+4>s.length||!read(s.address,current.data(),s.length)||
++           std::memcmp(current.data(),s.expected.data(),s.length))return false;
++        values[i]=s.axis==Axis::width?size.width:s.axis==Axis::height?size.height:projectionBits(size);
++        const auto first=uintptr_t(s.address)&~(granule-1),last=(uintptr_t(s.address)+s.length-1)&~(granule-1);
++        for(auto address=first;address<=last;address+=granule){
++            bool present=false;for(size_t n=0;n<count;++n)present|=pages[n].address==address;
++            if(!present){if(count==pages.size())return false;pages[count++].address=address;}
++        }
++    }
++    const auto restore=[&]() noexcept {bool ok=true;for(size_t i=count;i>0;--i)if(pages[i-1].changed){DWORD ignored=0;
++        if(!VirtualProtect(reinterpret_cast<void*>(pages[i-1].address),granule,pages[i-1].old,&ignored))ok=false;
++    }return ok;};
++    for(size_t i=0;i<count;++i){if(!VirtualProtect(reinterpret_cast<void*>(pages[i].address),granule,PAGE_EXECUTE_READWRITE,&pages[i].old)){restore();return false;}pages[i].changed=true;}
++    // Once writes begin, any subsequent failure is fatal before the original CRT
++    // entry is resumed. Never run the game with a partially admitted contract.
++    for(size_t i=0;i<sites.size();++i)std::memcpy(reinterpret_cast<void*>(sites[i].address+sites[i].offset),&values[i],4);
++    const bool flushed=FlushInstructionCache(GetCurrentProcess(),nullptr,0)!=FALSE;
++    const bool protectedAgain=restore();
++    if(!flushed||!protectedAgain)return false;
++    for(size_t i=0;i<sites.size();++i){uint32_t actual=0;if(!read(sites[i].address+sites[i].offset,&actual,4)||actual!=values[i])return false;}
++    return true;
++}
++void __stdcall bindStartup() noexcept {
++    LastError preserve;
++    try {
++        if(!installed||bound||!enabled()||!config.dynamicOutput)fail("startup binding lifetime/profile");
++        wchar_t width[16]{},height[16]{};
++        const auto w=GetEnvironmentVariableW(L"DW_REMASTER_OUTPUT_WIDTH",width,16),h=GetEnvironmentVariableW(L"DW_REMASTER_OUTPUT_HEIGHT",height,16);
++        Size selected{};
++        if(!w||!h||w>=16||h>=16||!parse({width,w},{height,h},selected))fail("canonical launch width/height missing or unsupported");
++        DEVMODEW mode{};mode.dmSize=sizeof(mode);
++        if(!EnumDisplaySettingsExW(nullptr,ENUM_CURRENT_SETTINGS,&mode,0)||mode.dmPosition.x||mode.dmPosition.y||
++           mode.dmPelsWidth!=selected.width||mode.dmPelsHeight!=selected.height)fail("launch dimensions no longer match physical primary display");
++        if(!bindOperands(selected))fail("audited startup operand transaction failed");
++        session=selected;bound=true;
++        note("native_output_bound","width="+std::to_string(session.width)+"; height="+std::to_string(session.height)+"; physical-primary=0,0; sites=15; before EXE CRT; disk engine unchanged");
++    }catch(...){fail("startup binding exception");}
++}
++__declspec(naked) void startupBridge() {
++    __asm pushfd
++    __asm pushad
++    __asm mov eax,esp
++    __asm sub esp,528
++    __asm and esp,0FFFFFFF0h
++    __asm fxsave [esp]
++    __asm mov [esp+512],eax
++    __asm fninit
++    __asm call bindStartup
++    __asm fxrstor [esp]
++    __asm mov esp,[esp+512]
++    __asm popad
++    __asm popfd
++    __asm jmp dword ptr [entryTrampoline]
++}
++}
++bool installStartup(bool staticLoad) noexcept {
++    if(!enabled()||!config.dynamicOutput)return true;
++    LastError preserve;
++    if(installed)return false;
++    if(!staticLoad||reinterpret_cast<uintptr_t>(GetModuleHandleW(nullptr))!=0x400000)return false;
++    IMAGE_DOS_HEADER dos{};IMAGE_NT_HEADERS32 nt{};
++    if(!read(0x400000,&dos,sizeof(dos))||dos.e_magic!=IMAGE_DOS_SIGNATURE||dos.e_lfanew<0||dos.e_lfanew>0x1000||
++       !read(0x400000+uintptr_t(dos.e_lfanew),&nt,sizeof(nt))||nt.Signature!=IMAGE_NT_SIGNATURE||
++       nt.FileHeader.Machine!=IMAGE_FILE_MACHINE_I386||nt.OptionalHeader.Magic!=IMAGE_NT_OPTIONAL_HDR32_MAGIC||
++       0x400000+nt.OptionalHeader.AddressOfEntryPoint!=entryAddress||nt.OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_TLS].Size)return false;
++    std::array<unsigned char,5> current{},patch{};
++    if(!read(entryAddress,current.data(),current.size())||current!=entryBytes||
++       !jump(patch.data(),entryAddress,reinterpret_cast<uintptr_t>(&startupBridge)))return false;
++    auto* block=static_cast<unsigned char*>(VirtualAlloc(nullptr,32,MEM_COMMIT|MEM_RESERVE,PAGE_READWRITE));
++    if(!block)return false;
++    std::memcpy(block,entryBytes.data(),5);
++    if(!jump(block+5,reinterpret_cast<uintptr_t>(block)+5,entryAddress+5)){VirtualFree(block,0,MEM_RELEASE);return false;}
++    DWORD previous=0;
++    if(!VirtualProtect(block,32,PAGE_EXECUTE_READ,&previous)||!FlushInstructionCache(GetCurrentProcess(),block,32)){VirtualFree(block,0,MEM_RELEASE);return false;}
++    std::array<unsigned char,10> expected{},verify{};std::memcpy(expected.data(),block,10);
++    DWORD old=0;
++    if(!VirtualProtect(reinterpret_cast<void*>(entryAddress),5,PAGE_EXECUTE_READWRITE,&old)){VirtualFree(block,0,MEM_RELEASE);return false;}
++    entryTrampoline=block;std::memcpy(reinterpret_cast<void*>(entryAddress),patch.data(),5);
++    const bool flushed=FlushInstructionCache(GetCurrentProcess(),reinterpret_cast<void*>(entryAddress),5)!=FALSE;
++    DWORD ignored=0;const bool protectedAgain=VirtualProtect(reinterpret_cast<void*>(entryAddress),5,old,&ignored)!=FALSE;
++    if(!flushed||!protectedAgain||!read(entryAddress,current.data(),5)||current!=patch||!read(reinterpret_cast<uintptr_t>(block),verify.data(),10)||verify!=expected){
++        // DllMain returns FALSE: process initialization aborts. Keep the valid
++        // trampoline allocated if the entry may reference it; never free a live
++        // branch target or claim a successful partial installation.
++        return false;
++    }
++    installed=true;note("native_output_startup_ready","checked CRT-entry bridge; one immutable launch binding");return true;
++}
++}

@@ -1,0 +1,38 @@
+{
+  "schema": "launcher-adaptive-source-handoff-2",
+  "status": "bounded focus-preflight fix; source tests only; Rendering controls retry",
+  "base": "adaptive-display-v1-source final bounds revision plus installed Current DE3 helper",
+  "preserved_v1_receipt_sha256": "f7c4b6e041f21ec82a421107d1576589db2817e3998ef4ce850daea4e75c6124",
+  "demonstrated_failure": "E:/Codex/remaster-build-tests/adaptive-output-20261030-01/.dw-remaster/runs/20261031T030504835Z-6d1b54a9e44c4b9dac691df94aa22294/helper-error.log: Unexpected game image before lower game launch",
+  "upstream": {
+    "Launch-Remaster.ps1": "46617a9b2d976e0c5bef1eba3f20b8b2c77e8bd927bf5a62b94a7fe71ebe3592",
+    "Remaster.Core.psm1": "6575db2a607b97a62fec1a7a79c6f796f4b70b1baf8ee44565154f8c1c00980c",
+    "Watch-RemasterFocus.ps1": "fd3f76945d7b731f881fdfff25bc4e641b932110ac59fbd157e58024d618e565"
+  },
+  "runtime": {
+    "Launch-Remaster.ps1": "46617a9b2d976e0c5bef1eba3f20b8b2c77e8bd927bf5a62b94a7fe71ebe3592",
+    "Remaster.Core.psm1": "0db55a56d8014b2b5e7f8c1b4c1f7558bb1d8323503446232a40e6750186f12a",
+    "Watch-RemasterFocus.ps1": "78778adfe1740624fe52afccb075d670f4581c71b93027ae1c8b7477b5f2d812"
+  },
+  "patch_sha256": "5ba481706d769164b5c86504d39df4403b6b9eabbdfe91b99ac1adeefe2fc325",
+  "identity_policy": {
+    "legacy_default": "de3e3ede7a9b4ce65a891201547f36413f3a880e4df3f28fb8a81e51f687abc6",
+    "native-display-v1_only": "e81aacb185e755c6478c06516bf0d442b7b95edc1f3a3603bfc7ecda1c777023",
+    "unconditional_two_hash_allowlist": false,
+    "actual_managed_validation": "unchanged parent Test-RemasterInstalled plus actual helper initial and ongoing exact hash checks"
+  },
+  "tests": {
+    "python_scope": {"passed": 5, "exit_code": 0},
+    "windows_powershell_display_contract": {"passed": 43, "exit_code": 0},
+    "windows_powershell_focus_identity": {"passed": 19, "exit_code": 0},
+    "all_powershell_parses": "pass",
+    "git_apply_check": "pass",
+    "actual_game_or_helper_loop_launch": "not performed"
+  },
+  "downstream_audit": {
+    "Launch-NoDesktopSwitch.ps1_sha256": "6721caeb4a403f9973036c143e71e8771f4d283e95738fdaa27872b5730476d3",
+    "DominionWarsLauncher.psm1_sha256": "2aa093dba8143932bcae26e28004f5eda72e1aa31daca1130bdc098d424cb70f",
+    "additional_fixed_de3_engine_gate": "not found in those downstream scripts; legacy Width/Height parameters are not the adaptive environment interface"
+  },
+  "changes_not_made": ["Current", "game/install files", "desktop", "shared integration/installer", "package/version", "launch", "commit", "publication", "secondary routing"]
+}

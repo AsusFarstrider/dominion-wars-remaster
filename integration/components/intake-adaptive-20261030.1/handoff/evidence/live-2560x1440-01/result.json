@@ -1,0 +1,35 @@
+{
+    "build_id":  "int-20261029.1-adaptive-output-01",
+    "launcher_exit":  0,
+    "managed_files_verified":  true,
+    "recorded_utc":  "2026-10-31T03:11:02.0072211Z",
+    "automatic_pause":  false,
+    "output_selection":  {
+                             "schema":  "native-display-selection-1",
+                             "profile":  "native-display-v1",
+                             "width":  2560,
+                             "height":  1440,
+                             "device":  "\\\\.\\DISPLAY3",
+                             "device_identity":  "public-display-1",
+                             "position_x":  0,
+                             "position_y":  0,
+                             "refresh":  165,
+                             "orientation":  0,
+                             "bits_per_pixel":  32,
+                             "source":  "primary-current-physical-mode",
+                             "live_resize":  false
+                         },
+    "version_identity":  {
+                             "flavor":  "native-display-prototype-01",
+                             "in_game_label":  "Remastered 1.10",
+                             "integration_build_id":  "int-20261029.1-adaptive-output-01",
+                             "original_game_version":  "1.04",
+                             "product":  "Dominion Wars Remastered",
+                             "release_stage":  "experimental",
+                             "remaster_version":  "1.10",
+                             "schema":  1,
+                             "source_revision":  "f025d0cfaacaa1c28964792424ee7b77f37ace97",
+                             "version_decision_id":  "rendering-adaptive-output-20261030-01"
+                         },
+    "version_identity_sha256":  "deed09a248623d4cd96fa5d4a9dfd47e1b72a49843ddf15cb298ad523fa99053"
+}

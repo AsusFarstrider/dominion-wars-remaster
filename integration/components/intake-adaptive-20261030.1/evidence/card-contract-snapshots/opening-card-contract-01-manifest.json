@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-27",
+  "disposition": "bounded_original_card_identity_palette_timer_contract",
+  "files": [
+    {
+      "path": "E:\\Codex\\research\\quantum-engine-kb\\scripts\\audit_opening_card_contract.py",
+      "sha256": "ec2d7b5c28d4d0c5cb11919b6d599c7fbafc00c5fc7568d68058862e3206338b"
+    },
+    {
+      "path": "E:\\Codex\\research\\quantum-engine-kb\\docs\\OPENING-CARD-REPLACEMENT-CONTRACT-01.md",
+      "sha256": "29a5c66ccb07981a5e969e5eb337da1ee20b184bb30304ad22e2840b61e59c82"
+    },
+    {
+      "path": "E:\\Codex\\research\\quantum-engine-kb\\evidence\\opening-card-contract-01\\audit.json",
+      "sha256": "d2e361346aae8aaeefd6648439b3ccf9e94b5b6e064dd7f092197aad84178efa"
+    },
+    {
+      "path": "E:\\Codex\\research\\quantum-engine-kb\\evidence\\opening-card-contract-01\\original-101.png",
+      "sha256": "e467792301ead69f7163795a79d677a0aff8dd07adb18f0e5758857d6edbe0f0"
+    },
+    {
+      "path": "E:\\Codex\\research\\quantum-engine-kb\\evidence\\opening-card-contract-01\\original-103.png",
+      "sha256": "49c8d13c4be2b0fb98a8af01074bda7e3cfdf68313282c293830ad5919cd88ff"
+    }
+  ]
+}

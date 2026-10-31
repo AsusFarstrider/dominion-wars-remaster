@@ -47,22 +47,23 @@
     "proposals_are_not_approved_versions": true
   },
   "current_baseline": {
-    "build_id": "int-20261029.1",
-    "flavor": "native1440-restored-v7-gizmo-v5",
-    "source_revision": "f025d0cfaacaa1c28964792424ee7b77f37ace97",
-    "package_sha256": "fdd3f3ee6bc619bcc841324ec7d3841fc6188379904301590293714de4a007ee",
-    "manifest_sha256": "b0319fd0a248d8862e2641ddc8eb03218632fbfd4d63a2384ff1203827bed43d",
-    "generated_executable_sha256": "de3e3ede7a9b4ce65a891201547f36413f3a880e4df3f28fb8a81e51f687abc6",
-    "remaster_version": "1.10",
+    "build_id": "int-20261030.1",
+    "flavor": "native-display-restored-v7-gizmo-v5",
+    "source_revision": "8a32bcc36117442fffda89cd42580382f3305216",
+    "package_sha256": "09b76f38aea263f13c9f596683968972a26f787b70ccc7b1ea9326f568eabd35",
+    "manifest_sha256": "9bbb5a7d32e78a66ceb6647bff6157820f2f2357c860727305aaf2591e94e9cf",
+    "generated_executable_sha256": "e81aacb185e755c6478c06516bf0d442b7b95edc1f3a3603bfc7ecda1c777023",
+    "remaster_version": "1.15",
     "release_stage": "alpha",
     "version_identity_status": "master-approved-remaster-version",
-    "in_game_label": "Remastered 1.10",
+    "in_game_label": "Remastered 1.15",
     "in_game_label_meaning": "remaster milestone; official original input remains1.04",
     "display_binding": "validated-shared-version-record",
-    "publication_tag": "v1.10-alpha",
+    "publication_tag": "v1.15-alpha",
     "historical_package_remains_immutable": true,
-    "known_accepted_bug": "In mission, Esc->Main Menu returns to upper-left legacy menu with nonfunctional mouse input; avoid this route and close/relaunch. User explicitly deferred repair until after release.",
-    "coverage": "Limited native1440 Alpha; short current recording-off retest plus explicitly inherited component evidence, not a fresh full regression matrix."
+    "known_accepted_bug": null,
+    "resolved_since_1_10": ["Mission Esc->Main Menu re-entry", "Preferences raw-composition cursor lag"],
+    "coverage": "Current packaged human1440 loaded-mission/UI/audio/pausedAltTab/normal-exit pass; actual1080 component evidence inherited from identical engine/provider/launcher/assets. One system/DPI96, primary-origin0, no live resize; other hardware/modes unvalidated."
   },
   "milestone_reviews": [
     {
@@ -104,6 +105,32 @@
         "Native2560x1440 primary at0,0 only; extremely limited hardware/OS coverage",
         "No new final-package fresh-media/save-load/focus matrix claimed; unchanged-component validation inherited explicitly",
         "Multiplayer unsupported; substantial further graphics/interface/gameplay coverage required before2.00"
+      ]
+    },
+    {
+      "id": "version-review-20261030-1.15",
+      "date": "2026-10-31",
+      "decision": "advance",
+      "assigned_remaster_version": "1.15",
+      "reviewed_build_id": "int-20261030.1",
+      "significance": "validated-integrated-milestone",
+      "approved_by": "Master Integration",
+      "rationale": "The coordinated neutral engine/provider/launcher removes the fixed1440 prerequisite with real1080/1440 component passes and a newly packaged1440 human pass. MissionMain re-entry and Preferences responsiveness repairs are integrated, not untracked overlays. This expands practical tester reach; it is not an automatic repair bump or completion percentage. User explicitly authorized internal update, release and Master version judgment.",
+      "evidence": [
+        "handoffs/master/int-20261030.1-release/APPROVAL.json (private exact package and human authorization)",
+        "handoffs/master/int-20261030.1-release/validation-accepted.json (current and inherited scopes)",
+        "handoffs/master/rendering-packaged-1.15-20261031/acceptance.json (manual package pass, loaded existing save, exit0)",
+        "integration/components/intake-adaptive-20261030.1/handoff/component.json (467 source pins and coherent launcher-v2 contract)",
+        "E:/Codex/remaster-build-tests/adaptive-fixtures-int-20261030.1-r2/results.json (2177 rebuilt assertions)",
+        "E:/Codex/remaster-build-tests/lifecycle-3eed6b53251f41f3b71bce73416dfe2c/result.json (29 checks)",
+        "E:/Codex/remaster-builds/int-20261030.1-adaptive-repro-r1/build-record.json (byte-identical independent ZIP build)"
+      ],
+      "remaining_boundaries": [
+        "Current packaged human test1440; actual1080 inherited component pass, not a new finalZIP run",
+        "One Windows11/AMD system/DPI96; other modes/aspects/4K/highDPI/otherGPUs unvalidated",
+        "Primary-origin0 and one immutable size per launch; no live resize/hotplug",
+        "Existing save loaded; no new-save roundtrip, new-fleet setup, fresh media/updater or full campaign on this package",
+        "Multiplayer unsupported;2.00 not earned"
       ]
     }
   ]

@@ -39,8 +39,8 @@ not by itself proof that the broader 2.00 goal has been earned.
 | Identity | Meaning | Current recorded value |
 |---|---|---|
 | Official original-game version | Supported original game's official patch/input identity | North American retail **1.04** |
-| Remaster version | Master-approved player-facing restoration milestone | **1.10 Alpha**; legacy first release remains numerically unassigned |
-| Integration build ID | Exact experimental assembly, with source revision, flavor and hashes | **int-20261029.1**, native1440-restored-v7-gizmo-v5 |
+| Remaster version | Master-approved player-facing restoration milestone | **1.15 Alpha**; legacy first release remains numerically unassigned |
+| Integration build ID | Exact experimental assembly, with source revision, flavor and hashes | **int-20261030.1**, native-display-restored-v7-gizmo-v5 |
 
 An altered executable derived from 1.04 is not the unmodified official executable.
 Preserve both its original-input SHA256 and generated-output SHA256. A PE version,
@@ -129,7 +129,7 @@ publication record**. Do not embed the final ZIP's own hash inside its contents,
 creating a circular checksum dependency. Historical approved packages stay frozen.
 
 The future in-game label should clearly identify the remaster, for example
-`Remastered 1.10` (illustrative, not approved). The official base `1.04` and exact
+`Remastered 1.15` (the current approved label). The official base `1.04` and exact
 build ID remain separately available in diagnostics/about/support information.
 Where room is limited, do not squeeze all metadata into the menu label.
 
@@ -188,7 +188,7 @@ python -B -m unittest discover -s versioning/tests -v
 ```
 
 For a versioned selected package, add `--identity '<package version.json>'`.
-The current registry now records1.10Alpha. Historical int-20261018.1 retains its
+The current registry now records1.15Alpha. Historical int-20261018.1 retains its
 original1.04 label, immutable package and separate release identity.
 
 ## Initial review, October 21, 2026
@@ -239,3 +239,39 @@ authorization supersede them; tested runtime bytes are not silently rewritten to
 change approval status. Public source privacy redaction, if performed by Release,
 must identify original/private versus public revisions and any metadata hash changes
 without claiming redacted source is byte-identical. The tested ZIP stays immutable.
+
+## Milestone approval, October 31, 2026 — 1.15 Alpha
+
+Master approves **1.15 Alpha**, build **int-20261030.1**, runtime source
+`8a32bcc36117442fffda89cd42580382f3305216`, ZIP SHA256
+`09b76f38aea263f13c9f596683968972a26f787b70ccc7b1ea9326f568eabd35`.
+The build identity dates the integration work begun October 30; final acceptance
+is October 31. Version 1.10 and its published ZIP remain unchanged and available.
+
+This milestone removes the fixed-1440 requirement through a coherent, launch-time
+physical-primary output contract shared by the neutral engine, renderer, launcher
+and focus helper. It also incorporates the validated mission Main re-entry and
+Preferences composition repairs. This is a practical reach improvement, not a
+numeric increase for every routine patch and not 15 percent completion.
+
+The same engine/provider/launcher/assets passed actual 1080p and 1440p component
+tests on one computer. The identified new package passed a human 1440p check:
+version/opening/audio/Preferences, loaded-save mission HUD/controls, paused Alt-Tab,
+Esc → Main Menu → Preferences, and normal exit 0. Automated app input was stopped
+after it could not drive menu controls; do not call that an agent mission pass.
+Native fixtures, managed lifecycle and byte-identical second-build checks passed.
+
+Limits remain explicit: primary origin (0,0), one immutable size per launch, no
+live resize/hotplug, very limited Windows11/AMD/DPI96 coverage. Other modes,
+aspects, high DPI and GPUs need testing; safety bounds are not a support list.
+An existing save was loaded, not a new-save roundtrip or fresh fleet traversal.
+Original-media extraction/updater evidence is inherited from the unchanged
+Modernizer foundation. Multiplayer remains unsupported; 2.00 has not been earned.
+
+The earlier section's Esc defect and exit 1 describe the preserved 1.10 release,
+not Current 1.15. Exact-hash external approval supersedes candidate/held package
+placeholders. The embedded generic Read Me's “No game assets” phrase means no
+complete original retail game content: nine authorized replacement visual
+payloads are supplied. Release must clarify this in its public read-first notice,
+without altering the tested ZIP. Source privacy mapping and metadata refresh
+remain distinct from original runtime source and package identities.

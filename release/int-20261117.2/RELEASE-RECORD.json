@@ -1,0 +1,16 @@
+{
+  "version": "1.20 Alpha",
+  "build": "int-20261117.2",
+  "tag": "v1.20-alpha",
+  "approved_private_source": "9e4efd8377104be03ba2238be3306580365412e4",
+  "mapped_public_source": "6e11e5cc23700e71246a2deb655526d63cd4c203",
+  "public_parent": "832c3f8b44f834eca7098061ce01a9aa812632b7",
+  "verified_private_backup_sha256": "ff3f556a58f06620282797edae85fc2053f20bcf9034fd1d84c10879c08d273a",
+  "zip_sha256": "7cfeaeae6cfc6110e686c6c555b6f80162795f37d18a00394ff1daabdc931b07",
+  "zip_bytes": 186327645,
+  "manifest_sha256": "44521bf1b96eb3a6fb4fece2514dfaf59a402652dc0fb05c44d319b49a324ca2",
+  "approval": "Master technical sign-off and explicit owner publication authorization, November 17, 2026",
+  "verification": "579 member checksums; 578 manifest files; 34 packaged lifecycle checks; exact private ZIP reproduced; 1080p menu smoke and normal exit; 1440p Results Exit from late autosave",
+  "limits": "Observed gameplay Alt-Tab crash and unsupported live display-mode switch hang. No full campaign or broad hardware qualification.",
+  "mapping": "Cumulative private integration delta mapped onto existing public history. 104 paths redacted or rehashed; two device identities aliased. Independent public build reproduced production payloads, not original private identity/lock provenance. No replacement ZIP published."
+}

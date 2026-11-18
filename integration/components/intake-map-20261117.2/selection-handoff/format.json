@@ -1,0 +1,72 @@
+{
+  "authoring": "existing owner-private DWSSEL1 authoring output -> tools/convert_catalog.py -> validate DWSSEL2; never ship the private input",
+  "density": "existing exact4x assets; no dependence on physical display size",
+  "duplicates": false,
+  "endianness": "little",
+  "fixed_header_bytes_per_record": 88,
+  "header": [
+    {
+      "bytes": 8,
+      "name": "magic"
+    },
+    {
+      "equals": 114,
+      "name": "record_count",
+      "type": "uint32"
+    }
+  ],
+  "logical_geometry_and_identity_guards": "See validator and original owners; keys/dimensions alone never admit replacement",
+  "magic_hex": "44575353454c3200",
+  "maximum_bytes": 33554432,
+  "original_reference_pixel_field": false,
+  "record": [
+    {
+      "allowed": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "name": "kind",
+      "type": "uint32"
+    },
+    {
+      "name": "key",
+      "type": "uint32"
+    },
+    {
+      "name": "origin_xy",
+      "type": "int16[2]"
+    },
+    {
+      "name": "logical_wh",
+      "type": "uint16[2]"
+    },
+    {
+      "name": "replacement_wh",
+      "type": "uint32[2]"
+    },
+    {
+      "algorithm": "SHA256",
+      "bytes": 32,
+      "domain": "exact logical W*H tightly packed row-major P8 owner bytes",
+      "name": "owner_pixel_sha256"
+    },
+    {
+      "bit_order": "class i: byte i//8 bit i%8",
+      "bytes": 32,
+      "name": "glyph_class_mask",
+      "rules": "bit0 forbidden; nonfont records allzero; covered glyph indices must be nonzero and in mask"
+    },
+    {
+      "encoding": "kind2 index8/coverage8; kind1/4 RGBA8",
+      "name": "replacement_payload",
+      "size": "kind3:0; kind2:PW*PH*2; kind1/4:PW*PH*4"
+    }
+  ],
+  "schema": "selection-binary-format-1",
+  "trailing_bytes": false,
+  "unsupported_or_failed_identity": "existing original draw/frame fallback; no pixel write redirected",
+  "validator": "tools/validate_catalog.py",
+  "version1_runtime_support": false
+}

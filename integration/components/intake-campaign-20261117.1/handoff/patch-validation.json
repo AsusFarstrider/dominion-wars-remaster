@@ -1,0 +1,13 @@
+{
+  "provider_exact_hashes": 13,
+  "launcher_exact_hashes": 3,
+  "disposable_apply_check": "E:\\Codex\\research\\dominion-rendering\\dynamic-output-patch-check-02",
+  "git_options": [
+    "-c",
+    "core.autocrlf=false",
+    "-c",
+    "core.whitespace=cr-at-eol"
+  ],
+  "note": "Disable Windows auto-CRLF for exact frozen source byte hashes; no source logic changes.",
+  "no_current_writes": true
+}

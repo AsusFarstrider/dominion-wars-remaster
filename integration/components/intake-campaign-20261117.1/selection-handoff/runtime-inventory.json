@@ -1,0 +1,100 @@
+{
+  "base_build": "int-20261030.1",
+  "base_revision": "8a32bcc36117442fffda89cd42580382f3305216",
+  "config": {
+    "config_delta": null,
+    "config_file": "Remaster.Rendering.json",
+    "managed_rendering_required": true,
+    "profile": "native-display-v1",
+    "recording_default": "off",
+    "version_identity_binding": "Master must generate normal locked manifest/version/config bindings; no bypass"
+  },
+  "current_changed": false,
+  "dependencies": [
+    "rendering-mission-selection-20261101-03",
+    "rendering-paused-briefing-20261102-01"
+  ],
+  "files": [
+    {
+      "sha256": "41653c0f7c3961cc0b5fd8eb6b67374fbe23ad807c5f17c370fb9ab15aacaba4",
+      "size": 7107584,
+      "source": "runtime/ddraw.dll",
+      "target": "ddraw.dll"
+    },
+    {
+      "sha256": "7e1b54d2fb728ff2eb76414493407886a04374d89d045b9b4aa050ad98d0ebe1",
+      "size": 6962940,
+      "source": "runtime/rs/Remaster/Selection/selection.dwselect",
+      "target": "rs/Remaster/Selection/selection.dwselect"
+    },
+    {
+      "sha256": "e8cf73382fcadbf2334697c33d5aab348d7f3e26f36b7525cd29153ec322cd02",
+      "size": 7372816,
+      "source": "runtime/rs/Remaster/Selection/selection.dwcard",
+      "target": "rs/Remaster/Selection/selection.dwcard"
+    },
+    {
+      "sha256": "38ff8ff74f041f47959b5a29409a0f86c08ddd63fe281e183b08b14cae613173",
+      "size": 61976,
+      "source": "runtime/rs/Remaster/Selection/cursor.dwcur",
+      "target": "rs/Remaster/Selection/cursor.dwcur"
+    },
+    {
+      "sha256": "dc0e9c3658a1a3ed1ec94274d8b19925c93e1abb7ddba294923ad9bde30f8cb8",
+      "size": 1,
+      "source": "runtime/rs/Remaster/Selection/selection.flags",
+      "target": "rs/Remaster/Selection/selection.flags"
+    },
+    {
+      "sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "size": 1,
+      "source": "runtime/rs/Remaster/Selection/cursor.flags",
+      "target": "rs/Remaster/Selection/cursor.flags"
+    }
+  ],
+  "flags": [
+    {
+      "allowed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "bits": {
+        "1": "map",
+        "2": "button bodies",
+        "4": "font014/007 six controls",
+        "8": "faction sprites"
+      },
+      "default": 15,
+      "encoding": "single uint8",
+      "missing_or_zero": "original artwork at startup",
+      "target": "rs/Remaster/Selection/selection.flags"
+    },
+    {
+      "allowed": [
+        0,
+        1
+      ],
+      "default": 1,
+      "encoding": "single uint8",
+      "missing_or_zero": "original cursor",
+      "target": "rs/Remaster/Selection/cursor.flags"
+    }
+  ],
+  "game_launch_performed": false,
+  "schema": "rendering-runtime-inventory-1",
+  "source_reference_pixels_in_catalog": false
+}

@@ -1,0 +1,128 @@
+{
+  "schema": "quantum-adaptive-live-acceptance-1",
+  "client_date": "2026-10-30",
+  "game": "E:\\Codex\\remaster-build-tests\\adaptive-output-20261030-01",
+  "pid": 27748,
+  "run": "E:\\Codex\\remaster-build-tests\\adaptive-output-20261030-01\\.dw-remaster\\runs\\20261031T031008924Z-287c1be4f89d409b9f1b4d67c3392fe1",
+  "selected_physical_output": {
+    "schema": "native-display-selection-1",
+    "profile": "native-display-v1",
+    "width": 2560,
+    "height": 1440,
+    "device": "\\\\.\\DISPLAY3",
+    "device_identity": "public-display-1",
+    "position_x": 0,
+    "position_y": 0,
+    "refresh": 165,
+    "orientation": 0,
+    "bits_per_pixel": 32,
+    "source": "primary-current-physical-mode",
+    "live_resize": false
+  },
+  "human_result": "All checks passed; quit normally",
+  "normal_process_exit": 0,
+  "normal_managed_launcher_exit": 0,
+  "managed_files_verified": true,
+  "snapshots": 59,
+  "changes_omitted_after_capacity": 0,
+  "observed_client_sizes": [
+    [
+      0,
+      0
+    ],
+    [
+      2560,
+      1440
+    ]
+  ],
+  "observed_screen_sizes": [
+    [
+      0,
+      0
+    ],
+    [
+      2560,
+      1440
+    ]
+  ],
+  "observed_native_image_sizes": [
+    [
+      2560,
+      1440
+    ]
+  ],
+  "raw_state_counts": {
+    "32": 5,
+    "4": 3,
+    "5": 1,
+    "6": 2,
+    "7": 13,
+    "10": 2,
+    "9": 1,
+    "12": 3,
+    "11": 8,
+    "3": 9,
+    "2": 10,
+    "18": 2
+  },
+  "selected_ledger_events": 20,
+  "selected_ledger_failures": [],
+  "fingerprint": {
+    "ds9dw.exe": "e81aacb185e755c6478c06516bf0d442b7b95edc1f3a3603bfc7ecda1c777023",
+    "ddraw.dll": "7694f070e24b4e1f80b27356a1087c056c04d519a63bab54b12f19e17f72b720",
+    "Remaster.Rendering.json": "42585cc57fb531cabce4d2f7445551abeb93e756f6f3d267e08e7c11561217f0",
+    "version.json": "deed09a248623d4cd96fa5d4a9dfd47e1b72a49843ddf15cb298ad523fa99053",
+    "Launch-Remaster.ps1": "46617a9b2d976e0c5bef1eba3f20b8b2c77e8bd927bf5a62b94a7fe71ebe3592",
+    "Remaster.Core.psm1": "0db55a56d8014b2b5e7f8c1b4c1f7558bb1d8323503446232a40e6750186f12a",
+    "Watch-RemasterFocus.ps1": "78778adfe1740624fe52afccb075d670f4581c71b93027ae1c8b7477b5f2d812",
+    "DDrawCompat-ds9dw.ini": "b5b6e74d04dde1346669194cb9d11fa824604dad1ca3c637460b0a45f2a11760"
+  },
+  "evidence": {
+    "events.ndjson": {
+      "source": "E:\\Codex\\remaster-build-tests\\adaptive-output-20261030-01\\.dw-remaster\\output-evidence-20261031T031007167Z\\events.ndjson",
+      "sha256": "58708138ca5863dd7d7b8ecf534f6e5033ff8353a78f8de57847a83e39e5387f"
+    },
+    "rendering.ndjson": {
+      "source": "C:\\Users\\Example\\AppData\\Local\\Dominion Wars Remastered\\Rendering\\rendering-27748-134378898123192286-0.ndjson",
+      "sha256": "d6e4601771e7842800caa865b2c7da0fe15b713fcf9dbcf4435e78ad3fb371ff"
+    },
+    "result.json": {
+      "source": "E:\\Codex\\remaster-build-tests\\adaptive-output-20261030-01\\.dw-remaster\\runs\\20261031T031008924Z-287c1be4f89d409b9f1b4d67c3392fe1\\result.json",
+      "sha256": "d09d25951306a673b798f6636537ace215ce3fc537b66d6b81fa75aed9eeb65e"
+    },
+    "output-selection.json": {
+      "source": "E:\\Codex\\remaster-build-tests\\adaptive-output-20261030-01\\.dw-remaster\\runs\\20261031T031008924Z-287c1be4f89d409b9f1b4d67c3392fe1\\output-selection.json",
+      "sha256": "7fae012c9645569b04f30b6a99d06506a2c6fabb58bf2837f27b94fbbc66d003"
+    },
+    "focus.log": {
+      "source": "E:\\Codex\\remaster-build-tests\\adaptive-output-20261030-01\\.dw-remaster\\runs\\20261031T031008924Z-287c1be4f89d409b9f1b4d67c3392fe1\\focus.log",
+      "sha256": "53a8195ac0744d017edb4895f3687f22bd9afba79c0ecebcd29833e77b594a7c"
+    },
+    "helper-error.log": {
+      "source": "E:\\Codex\\remaster-build-tests\\adaptive-output-20261030-01\\.dw-remaster\\runs\\20261031T031008924Z-287c1be4f89d409b9f1b4d67c3392fe1\\helper-error.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "launcher-output.log": {
+      "source": "E:\\Codex\\remaster-build-tests\\adaptive-output-20261030-01\\.dw-remaster\\runs\\20261031T031008924Z-287c1be4f89d409b9f1b4d67c3392fe1\\launcher-output.log",
+      "sha256": "e62da134d6a02756bb6b4f705cd2903e0b83ec7561bf18ac8255d8450fb1a98c"
+    },
+    "launcher-error.log": {
+      "source": "E:\\Codex\\remaster-build-tests\\adaptive-output-20261030-01\\.dw-remaster\\runs\\20261031T031008924Z-287c1be4f89d409b9f1b4d67c3392fe1\\launcher-error.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "sampler.log": {
+      "source": "E:\\Codex\\remaster-build-tests\\adaptive-output-20261030-01\\.dw-remaster\\output-evidence-20261031T031007167Z-sampler.log",
+      "sha256": "e2874bffe94024b09464d3678b7480238521428ae491cc41e80618ddfe0f42da"
+    },
+    "sampler-error.log": {
+      "source": "E:\\Codex\\remaster-build-tests\\adaptive-output-20261030-01\\.dw-remaster\\output-evidence-20261031T031007167Z-sampler-error.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "limitations": [
+    "200ms read-only state sampling can miss transitions between polls; zero capacity loss is not exhaustive event capture.",
+    "Selected safety ledger is bounded to128 events and is not the comprehensive flight recorder.",
+    "No GPU pixel capture, screenshot analysis, per-draw audit or comprehensive hardware proof.",
+    "Human result applies to the requested playtest categories, not every menu/state/gameplay feature."
+  ]
+}

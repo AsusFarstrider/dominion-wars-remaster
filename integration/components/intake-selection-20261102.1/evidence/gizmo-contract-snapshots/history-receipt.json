@@ -1,0 +1,17 @@
+{
+  "command": [
+    "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\gizmo_history_check.exe",
+    "E:\\Codex\\research\\installed-1.04\\binkw32.dll",
+    "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-gizmo-hd-v1\\GizmoLogo-1440p-original-audio.bik"
+  ],
+  "exit": 0,
+  "stdout": "independent_handles=2 copies_per_handle_per_frame=1 dimensions=2560x1440 pitch=5120 history_bytes=7372800 compared=601 skipped=0 guard_ok=1 equal=1 sound_tested=0 wait_tested=0\n",
+  "stderr": "",
+  "asset_sha256": "c65bf6cb39b6838ab76f059152790bd0bf437d513c93b4c7b2bdd81d700dc851",
+  "dll_sha256": "65358b3cde7281df10cb68ac8e1c9f8705893a47df33f87bb882073fd0955c90",
+  "runner_sha256": "c94ad864393fd578080fd3bfaefc231326b7e3429d3a2bbd3507b5f08d6fce72",
+  "source_sha256": "ebb490cb00fb5c12517a8f058f63f2b5654a276f8aac9f8c727f6776bab86dd2",
+  "sound_playback_tested": false,
+  "wait_cadence_tested": false,
+  "game_tested": false
+}

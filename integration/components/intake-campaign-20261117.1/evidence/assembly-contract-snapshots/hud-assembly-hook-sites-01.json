@@ -1,0 +1,233 @@
+{
+  "binary": "E:\\Codex\\research\\dominion-rendering\\native-engine-2560x1440-01\\ds9dw.exe",
+  "sha256": "de3e3ede7a9b4ce65a891201547f36413f3a880e4df3f28fb8a81e51f687abc6",
+  "sites": [
+    {
+      "va": 4315795,
+      "name": "point_before",
+      "size": 5,
+      "bytes": "8b4604a804",
+      "instructions": [
+        {
+          "va": "0x41da93",
+          "bytes": "8b4604",
+          "instruction": "mov eax, dword ptr [esi + 4]"
+        },
+        {
+          "va": "0x41da96",
+          "bytes": "a804",
+          "instruction": "test al, 4"
+        }
+      ]
+    },
+    {
+      "va": 4316412,
+      "name": "point_restore",
+      "size": 6,
+      "bytes": "8b74242085f6",
+      "instructions": [
+        {
+          "va": "0x41dcfc",
+          "bytes": "8b742420",
+          "instruction": "mov esi, dword ptr [esp + 0x20]"
+        },
+        {
+          "va": "0x41dd00",
+          "bytes": "85f6",
+          "instruction": "test esi, esi"
+        }
+      ]
+    },
+    {
+      "va": 4559040,
+      "name": "radar_pass",
+      "size": 9,
+      "bytes": "83ec588b15ccf65f00",
+      "instructions": [
+        {
+          "va": "0x4590c0",
+          "bytes": "83ec58",
+          "instruction": "sub esp, 0x58"
+        },
+        {
+          "va": "0x4590c3",
+          "bytes": "8b15ccf65f00",
+          "instruction": "mov edx, dword ptr [0x5ff6cc]"
+        }
+      ]
+    },
+    {
+      "va": 4873728,
+      "name": "primitive_admission",
+      "size": 5,
+      "bytes": "538b5c2408",
+      "instructions": [
+        {
+          "va": "0x4a5e00",
+          "bytes": "53",
+          "instruction": "push ebx"
+        },
+        {
+          "va": "0x4a5e01",
+          "bytes": "8b5c2408",
+          "instruction": "mov ebx, dword ptr [esp + 8]"
+        }
+      ]
+    },
+    {
+      "va": 4874000,
+      "name": "indexed_admission",
+      "size": 5,
+      "bytes": "538b5c2408",
+      "instructions": [
+        {
+          "va": "0x4a5f10",
+          "bytes": "53",
+          "instruction": "push ebx"
+        },
+        {
+          "va": "0x4a5f11",
+          "bytes": "8b5c2408",
+          "instruction": "mov ebx, dword ptr [esp + 8]"
+        }
+      ]
+    },
+    {
+      "va": 4871696,
+      "name": "queue_reset",
+      "size": 6,
+      "bytes": "53568b74240c",
+      "instructions": [
+        {
+          "va": "0x4a5610",
+          "bytes": "53",
+          "instruction": "push ebx"
+        },
+        {
+          "va": "0x4a5611",
+          "bytes": "56",
+          "instruction": "push esi"
+        },
+        {
+          "va": "0x4a5612",
+          "bytes": "8b74240c",
+          "instruction": "mov esi, dword ptr [esp + 0xc]"
+        }
+      ]
+    },
+    {
+      "va": 4204672,
+      "name": "native_scene_pass",
+      "size": 8,
+      "bytes": "83ec38a1a4285800",
+      "instructions": [
+        {
+          "va": "0x402880",
+          "bytes": "83ec38",
+          "instruction": "sub esp, 0x38"
+        },
+        {
+          "va": "0x402883",
+          "bytes": "a1a4285800",
+          "instruction": "mov eax, dword ptr [0x5828a4]"
+        }
+      ]
+    },
+    {
+      "va": 4563053,
+      "name": "radar_cx_x",
+      "size": 7,
+      "bytes": "668b0d5c7e5f00",
+      "instructions": [
+        {
+          "va": "0x45a06d",
+          "bytes": "668b0d5c7e5f00",
+          "instruction": "mov cx, word ptr [0x5f7e5c]"
+        }
+      ]
+    },
+    {
+      "va": 4563078,
+      "name": "radar_cx_y",
+      "size": 7,
+      "bytes": "668b0d5e7e5f00",
+      "instructions": [
+        {
+          "va": "0x45a086",
+          "bytes": "668b0d5e7e5f00",
+          "instruction": "mov cx, word ptr [0x5f7e5e]"
+        }
+      ]
+    },
+    {
+      "va": 4563256,
+      "name": "radar_edx_x",
+      "size": 7,
+      "bytes": "0fbf155c7e5f00",
+      "instructions": [
+        {
+          "va": "0x45a138",
+          "bytes": "0fbf155c7e5f00",
+          "instruction": "movsx edx, word ptr [0x5f7e5c]"
+        }
+      ]
+    },
+    {
+      "va": 4563263,
+      "name": "radar_ecx_y",
+      "size": 7,
+      "bytes": "0fbf0d5e7e5f00",
+      "instructions": [
+        {
+          "va": "0x45a13f",
+          "bytes": "0fbf0d5e7e5f00",
+          "instruction": "movsx ecx, word ptr [0x5f7e5e]"
+        }
+      ]
+    },
+    {
+      "va": 4563544,
+      "name": "radar_ax_x",
+      "size": 6,
+      "bytes": "66a15c7e5f00",
+      "instructions": [
+        {
+          "va": "0x45a258",
+          "bytes": "66a15c7e5f00",
+          "instruction": "mov ax, word ptr [0x5f7e5c]"
+        }
+      ]
+    },
+    {
+      "va": 4563568,
+      "name": "radar_ax_y",
+      "size": 6,
+      "bytes": "66a15e7e5f00",
+      "instructions": [
+        {
+          "va": "0x45a270",
+          "bytes": "66a15e7e5f00",
+          "instruction": "mov ax, word ptr [0x5f7e5e]"
+        }
+      ]
+    },
+    {
+      "va": 4563872,
+      "name": "radar_pair",
+      "size": 14,
+      "bytes": "0fbf055c7e5f000fbf155e7e5f00",
+      "instructions": [
+        {
+          "va": "0x45a3a0",
+          "bytes": "0fbf055c7e5f00",
+          "instruction": "movsx eax, word ptr [0x5f7e5c]"
+        },
+        {
+          "va": "0x45a3a7",
+          "bytes": "0fbf155e7e5f00",
+          "instruction": "movsx edx, word ptr [0x5f7e5e]"
+        }
+      ]
+    }
+  ]
+}

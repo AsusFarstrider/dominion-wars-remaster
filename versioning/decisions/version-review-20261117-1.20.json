@@ -1,0 +1,16 @@
+{
+  "id": "version-review-20261117-1.20",
+  "owner": "Master Integration",
+  "status": "candidate-proposal-pending-integrated-acceptance",
+  "proposed_remaster_version": "1.20",
+  "release_stage": "alpha",
+  "integration_build_id": "int-20261117.1",
+  "flavor": "native-display-campaign-ui-restoration",
+  "in_game_label": "Remastered 1.20",
+  "official_original_game_version": "1.04",
+  "rationale": "Advance for the restored mission selection, widescreen Federation Briefing and Fleet Setup, Captain tab improvements and mission transition presentation. The palette format change is a distribution safeguard, not the reason for the version bump.",
+  "known_scope": "Original North American 1.04 owner data. One-system component evidence; final Fleet live trials were 1440p on its private predecessor. Exact package gameplay acceptance pending. Multiplayer unsupported.",
+  "current_baseline_changed": false,
+  "version_advancement_approved": false,
+  "publication_authorized_by_this_record": false
+}

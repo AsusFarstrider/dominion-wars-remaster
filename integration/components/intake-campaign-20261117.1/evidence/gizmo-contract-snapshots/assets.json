@@ -1,0 +1,35 @@
+{
+  "schema": "quantum-main-background-assets-1",
+  "resource": "201",
+  "source": "C:\\Users\\Example\\Downloads\\Dominion_Wars_Main_Menu_1440p_Restoration_v1\\Dominion_Wars_Main_Menu_2560x1440_Faithful_Widescreen.png",
+  "source_sha256": "a28f7f9df2c648dcfb81300cc5d4241d61c9a01a856d2ccbdc4e50f7749cfc1a",
+  "width": 2560,
+  "height": 1440,
+  "alpha_range": [
+    255,
+    255
+  ],
+  "payload": "E:\\Codex\\research\\dominion-rendering\\main-background-assets-v1\\main.dwcard",
+  "payload_sha256": "94a131d5b71bec90e3d747a6475c18ece4ad6efdc98b5310b9daa74c7d3c0bcd",
+  "payload_bytes": 7372816,
+  "rgba_sha256": "aa61811d7b212ba8178950542a029e5376e94ec1ef505195d64026bad26c89e4",
+  "decode_command": [
+    "C:\\Program Files\\Virtual Desktop Streamer\\ffmpeg.exe",
+    "-nostdin",
+    "-v",
+    "error",
+    "-i",
+    "C:\\Users\\Example\\Downloads\\Dominion_Wars_Main_Menu_1440p_Restoration_v1\\Dominion_Wars_Main_Menu_2560x1440_Faithful_Widescreen.png",
+    "-frames:v",
+    "1",
+    "-f",
+    "rawvideo",
+    "-pix_fmt",
+    "rgba",
+    "pipe:1"
+  ],
+  "ffmpeg_sha256": "b2495c9ab7bec4ba5f9e34fcabc70f778cdb70730ed32b627b9f51f6c7f384ad",
+  "converter_sha256": "0c245db973f61c0e6c93d30165af8ac6edc975d6e385328688d0727b364a222b",
+  "conversion": "RGBA onblack thenR>>3/G>>2/B>>3, noresize/nodither",
+  "scope": "Main background only; original foreground coverage/colors/layout retained separately"
+}

@@ -1,0 +1,3 @@
+Fleet palette 12000 drawing lookups in 1 layers: V1 1122 us, V2 1114 us, 2 hashes
+Fleet palette 12000 drawing lookups in 240 layers: V1 1155 us, V2 1497 us, 480 hashes
+PASS 1222 actual opening-controller assertions including HD provider

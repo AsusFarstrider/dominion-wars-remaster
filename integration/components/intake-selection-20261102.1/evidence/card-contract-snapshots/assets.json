@@ -1,0 +1,78 @@
+{
+  "schema": "quantum-opening-card-assets-1",
+  "ffmpeg_sha256": "b2495c9ab7bec4ba5f9e34fcabc70f778cdb70730ed32b627b9f51f6c7f384ad",
+  "converter_sha256": "7a1da66fd00c9eb8c6da08482b19ca678d4d1a9fc56995a40b1331dd549f61ca",
+  "assets": [
+    {
+      "name": "title",
+      "source": "C:\\Users\\Example\\Downloads\\Dominion_Wars_Title_Splash_2560x1440.png",
+      "source_sha256": "9a54e4a22469b356ada3b40e56e76b9cd48226cb03ecfc31724737ffb7203ff2",
+      "width": 2560,
+      "height": 1440,
+      "alpha_range": [
+        255,
+        255
+      ],
+      "payload": "E:\\Codex\\research\\dominion-rendering\\opening-card-assets-v1\\title.dwcard",
+      "payload_sha256": "3818d7e2a72b634585edfb4134fe64869fce6d7d26757f8e255e24ce79b816bf",
+      "payload_bytes": 7372816,
+      "rgba_sha256": "a511e8657500adc9b5328e5523cebc495268b80f8c99d7fe6b36cf5d221784e9",
+      "decode_command": [
+        "C:\\Program Files\\Virtual Desktop Streamer\\ffmpeg.exe",
+        "-nostdin",
+        "-v",
+        "error",
+        "-i",
+        "C:\\Users\\Example\\Downloads\\Dominion_Wars_Title_Splash_2560x1440.png",
+        "-frames:v",
+        "1",
+        "-f",
+        "rawvideo",
+        "-pix_fmt",
+        "rgba",
+        "pipe:1"
+      ],
+      "format": "DWCARD1/NUL,widthU32LE,heightU32LE,tightly packed RGB565LE",
+      "alpha": "Composite on black with integer rounded(alpha*channel/255); opaque inputs unchanged",
+      "quantization": "R>>3,G>>2,B>>3; no dither/no resizing"
+    },
+    {
+      "name": "publisher",
+      "source": "C:\\Users\\Example\\Downloads\\Dominion_Wars_Publisher_Card_1440p_faithful.png",
+      "source_sha256": "5f609b34886f8359831ceda0429a8baae135144ccda906f76834455a6b31592b",
+      "width": 2560,
+      "height": 1440,
+      "alpha_range": [
+        255,
+        255
+      ],
+      "payload": "E:\\Codex\\research\\dominion-rendering\\opening-card-assets-v1\\publisher.dwcard",
+      "payload_sha256": "4b89bd1608a09db212401246b91584fb398275599e91b1c7c575f2e9d31055c5",
+      "payload_bytes": 7372816,
+      "rgba_sha256": "af8830af139c6ddc22525d74345d3b312b075ddf3bbcd1d20b3f9b5f2ed55d62",
+      "decode_command": [
+        "C:\\Program Files\\Virtual Desktop Streamer\\ffmpeg.exe",
+        "-nostdin",
+        "-v",
+        "error",
+        "-i",
+        "C:\\Users\\Example\\Downloads\\Dominion_Wars_Publisher_Card_1440p_faithful.png",
+        "-frames:v",
+        "1",
+        "-f",
+        "rawvideo",
+        "-pix_fmt",
+        "rgba",
+        "pipe:1"
+      ],
+      "format": "DWCARD1/NUL,widthU32LE,heightU32LE,tightly packed RGB565LE",
+      "alpha": "Composite on black with integer rounded(alpha*channel/255); opaque inputs unchanged",
+      "quantization": "R>>3,G>>2,B>>3; no dither/no resizing"
+    }
+  ],
+  "state_resource_mapping": {
+    "5/0x101": "publisher",
+    "6/0x103": "title"
+  },
+  "mapping_evidence": "cinematic-extraction/remaining-opening-v1/inventory.json + original Engine constructor/root identities"
+}

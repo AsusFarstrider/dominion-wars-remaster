@@ -1,0 +1,178 @@
+{
+  "schema": "quantum-native-engine-1",
+  "original_sha256": "03c20a3535d0209111ff9f3b90eba403e059df2be7e784d2746abf1535c1be6a",
+  "approved_comparison_sha256": "77a99e3bf0a2d8704f4060e5ce584514daa03bb44891fd3336a7d66460efe179",
+  "output_sha256": "e81aacb185e755c6478c06516bf0d442b7b95edc1f3a3603bfc7ecda1c777023",
+  "control_with_input_sha256": "e81aacb185e755c6478c06516bf0d442b7b95edc1f3a3603bfc7ecda1c777023",
+  "width": 800,
+  "height": 600,
+  "pixel_bits_policy": "original initialization retained; selected actual format must be observed",
+  "scene": [
+    0,
+    0,
+    800,
+    446
+  ],
+  "projection_m11": 2.0,
+  "projection_m22": 3.5,
+  "projection_policy": "Retain original vertical calibration; scale original m11 by original/new scene aspect",
+  "input": {
+    "base_sha256": "b9252c2c069e6c1fa9955ba67bb23f9632445f51347025f4264211e9158393fe",
+    "candidate_sha256": "e81aacb185e755c6478c06516bf0d442b7b95edc1f3a3603bfc7ecda1c777023",
+    "hook_va": "0x49e5ee",
+    "displaced_bytes": "66a1e49eab00668b0de69eab00",
+    "stub_va": "0xabd000",
+    "stub_bytes": "9c6083ec108d042450ff35a487a300ff1578d24b0085c00f84450000008b4424082b04248b54240c2b54240483f8010f8c2d0000003dff7f00000f8f2200000083fa010f8c1900000081faff7f00000f8f0d00000066a3e49eab00668915e69eab0083c410619d66a1e49eab00668b0de69eab00e982159eff",
+    "hwnd_address": "0xa387a4",
+    "runtime_validated": false,
+    "scope": "Refresh mouse-recenter cache from GetClientRect at recenter use",
+    "limitations": [
+      "Original screen-coordinate warp assumes client origin at desktop zero; nonzero-origin windows not handled here.",
+      "Invalid HWND/API failure retains original cache; no desktop or rendering dimensions changed."
+    ],
+    "emitter_sha256": "e47ce4485af9c1b1b0402eb18ba5d00fcec090be118acff6cfae33beb5fc1913",
+    "native_body_matches_frozen_v2": true,
+    "reason": "Original layout control plus accepted no-startup-switch recenter behavior; no960-specific UI adapters"
+  },
+  "sites": [
+    {
+      "va": "0x428c84",
+      "file_offset": 167045,
+      "role": "initial application layout",
+      "axis": "height",
+      "original_instruction": "6858020000",
+      "before": "58020000",
+      "after": "58020000"
+    },
+    {
+      "va": "0x428c89",
+      "file_offset": 167050,
+      "role": "initial application layout",
+      "axis": "width",
+      "original_instruction": "6820030000",
+      "before": "20030000",
+      "after": "20030000"
+    },
+    {
+      "va": "0x42b5b5",
+      "file_offset": 177595,
+      "role": "mission default writer",
+      "axis": "width",
+      "original_instruction": "c705d037710020030000",
+      "before": "20030000",
+      "after": "20030000"
+    },
+    {
+      "va": "0x42b5bf",
+      "file_offset": 177605,
+      "role": "mission default writer",
+      "axis": "height",
+      "original_instruction": "c705d437710058020000",
+      "before": "58020000",
+      "after": "58020000"
+    },
+    {
+      "va": "0x4a6480",
+      "file_offset": 681091,
+      "role": "screen-object default",
+      "axis": "width",
+      "original_instruction": "c7410820030000",
+      "before": "20030000",
+      "after": "20030000"
+    },
+    {
+      "va": "0x4a6487",
+      "file_offset": 681098,
+      "role": "screen-object default",
+      "axis": "height",
+      "original_instruction": "c7410c58020000",
+      "before": "58020000",
+      "after": "58020000"
+    },
+    {
+      "va": "0x433498",
+      "file_offset": 210073,
+      "role": "initial screen request",
+      "axis": "height",
+      "original_instruction": "6858020000",
+      "before": "58020000",
+      "after": "58020000"
+    },
+    {
+      "va": "0x43349d",
+      "file_offset": 210078,
+      "role": "initial screen request",
+      "axis": "width",
+      "original_instruction": "6820030000",
+      "before": "20030000",
+      "after": "20030000"
+    },
+    {
+      "va": "0x4ad865",
+      "file_offset": 710758,
+      "role": "generic application reset request",
+      "axis": "height",
+      "original_instruction": "6858020000",
+      "before": "58020000",
+      "after": "58020000"
+    },
+    {
+      "va": "0x4ad86a",
+      "file_offset": 710763,
+      "role": "generic application reset request",
+      "axis": "width",
+      "original_instruction": "6820030000",
+      "before": "20030000",
+      "after": "20030000"
+    },
+    {
+      "va": "0x429883",
+      "file_offset": 170116,
+      "role": "initial input SetRect bottom",
+      "axis": "height",
+      "original_instruction": "6858020000",
+      "before": "58020000",
+      "after": "58020000"
+    },
+    {
+      "va": "0x429888",
+      "file_offset": 170121,
+      "role": "initial input SetRect right",
+      "axis": "width",
+      "original_instruction": "6820030000",
+      "before": "20030000",
+      "after": "20030000"
+    },
+    {
+      "va": "0x4292d9",
+      "file_offset": 168666,
+      "role": "application transition mode request",
+      "axis": "height",
+      "original_instruction": "6858020000",
+      "before": "58020000",
+      "after": "58020000"
+    },
+    {
+      "va": "0x4292de",
+      "file_offset": 168671,
+      "role": "application transition mode request",
+      "axis": "width",
+      "original_instruction": "6820030000",
+      "before": "20030000",
+      "after": "20030000"
+    },
+    {
+      "va": "0x40117a",
+      "file_offset": 4480,
+      "role": "mission projection m11",
+      "axis": "projection",
+      "original_instruction": "c70508034f0000000040",
+      "before": "00000040",
+      "after": "00000040"
+    }
+  ],
+  "mode_changed_bytes": 0,
+  "runtime_validated": false,
+  "scope": "launch-selected scene experiment; no independent UI scaling, live resize, NPOT, LAA, texture/model/pool changes",
+  "builder_sha256": "d0c6b3275e877580d62ae402248544f3022848a69553392d0c1465cf6c5e5576"
+}

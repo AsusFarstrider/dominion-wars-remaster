@@ -1,0 +1,1654 @@
+{
+  "schema": "quantum-main-buttons-source-1",
+  "archive_sha256": "d4369bacfe8baa4aa92adaf9a67a700b880ad9b9e9b55b4c1589eb8a42d95b63",
+  "validation_sha256": "9a573f188b5db2a5b28f71bf932f331d3ccca33cb21727aa4ec82f363a8f2565",
+  "converter_sha256": "db2a1df4f0f44a66849ca158547a7726c8acc10e0526f3f212978097f5476ab9",
+  "decoder_sha256": "b2495c9ab7bec4ba5f9e34fcabc70f778cdb70730ed32b627b9f51f6c7f384ad",
+  "format": "DWBANK1NUL;U32LEwidth,height,count;count*U32LEoriginalResource;count*tightlypackedstraightRGBA8 frames",
+  "transform": "PNG RGBA decode only; no resize/color quantization/dither/art regeneration; explicit alpha retained",
+  "banks": [
+    {
+      "name": "new_game",
+      "node": 5130320,
+      "idle_resource": 514,
+      "hover_wrap_start": 12,
+      "path": "E:\\Codex\\research\\dominion-rendering\\main-button-assets-v7\\new_game.dwbank",
+      "sha256": "aa75785a8e503cf1d1bbe2dcb757f071149507840ac0a6801dc1ca86c4d50a83",
+      "bytes": 40320160,
+      "frames": [
+        {
+          "resource": 514,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\idle.png",
+          "source_sha256": "b018f12c7280db63b9bb9aa933911224f8b53e802ac49d6b59f194fe2ccf1113",
+          "rgba_sha256": "0ca3b44455b4aefa13af3d2ebe4ade96fb4dbe13644ca42b6cfc1527877a0bcb"
+        },
+        {
+          "resource": 515,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\hover\\hover_00.png",
+          "source_sha256": "c87327709d62b58340e0fbbb7d2c21066efd8452dff2db0887a2e7669ab47620",
+          "rgba_sha256": "6c1dbcde16320cdc6960f9d186a1d46b4e7943cd30a19b3bd5fd264bc5340133"
+        },
+        {
+          "resource": 516,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\hover\\hover_01.png",
+          "source_sha256": "046fc9cb81aa3f579c27892d1449e82a7c025e610051777e59690a7a188f5633",
+          "rgba_sha256": "220f94d74d3f0c6cb67dd2af278d42ef8814523b349b9178de2886204d12acb5"
+        },
+        {
+          "resource": 517,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\hover\\hover_02.png",
+          "source_sha256": "46c1c6e890fd1b650ae871eff6716b3d682f6ad623470200ba4d182930244f40",
+          "rgba_sha256": "e547bf72f9e3f5527714858f7ffc6f65215f7886b325773d9b82057e9440f378"
+        },
+        {
+          "resource": 518,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\hover\\hover_03.png",
+          "source_sha256": "0ed21884e32c86bb316a35ee9a2d79fb6c920e2d85a165bb73fe4ed198aabf87",
+          "rgba_sha256": "1a08f994c9066787abebd554fa09c9666735957becb9eded20308f2d028e05eb"
+        },
+        {
+          "resource": 519,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\hover\\hover_04.png",
+          "source_sha256": "f006fede9aeabc92f12f67ee7d5ca89dfabde9ab5923b36f6db8b7dbfc2a82c6",
+          "rgba_sha256": "c7d191b58d8a3f3cfdf17675f39b72c2b1e3b1778835462a80412c63134c2aa0"
+        },
+        {
+          "resource": 520,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\hover\\hover_05.png",
+          "source_sha256": "85b77579019c5249f67f7a29342de235a757b245905eb6cdd1d233dea7f38462",
+          "rgba_sha256": "27245f5459605b6a4652e0b2a342c6589794e5b64adb20018a82caf4e2283a46"
+        },
+        {
+          "resource": 521,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\hover\\hover_06.png",
+          "source_sha256": "aeccea7e18df7f5a07d25f9ea49f766fd870ef08294cab6c592a55e3f91a46e9",
+          "rgba_sha256": "3ac60793a442c9d365b3dc223daa53a9d31466936d92141aa23e5be0dd75aa41"
+        },
+        {
+          "resource": 522,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\hover\\hover_07.png",
+          "source_sha256": "c787408c442c9d53348e1965ccdf6b1666bcf91556044c5a04db9fafd81c7368",
+          "rgba_sha256": "fda36d577e2eaa162dd7932ad00d19e45f01921c8ab64b7d6448902feb8bf348"
+        },
+        {
+          "resource": 523,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\hover\\hover_08.png",
+          "source_sha256": "c33160ceeaa907ebe7a937df43ac0080a6a7ce0484f02f7214c7f1d7b4da1ad6",
+          "rgba_sha256": "93deb650a83146211a340c4c012091163c95d5e18d2bcbc153e5230d32ce22d2"
+        },
+        {
+          "resource": 524,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\hover\\hover_09.png",
+          "source_sha256": "f08e25b8758c7b59cf019a1e10eb9dae9ecd624ad1eb750a20331b239d80bd23",
+          "rgba_sha256": "2c3aed9a32bc4be6cc83d92439b62dc62610c6b6eb87dc9a009bdf5d2470c061"
+        },
+        {
+          "resource": 525,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\hover\\hover_10.png",
+          "source_sha256": "f34f50c80a75c91881362aa998d0d9135bd972025c24f05790fc3dd66dfa1db6",
+          "rgba_sha256": "47428e8f4b60198b14705ebebc743c81fc579e0367c894bde924d895d8b8a620"
+        },
+        {
+          "resource": 526,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\hover\\hover_11.png",
+          "source_sha256": "ff2bcd2e2e9f42d83957450f6f551decb8f78f5d1b9f8135748d835920a6b664",
+          "rgba_sha256": "a9c9570f84acf5f130f1250bd3bb714219c190d4e0271e751ed4cbc9b092944b"
+        },
+        {
+          "resource": 527,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\hover\\hover_12.png",
+          "source_sha256": "ff2bcd2e2e9f42d83957450f6f551decb8f78f5d1b9f8135748d835920a6b664",
+          "rgba_sha256": "a9c9570f84acf5f130f1250bd3bb714219c190d4e0271e751ed4cbc9b092944b"
+        },
+        {
+          "resource": 528,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\hover\\hover_13.png",
+          "source_sha256": "e70cae2e116b8b222e4e3b851d66dc28b635322be901c143f54a7758d83617c7",
+          "rgba_sha256": "de9bc74cc1500a43c979f952b358d872db2aaf9e5da5a5d79cc5599d0b1025fc"
+        },
+        {
+          "resource": 529,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\hover\\hover_14.png",
+          "source_sha256": "5cf53e8316ae5c4e9e13ec8fe6440e88399fd68eb8436d08767e6064621d21b4",
+          "rgba_sha256": "4b9634f5a04f987e5f0068555029ee11166aad9126bd007f842c85c3649ba104"
+        },
+        {
+          "resource": 530,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\hover\\hover_15.png",
+          "source_sha256": "8dafe7f62ba5452f9e24260f5f89d66e21071cc20587b036a8591df894d3286d",
+          "rgba_sha256": "56a3220f71048a7461299dd93011b705037105ea0e44aa4d10136bd950284f1a"
+        },
+        {
+          "resource": 531,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\hover\\hover_16.png",
+          "source_sha256": "afb7c64a4579203ea59d73f6cb66dc0bdbb3528a1f06dc0506de4545e6a54ab0",
+          "rgba_sha256": "e6803ace53b6e1209ffd4714dc1f90cbf17cd9ae292fbc4cd17e1fd358eb7152"
+        },
+        {
+          "resource": 532,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\hover\\hover_17.png",
+          "source_sha256": "bd952cff1f37d23a6b1e535c0f302ab1d42c6bdb48a6d4de68ca75b89c12c8e8",
+          "rgba_sha256": "9d284faf2e25bf3a6c8df2746354b06eeb0b5f3bfea1d56db394da25e251e0ec"
+        },
+        {
+          "resource": 533,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\hover\\hover_18.png",
+          "source_sha256": "40439f203aac79a8a811956f5463b482972fd8fab47829b5cb4d414fc6460ee9",
+          "rgba_sha256": "2e0b8cd165092260b89bb39f067be199b2ed441814490c43c4fd3edaff93b5a6"
+        },
+        {
+          "resource": 534,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\hover\\hover_19.png",
+          "source_sha256": "bd952cff1f37d23a6b1e535c0f302ab1d42c6bdb48a6d4de68ca75b89c12c8e8",
+          "rgba_sha256": "9d284faf2e25bf3a6c8df2746354b06eeb0b5f3bfea1d56db394da25e251e0ec"
+        },
+        {
+          "resource": 535,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\hover\\hover_20.png",
+          "source_sha256": "afb7c64a4579203ea59d73f6cb66dc0bdbb3528a1f06dc0506de4545e6a54ab0",
+          "rgba_sha256": "e6803ace53b6e1209ffd4714dc1f90cbf17cd9ae292fbc4cd17e1fd358eb7152"
+        },
+        {
+          "resource": 536,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\hover\\hover_21.png",
+          "source_sha256": "8dafe7f62ba5452f9e24260f5f89d66e21071cc20587b036a8591df894d3286d",
+          "rgba_sha256": "56a3220f71048a7461299dd93011b705037105ea0e44aa4d10136bd950284f1a"
+        },
+        {
+          "resource": 537,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\hover\\hover_22.png",
+          "source_sha256": "5cf53e8316ae5c4e9e13ec8fe6440e88399fd68eb8436d08767e6064621d21b4",
+          "rgba_sha256": "4b9634f5a04f987e5f0068555029ee11166aad9126bd007f842c85c3649ba104"
+        },
+        {
+          "resource": 538,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\hover\\hover_23.png",
+          "source_sha256": "e70cae2e116b8b222e4e3b851d66dc28b635322be901c143f54a7758d83617c7",
+          "rgba_sha256": "de9bc74cc1500a43c979f952b358d872db2aaf9e5da5a5d79cc5599d0b1025fc"
+        },
+        {
+          "resource": 539,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\hover\\hover_24.png",
+          "source_sha256": "ff2bcd2e2e9f42d83957450f6f551decb8f78f5d1b9f8135748d835920a6b664",
+          "rgba_sha256": "a9c9570f84acf5f130f1250bd3bb714219c190d4e0271e751ed4cbc9b092944b"
+        },
+        {
+          "resource": 540,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\activate\\activate_00.png",
+          "source_sha256": "d6360d7ac60ebd90b2ece85e24af075c38e8dabe3a5440a9c78f8a36bc60da82",
+          "rgba_sha256": "10ca98e124e6f94bb4061d06f0274ec2892de89ebb9012c3bcd217bbb04de809"
+        },
+        {
+          "resource": 541,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\activate\\activate_01.png",
+          "source_sha256": "bd33fa2bfb0054fcb68d1f57d242b3cf747413fb76fd164235f5242db641e5bc",
+          "rgba_sha256": "d6b2a444a2b172b64fff943af10811b74e258bfed54792a86553c887064250d0"
+        },
+        {
+          "resource": 542,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\activate\\activate_02.png",
+          "source_sha256": "bf2f0dd725a822d070c3eee975d891cabc49804805dfeea51514bfeef817dfe1",
+          "rgba_sha256": "34d8fa285d6286d60fc8c877e8f84872ba273ff1d6069575543fb38ba45a5abf"
+        },
+        {
+          "resource": 543,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\activate\\activate_03.png",
+          "source_sha256": "f487ac37b918378944971d029be0f69d80f4f592feb9a24726355509375ed268",
+          "rgba_sha256": "d0c0bf15fbd208c742bd2f83686aba790bdb3f912d29a7bf8884cd93c0bf8105"
+        },
+        {
+          "resource": 544,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\activate\\activate_04.png",
+          "source_sha256": "cc86dde7b5329b0b57d90b7d45c78c7460096031fbaa31ddf32c5f56f8018f47",
+          "rgba_sha256": "32c4e493b36c0f932f43179670fe6664fac1171d70c2d7600c9048cf195c0f9d"
+        },
+        {
+          "resource": 545,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\activate\\activate_05.png",
+          "source_sha256": "0f9d5eb0b363c85c476e6a808b98afb37241e84c42cb5c2571bf04f4fa8451e4",
+          "rgba_sha256": "68b1c52abcb005a8a87305a3f7b7dc27238299e04efc6e983a7da9c791a27f79"
+        },
+        {
+          "resource": 546,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\activate\\activate_06.png",
+          "source_sha256": "b34623d0f2b1ac813db58a8f9d7936674b973b1746ce9c9472f94390d557473a",
+          "rgba_sha256": "e0b6786562a655c9e88ca79a711bc459f963952c99f3554bc251b3c43f12d689"
+        },
+        {
+          "resource": 547,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\activate\\activate_07.png",
+          "source_sha256": "126a562022523c81882a50dc9affcbf48a8c9db3123ea106b3ba98020b9981f3",
+          "rgba_sha256": "0cb260daa7b0ce1772b41c5d8a0e8c54230630103197c67ee79e284fe69c5a7e"
+        },
+        {
+          "resource": 548,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\activate\\activate_08.png",
+          "source_sha256": "bf3219db5e430d9016aec5821f63f25ab257f35d60920b84cad5dff667671297",
+          "rgba_sha256": "87b70eb78776e7b61f70a6fdbd06bddbfb7e877812b593071945976f73a89269"
+        }
+      ],
+      "commands": [
+        [
+          "C:\\Program Files\\Virtual Desktop Streamer\\ffmpeg.exe",
+          "-nostdin",
+          "-v",
+          "error",
+          "-i",
+          "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\idle.png",
+          "-frames:v",
+          "1",
+          "-f",
+          "rawvideo",
+          "-pix_fmt",
+          "rgba",
+          "pipe:1"
+        ],
+        [
+          "C:\\Program Files\\Virtual Desktop Streamer\\ffmpeg.exe",
+          "-nostdin",
+          "-v",
+          "error",
+          "-start_number",
+          "0",
+          "-i",
+          "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\hover\\hover_%02d.png",
+          "-frames:v",
+          "25",
+          "-f",
+          "rawvideo",
+          "-pix_fmt",
+          "rgba",
+          "pipe:1"
+        ],
+        [
+          "C:\\Program Files\\Virtual Desktop Streamer\\ffmpeg.exe",
+          "-nostdin",
+          "-v",
+          "error",
+          "-start_number",
+          "0",
+          "-i",
+          "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\new_game\\activate\\activate_%02d.png",
+          "-frames:v",
+          "9",
+          "-f",
+          "rawvideo",
+          "-pix_fmt",
+          "rgba",
+          "pipe:1"
+        ]
+      ]
+    },
+    {
+      "name": "load_game",
+      "node": 5130464,
+      "idle_resource": 619,
+      "hover_wrap_start": 12,
+      "path": "E:\\Codex\\research\\dominion-rendering\\main-button-assets-v7\\load_game.dwbank",
+      "sha256": "7c23f348098db88db9b5307b12b14ee9a82cf4e04a595c268b2b2a8ab07d9001",
+      "bytes": 40320160,
+      "frames": [
+        {
+          "resource": 619,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\idle.png",
+          "source_sha256": "d09f6dc379fd8782691dc902651a456ca703265bf36382821f54dac7387c601c",
+          "rgba_sha256": "4d9a0cf54edafb5226383a11d79599b75957efc951384700a2cccd1a2784e91a"
+        },
+        {
+          "resource": 620,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\hover\\hover_00.png",
+          "source_sha256": "9212ef14ce88fdcffe83264fe2548af8065078b7c08edd0a5f06b1cd36a558f8",
+          "rgba_sha256": "53b6d58830002a1056688eb944b56fb3e155eab189ca8f1756f3568ca0f2dd9a"
+        },
+        {
+          "resource": 621,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\hover\\hover_01.png",
+          "source_sha256": "03e242a75dba786f674b3f33bdd452561129ff1873ea7b67495e76a9bb022acf",
+          "rgba_sha256": "763146c19ccc09bc358551baa51a335b0a513651851c554943c6ccdb18100a6a"
+        },
+        {
+          "resource": 622,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\hover\\hover_02.png",
+          "source_sha256": "64eaef8bd22e81ac84e24ad24394319126e45b32987ab97bdce666b398985c18",
+          "rgba_sha256": "ab89fe86c7ee0125aa8669795ff5e09abc0c6b2eb34095ecd05accec3536eb20"
+        },
+        {
+          "resource": 623,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\hover\\hover_03.png",
+          "source_sha256": "2786031909e76088030fd8a8fdf79b303e99b7759ff6485e9bc1d32db8d52676",
+          "rgba_sha256": "87f779e64c269c253e2292fa6dba38352e6e16bd1d7888a04ccbff971f9ac90a"
+        },
+        {
+          "resource": 624,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\hover\\hover_04.png",
+          "source_sha256": "67263ced9293a38bc9de513845e0a3e436a086fe47bb0c921e7c596b2d34e76c",
+          "rgba_sha256": "87f61cf90c53fdc9d93af77433341f3b157b9d7de6b25a531a03b9065f8b3c9a"
+        },
+        {
+          "resource": 625,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\hover\\hover_05.png",
+          "source_sha256": "2130b0d660e2859d271427c28c8d9209eceba5fae28b66ffb1c9c16e0051f9be",
+          "rgba_sha256": "c817fa8675f25b3dbe086254f265aac637bfad20191a6e838a53c8f66a040654"
+        },
+        {
+          "resource": 626,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\hover\\hover_06.png",
+          "source_sha256": "fa9c9ac029ca4026eeb650f6e847d8d759ca2f4ca4f9000fb4c5e0dcd9a96a00",
+          "rgba_sha256": "cb7f1210af5d2e90c2cb18ad0e59951fc3576dd2bc20fa6df44e9731e9992307"
+        },
+        {
+          "resource": 627,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\hover\\hover_07.png",
+          "source_sha256": "fbfbd6c5eb7ff2c75d382629ec9600b95b2e67bef16fb27b2523d57b98ccbb46",
+          "rgba_sha256": "22ac45d0178ea321d95d489f7a27df7e605948604f9ac2d868b4267a4449a362"
+        },
+        {
+          "resource": 628,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\hover\\hover_08.png",
+          "source_sha256": "a618d66c88707bcc76a654d8b5ebb1df5e287660ae2330fd0d89391d6267f986",
+          "rgba_sha256": "71df9e6d5043195203a3b59b706477b62c69832e6a07038f6c9dab3d819dcb46"
+        },
+        {
+          "resource": 629,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\hover\\hover_09.png",
+          "source_sha256": "af389a484a164a2dd173adbfa3a48e794253e906f1f56d54f731105f0d126d99",
+          "rgba_sha256": "0d0d66cebcac895cd60b8655e246fe86b0358333a5d2b52482f85e7c96b93022"
+        },
+        {
+          "resource": 630,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\hover\\hover_10.png",
+          "source_sha256": "a0db41b0626c9a65339262e0542932d60d756c4d694b7c7e1ee16953e0d4caeb",
+          "rgba_sha256": "a1b3a6880e0a375be55623635ad0659574cca0cb814fa0899786ff7118341ae5"
+        },
+        {
+          "resource": 631,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\hover\\hover_11.png",
+          "source_sha256": "54296edec13be78aeb85e95f8a85f6a078190394e68135e310a5f7b81faa1fb0",
+          "rgba_sha256": "941dfcf7c829424ab4c6507c18851f2c20bd8eddc3673920101cc7de0bbfc934"
+        },
+        {
+          "resource": 632,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\hover\\hover_12.png",
+          "source_sha256": "54296edec13be78aeb85e95f8a85f6a078190394e68135e310a5f7b81faa1fb0",
+          "rgba_sha256": "941dfcf7c829424ab4c6507c18851f2c20bd8eddc3673920101cc7de0bbfc934"
+        },
+        {
+          "resource": 633,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\hover\\hover_13.png",
+          "source_sha256": "baf1c792c245b877d97acda0be959df0de8123df856fc0bb3dd1c50b9596d45c",
+          "rgba_sha256": "d9f8e2b57e22c39cbd7598e6b305839c6d3e4af942d1ffcd6d49de9fbaffb6bf"
+        },
+        {
+          "resource": 634,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\hover\\hover_14.png",
+          "source_sha256": "4d6ee4bdaf2297d28c2040ce487c040908e3b32509d8c7e4c6827b877e48d020",
+          "rgba_sha256": "b6a27b9f4fb41bf693265b3e360224cc78c23ec4f080f18a0b8d1244ca0d0319"
+        },
+        {
+          "resource": 635,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\hover\\hover_15.png",
+          "source_sha256": "36b8a32b70b0be95aad1789369ec2096c3e0ad10a8754a0e620801ceb5182387",
+          "rgba_sha256": "d446fbc602840baa5e122701fcbaf54320ea4928604f3d86820be46fda37a6e2"
+        },
+        {
+          "resource": 636,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\hover\\hover_16.png",
+          "source_sha256": "77331e2d1b0ac78cd00f1160f3f400edd69c40c6460e9223aba785c5cd3d75da",
+          "rgba_sha256": "eb9614a4940f967b1beea6a2c06e6c4da9191e39ca903851f326b89802260eb2"
+        },
+        {
+          "resource": 637,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\hover\\hover_17.png",
+          "source_sha256": "156f43e92d42adce94244d56be220ca720deec85c4a9051e361767e7cb562722",
+          "rgba_sha256": "6523960b7e293d12897c85e7b62d3b54487babe9ac493304311aad962067345b"
+        },
+        {
+          "resource": 638,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\hover\\hover_18.png",
+          "source_sha256": "f65f6210961bf5e39d371c5713a4e944783e9b95eaa1ecaf23d2897615546e23",
+          "rgba_sha256": "dceebc609b43f09be43c4fac82e4d75deb090e34b3a55db8386d3b598f1b1011"
+        },
+        {
+          "resource": 639,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\hover\\hover_19.png",
+          "source_sha256": "156f43e92d42adce94244d56be220ca720deec85c4a9051e361767e7cb562722",
+          "rgba_sha256": "6523960b7e293d12897c85e7b62d3b54487babe9ac493304311aad962067345b"
+        },
+        {
+          "resource": 640,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\hover\\hover_20.png",
+          "source_sha256": "77331e2d1b0ac78cd00f1160f3f400edd69c40c6460e9223aba785c5cd3d75da",
+          "rgba_sha256": "eb9614a4940f967b1beea6a2c06e6c4da9191e39ca903851f326b89802260eb2"
+        },
+        {
+          "resource": 641,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\hover\\hover_21.png",
+          "source_sha256": "36b8a32b70b0be95aad1789369ec2096c3e0ad10a8754a0e620801ceb5182387",
+          "rgba_sha256": "d446fbc602840baa5e122701fcbaf54320ea4928604f3d86820be46fda37a6e2"
+        },
+        {
+          "resource": 642,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\hover\\hover_22.png",
+          "source_sha256": "4d6ee4bdaf2297d28c2040ce487c040908e3b32509d8c7e4c6827b877e48d020",
+          "rgba_sha256": "b6a27b9f4fb41bf693265b3e360224cc78c23ec4f080f18a0b8d1244ca0d0319"
+        },
+        {
+          "resource": 643,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\hover\\hover_23.png",
+          "source_sha256": "baf1c792c245b877d97acda0be959df0de8123df856fc0bb3dd1c50b9596d45c",
+          "rgba_sha256": "d9f8e2b57e22c39cbd7598e6b305839c6d3e4af942d1ffcd6d49de9fbaffb6bf"
+        },
+        {
+          "resource": 644,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\hover\\hover_24.png",
+          "source_sha256": "54296edec13be78aeb85e95f8a85f6a078190394e68135e310a5f7b81faa1fb0",
+          "rgba_sha256": "941dfcf7c829424ab4c6507c18851f2c20bd8eddc3673920101cc7de0bbfc934"
+        },
+        {
+          "resource": 645,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\activate\\activate_00.png",
+          "source_sha256": "7b346c71a860a66d7cfdd22677b4ef78514698b3ff26e5d18ce1e5738cf2fe44",
+          "rgba_sha256": "eb99af155c1e99b902dbdb712076b9acede5ec5ed3cf618d34dee919e1a39c10"
+        },
+        {
+          "resource": 646,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\activate\\activate_01.png",
+          "source_sha256": "eadaf5d93f2b86a2a9bd34c07edaa65ff72c10a2ba93d3892aaf20bc0d2632f0",
+          "rgba_sha256": "3a3ef2fc049b3f3d508999e98b6e968c3d820e849010ad75d4d15eb6cedfa8cb"
+        },
+        {
+          "resource": 647,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\activate\\activate_02.png",
+          "source_sha256": "34d11fded64ab9ef83b19c3ef7d70f7d2e7aadf65ac856844d59f411f0882537",
+          "rgba_sha256": "e40008e5581fa0f425f1b6ddc802e7eddad9a90c9f8b839129f849a6e59b0d00"
+        },
+        {
+          "resource": 648,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\activate\\activate_03.png",
+          "source_sha256": "b97cf19b0d1620e162e74c68f338fb7089a7f40ba76a7446f944a05a0fa8bd9a",
+          "rgba_sha256": "2d478a2c02a293b0ad52de0634d2e5543cee27b5b6cbafc6d1fcfa31f1193b04"
+        },
+        {
+          "resource": 649,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\activate\\activate_04.png",
+          "source_sha256": "90e4fe21509eca1477646d995da262fcd610c453bd3982c9018f405a5c65668a",
+          "rgba_sha256": "33ae1917b88a5a3e455521190386754207a0e7ee5dc95ea1d9515a91cf034102"
+        },
+        {
+          "resource": 650,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\activate\\activate_05.png",
+          "source_sha256": "e04752d8a95b6098bb271756ef9ebfd71a3da146d02697e3cf6468ab7e0eadbb",
+          "rgba_sha256": "b5a5accb26da85d5e82f2f1b5d170bad4be308404ad9d39d945058a89e96afc5"
+        },
+        {
+          "resource": 651,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\activate\\activate_06.png",
+          "source_sha256": "6388f471505bc61a6a971979aa6962c9138b9e535ae83f67eb87a2b6dc053714",
+          "rgba_sha256": "266fb6186d62dffbd6393c393d06084ca472ecf90257969d4bba76ca780d2605"
+        },
+        {
+          "resource": 652,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\activate\\activate_07.png",
+          "source_sha256": "b48bd9ce632a474eec2019b7452de8adf228a18aa7fd10dff26ac51da38a66bd",
+          "rgba_sha256": "98289623af2253800c8fff2e018aa6872b8cbde262ca3addd1220fec1341c135"
+        },
+        {
+          "resource": 653,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\activate\\activate_08.png",
+          "source_sha256": "8dc85ea3b3c6f63c02a214ccc6a10d26120e0fb41f85340638244308da534519",
+          "rgba_sha256": "87b70eb78776e7b61f70a6fdbd06bddbfb7e877812b593071945976f73a89269"
+        }
+      ],
+      "commands": [
+        [
+          "C:\\Program Files\\Virtual Desktop Streamer\\ffmpeg.exe",
+          "-nostdin",
+          "-v",
+          "error",
+          "-i",
+          "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\idle.png",
+          "-frames:v",
+          "1",
+          "-f",
+          "rawvideo",
+          "-pix_fmt",
+          "rgba",
+          "pipe:1"
+        ],
+        [
+          "C:\\Program Files\\Virtual Desktop Streamer\\ffmpeg.exe",
+          "-nostdin",
+          "-v",
+          "error",
+          "-start_number",
+          "0",
+          "-i",
+          "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\hover\\hover_%02d.png",
+          "-frames:v",
+          "25",
+          "-f",
+          "rawvideo",
+          "-pix_fmt",
+          "rgba",
+          "pipe:1"
+        ],
+        [
+          "C:\\Program Files\\Virtual Desktop Streamer\\ffmpeg.exe",
+          "-nostdin",
+          "-v",
+          "error",
+          "-start_number",
+          "0",
+          "-i",
+          "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\load_game\\activate\\activate_%02d.png",
+          "-frames:v",
+          "9",
+          "-f",
+          "rawvideo",
+          "-pix_fmt",
+          "rgba",
+          "pipe:1"
+        ]
+      ]
+    },
+    {
+      "name": "multiplayer",
+      "node": 5130608,
+      "idle_resource": 549,
+      "hover_wrap_start": 11,
+      "path": "E:\\Codex\\research\\dominion-rendering\\main-button-assets-v7\\multiplayer.dwbank",
+      "sha256": "2814a429864fcbd77788e5ce4a6332bb6a549b16d83f0e056245942227ef8b04",
+      "bytes": 40320160,
+      "frames": [
+        {
+          "resource": 549,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\idle.png",
+          "source_sha256": "dd01e1300d719ddeedb18bb7dbcad8904e3384ce66906cadccbe6c6aa3e1d0f6",
+          "rgba_sha256": "b9c63f978a3937313b85a931ff3292a8bb02d43461107630661528a6096c4308"
+        },
+        {
+          "resource": 550,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\hover\\hover_00.png",
+          "source_sha256": "5661cb67d299fab2fab890e10eea05613d1516326baacdb182b8c3048f208be3",
+          "rgba_sha256": "059cbcb93ae6be8a64cb5a37587d5008e19bddb3103284af81d896eacb5420ed"
+        },
+        {
+          "resource": 551,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\hover\\hover_01.png",
+          "source_sha256": "190e639c68984e68cacab972fb753e0657b4fa91482c38ec8450c896f87fe8a7",
+          "rgba_sha256": "f42107f63c0b944fef0d8deef4bc8438a2468cf90207ad216cdb6b616bcad633"
+        },
+        {
+          "resource": 552,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\hover\\hover_02.png",
+          "source_sha256": "2bb5f97cc4ba3c7abb43e30a74b5cd4b68f603571ecce7c20847f4e931f1db46",
+          "rgba_sha256": "2d61491c530523c7b57a94f1a39724a923fa3b3e54c1e9e94ab7d2f23cb9bc56"
+        },
+        {
+          "resource": 553,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\hover\\hover_03.png",
+          "source_sha256": "f1b54b5d7e54db4252631a756475e21505d076278d51926769a1fb3299bc841c",
+          "rgba_sha256": "f90de2dd8a4a753923017f49ebc80840fe4b1b912c95f058b897daa6be60572d"
+        },
+        {
+          "resource": 554,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\hover\\hover_04.png",
+          "source_sha256": "45b5a220c7bd8c5086b23fa318b37490ed848cd936a051122e7e23fb37f3ee26",
+          "rgba_sha256": "41b00e9a5036fdd1752fa9999932998c956eec47c283e30392e9e57a07321fe2"
+        },
+        {
+          "resource": 555,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\hover\\hover_05.png",
+          "source_sha256": "9fc9b15c77e944e1f143ddb0a7e51e46d068f2eb16dad631fec4135e09290c19",
+          "rgba_sha256": "6c971482fec6113e385c347dbfc26e369dcaf6bdbd34feed725cda04f0c55ee2"
+        },
+        {
+          "resource": 556,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\hover\\hover_06.png",
+          "source_sha256": "ca874bdd0b904e13b105cd382cf8a840b6176bd2417697fdb7417819a0493409",
+          "rgba_sha256": "82add485e080c9dce63273d81d440ceec60096316eafd25ec48705ad60bb5e45"
+        },
+        {
+          "resource": 557,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\hover\\hover_07.png",
+          "source_sha256": "3d22befc7c1d791a567eff969093b893d31a397b9039011375e227e0e5574030",
+          "rgba_sha256": "9f2d99d6836e81662b63f11b3c56e335d64e1dfc7895e9750cecb5436f6043b4"
+        },
+        {
+          "resource": 558,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\hover\\hover_08.png",
+          "source_sha256": "a8e8458c0dc491e097d3e9359cd6113b86828db383228009757f2be5cab601e4",
+          "rgba_sha256": "a0d6bc24409dde88be90f116792777fadece93963465fe510921169272dea3b1"
+        },
+        {
+          "resource": 559,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\hover\\hover_09.png",
+          "source_sha256": "9e635379aee037c83013f9d21488ec48448cad64843d63579e30e4c941514c8f",
+          "rgba_sha256": "964988e0695ae477b6ac13c0e6806507d0d1923a9d2a1ded1c617d10b4a71d55"
+        },
+        {
+          "resource": 560,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\hover\\hover_10.png",
+          "source_sha256": "a3636e3d5bee2f862cfb57664b7fc831822f29954488a61f7eb074577e3ba944",
+          "rgba_sha256": "3a8e76bef45688c040b50a3f49d23657bd59ec80419a03e0a593a5bbba483674"
+        },
+        {
+          "resource": 561,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\hover\\hover_11.png",
+          "source_sha256": "a3636e3d5bee2f862cfb57664b7fc831822f29954488a61f7eb074577e3ba944",
+          "rgba_sha256": "3a8e76bef45688c040b50a3f49d23657bd59ec80419a03e0a593a5bbba483674"
+        },
+        {
+          "resource": 562,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\hover\\hover_12.png",
+          "source_sha256": "2c13a7ea6453ad18ea06a95dcfff594dc667dcf2861433507fd43b5941174e15",
+          "rgba_sha256": "edda0f23f7d3a13b6fdcb3a2197febbb7300a35d107554ab09db241d0449aa66"
+        },
+        {
+          "resource": 563,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\hover\\hover_13.png",
+          "source_sha256": "f9c76929e719f5b04fed2b408bc0e1f4c178761b39845412b088068d9fc554ec",
+          "rgba_sha256": "746ebb39b52488377cf4295321ba38e079c395dc30867fb73e4be3ee20370fd9"
+        },
+        {
+          "resource": 564,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\hover\\hover_14.png",
+          "source_sha256": "5e9fc7ff2785ce3db4068694fcd3a0391c6ed4224dd609ea6e4a57eb4e0fd13d",
+          "rgba_sha256": "3f428e2c7fbdd9fa79d376891425888f8291752abc039c2e05708c85f79822f7"
+        },
+        {
+          "resource": 565,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\hover\\hover_15.png",
+          "source_sha256": "d3a0ad5552266c3a38241c06ed818d3ef973bb5968aab5d011596e10e75de33b",
+          "rgba_sha256": "634dc88abd152935c5a73d18b0a3c527528182ec138a69ee2fb42ec782ac29cc"
+        },
+        {
+          "resource": 566,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\hover\\hover_16.png",
+          "source_sha256": "ab3c89476dede02a25e8979821d9de84d9469d535590cdc892ecc010cc972905",
+          "rgba_sha256": "ef9929747938e4080d1a5e1f575ad4bfcf5cc3538dcb53e61fd8ba6f2509b415"
+        },
+        {
+          "resource": 567,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\hover\\hover_17.png",
+          "source_sha256": "32b5deebbeeed757042c5a38dc1ab13cacc42f3e1b77754e97908ee4e2a17589",
+          "rgba_sha256": "1fa29683a736dcc25cf6a13ac4ea054103fc3d94ca6588bd08231263379a3cfd"
+        },
+        {
+          "resource": 568,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\hover\\hover_18.png",
+          "source_sha256": "32b5deebbeeed757042c5a38dc1ab13cacc42f3e1b77754e97908ee4e2a17589",
+          "rgba_sha256": "1fa29683a736dcc25cf6a13ac4ea054103fc3d94ca6588bd08231263379a3cfd"
+        },
+        {
+          "resource": 569,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\hover\\hover_19.png",
+          "source_sha256": "ab3c89476dede02a25e8979821d9de84d9469d535590cdc892ecc010cc972905",
+          "rgba_sha256": "ef9929747938e4080d1a5e1f575ad4bfcf5cc3538dcb53e61fd8ba6f2509b415"
+        },
+        {
+          "resource": 570,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\hover\\hover_20.png",
+          "source_sha256": "d3a0ad5552266c3a38241c06ed818d3ef973bb5968aab5d011596e10e75de33b",
+          "rgba_sha256": "634dc88abd152935c5a73d18b0a3c527528182ec138a69ee2fb42ec782ac29cc"
+        },
+        {
+          "resource": 571,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\hover\\hover_21.png",
+          "source_sha256": "5e9fc7ff2785ce3db4068694fcd3a0391c6ed4224dd609ea6e4a57eb4e0fd13d",
+          "rgba_sha256": "3f428e2c7fbdd9fa79d376891425888f8291752abc039c2e05708c85f79822f7"
+        },
+        {
+          "resource": 572,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\hover\\hover_22.png",
+          "source_sha256": "f9c76929e719f5b04fed2b408bc0e1f4c178761b39845412b088068d9fc554ec",
+          "rgba_sha256": "746ebb39b52488377cf4295321ba38e079c395dc30867fb73e4be3ee20370fd9"
+        },
+        {
+          "resource": 573,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\hover\\hover_23.png",
+          "source_sha256": "2c13a7ea6453ad18ea06a95dcfff594dc667dcf2861433507fd43b5941174e15",
+          "rgba_sha256": "edda0f23f7d3a13b6fdcb3a2197febbb7300a35d107554ab09db241d0449aa66"
+        },
+        {
+          "resource": 574,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\hover\\hover_24.png",
+          "source_sha256": "a3636e3d5bee2f862cfb57664b7fc831822f29954488a61f7eb074577e3ba944",
+          "rgba_sha256": "3a8e76bef45688c040b50a3f49d23657bd59ec80419a03e0a593a5bbba483674"
+        },
+        {
+          "resource": 575,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\activate\\activate_00.png",
+          "source_sha256": "4d483020a5cbdb28eeb92d47569af55593181ced661e9686854cf5e649db88ed",
+          "rgba_sha256": "99463f87a1b69ee7d6aee2ebb6b7d4477b6d886e80ca4d05f9cc8ad997184988"
+        },
+        {
+          "resource": 576,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\activate\\activate_01.png",
+          "source_sha256": "d0133eff9994a3b905f004faff392931c12e053195de17c3b8219355f025f02c",
+          "rgba_sha256": "c20f80c303319bc16a8c1a30f625b8f45dce409ac1e1443e90f8ef8801860ef0"
+        },
+        {
+          "resource": 577,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\activate\\activate_02.png",
+          "source_sha256": "44818cef1d58bbdda8eec7ff9bdeb0bc4da4ef1327a738ac629edad9ff1be4f3",
+          "rgba_sha256": "0181aeb47062c280cf5ea35a8e184b4fe954162cd781872224a5ee4519f42e4c"
+        },
+        {
+          "resource": 578,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\activate\\activate_03.png",
+          "source_sha256": "ba10e9be42771dc67b303afcf827878ead1d350ae60d63516f0d5e1b89bb92ee",
+          "rgba_sha256": "3db91e3cb414a256fdbf97206f3e4c77e966664989a9d8b4e6fb6d57aaf8576e"
+        },
+        {
+          "resource": 579,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\activate\\activate_04.png",
+          "source_sha256": "ad72afd17207509191d2ac1919ce9c60327eb0416f101c4415f04484e85df7b8",
+          "rgba_sha256": "25b509cc387e7008251fa58641f2e3eb127639fa71dddbd70c45782f6fe6b7ef"
+        },
+        {
+          "resource": 580,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\activate\\activate_05.png",
+          "source_sha256": "8dc967cc3c24bfc6fcaf52bd81752c6a60f59b136a6cd1534711a2101ca7fc00",
+          "rgba_sha256": "86c2bbf88cb42798c7ca103ec6327a6bffec63ea6ea0e6b4ce885526d6f3b283"
+        },
+        {
+          "resource": 581,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\activate\\activate_06.png",
+          "source_sha256": "6b57c490cdc613b6e201d7c4bbb7071f5809c66952dfc5a5de3f33c756cb1689",
+          "rgba_sha256": "f5fea4c27334b5e86731d12684ee50d558cd1230ebe5142aaf3cbeaa28affe92"
+        },
+        {
+          "resource": 582,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\activate\\activate_07.png",
+          "source_sha256": "c9678274f6eb938aa539fbb77831e2b6fd3741fb7306bf7461de5a5a1bf7934b",
+          "rgba_sha256": "56385c20766b499940627a9c0629975c3c5fa506ef405290b7eb99105a6916a4"
+        },
+        {
+          "resource": 583,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\activate\\activate_08.png",
+          "source_sha256": "8dc85ea3b3c6f63c02a214ccc6a10d26120e0fb41f85340638244308da534519",
+          "rgba_sha256": "87b70eb78776e7b61f70a6fdbd06bddbfb7e877812b593071945976f73a89269"
+        }
+      ],
+      "commands": [
+        [
+          "C:\\Program Files\\Virtual Desktop Streamer\\ffmpeg.exe",
+          "-nostdin",
+          "-v",
+          "error",
+          "-i",
+          "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\idle.png",
+          "-frames:v",
+          "1",
+          "-f",
+          "rawvideo",
+          "-pix_fmt",
+          "rgba",
+          "pipe:1"
+        ],
+        [
+          "C:\\Program Files\\Virtual Desktop Streamer\\ffmpeg.exe",
+          "-nostdin",
+          "-v",
+          "error",
+          "-start_number",
+          "0",
+          "-i",
+          "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\hover\\hover_%02d.png",
+          "-frames:v",
+          "25",
+          "-f",
+          "rawvideo",
+          "-pix_fmt",
+          "rgba",
+          "pipe:1"
+        ],
+        [
+          "C:\\Program Files\\Virtual Desktop Streamer\\ffmpeg.exe",
+          "-nostdin",
+          "-v",
+          "error",
+          "-start_number",
+          "0",
+          "-i",
+          "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\multiplayer\\activate\\activate_%02d.png",
+          "-frames:v",
+          "9",
+          "-f",
+          "rawvideo",
+          "-pix_fmt",
+          "rgba",
+          "pipe:1"
+        ]
+      ]
+    },
+    {
+      "name": "preferences",
+      "node": 5130752,
+      "idle_resource": 654,
+      "hover_wrap_start": 12,
+      "path": "E:\\Codex\\research\\dominion-rendering\\main-button-assets-v7\\preferences.dwbank",
+      "sha256": "d0f3c2747b916c9c1f6ca955a391fd2ddb51f95029a9b8d40a0d8faa1eb9834b",
+      "bytes": 40320160,
+      "frames": [
+        {
+          "resource": 654,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\idle.png",
+          "source_sha256": "4aec55e4fbefa323a8617fc22fc8e88e5132dc014ea843b840402f96d47f0996",
+          "rgba_sha256": "06a8d87f85e59685882e56bc342affdf3c3d0d6391b6c2c5c043e2e11b0f4018"
+        },
+        {
+          "resource": 655,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\hover\\hover_00.png",
+          "source_sha256": "88789ecfa0537f3ecc2c7e8542e269a81c42bdb7eb89ebecc2681a97d7e5eaba",
+          "rgba_sha256": "cdf918c4016112c443e195d938826cfa13db508a49bd739cb4f3b79405bbc047"
+        },
+        {
+          "resource": 656,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\hover\\hover_01.png",
+          "source_sha256": "292d57f55f214ff2e922fd4e6353eef271d98d081dd694e65eda21ed21360df6",
+          "rgba_sha256": "2f68e03ad4149c0720f6eb507753e604a0e320dba8152ed8c93051fd35724761"
+        },
+        {
+          "resource": 657,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\hover\\hover_02.png",
+          "source_sha256": "8b31746870681786c99e5bc494e0a296e727afef24607428d56c6e2dd66ad5b7",
+          "rgba_sha256": "bf34af8acc377b504dc2766d5693cffd6c5480e6f8bf7fe1743ae17813ae58f5"
+        },
+        {
+          "resource": 658,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\hover\\hover_03.png",
+          "source_sha256": "d7cf75966eb15b631e8a57cc2be080cd0645791640f8ad539a758b9394160abb",
+          "rgba_sha256": "e610588cf4559d9025c3892fed57354b3ac7f5a0113af296a8cb88cf4977e789"
+        },
+        {
+          "resource": 659,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\hover\\hover_04.png",
+          "source_sha256": "2eed6e3281dcff9bbf110bf3dbd708b7bebe9fbfd89858b5728be5b47690dab4",
+          "rgba_sha256": "c4f5a9f686ee7025f141a48b9d656e9a8f6df0b8d70a7bfb3fc9fd67f104458c"
+        },
+        {
+          "resource": 660,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\hover\\hover_05.png",
+          "source_sha256": "c747b70ddd26119a0b7771b59b562468a8229de7768297e75de24367dc1f0709",
+          "rgba_sha256": "73fe161d363f9c0fc2ab0da4dfbc7cff8683120ca1cc2528e389f001136dc72c"
+        },
+        {
+          "resource": 661,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\hover\\hover_06.png",
+          "source_sha256": "4ff2c44100394df5632bed24410ef2a6664074713f9e95430318664dd3e56a4f",
+          "rgba_sha256": "aec7df8ec3eaf8109b53492ea2b5dbef445804cc3bd141e5166647f9459ba0e2"
+        },
+        {
+          "resource": 662,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\hover\\hover_07.png",
+          "source_sha256": "22900a1a5fccc965efa632883b8552642254067264fafa96bc60d74732afe7a8",
+          "rgba_sha256": "3192e654e0ac76eaf7c4d5be1ee97410a12b399ae0285491f90a7636bcca3651"
+        },
+        {
+          "resource": 663,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\hover\\hover_08.png",
+          "source_sha256": "fd4b3ca65e80147ab5b7786b8cd6becd54a287ac035a06901ce70e03abef1528",
+          "rgba_sha256": "0ade211b958ce01f4ef3b90b37276628b614108e9f689e8d318d89a6404288a6"
+        },
+        {
+          "resource": 664,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\hover\\hover_09.png",
+          "source_sha256": "16a2278a9b583f8d01af659f13bb9b0f2c260357ea2555281f873fe778f40423",
+          "rgba_sha256": "bbb13dd495353a786d4d7836ae00801afedeb5ffc68e4df0bf9e7c0ecd8e7f7f"
+        },
+        {
+          "resource": 665,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\hover\\hover_10.png",
+          "source_sha256": "0ed8e113fd9f0b8ab8dca8b5db798d9f3d5035e80de65afcd4f440a7981565c4",
+          "rgba_sha256": "2481cfe1595a8e2ef24f364c255faf3cbef0ab57c865a9a41ffdd203fc8d1e7a"
+        },
+        {
+          "resource": 666,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\hover\\hover_11.png",
+          "source_sha256": "addf567e22d20a5315165554bf8e3f49fa86ce0ae7c8c4d2d8a11ea722f17168",
+          "rgba_sha256": "626a4118bd70418347127faddf7c0442efb796021de5b69839cd1062ca83026e"
+        },
+        {
+          "resource": 667,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\hover\\hover_12.png",
+          "source_sha256": "addf567e22d20a5315165554bf8e3f49fa86ce0ae7c8c4d2d8a11ea722f17168",
+          "rgba_sha256": "626a4118bd70418347127faddf7c0442efb796021de5b69839cd1062ca83026e"
+        },
+        {
+          "resource": 668,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\hover\\hover_13.png",
+          "source_sha256": "67037ac438f1683d884742a0e6978d418ce24801fc010073b804d90cd668689d",
+          "rgba_sha256": "f2cb69e1c54d55078cf9535ecac19efc4ff8baa0af769f243adccb7daf812f89"
+        },
+        {
+          "resource": 669,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\hover\\hover_14.png",
+          "source_sha256": "26d9c3e12b95fe757914dec7e8788325109ec5968d379b2140d60fdfe10df8e1",
+          "rgba_sha256": "0af0930b81727c9ebb0d2fd46af5fc238cdb038ad87952ac6091fdb33ae04b8e"
+        },
+        {
+          "resource": 670,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\hover\\hover_15.png",
+          "source_sha256": "7762f6a8a29c5163a936d2db70d13195d0caf69b60f31b38948bad2516b608c4",
+          "rgba_sha256": "802b1947ae0126db6dce9372a426d0663012a76630d6f9008fdc0611a7998e0c"
+        },
+        {
+          "resource": 671,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\hover\\hover_16.png",
+          "source_sha256": "f308f51374fb0cbdc1db9b7564c046180dc1531c96c993108f9f43eba273f356",
+          "rgba_sha256": "0b4e4bc0aecb87ce8cce15fedce0f2e8c3438282e86f1fee7517573e639ef9fc"
+        },
+        {
+          "resource": 672,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\hover\\hover_17.png",
+          "source_sha256": "02c6afc93450bcfd61c29c40fd96c39d3c5ac339367e535d0fafe75ea66b401b",
+          "rgba_sha256": "03d14947d3a453be35b191db9ee47787d292f2414fff14e0502cfebc44ef5bc0"
+        },
+        {
+          "resource": 673,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\hover\\hover_18.png",
+          "source_sha256": "b821d33ec5f5806e474f4917b9a955078280ab371c8ab49c52835be4362c0208",
+          "rgba_sha256": "e158bcefba0991648befedfee75e4d101cbe64257d5269aa57cd81d9326dae5d"
+        },
+        {
+          "resource": 674,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\hover\\hover_19.png",
+          "source_sha256": "02c6afc93450bcfd61c29c40fd96c39d3c5ac339367e535d0fafe75ea66b401b",
+          "rgba_sha256": "03d14947d3a453be35b191db9ee47787d292f2414fff14e0502cfebc44ef5bc0"
+        },
+        {
+          "resource": 675,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\hover\\hover_20.png",
+          "source_sha256": "f308f51374fb0cbdc1db9b7564c046180dc1531c96c993108f9f43eba273f356",
+          "rgba_sha256": "0b4e4bc0aecb87ce8cce15fedce0f2e8c3438282e86f1fee7517573e639ef9fc"
+        },
+        {
+          "resource": 676,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\hover\\hover_21.png",
+          "source_sha256": "7762f6a8a29c5163a936d2db70d13195d0caf69b60f31b38948bad2516b608c4",
+          "rgba_sha256": "802b1947ae0126db6dce9372a426d0663012a76630d6f9008fdc0611a7998e0c"
+        },
+        {
+          "resource": 677,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\hover\\hover_22.png",
+          "source_sha256": "26d9c3e12b95fe757914dec7e8788325109ec5968d379b2140d60fdfe10df8e1",
+          "rgba_sha256": "0af0930b81727c9ebb0d2fd46af5fc238cdb038ad87952ac6091fdb33ae04b8e"
+        },
+        {
+          "resource": 678,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\hover\\hover_23.png",
+          "source_sha256": "67037ac438f1683d884742a0e6978d418ce24801fc010073b804d90cd668689d",
+          "rgba_sha256": "f2cb69e1c54d55078cf9535ecac19efc4ff8baa0af769f243adccb7daf812f89"
+        },
+        {
+          "resource": 679,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\hover\\hover_24.png",
+          "source_sha256": "addf567e22d20a5315165554bf8e3f49fa86ce0ae7c8c4d2d8a11ea722f17168",
+          "rgba_sha256": "626a4118bd70418347127faddf7c0442efb796021de5b69839cd1062ca83026e"
+        },
+        {
+          "resource": 680,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\activate\\activate_00.png",
+          "source_sha256": "bb580f3e268f65ddab6e1c84c579b953c79ff5c3900b74ff8e323ea844ac3cbb",
+          "rgba_sha256": "d2ad3f3b30ad1dbe8036205ef882a9c95acf058a8f38cff7ce7a403d345ef741"
+        },
+        {
+          "resource": 681,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\activate\\activate_01.png",
+          "source_sha256": "c5979b3bdc6231f00e6e8c83721e39b255ba31a110d75f48e92225af05c0bf60",
+          "rgba_sha256": "0de97fb301693012d0f4f4a68fa77f226e4577f1086593084a36d3fda044e8cc"
+        },
+        {
+          "resource": 682,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\activate\\activate_02.png",
+          "source_sha256": "a24ad6cd66d1e193ae4423330b57ac1c13ef6877fea6aac5a2026c7648d2fad7",
+          "rgba_sha256": "b54c5c0248f855ec70ed3ed6f5b25f37c5ce7d2961903986d7c720cc61daf4eb"
+        },
+        {
+          "resource": 683,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\activate\\activate_03.png",
+          "source_sha256": "68f558de20ce17fd7648f9a65779def9ca347548e1746f6be064b89958b731a8",
+          "rgba_sha256": "c1b588a614f9ed20596e476e3495a29eeb63d77619f298c62df744f8fc324050"
+        },
+        {
+          "resource": 684,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\activate\\activate_04.png",
+          "source_sha256": "5742aa22560d55b447cc82cad1fc02ffec740eb87d5a9fb6fe92ae37821b0c38",
+          "rgba_sha256": "8d1a82c56bd16ed42f12a3a9e23391e47d6e32b6d3d526ecec8a6d68ca1b12cb"
+        },
+        {
+          "resource": 685,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\activate\\activate_05.png",
+          "source_sha256": "b25b08b72094713651abff7e099a145e73e0ab5ff4dad0fc9524e6fc33ddc04c",
+          "rgba_sha256": "183e798ad2a31e4c5cee79a06eb0665538bc24e2811484a42ca1e862f6c16c44"
+        },
+        {
+          "resource": 686,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\activate\\activate_06.png",
+          "source_sha256": "81df485c0762a339eb8ff39ecd77af9f05714afac1feba724668227b41193f59",
+          "rgba_sha256": "35258c6ee2353e2e86b5660589af4ff72814c71c978b74c451a1b5a381724375"
+        },
+        {
+          "resource": 687,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\activate\\activate_07.png",
+          "source_sha256": "4b2ffb0ee6b1ba35722058d7a394ca1047d533a66c462e94d331f70a4ff264cc",
+          "rgba_sha256": "14f667cc85e18957484ae935ceda16b2863459c197d9ef5a25650fc51aeda549"
+        },
+        {
+          "resource": 688,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\activate\\activate_08.png",
+          "source_sha256": "8dc85ea3b3c6f63c02a214ccc6a10d26120e0fb41f85340638244308da534519",
+          "rgba_sha256": "87b70eb78776e7b61f70a6fdbd06bddbfb7e877812b593071945976f73a89269"
+        }
+      ],
+      "commands": [
+        [
+          "C:\\Program Files\\Virtual Desktop Streamer\\ffmpeg.exe",
+          "-nostdin",
+          "-v",
+          "error",
+          "-i",
+          "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\idle.png",
+          "-frames:v",
+          "1",
+          "-f",
+          "rawvideo",
+          "-pix_fmt",
+          "rgba",
+          "pipe:1"
+        ],
+        [
+          "C:\\Program Files\\Virtual Desktop Streamer\\ffmpeg.exe",
+          "-nostdin",
+          "-v",
+          "error",
+          "-start_number",
+          "0",
+          "-i",
+          "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\hover\\hover_%02d.png",
+          "-frames:v",
+          "25",
+          "-f",
+          "rawvideo",
+          "-pix_fmt",
+          "rgba",
+          "pipe:1"
+        ],
+        [
+          "C:\\Program Files\\Virtual Desktop Streamer\\ffmpeg.exe",
+          "-nostdin",
+          "-v",
+          "error",
+          "-start_number",
+          "0",
+          "-i",
+          "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\preferences\\activate\\activate_%02d.png",
+          "-frames:v",
+          "9",
+          "-f",
+          "rawvideo",
+          "-pix_fmt",
+          "rgba",
+          "pipe:1"
+        ]
+      ]
+    },
+    {
+      "name": "credits",
+      "node": 5130896,
+      "idle_resource": 584,
+      "hover_wrap_start": 12,
+      "path": "E:\\Codex\\research\\dominion-rendering\\main-button-assets-v7\\credits.dwbank",
+      "sha256": "f62e8d6c060b6ab645b1af130ea0db8ff1d2a56c3c7b4e92f24568c98a970d5f",
+      "bytes": 40320160,
+      "frames": [
+        {
+          "resource": 584,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\idle.png",
+          "source_sha256": "f486b85b1bf8f242336adefed03f83072cb7d2e3059218c9e8451a355634393a",
+          "rgba_sha256": "4a4e2367946acbbdc06588f20601f9d0863fc31759957199c56aeb40d61d3db7"
+        },
+        {
+          "resource": 585,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\hover\\hover_00.png",
+          "source_sha256": "b065b58230f49462e5505be335c2e1575ef5b26ed8b8045f0be36035c6274464",
+          "rgba_sha256": "5891b077f7415e2f02356adf376fbef555a37b9cf312368051351f08790f525b"
+        },
+        {
+          "resource": 586,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\hover\\hover_01.png",
+          "source_sha256": "97d76aedacb052e3aeb9f9ae06631e73c055f38d99dd3e7391279ed4fafbcdfb",
+          "rgba_sha256": "635debb9a4b1e2bde047dda030cee24900b43b58ef86e1be555859191d302e06"
+        },
+        {
+          "resource": 587,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\hover\\hover_02.png",
+          "source_sha256": "b57c5bc067119e3efd8115a3e89d668d44ec252a2801f6df91f999404a99f25f",
+          "rgba_sha256": "3bb8dfe1a0153e1aec68ff2a6c2e2152dd80c726f26d9e091360197bab0eb767"
+        },
+        {
+          "resource": 588,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\hover\\hover_03.png",
+          "source_sha256": "af565719da3588819d2169da8e7661749d8b1158ee67dd34f724f3b1c5fe6c8d",
+          "rgba_sha256": "fdff6e83e6e2c0388765f26da70b7f2e8af2dc607318482f786135ef8097e2d9"
+        },
+        {
+          "resource": 589,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\hover\\hover_04.png",
+          "source_sha256": "d6e69d026a1deddc09b5e464d2518b9f570e0842f5261719770028b058c97f05",
+          "rgba_sha256": "f07dd8cd906304ed6b86354787b43883132392041e4de89207232c2d2f677872"
+        },
+        {
+          "resource": 590,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\hover\\hover_05.png",
+          "source_sha256": "d81efcc38ed3108774670e2de1fd407906e06dc0f067c3a47c219b27a65654f7",
+          "rgba_sha256": "ab8ce06712f4537857715eb76d6a2cd989b944a5d66fe381be0dad67188f6e86"
+        },
+        {
+          "resource": 591,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\hover\\hover_06.png",
+          "source_sha256": "84ddc955d09472619512714a208f52eeb75e215be35ed13334abbbaeae459dde",
+          "rgba_sha256": "208863bb38cbf497ff2db733104b5dcda93c83c6cbb9a26e2675ac9410e46474"
+        },
+        {
+          "resource": 592,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\hover\\hover_07.png",
+          "source_sha256": "45ccc978e23f65692e679fee83f082e7b05b3e3ecdd88ad14e7602c34be21224",
+          "rgba_sha256": "e95f7daa94e240a48070f65675f8c5b20930acc8f3a7a908f4eee958ad811445"
+        },
+        {
+          "resource": 593,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\hover\\hover_08.png",
+          "source_sha256": "44fd2b73c6de674f549b11d35b943ecf207c6dd6245a7213bf6b0e849cd453d8",
+          "rgba_sha256": "2e26a2cc59616f9349bb4058b64d574c076aa561d03b2c68e87f53d581ed6765"
+        },
+        {
+          "resource": 594,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\hover\\hover_09.png",
+          "source_sha256": "a15c7f12d2fd2f5dcc2346816b5c0d52996e84852d92b11873888324cf3e80cf",
+          "rgba_sha256": "31b2e431aa69082e43f78afccde9dfde72f7e5eefae3713a9ad11a6824b9b363"
+        },
+        {
+          "resource": 595,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\hover\\hover_10.png",
+          "source_sha256": "32f86637d5eba4e7ea85f74e1b8c98e03d8fda8320ae8f5bdd41f5f60692a70e",
+          "rgba_sha256": "77e1ff58eefdea8f484da0ef9768dc9cd5a4fd988491f59ca3512f314eca5d51"
+        },
+        {
+          "resource": 596,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\hover\\hover_11.png",
+          "source_sha256": "d9fbda9765f8537f8e5866200b953173a9a704e1e694b01049b6d14ed84fecf7",
+          "rgba_sha256": "75cf3105a70f4fea43acd735047befc83f6edc69fc4e9290dae6adc818c1c8e4"
+        },
+        {
+          "resource": 597,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\hover\\hover_12.png",
+          "source_sha256": "d9fbda9765f8537f8e5866200b953173a9a704e1e694b01049b6d14ed84fecf7",
+          "rgba_sha256": "75cf3105a70f4fea43acd735047befc83f6edc69fc4e9290dae6adc818c1c8e4"
+        },
+        {
+          "resource": 598,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\hover\\hover_13.png",
+          "source_sha256": "425d6238933ce9c1e5b31ebc783c02855c4623af201d8312a58b59a70360f326",
+          "rgba_sha256": "9db64865f4c09b057336e2c8ee8d1653b8a6ae7945030e58c4a73a38aa24c1da"
+        },
+        {
+          "resource": 599,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\hover\\hover_14.png",
+          "source_sha256": "4e23399ecc001b360f866883e9ecf40dea99f5ca0c6fe86a5756a1ba53cfc686",
+          "rgba_sha256": "45be43b6a4423fa245d7ce2f0b1a2cf46c0bf1065df0e17787c88901cec5afe3"
+        },
+        {
+          "resource": 600,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\hover\\hover_15.png",
+          "source_sha256": "ca97afcc6698618da6669ab33d332c37faa6a660212cb5e7e8116373d819784f",
+          "rgba_sha256": "1df29643b141f354ea50d6711e5f2da81969d3d487f033693899206565164502"
+        },
+        {
+          "resource": 601,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\hover\\hover_16.png",
+          "source_sha256": "14bf308733bf2a906f28d13ef323e49d86fa0fee19cbd1011f846e05e66698e0",
+          "rgba_sha256": "4e57b3e383ecf789e9d48c614807a5a3a7c3c0a3fbd6c83f66ff2faf085ac84b"
+        },
+        {
+          "resource": 602,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\hover\\hover_17.png",
+          "source_sha256": "bf09ce00e045b579e7c11cc6f76514806c283a1eecfc46993cd7dbfbbeb21dfb",
+          "rgba_sha256": "7ce53da120efceced859c1210b2e934e2abc3164b5e173bc741408f57de86e56"
+        },
+        {
+          "resource": 603,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\hover\\hover_18.png",
+          "source_sha256": "71d168472d6f3726b364aec0010f196b84c80548d53aabd9804d4cdb6eb59d5d",
+          "rgba_sha256": "ad07234a1a54dea6e51fac54d1feacc3896d868125863ad903624bbcad371429"
+        },
+        {
+          "resource": 604,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\hover\\hover_19.png",
+          "source_sha256": "bf09ce00e045b579e7c11cc6f76514806c283a1eecfc46993cd7dbfbbeb21dfb",
+          "rgba_sha256": "7ce53da120efceced859c1210b2e934e2abc3164b5e173bc741408f57de86e56"
+        },
+        {
+          "resource": 605,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\hover\\hover_20.png",
+          "source_sha256": "14bf308733bf2a906f28d13ef323e49d86fa0fee19cbd1011f846e05e66698e0",
+          "rgba_sha256": "4e57b3e383ecf789e9d48c614807a5a3a7c3c0a3fbd6c83f66ff2faf085ac84b"
+        },
+        {
+          "resource": 606,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\hover\\hover_21.png",
+          "source_sha256": "ca97afcc6698618da6669ab33d332c37faa6a660212cb5e7e8116373d819784f",
+          "rgba_sha256": "1df29643b141f354ea50d6711e5f2da81969d3d487f033693899206565164502"
+        },
+        {
+          "resource": 607,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\hover\\hover_22.png",
+          "source_sha256": "4e23399ecc001b360f866883e9ecf40dea99f5ca0c6fe86a5756a1ba53cfc686",
+          "rgba_sha256": "45be43b6a4423fa245d7ce2f0b1a2cf46c0bf1065df0e17787c88901cec5afe3"
+        },
+        {
+          "resource": 608,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\hover\\hover_23.png",
+          "source_sha256": "425d6238933ce9c1e5b31ebc783c02855c4623af201d8312a58b59a70360f326",
+          "rgba_sha256": "9db64865f4c09b057336e2c8ee8d1653b8a6ae7945030e58c4a73a38aa24c1da"
+        },
+        {
+          "resource": 609,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\hover\\hover_24.png",
+          "source_sha256": "d9fbda9765f8537f8e5866200b953173a9a704e1e694b01049b6d14ed84fecf7",
+          "rgba_sha256": "75cf3105a70f4fea43acd735047befc83f6edc69fc4e9290dae6adc818c1c8e4"
+        },
+        {
+          "resource": 610,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\activate\\activate_00.png",
+          "source_sha256": "bd7e1f4ef54d1426a6c3b4b3d087e1833d230f02d510b539cd7cbf93be92b548",
+          "rgba_sha256": "cd0f2b51b58c27ce6b8f821f579ecaad8c39518855e28eb0bbbb1c6f890dc19d"
+        },
+        {
+          "resource": 611,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\activate\\activate_01.png",
+          "source_sha256": "f3dca1618422f32affa36d6db954bf3b501a00f89fe0626784c3676239866e25",
+          "rgba_sha256": "82a85f57b5b774924a1f39542c29890fa551677cb0604d53d8334229e006e5bc"
+        },
+        {
+          "resource": 612,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\activate\\activate_02.png",
+          "source_sha256": "ababfbdeb15ec08bec2a161b91400aaac4a4adbc1d7e2e01cb3ae54b40cff5a2",
+          "rgba_sha256": "e8f72ba54462a24d111a6335d3ff51d2e283ea213e12f7d699e05c9488c3d09e"
+        },
+        {
+          "resource": 613,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\activate\\activate_03.png",
+          "source_sha256": "160906345cea6e6da26b33f42ac5a2ac6f7b871fe4bad9d44a92c0664ac45db5",
+          "rgba_sha256": "9a3b75fb9744ed38093249d6ac3f7653831a499fa21e356ae980be94d7bde3df"
+        },
+        {
+          "resource": 614,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\activate\\activate_04.png",
+          "source_sha256": "c932caf414506e3201b972705def6a403457f89f618617a2d32f5c7207de67c6",
+          "rgba_sha256": "7ffa8ee6cd652cdc051b531aa16c5ff7583cef7a83452b514eea5ecd4e7e316b"
+        },
+        {
+          "resource": 615,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\activate\\activate_05.png",
+          "source_sha256": "77ed5457df3f89f37279a16279006bc8f89e35e1aea4f850da865052929381e8",
+          "rgba_sha256": "0fb65c84a77e5dfbae0c0d9b46b11d85b42817867f94aac9eb8e87560a30d263"
+        },
+        {
+          "resource": 616,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\activate\\activate_06.png",
+          "source_sha256": "5f65321d29881388ff46dbf3f91b1c00be3e1485b6a0347dda3acfa792afefb3",
+          "rgba_sha256": "d169b64b9e3b6f0c4b1b76167d9e50a1096109c948abacbda881633057993fda"
+        },
+        {
+          "resource": 617,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\activate\\activate_07.png",
+          "source_sha256": "5efee004b80a49fed3a0fec9bcb0a2b111dce3f7e7e9198bfd43eef97a975720",
+          "rgba_sha256": "d1bb74de9d7f5dd412082988214c1baab56691e27bc01edc5e5764ebef5fb34f"
+        },
+        {
+          "resource": 618,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\activate\\activate_08.png",
+          "source_sha256": "8dc85ea3b3c6f63c02a214ccc6a10d26120e0fb41f85340638244308da534519",
+          "rgba_sha256": "87b70eb78776e7b61f70a6fdbd06bddbfb7e877812b593071945976f73a89269"
+        }
+      ],
+      "commands": [
+        [
+          "C:\\Program Files\\Virtual Desktop Streamer\\ffmpeg.exe",
+          "-nostdin",
+          "-v",
+          "error",
+          "-i",
+          "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\idle.png",
+          "-frames:v",
+          "1",
+          "-f",
+          "rawvideo",
+          "-pix_fmt",
+          "rgba",
+          "pipe:1"
+        ],
+        [
+          "C:\\Program Files\\Virtual Desktop Streamer\\ffmpeg.exe",
+          "-nostdin",
+          "-v",
+          "error",
+          "-start_number",
+          "0",
+          "-i",
+          "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\hover\\hover_%02d.png",
+          "-frames:v",
+          "25",
+          "-f",
+          "rawvideo",
+          "-pix_fmt",
+          "rgba",
+          "pipe:1"
+        ],
+        [
+          "C:\\Program Files\\Virtual Desktop Streamer\\ffmpeg.exe",
+          "-nostdin",
+          "-v",
+          "error",
+          "-start_number",
+          "0",
+          "-i",
+          "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\credits\\activate\\activate_%02d.png",
+          "-frames:v",
+          "9",
+          "-f",
+          "rawvideo",
+          "-pix_fmt",
+          "rgba",
+          "pipe:1"
+        ]
+      ]
+    },
+    {
+      "name": "quit",
+      "node": 5131040,
+      "idle_resource": 689,
+      "hover_wrap_start": 12,
+      "path": "E:\\Codex\\research\\dominion-rendering\\main-button-assets-v7\\quit.dwbank",
+      "sha256": "ca5575fa6534a6772b053bedcee15881b8daf50de43d6ba010f1316bff002bf5",
+      "bytes": 40320160,
+      "frames": [
+        {
+          "resource": 689,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\idle.png",
+          "source_sha256": "ac8cbc5e728d188737db87ae7fd743903095c7b9d8cb9935951dfef91ba911a8",
+          "rgba_sha256": "1e3df86e49e73754991f454974f98bb7eb8d5766add6b28d090c3febc8586fc0"
+        },
+        {
+          "resource": 690,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\hover\\hover_00.png",
+          "source_sha256": "8dfdf62fca26d1631e7168ee65d40d6bdfc95c3bcea22eada56abfed2a49b94a",
+          "rgba_sha256": "0b3ee01002528a71e46b3a31d600d079a4603d1f2d60bd375ddf085a0e848353"
+        },
+        {
+          "resource": 691,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\hover\\hover_01.png",
+          "source_sha256": "430c3d92da9475a50cec3c0ae88a5fa0992370afc00aa3dab5c5313b404df3c4",
+          "rgba_sha256": "113fd3f6cef638c2885ec0267ef047ae13dd05f799ce0c92e9b64de2da4c1a62"
+        },
+        {
+          "resource": 692,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\hover\\hover_02.png",
+          "source_sha256": "abf8eddaa73a64086a88a829a81d89dc125cd13c8ed88e6bd42ff37a24530232",
+          "rgba_sha256": "f095908d77adc27b69cfad5a1b83821343d92a840dd0f45297dbb72557516486"
+        },
+        {
+          "resource": 693,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\hover\\hover_03.png",
+          "source_sha256": "0acdc1e85102f964f05f1f14257d0faae7e4ca710113edaa0e2b17cd88ae0e79",
+          "rgba_sha256": "0febce5884b2886c95b68c1cf114f22e32791c2a6f2a6178f310d6a0d1c6f8f2"
+        },
+        {
+          "resource": 694,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\hover\\hover_04.png",
+          "source_sha256": "175a4834689a043ee35b854ffcc508c9576f9f64eca44f0660281ddd477b3f7c",
+          "rgba_sha256": "86db024aab80608f13a4c6ce3667b05f410b374199f4dc440c8a940462010ad5"
+        },
+        {
+          "resource": 695,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\hover\\hover_05.png",
+          "source_sha256": "da5d4a85b5d8baf26034f2217a8ba194986ed350e80fd4d19dac0b4233363a62",
+          "rgba_sha256": "cd126857742ec1542175fd3eeb8b790690ec7bede4c08cb2a4db237b017e23a8"
+        },
+        {
+          "resource": 696,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\hover\\hover_06.png",
+          "source_sha256": "4eca66f0e1a071d95ed57057291c1f4fe22af2cc978f3d6680af306a630db2c7",
+          "rgba_sha256": "84f98779bfdbefbd2eab79d877b08449f5b2f3122bf26de1f0e0eb7d304459f8"
+        },
+        {
+          "resource": 697,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\hover\\hover_07.png",
+          "source_sha256": "c9e47a5fe091a87bb24310aac9093db519fb046681054784e054f7be957f5876",
+          "rgba_sha256": "84a65186daee58891d6d00bff305c84832b2047afc2fde7292a406226f2bb4c2"
+        },
+        {
+          "resource": 698,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\hover\\hover_08.png",
+          "source_sha256": "03497ded459a7bb38dec27a35aa069cbf51d39a4522c1c4891566ba7cb649971",
+          "rgba_sha256": "f99c67d397ce28431bb3c4c53dbb99d0cb5f57205b6213ea86353b161c04bab4"
+        },
+        {
+          "resource": 699,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\hover\\hover_09.png",
+          "source_sha256": "ce6875a8e944fd32a37198e6997eba4786c0dfddff7ec6ded3ea18f23863220a",
+          "rgba_sha256": "5440e58a334d2a87fb0df5a871327900a0f535454385283aabc1c611cc7952e8"
+        },
+        {
+          "resource": 700,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\hover\\hover_10.png",
+          "source_sha256": "2e9c6b561bcfa43f05e0e45f2084b07a3ef62d6f24392fbd9e2dd899155bc7f7",
+          "rgba_sha256": "51fed5108316307d8dde39fc73740947e8ace097fd3638da8f7d28d893715785"
+        },
+        {
+          "resource": 701,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\hover\\hover_11.png",
+          "source_sha256": "5402f4162807fd384ffd840e7998d2de70147ed4afead62d7d0d52011ce64f1b",
+          "rgba_sha256": "b3da6011465e2c674cfd08627ae442a6d3a8013ff6ea3e51ab1b332c39ba9992"
+        },
+        {
+          "resource": 702,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\hover\\hover_12.png",
+          "source_sha256": "5402f4162807fd384ffd840e7998d2de70147ed4afead62d7d0d52011ce64f1b",
+          "rgba_sha256": "b3da6011465e2c674cfd08627ae442a6d3a8013ff6ea3e51ab1b332c39ba9992"
+        },
+        {
+          "resource": 703,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\hover\\hover_13.png",
+          "source_sha256": "4049f0e15ab22bdf460bfde8efec6f9cd2a5e9b349ca3bc1a34dc5d470e1fded",
+          "rgba_sha256": "09eff4043db7f9b02d4367daad034356b72304526597a9a4a429e57bd497eb5e"
+        },
+        {
+          "resource": 704,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\hover\\hover_14.png",
+          "source_sha256": "3833aaf67f1257dec5a17b29c9d22a88054d82c150bd2bbd652438225dec9e1b",
+          "rgba_sha256": "87acfd127a744b46963160d8f8ab2cd125082174fef2a539734b72104952f07b"
+        },
+        {
+          "resource": 705,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\hover\\hover_15.png",
+          "source_sha256": "3814f95cd3aa693c0b70c765f11c83f053074a588a8a621a939541565932bec5",
+          "rgba_sha256": "32bdae251a6eee6cfe80d94acce78c43487b7670fc318acde52fc1a9f0d5f52b"
+        },
+        {
+          "resource": 706,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\hover\\hover_16.png",
+          "source_sha256": "fc34fb6c4ac0473539c6f423d3507937ae0ef71f2872f9e607422de2f1057da0",
+          "rgba_sha256": "cca7b4bc378c1881df93e3408992280b59400359ce7f5268730c8ab07d1fa2b0"
+        },
+        {
+          "resource": 707,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\hover\\hover_17.png",
+          "source_sha256": "a580cdade2f0c4ad94b013e13bb4ec4a4deb81b45b524c188bef0942535180b1",
+          "rgba_sha256": "0083fb68eb9e2fe6bc5ed2de363b7ead54eff8ae1424a8169807f7756d1d2c7c"
+        },
+        {
+          "resource": 708,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\hover\\hover_18.png",
+          "source_sha256": "b841c0974b4742ccd18b462862e642b49fb12800270ed660cce6a75d800e61f2",
+          "rgba_sha256": "b84618991cd8c25e2501054a9714041c9a5af19aabf174581570a497a9a94f0b"
+        },
+        {
+          "resource": 709,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\hover\\hover_19.png",
+          "source_sha256": "a580cdade2f0c4ad94b013e13bb4ec4a4deb81b45b524c188bef0942535180b1",
+          "rgba_sha256": "0083fb68eb9e2fe6bc5ed2de363b7ead54eff8ae1424a8169807f7756d1d2c7c"
+        },
+        {
+          "resource": 710,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\hover\\hover_20.png",
+          "source_sha256": "fc34fb6c4ac0473539c6f423d3507937ae0ef71f2872f9e607422de2f1057da0",
+          "rgba_sha256": "cca7b4bc378c1881df93e3408992280b59400359ce7f5268730c8ab07d1fa2b0"
+        },
+        {
+          "resource": 711,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\hover\\hover_21.png",
+          "source_sha256": "3814f95cd3aa693c0b70c765f11c83f053074a588a8a621a939541565932bec5",
+          "rgba_sha256": "32bdae251a6eee6cfe80d94acce78c43487b7670fc318acde52fc1a9f0d5f52b"
+        },
+        {
+          "resource": 712,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\hover\\hover_22.png",
+          "source_sha256": "3833aaf67f1257dec5a17b29c9d22a88054d82c150bd2bbd652438225dec9e1b",
+          "rgba_sha256": "87acfd127a744b46963160d8f8ab2cd125082174fef2a539734b72104952f07b"
+        },
+        {
+          "resource": 713,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\hover\\hover_23.png",
+          "source_sha256": "4049f0e15ab22bdf460bfde8efec6f9cd2a5e9b349ca3bc1a34dc5d470e1fded",
+          "rgba_sha256": "09eff4043db7f9b02d4367daad034356b72304526597a9a4a429e57bd497eb5e"
+        },
+        {
+          "resource": 714,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\hover\\hover_24.png",
+          "source_sha256": "5402f4162807fd384ffd840e7998d2de70147ed4afead62d7d0d52011ce64f1b",
+          "rgba_sha256": "b3da6011465e2c674cfd08627ae442a6d3a8013ff6ea3e51ab1b332c39ba9992"
+        },
+        {
+          "resource": 715,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\activate\\activate_00.png",
+          "source_sha256": "1638ec0f65c7bdea7066aea5bd9157a63f3cf61e7257777f1dbf6481cfbcc6d8",
+          "rgba_sha256": "30e6b7d23016207e142de2cc396ed43f36d87d88b05131014e19c8a055d33cef"
+        },
+        {
+          "resource": 716,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\activate\\activate_01.png",
+          "source_sha256": "376bbf941ba2b2d03a3d692247856925ced279edb85cc057860f84eb256e9985",
+          "rgba_sha256": "fde8159f850714d491b6bc39844300505f4500b7e0985d18ea84adb1d13cf34f"
+        },
+        {
+          "resource": 717,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\activate\\activate_02.png",
+          "source_sha256": "0db7ad48502fe0396c570cf2a93c13023989969c49d94b84a4d45406c46a3500",
+          "rgba_sha256": "9de6d5e170199df0db57aea43398b69a1772354bc6e7dfa86015b6d0839dfc82"
+        },
+        {
+          "resource": 718,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\activate\\activate_03.png",
+          "source_sha256": "468bd2ecbec9d141b288632a196ab40d13ff5e74af54a44e493ea2180cdd2812",
+          "rgba_sha256": "04afce69caf914cfb9ba3a3b294fc51263860528b74a8d04d79dd5e0135c2940"
+        },
+        {
+          "resource": 719,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\activate\\activate_04.png",
+          "source_sha256": "bd5442d4acd2d6fed993034983e45d61115af994cc6e7f9fa768794c799d8ae1",
+          "rgba_sha256": "80417bab863323572728d18953cc27060c6792cbe848a258748ae49fdf09fe14"
+        },
+        {
+          "resource": 720,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\activate\\activate_05.png",
+          "source_sha256": "28f09bcf26c83e866fd98d96dbc256a969b31307a39052f338f876f3623ff873",
+          "rgba_sha256": "02c33aa0014b5117909e2b18d6d94fee8499ac21c423ca9685b9c6c270bb7d6b"
+        },
+        {
+          "resource": 721,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\activate\\activate_06.png",
+          "source_sha256": "399b3f70763b1a8d3aaaa111030304ab593f68b76600d6560bec334b8909d079",
+          "rgba_sha256": "991249bf89e89c21b5d5b43415cbf755f68568f6393547f8f00fd170fd7ff2b5"
+        },
+        {
+          "resource": 722,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\activate\\activate_07.png",
+          "source_sha256": "379da44ef30ef353384579b4943ade3d42cae8030d4ade800af162b3b41a8489",
+          "rgba_sha256": "ccf3c7abcb37f0e89bf0379467779a1e3d18011ad43f9c242f52c7efeb738670"
+        },
+        {
+          "resource": 723,
+          "source": "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\activate\\activate_08.png",
+          "source_sha256": "8dc85ea3b3c6f63c02a214ccc6a10d26120e0fb41f85340638244308da534519",
+          "rgba_sha256": "87b70eb78776e7b61f70a6fdbd06bddbfb7e877812b593071945976f73a89269"
+        }
+      ],
+      "commands": [
+        [
+          "C:\\Program Files\\Virtual Desktop Streamer\\ffmpeg.exe",
+          "-nostdin",
+          "-v",
+          "error",
+          "-i",
+          "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\idle.png",
+          "-frames:v",
+          "1",
+          "-f",
+          "rawvideo",
+          "-pix_fmt",
+          "rgba",
+          "pipe:1"
+        ],
+        [
+          "C:\\Program Files\\Virtual Desktop Streamer\\ffmpeg.exe",
+          "-nostdin",
+          "-v",
+          "error",
+          "-start_number",
+          "0",
+          "-i",
+          "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\hover\\hover_%02d.png",
+          "-frames:v",
+          "25",
+          "-f",
+          "rawvideo",
+          "-pix_fmt",
+          "rgba",
+          "pipe:1"
+        ],
+        [
+          "C:\\Program Files\\Virtual Desktop Streamer\\ffmpeg.exe",
+          "-nostdin",
+          "-v",
+          "error",
+          "-start_number",
+          "0",
+          "-i",
+          "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-buttons-v7-intake\\DW_Menu_Hover_Gentle_Pulse_v7_Complete\\assets\\quit\\activate\\activate_%02d.png",
+          "-frames:v",
+          "9",
+          "-f",
+          "rawvideo",
+          "-pix_fmt",
+          "rgba",
+          "pipe:1"
+        ]
+      ]
+    }
+  ],
+  "original_layout": [
+    180,
+    100
+  ],
+  "source_density": [
+    720,
+    400
+  ],
+  "original_timers": true,
+  "original_hitboxes": true,
+  "game_tested": false
+}

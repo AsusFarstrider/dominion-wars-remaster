@@ -1,0 +1,11 @@
+{
+  "assertions": 369,
+  "format": "DWSSEL2",
+  "input_sha256": "a26c6fe1027ba210a9aed900479a56cc4ec2c8cd025c856ab3ab38015ac24a16",
+  "output_sha256": "7e1b54d2fb728ff2eb76414493407886a04374d89d045b9b4aa050ad98d0ebe1",
+  "records": 114,
+  "replacement_payloads_byte_equal": true,
+  "reference_pixel_fields_removed": true,
+  "reference_bytes_removed": 593038,
+  "runtime_artwork_rights_reviewed": false
+}

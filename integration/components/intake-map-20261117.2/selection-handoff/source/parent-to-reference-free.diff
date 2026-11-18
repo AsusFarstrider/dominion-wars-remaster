@@ -1,0 +1,76 @@
+--- a/DDrawCompat/Remaster/SelectionAssetPins.h
++++ b/DDrawCompat/Remaster/SelectionAssetPins.h
+@@ -1,6 +1,6 @@
+ #pragma once
+ namespace SelectionRestoration {
+-inline constexpr char catalogHash[]="a26c6fe1027ba210a9aed900479a56cc4ec2c8cd025c856ab3ab38015ac24a16";
++inline constexpr char catalogHash[]="7e1b54d2fb728ff2eb76414493407886a04374d89d045b9b4aa050ad98d0ebe1";
+ inline constexpr char mapHash[]="e8cf73382fcadbf2334697c33d5aab348d7f3e26f36b7525cd29153ec322cd02";
+ }
+ namespace CMainCursor {inline constexpr char assetHash[]="38ff8ff74f041f47959b5a29409a0f86c08ddd63fe281e183b08b14cae613173";}
+--- a/DDrawCompat/Remaster/SelectionCatalog.h
++++ b/DDrawCompat/Remaster/SelectionCatalog.h
+@@ -4,11 +4,13 @@
+ #include <Research/OpeningFlow/CardImage.h>
+ #include <array>
+ #include <set>
++#include <Windows.h>
++#include <bcrypt.h>
+ 
+ namespace SelectionRestoration {
+ struct Entry {
+     uint32_t kind=0,key=0;int16_t ox=0,oy=0;uint16_t w=0,h=0;unsigned pw=0,ph=0;
+-    std::vector<uint8_t> original;
++    std::array<uint8_t,32> identity{},classes{};
+     Remaster::SpriteFrame body;
+     std::vector<uint8_t> indexedCoverage;
+     mutable Remaster::SpriteFrame colored;
+@@ -18,7 +20,7 @@
+ struct Catalog {
+     std::vector<Entry> entries;
+     static std::shared_ptr<Catalog> parse(std::vector<uint8_t> bytes) {
+-        if(bytes.size()<12||bytes.size()>32*1024*1024||memcmp(bytes.data(),"DWSSEL1\0",8))return {};
++        if(bytes.size()<12||bytes.size()>32*1024*1024||memcmp(bytes.data(),"DWSSEL2\0",8))return {};
+         size_t pos=8;auto take=[&](void* out,size_t n){if(n>bytes.size()-pos)return false;memcpy(out,bytes.data()+pos,n);pos+=n;return true;};
+         uint32_t count=0;if(!take(&count,4)||count!=114)return {};
+         auto c=std::make_shared<Catalog>();std::set<std::pair<uint32_t,uint32_t>> keys;
+@@ -34,12 +36,15 @@
+                 if(e.w!=expectedWidths[e.key-0x809]||e.h!=(e.key<0x80B?21:22))return {};}
+             else if(e.kind==2){if(e.key<32||e.key>127||e.w>17||e.h>19||e.ox<0||e.ox>17||e.oy<0||e.oy>24)return {};}
+             else if(e.kind!=3)return {};
+-            e.original.resize(size_t(e.w)*e.h);if(!take(e.original.data(),e.original.size()))return {};
++            if(!take(e.identity.data(),e.identity.size())||!take(e.classes.data(),e.classes.size()))return {};
++            if(std::all_of(e.identity.begin(),e.identity.end(),[](uint8_t v){return !v;}))return {};
++            if(e.classes[0]&1)return {}; // Index0 is transparent, never a covered glyph class.
++            if(e.kind!=2&&std::any_of(e.classes.begin(),e.classes.end(),[](uint8_t v){return v!=0;}))return {};
+             if(e.kind==3){c->entries.push_back(std::move(e));continue;}
+             const auto n=size_t(e.pw)*e.ph*(e.kind==2?2:4);if(n>bytes.size()-pos)return {};
+             if(e.kind==1||e.kind==4){auto p=std::make_shared<std::vector<uint8_t>>(n);if(!take(p->data(),n))return {};e.body={p,0,e.pw,e.ph};}
+             else {e.indexedCoverage.resize(n);if(!take(e.indexedCoverage.data(),n))return {};
+-                for(size_t k=0;k<n;k+=2)if(e.indexedCoverage[k+1]&&(e.indexedCoverage[k]==0||std::find(e.original.begin(),e.original.end(),e.indexedCoverage[k])==e.original.end()))return {};}
++                for(size_t k=0;k<n;k+=2)if(e.indexedCoverage[k+1]&&(e.indexedCoverage[k]==0||!(e.classes[e.indexedCoverage[k]/8]&(1u<<(e.indexedCoverage[k]%8)))))return {};}
+             c->entries.push_back(std::move(e));
+         }
+         if(pos!=bytes.size())return {};return c;
+@@ -52,7 +57,9 @@
+     return src.origin_x==e.ox&&src.origin_y==e.oy&&src.width==e.w&&src.height==e.h;
+ }
+ inline bool originalPixels(const Entry& e,const uint8_t* pixels,size_t size)noexcept {
+-    return pixels&&size==e.original.size()&&!memcmp(e.original.data(),pixels,size);
++    if(!pixels||size!=size_t(e.w)*e.h||!size||size>800*600)return false;
++    std::array<uint8_t,32> actual{};
++    return BCryptHash(BCRYPT_SHA256_ALG_HANDLE,nullptr,0,const_cast<PUCHAR>(pixels),ULONG(size),actual.data(),ULONG(actual.size()))>=0&&actual==e.identity;
+ }
+ inline Remaster::SpriteFrame colorize(const Entry& e,const std::array<uint16_t,256>& ramp) {
+     if(e.kind!=2)return {};
+--- a/DDrawCompat/Remaster/SelectionRuntime.h
++++ b/DDrawCompat/Remaster/SelectionRuntime.h
+@@ -61,7 +61,7 @@
+             !read(face+12,glyphs.data(),sizeof(glyphs)))return false;
+         for(unsigned i=0;i<96;++i){const auto* e=catalog->get(2,i+32);const auto& g=glyphs[i];
+             if(!e||g.origin_x!=e->ox||g.origin_y!=e->oy||g.width!=e->w||g.height!=e->h)return false;
+-            std::vector<uint8_t> pixels(e->original.size());if(!read(g.pixels,pixels.data(),pixels.size())||!originalPixels(*e,pixels.data(),pixels.size()))return false;}
++            std::vector<uint8_t> pixels(size_t(e->w)*e->h);if(!read(g.pixels,pixels.data(),pixels.size())||!originalPixels(*e,pixels.data(),pixels.size()))return false;}
+         faceValid=true;return true;
+     }
+     const Entry* glyph(uint32_t node,uint32_t caller,uint32_t source,uint32_t glyphRecord,const QImageResearch& src) {

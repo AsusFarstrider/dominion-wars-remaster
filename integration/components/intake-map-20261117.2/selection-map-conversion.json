@@ -1,0 +1,20 @@
+{
+  "approved_png_sha256": "57fccea221b9b1befa589f0e7e756b3e73c77dd269463b06bcf0e36e298ba7d4",
+  "format": "DWCARD1, RGB565LE, no scaling or PNG metadata",
+  "height": 1440,
+  "map_sha256": "63c617fc830cbd1291379a32177a460d98c680e54bda19adbc62041b63fb4992",
+  "parent_lock_sha256": "c2670e492617545232d0956aba53c0f1ee8dd263a39fcb949c1eabeeda4f72f2",
+  "pin_header_sha256": "12b53247a0e46727e42b8410443cda81369cc8de7d2f75bd367258cea48f8418",
+  "previous_map_sha256": "e8cf73382fcadbf2334697c33d5aab348d7f3e26f36b7525cd29153ec322cd02",
+  "previous_pin_header_sha256": "009a9ab838958f9f1e0b894ae806c9e794b7711d297e827db71dae487495f7d6",
+  "production_source_delta": [
+    "DDrawCompat/Remaster/SelectionAssetPins.h"
+  ],
+  "runtime_payload_delta": [
+    "rs/Remaster/Selection/selection.dwcard",
+    "ddraw.dll"
+  ],
+  "schema": "selection-map-only-1",
+  "width": 2560,
+  "wrapper_sha256": "b55b74dfa591a097d0d37e0349a9fd9a0b6fa7dffea97c2cb1c8b36a9d35c3de"
+}

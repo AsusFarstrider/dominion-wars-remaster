@@ -1,0 +1,21 @@
+{"event":"configuration_validated","detail":"Remastered 1.10; build=int-20261029.1-adaptive-output-01; source=f025d0cfaacaa1c28964792424ee7b77f37ace97; flavor=native-display-prototype-01; recording=off","pid":12444}
+{"event":"native_output_startup_ready","detail":"checked CRT-entry bridge; one immutable launch binding","pid":12444}
+{"event":"native_output_bound","detail":"width=1920; height=1080; physical-primary=0,0; sites=15; before EXE CRT; disk engine unchanged","pid":12444}
+{"event":"main_buttons_ready","detail":"v7;6banks/210RGBAframes;720x400 source/180x100 layout; original lookup/timers/callbacks","pid":12444}
+{"event":"functional_ready","detail":"native/UI/canvas/opening/HUD active independently of recording","pid":12444}
+{"event":"version_label_substituted","detail":"Remastered 1.10; original call once; logical bounds=700,580,759,589; measured_width=59; final_pen=760","pid":12444}
+{"event":"native_button_state","detail":"new_game; resource=514; family=0; logical180x100/source720x400","pid":12444}
+{"event":"native_button_state","detail":"load_game; resource=619; family=0; logical180x100/source720x400","pid":12444}
+{"event":"native_button_state","detail":"multiplayer; resource=549; family=0; logical180x100/source720x400","pid":12444}
+{"event":"native_button_state","detail":"preferences; resource=654; family=0; logical180x100/source720x400","pid":12444}
+{"event":"native_button_state","detail":"credits; resource=584; family=0; logical180x100/source720x400","pid":12444}
+{"event":"native_button_state","detail":"quit; resource=689; family=0; logical180x100/source720x400","pid":12444}
+{"event":"native_button_state","detail":"preferences; resource=656; family=1; logical180x100/source720x400","pid":12444}
+{"event":"native_button_state","detail":"multiplayer; resource=550; family=1; logical180x100/source720x400","pid":12444}
+{"event":"native_button_state","detail":"new_game; resource=516; family=1; logical180x100/source720x400","pid":12444}
+{"event":"native_button_state","detail":"load_game; resource=620; family=1; logical180x100/source720x400","pid":12444}
+{"event":"native_button_state","detail":"new_game; resource=540; family=2; logical180x100/source720x400","pid":12444}
+{"event":"native_button_state","detail":"preferences; resource=680; family=2; logical180x100/source720x400","pid":12444}
+{"event":"native_button_state","detail":"quit; resource=691; family=1; logical180x100/source720x400","pid":12444}
+{"event":"native_button_state","detail":"credits; resource=585; family=1; logical180x100/source720x400","pid":12444}
+{"event":"native_button_state","detail":"quit; resource=715; family=2; logical180x100/source720x400","pid":12444}

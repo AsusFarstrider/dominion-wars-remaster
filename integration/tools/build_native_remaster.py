@@ -7,7 +7,7 @@ import argparse
 from datetime import date
 import importlib.util
 import json
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 import re
 import shutil
 import subprocess
@@ -47,6 +47,37 @@ def rendering_settings(lock):
     if profile == 'native-1440-v1':
         rendering.update(width=2560, height=1440)
     return rendering, dimensions
+
+
+def runtime_additions(lock):
+    """Optional, fully inventoried remaster data; never arbitrary file overrides."""
+    records, targets = [], set()
+    inventory = {item['path']: item for item in lock['files']}
+    for item in lock.get('runtime_additions', []):
+        target = item['target']
+        if not isinstance(target, str):
+            raise ValueError('Invalid remaster runtime target')
+        path = PurePosixPath(target)
+        if ('\\' in target or ':' in target or
+                path.is_absolute() or path.as_posix() != target or
+                any(part in ('', '.', '..') for part in target.split('/')) or
+                any(part.endswith(('.', ' ')) for part in path.parts) or
+                any(part.split('.')[0].upper() in {'CON', 'PRN', 'AUX', 'NUL',
+                    *('COM' + str(i) for i in range(1, 10)),
+                    *('LPT' + str(i) for i in range(1, 10))} for part in path.parts) or
+                not target.startswith('rs/Remaster/') or len(path.parts) < 4):
+            raise ValueError('Invalid remaster runtime target')
+        if target.casefold() in targets:
+            raise ValueError('Duplicate remaster runtime target')
+        targets.add(target.casefold())
+        source = 'runtime-assets/' + target
+        pinned = inventory.get(source)
+        if (item['input'] != source or not pinned or item['size'] <= 0 or
+                not re.fullmatch(r'[0-9a-f]{64}', item['sha256']) or
+                (pinned['sha256'], pinned['size']) != (item['sha256'], item['size'])):
+            raise ValueError('Runtime addition is not exactly pinned in the intake')
+        records.append(item)
+    return records
 
 
 def native_engine(original, expected, dimensions=(2560, 1440)):
@@ -91,6 +122,7 @@ def main():
     digits = BUILD_ID[4:12]
     build_date = date(int(digits[:4]), int(digits[4:6]), int(digits[6:])).isoformat()
     lock = json.loads((NATIVE / 'source-lock.json').read_text())
+    additions = runtime_additions(lock)
     for item in lock['files']:
         checked_file(NATIVE / item['path'], item['sha256'])
     base_lock = json.loads((FOUNDATION / 'source-lock.json').read_text())
@@ -173,6 +205,12 @@ def main():
                                 frames=len(frames), audio_metadata_copy=[44, 12],
                                 audio_packet_copies=[[start, audio_end-start] for start, audio_end, _ in frames],
                                 literal_original_audio=False))
+    existing_targets = {item['target'].casefold() for item in runtime}
+    for item in additions:
+        if item['target'].casefold() in existing_targets:
+            raise ValueError('Runtime addition would replace an existing component')
+        runtime_put(item['target'], checked_file(NATIVE / item['input'], item['sha256']))
+        existing_targets.add(item['target'].casefold())
     put(package / 'patches/audio-provenance.json', data_json(audio_audit))
     for path in sorted((ROOT / 'installer').iterdir()):
         if path.is_file():
@@ -194,7 +232,10 @@ def main():
             put(package / 'third_party/DDrawCompat-source' / path.relative_to(NATIVE / 'wrapper-source'), path.read_bytes())
     put(package / 'third_party/native-component-source-lock.json', (NATIVE / 'source-lock.json').read_bytes())
     put(package / 'third_party/runtime-contract.md', (NATIVE / 'tests/RUNTIME-CONTRACT.md').read_bytes())
-    put(package / 'Read Me First.md', (ROOT / 'docs' / ('ADAPTIVE-ALPHA.md' if adaptive else 'NATIVE-1440-TRIAL.md')).read_bytes())
+    readme = lock.get('player_readme', 'ADAPTIVE-ALPHA.md' if adaptive else 'NATIVE-1440-TRIAL.md')
+    if readme not in {'ADAPTIVE-ALPHA.md', 'NATIVE-1440-TRIAL.md', 'CAMPAIGN-ALPHA.md'}:
+        raise ValueError('Unknown player readme')
+    put(package / 'Read Me First.md', (ROOT / 'docs' / readme).read_bytes())
     put(package / 'version-decision.json', decision_bytes)
     files = [dict(path=p.relative_to(package).as_posix(), size=p.stat().st_size, sha256=sha(p.read_bytes()))
              for p in sorted(package.rglob('*')) if p.is_file()]

@@ -1,0 +1,18 @@
+{
+  "catalog_sha256": "7e1b54d2fb728ff2eb76414493407886a04374d89d045b9b4aa050ad98d0ebe1",
+  "changed_files": 3,
+  "current_changed": false,
+  "existing_os_dependency": "Windows BCrypt SHA256, bcrypt.lib already linked",
+  "external_decoder_or_license_dependency_added": false,
+  "format_sha256": "200c8ea005b40bc6152f03ee25b83eb30d0f686b62d9923a37691269bdfaa291",
+  "id": "selection-reference-free-20261102-01",
+  "launch_performed": false,
+  "publish_authorized": false,
+  "runtime_inventory_sha256": "a1c1e9730ff02e194961eec8e334782de6cb5eb1c01993d743b22fdb6d046461",
+  "schema": "rendering-component-1",
+  "source_files": 472,
+  "source_receipt_sha256": "93307209a0ea8796df55813be08079f1c7c096bc39f52ecd95792ab73365925c",
+  "source_reference_pixel_gate": "resolved structurally for DWSSEL2; no original identity raster serialized",
+  "status": "ready for Master locked intake/review; offline only",
+  "wrapper_sha256": "41653c0f7c3961cc0b5fd8eb6b67374fbe23ad807c5f17c370fb9ab15aacaba4"
+}

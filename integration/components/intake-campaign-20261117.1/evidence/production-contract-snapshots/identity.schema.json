@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dominion Wars Remastered packaged version identity",
+  "description": "Prospective immutable, manifest-hashed package metadata. Selection/acceptance/publication are separate decisions; legacy int-20261018.1 does not contain this file.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "product", "original_game_version", "remaster_version", "release_stage", "integration_build_id", "source_revision", "flavor", "version_decision_id", "in_game_label"],
+  "properties": {
+    "schema": {"const": 1},
+    "product": {"const": "Dominion Wars Remastered"},
+    "original_game_version": {"const": "1.04"},
+    "remaster_version": {"type": ["string", "null"], "pattern": "^(?:1\\.(?:0[5-9]|[1-9][0-9])|(?:[2-9]|[1-9][0-9]+)\\.[0-9]{2})$"},
+    "release_stage": {"enum": ["experimental", "alpha", "beta", "release-candidate", "stable"]},
+    "integration_build_id": {"type": "string", "pattern": "^int-[0-9]{8}\\.[1-9][0-9]*(?:-[a-z0-9-]+)?$"},
+    "source_revision": {"type": "string", "pattern": "^[a-f0-9]{40}$"},
+    "flavor": {"type": "string", "minLength": 1},
+    "version_decision_id": {"type": "string", "minLength": 1},
+    "in_game_label": {"type": "string", "minLength": 1, "maxLength": 80}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"remaster_version": {"type": "null"}}},
+      "then": {"properties": {"in_game_label": {"const": "Version 1.04"}}},
+      "else": {"properties": {"in_game_label": {"pattern": "^Remastered [0-9]+\\.[0-9]{2}$"}}}
+    }
+  ],
+  "$comment": "The relational equality of remaster_version and in_game_label is checked by check_policy.py. The80-character bound is a storage safety limit, NOT a proven in-game width/clip budget. Actual label metrics and rendering require validation. No ZIP self-hash is embedded."
+}

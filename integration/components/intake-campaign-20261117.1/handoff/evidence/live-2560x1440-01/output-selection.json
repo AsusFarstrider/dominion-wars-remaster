@@ -1,0 +1,15 @@
+{
+    "schema":  "native-display-selection-1",
+    "profile":  "native-display-v1",
+    "width":  2560,
+    "height":  1440,
+    "device":  "\\\\.\\DISPLAY3",
+    "device_identity":  "public-display-1",
+    "position_x":  0,
+    "position_y":  0,
+    "refresh":  165,
+    "orientation":  0,
+    "bits_per_pixel":  32,
+    "source":  "primary-current-physical-mode",
+    "live_resize":  false
+}

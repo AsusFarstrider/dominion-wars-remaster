@@ -1,0 +1,7 @@
+Unexpected game image
+At E:\Codex\remaster-build-tests\adaptive-output-20261030-01\Watch-RemasterFocus.ps1:5 char:62
++ ... ralPath $gameFull).Hash -ne $expected){throw 'Unexpected game image'}
++                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Unexpected game image:String) [], RuntimeException
+    + FullyQualifiedErrorId : Unexpected game image
+ 

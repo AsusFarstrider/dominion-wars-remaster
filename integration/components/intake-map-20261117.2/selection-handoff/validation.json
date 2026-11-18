@@ -1,0 +1,95 @@
+{
+  "benchmark": {
+    "full_inventory_bytes": 593038,
+    "full_inventory_identities": 114,
+    "full_inventory_mean_us": 355.578,
+    "map_bytes": 480000,
+    "map_mean_us": 261.152,
+    "method": "standalone actual BCryptHash, this workstation only, identity work excludes ReadProcessMemory/allocations/composition",
+    "no_fps_claim": true
+  },
+  "catalog_checks": 5532,
+  "controller_checks": 628,
+  "conversion_checks": 369,
+  "coverage": "all114 metrics/identity checks; all replacement payloads exact;96glyphs four live-style synthetic RGB565 ramps; ordered offscreen scene with all113replacement entries, clipping,alpha,padded rows; inherited raw overlap/adaptive/cursor checks",
+  "current_changed": false,
+  "current_pointer_sha256": "4c3eccf0ecdcb6dc28f0cc173a95c50f426e2ba65f57a875895121c9874e19fc",
+  "limitations": [
+    "Synthetic ordered scene is not captured live game output",
+    "No physical-display/performance or new reset/hardware qualification",
+    "Existing font/layout/lifetime/cursor contracts retained by source pins/controller tests",
+    "Public artwork redistribution permissions are separate from removal of identity reference pixels"
+  ],
+  "output_equivalence": [
+    {
+      "bytes": 1579008,
+      "height": 768,
+      "old_new_equal": true,
+      "pitch": 2056,
+      "sha256": "a85382bf76a528d05e594b92ae2edaafbde88c40d1c8e0054e35866b24fa0833",
+      "width": 1024
+    },
+    {
+      "bytes": 2054400,
+      "height": 800,
+      "old_new_equal": true,
+      "pitch": 2568,
+      "sha256": "4959215f11fa11b1b11fca1a6f6054853a5356d1e0d7d44034a0fb25f59ea58a",
+      "width": 1280
+    },
+    {
+      "bytes": 2104320,
+      "height": 768,
+      "old_new_equal": true,
+      "pitch": 2740,
+      "sha256": "9fa6fe2fdb9127a4dedc4f7af82ffe8f3e7b3e12ad9d86b45cb3ea7ea3c25498",
+      "width": 1366
+    },
+    {
+      "bytes": 4155840,
+      "height": 1080,
+      "old_new_equal": true,
+      "pitch": 3848,
+      "sha256": "9133d4409afd3e8220d80e05d71dca5f4e473fec921a1d6a8d59988160d97f16",
+      "width": 1920
+    },
+    {
+      "bytes": 4617600,
+      "height": 1200,
+      "old_new_equal": true,
+      "pitch": 3848,
+      "sha256": "687e6f26256947f16320e18c047cc0ab21b9b508b8bce88babb4c982d7fd44b9",
+      "width": 1920
+    },
+    {
+      "bytes": 7384320,
+      "height": 1440,
+      "old_new_equal": true,
+      "pitch": 5128,
+      "sha256": "6f3ea74cfcb0938cc53b35694c8b8c25a8e2f63f156b880b92c4771748c7b5fa",
+      "width": 2560
+    },
+    {
+      "bytes": 16606080,
+      "height": 2160,
+      "old_new_equal": true,
+      "pitch": 7688,
+      "sha256": "7712bd0a12b650201835bbadd46880aba6137618ec6ee488d516e24aa2e0fded",
+      "width": 3840
+    },
+    {
+      "bytes": 9918720,
+      "height": 1440,
+      "old_new_equal": true,
+      "pitch": 6888,
+      "sha256": "1ac7ae875909af27d9898b1644b9377536ae37cfc432ea3bbbd6c18d15e09e9c",
+      "width": 3440
+    }
+  ],
+  "reference_storage": {
+    "added_hash_and_class_bytes": 7296,
+    "net_file_reduction_bytes": 585742,
+    "removed_bytes": 593038
+  },
+  "status": "offline validated; no live run authorized/performed"
+}

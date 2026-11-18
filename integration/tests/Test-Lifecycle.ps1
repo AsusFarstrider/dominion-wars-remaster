@@ -22,6 +22,15 @@ $savePath=Join-Path $a 'integration-save-preservation.sav'
 $saveHash=Get-RemasterHash $savePath
 Run-Installer @('-Action','Install','-SourcePath',$VerifiedGame,'-Destination',$a) $false
 Check ((Get-RemasterHash $savePath) -eq $saveHash)
+if($manifest.build_id -in @('int-20261117.1','int-20261117.2')) {
+    $identity=Get-RemasterIdentity $a $manifest
+    Check ($identity.in_game_label -ceq 'Remastered 1.20')
+    $fleetBank=Join-Path $a 'rs/Remaster/Fleet/fleet.dwbank'
+    [IO.File]::AppendAllText($fleetBank,'lifecycle tamper')
+    $refused=$false
+    try{$null=Test-RemasterInstalled $a}catch{$refused=$_.Exception.Message -like '*fleet.dwbank*'}
+    Check $refused
+}
 Run-Installer @('-Action','Repair','-Destination',$a)
 $null=Test-RemasterInstalled $a;$checks++
 Check ((Get-RemasterHash $savePath) -eq $saveHash)
@@ -40,6 +49,11 @@ Check ((Get-RemasterHash (Join-Path $b 'ds9dw.exe')) -eq $manifest.engine.input_
 Check ((Get-RemasterHash (Join-Path $b 'integration-save-preservation.sav')) -eq $saveHash)
 Check (-not(Test-Path -LiteralPath (Join-Path $b 'Launch-Remaster.ps1')))
 Check (Test-Path -LiteralPath (Join-Path $b 'Play Dominion Wars.cmd'))
+if($manifest.build_id -in @('int-20261117.1','int-20261117.2')) {
+    foreach($target in @('rs/Remaster/Fleet/fleet.dwbank','rs/Remaster/Briefing/briefing.dwbrief','rs/Remaster/Selection/selection.dwselect')) {
+        Check (-not(Test-Path -LiteralPath (Join-Path $b $target)))
+    }
+}
 Check ((Get-RemasterHash (Join-Path $VerifiedGame 'ds9dw.exe')) -eq $sourceExeHash)
 # Simulate only the commit-boundary interruption on our own clone, not a game.
 $transaction=[guid]::NewGuid().ToString('N')

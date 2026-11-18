@@ -1,0 +1,2832 @@
+{
+  "converter_sha256": "cd37420b4fb67a47e93583cc8d7c4c70ce054016ae50299e85c6ba81c77581a9",
+  "identity_bytes_added": 7296,
+  "input_sha256": "a26c6fe1027ba210a9aed900479a56cc4ec2c8cd025c856ab3ab38015ac24a16",
+  "original_reference_pixels_written": false,
+  "output_bytes": 6962940,
+  "output_sha256": "7e1b54d2fb728ff2eb76414493407886a04374d89d045b9b4aa050ad98d0ebe1",
+  "records": [
+    {
+      "identity_bytes": 480000,
+      "identity_sha256": "02213595a09ca9acccdb8b859ed92f3e10578b0a8b3dd8b46b9568656a369781",
+      "key": 2049,
+      "kind": 3,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        800,
+        600
+      ],
+      "nonzero_glyph_classes": [],
+      "replacement_bytes": 0,
+      "replacement_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "replacement_size": [
+        800,
+        600
+      ]
+    },
+    {
+      "identity_bytes": 18240,
+      "identity_sha256": "1142d3a86cdc345475edd13baa12775e8885d9bae7ece0261834c837045fb2fc",
+      "key": 2050,
+      "kind": 1,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        570,
+        32
+      ],
+      "nonzero_glyph_classes": [],
+      "replacement_bytes": 1167360,
+      "replacement_sha256": "1d7cf5e6b522d0b27a94aba3c34e27e4552dfc9959f256814ac8d69182435506",
+      "replacement_size": [
+        2280,
+        128
+      ]
+    },
+    {
+      "identity_bytes": 18240,
+      "identity_sha256": "6ac7f1d66a4ed831f35abdcd0b5acae9afe994697d7695d96d8c7cb595577755",
+      "key": 2051,
+      "kind": 1,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        570,
+        32
+      ],
+      "nonzero_glyph_classes": [],
+      "replacement_bytes": 1167360,
+      "replacement_sha256": "0055728bc39a238ec594bd587d5f9fe5d0a87fba9ffd69abac1e9bd8d852b730",
+      "replacement_size": [
+        2280,
+        128
+      ]
+    },
+    {
+      "identity_bytes": 18240,
+      "identity_sha256": "1a2a621e09ffe6a5791aa7cb968375325d712a6f661e58de4d488d6d638c5eff",
+      "key": 2052,
+      "kind": 1,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        570,
+        32
+      ],
+      "nonzero_glyph_classes": [],
+      "replacement_bytes": 1167360,
+      "replacement_sha256": "b1aabc761c746ed69f81f1f362ebf610a1a961c60f1f28b2408eee54af213f03",
+      "replacement_size": [
+        2280,
+        128
+      ]
+    },
+    {
+      "identity_bytes": 4480,
+      "identity_sha256": "2fd6764fc1f3466fd8793b381fe7d29d092e448d02799465d08a36d2defc3f02",
+      "key": 18,
+      "kind": 1,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        140,
+        32
+      ],
+      "nonzero_glyph_classes": [],
+      "replacement_bytes": 286720,
+      "replacement_sha256": "68a91d9642d22348e90207959827ac3ac0d297673386d94bf4acc0f4e3138e85",
+      "replacement_size": [
+        560,
+        128
+      ]
+    },
+    {
+      "identity_bytes": 4480,
+      "identity_sha256": "7f0f9f8f97f54143f05aa8b15b19b20ed08e614478dd43a475d49590d81fbc6c",
+      "key": 19,
+      "kind": 1,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        140,
+        32
+      ],
+      "nonzero_glyph_classes": [],
+      "replacement_bytes": 286720,
+      "replacement_sha256": "d0444e6005d3330d4bbea7fa5a84a1514752e9a5ef0dec36ab37d8284c40b6ac",
+      "replacement_size": [
+        560,
+        128
+      ]
+    },
+    {
+      "identity_bytes": 4480,
+      "identity_sha256": "045cab1489fb21649bb4279f33d0208edf53cc23fd6d23ff1ca63419078c6f5d",
+      "key": 20,
+      "kind": 1,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        140,
+        32
+      ],
+      "nonzero_glyph_classes": [],
+      "replacement_bytes": 286720,
+      "replacement_sha256": "dfb85a124de43e01fdd72a6b006120f9e7fc78bac0e7dfc4736842f8fa8661a2",
+      "replacement_size": [
+        560,
+        128
+      ]
+    },
+    {
+      "identity_bytes": 5760,
+      "identity_sha256": "971024e427dbdf50fca7472939d5e513174a3572c4d8702c023437d69e021738",
+      "key": 21,
+      "kind": 1,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        180,
+        32
+      ],
+      "nonzero_glyph_classes": [],
+      "replacement_bytes": 368640,
+      "replacement_sha256": "6f4ad03babb8e69569efc70c36d4da4621573b9a585c0a980b1ed8d0627c24f6",
+      "replacement_size": [
+        720,
+        128
+      ]
+    },
+    {
+      "identity_bytes": 5760,
+      "identity_sha256": "2c3f0e9a10c34477bbc9e95f38ac2e0b0fa98d7859b37ab6031ffd722f884bb1",
+      "key": 22,
+      "kind": 1,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        180,
+        32
+      ],
+      "nonzero_glyph_classes": [],
+      "replacement_bytes": 368640,
+      "replacement_sha256": "698f295a05f1f48f8b2f71a39b9012f7c98e4039ff383d33331e0e050c1d86a0",
+      "replacement_size": [
+        720,
+        128
+      ]
+    },
+    {
+      "identity_bytes": 5760,
+      "identity_sha256": "2bb12aa9272ffbf7adf52cf231cc9317722f97abc9ffbf4b91153913bd7c96f3",
+      "key": 23,
+      "kind": 1,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        180,
+        32
+      ],
+      "nonzero_glyph_classes": [],
+      "replacement_bytes": 368640,
+      "replacement_sha256": "f5025e52c78cee3658dde0cc7220bf6d0d87b2df78587250ac47b59527858cba",
+      "replacement_size": [
+        720,
+        128
+      ]
+    },
+    {
+      "identity_bytes": 1722,
+      "identity_sha256": "eed4573cb1400dc18b50694ecab768439694d8d0aeae53ddbc7cd8142d0c1016",
+      "key": 2057,
+      "kind": 4,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        82,
+        21
+      ],
+      "nonzero_glyph_classes": [],
+      "replacement_bytes": 110208,
+      "replacement_sha256": "e8431989ca8ea5d1fe9a19023a68e98719ac5f8b61d54460812faad30f6de8e8",
+      "replacement_size": [
+        328,
+        84
+      ]
+    },
+    {
+      "identity_bytes": 1722,
+      "identity_sha256": "4c0b98aa71878d9c7c09561802acb68a35ec579fa6b9182515db87777a91677c",
+      "key": 2058,
+      "kind": 4,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        82,
+        21
+      ],
+      "nonzero_glyph_classes": [],
+      "replacement_bytes": 110208,
+      "replacement_sha256": "ab7fd0b7f188bb9b2a565436df35f36f0e8dac7efefc21ec110aae3358fec661",
+      "replacement_size": [
+        328,
+        84
+      ]
+    },
+    {
+      "identity_bytes": 2222,
+      "identity_sha256": "9a0211b2404c66df362d5b9f939f8edd91c5e0eb5354fd18b3994e06428e64c9",
+      "key": 2059,
+      "kind": 4,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        101,
+        22
+      ],
+      "nonzero_glyph_classes": [],
+      "replacement_bytes": 142208,
+      "replacement_sha256": "355689da692e6d78e2b2023846c8f5835cf9ef32f68bf18f97eae6efa30c3780",
+      "replacement_size": [
+        404,
+        88
+      ]
+    },
+    {
+      "identity_bytes": 2222,
+      "identity_sha256": "13beb8df444f5b9aedd3865be318973f7074513887247f8851e197624fdafbfb",
+      "key": 2060,
+      "kind": 4,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        101,
+        22
+      ],
+      "nonzero_glyph_classes": [],
+      "replacement_bytes": 142208,
+      "replacement_sha256": "560acbf6a4d3bc6202f668a8eb30088225cabc596675f4c3926d0e16f427bc85",
+      "replacement_size": [
+        404,
+        88
+      ]
+    },
+    {
+      "identity_bytes": 3366,
+      "identity_sha256": "5e3936cc569fa9e65a9d3e8b516ff9e41437f79e67e0e1dbeab9d594523e253a",
+      "key": 2061,
+      "kind": 4,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        153,
+        22
+      ],
+      "nonzero_glyph_classes": [],
+      "replacement_bytes": 215424,
+      "replacement_sha256": "7949ebbf44ae06d5f567446bede650c0b5cb2ec2fd2d936c6be47977335ba6f6",
+      "replacement_size": [
+        612,
+        88
+      ]
+    },
+    {
+      "identity_bytes": 3366,
+      "identity_sha256": "5c50a6588a4247f54c4b4e0917164479c0e88e892400aedb476e6899f1beb0e7",
+      "key": 2062,
+      "kind": 4,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        153,
+        22
+      ],
+      "nonzero_glyph_classes": [],
+      "replacement_bytes": 215424,
+      "replacement_sha256": "9d8cc160c286d3408284905137bc5e283ea0b2403788a60add238b0cbdb5c338",
+      "replacement_size": [
+        612,
+        88
+      ]
+    },
+    {
+      "identity_bytes": 2090,
+      "identity_sha256": "fdd91b3502c9ba4c09e549bd37093889b82a6989720b404c64af28179fa3c004",
+      "key": 2063,
+      "kind": 4,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        95,
+        22
+      ],
+      "nonzero_glyph_classes": [],
+      "replacement_bytes": 133760,
+      "replacement_sha256": "dbf319e36d9cb83bd2f2c9a1e5536161d2905ab98429ca99eb5d5a0214a8a091",
+      "replacement_size": [
+        380,
+        88
+      ]
+    },
+    {
+      "identity_bytes": 2090,
+      "identity_sha256": "b1a58b6e8a138dfc037938deba8d2076b60399241004c434b02e5bb782d36436",
+      "key": 2064,
+      "kind": 4,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        95,
+        22
+      ],
+      "nonzero_glyph_classes": [],
+      "replacement_bytes": 133760,
+      "replacement_sha256": "c692534809d0585c61b518c301ae49e5cfe8a19d65c47ef48b57d2dc1fc33448",
+      "replacement_size": [
+        380,
+        88
+      ]
+    },
+    {
+      "identity_bytes": 3,
+      "identity_sha256": "709e80c88487a2411e1ee4dfb9f22a861492d20c4765150c0c794abd70f8147c",
+      "key": 32,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        3,
+        1
+      ],
+      "nonzero_glyph_classes": [],
+      "replacement_bytes": 96,
+      "replacement_sha256": "2ea9ab9198d1638007400cd2c3bef1cc745b864b76011a0e1bc52180ac6452d4",
+      "replacement_size": [
+        12,
+        4
+      ]
+    },
+    {
+      "identity_bytes": 48,
+      "identity_sha256": "f280169fa8a92d445cda24befd38a290b69c1afdaeb50b11cc6e02d468de9a1f",
+      "key": 33,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        3,
+        16
+      ],
+      "nonzero_glyph_classes": [
+        1,
+        2,
+        5,
+        7,
+        8
+      ],
+      "replacement_bytes": 1536,
+      "replacement_sha256": "f80ef98a1d8477a4bc5cff001f9fd808066f4caa6b4a910b5b09de74cf086ad6",
+      "replacement_size": [
+        12,
+        64
+      ]
+    },
+    {
+      "identity_bytes": 30,
+      "identity_sha256": "5b286267ee3caafcc30226207b7edb58deeee0f18660ca907b84a7556f9093d6",
+      "key": 34,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        5,
+        6
+      ],
+      "nonzero_glyph_classes": [
+        1,
+        5,
+        7,
+        8
+      ],
+      "replacement_bytes": 960,
+      "replacement_sha256": "2f3323f1106f61a61f8ef39a1826019c39a281677398a6b9763cf53d7ec6b5ca",
+      "replacement_size": [
+        20,
+        24
+      ]
+    },
+    {
+      "identity_bytes": 154,
+      "identity_sha256": "13734c02da1d60f095c534514753767c5271f325ab1913a7f97246e82335a38c",
+      "key": 35,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        11,
+        14
+      ],
+      "nonzero_glyph_classes": [
+        1,
+        2,
+        5,
+        7,
+        8
+      ],
+      "replacement_bytes": 4928,
+      "replacement_sha256": "28ee27534df9fc0fdd4e785874c1da87275865ab6843838ff5c8bbf654235dfc",
+      "replacement_size": [
+        44,
+        56
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "33470c47879747b664988c7d1db8828c5245130191c08c7e5007831d626e34a1",
+      "key": 36,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        1,
+        2,
+        5,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "e20a64bdf8ee9a9cc7199605141fe3d3b98861d5be1f38dce1960e95704de642",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 144,
+      "identity_sha256": "591c0ab25909647ab89f01d3006684daa141fe0952f9473c85efb709a00cee88",
+      "key": 37,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        8,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        1,
+        2,
+        5,
+        7,
+        8
+      ],
+      "replacement_bytes": 4608,
+      "replacement_sha256": "ccada35c81b8bc8dcd24eaddbac0a1f53df30340466b1c7f4e12abef27a73191",
+      "replacement_size": [
+        32,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 112,
+      "identity_sha256": "c5f252c6d168d33866bb6f97bf36e3abed74d4637b151daaa56b1330382e01a9",
+      "key": 38,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        7,
+        16
+      ],
+      "nonzero_glyph_classes": [
+        1,
+        2,
+        5,
+        7,
+        8
+      ],
+      "replacement_bytes": 3584,
+      "replacement_sha256": "7c23843223e2fb74e34f500552b1e7c9948cd955f50a17ccb5bd06677bc1c10a",
+      "replacement_size": [
+        28,
+        64
+      ]
+    },
+    {
+      "identity_bytes": 10,
+      "identity_sha256": "66f441d7abc2a53897b0c8efa539829436626b16f3c5bb32957298e8eb5f9650",
+      "key": 39,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        2,
+        5
+      ],
+      "nonzero_glyph_classes": [
+        1,
+        7,
+        8
+      ],
+      "replacement_bytes": 320,
+      "replacement_sha256": "86775468343b2fa7a7d4d0089f60319c5539ae8ead5a936f459858f9dc79ae1c",
+      "replacement_size": [
+        8,
+        20
+      ]
+    },
+    {
+      "identity_bytes": 72,
+      "identity_sha256": "0dc6eaed1dfd69320c7fa55483fa4fec2c14762083d7647a153952939c2b5476",
+      "key": 40,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        4,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        1,
+        4,
+        8
+      ],
+      "replacement_bytes": 2304,
+      "replacement_sha256": "0a195160517e2aa4c483a92f41cbc59919b2bd42825ffb40f46188e85fff3b5d",
+      "replacement_size": [
+        16,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 72,
+      "identity_sha256": "3471687cd769162af88d40a6dcbcb1a245d3eaf71912cfbd5cd2376d530379cb",
+      "key": 41,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        4,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        1,
+        4,
+        8
+      ],
+      "replacement_bytes": 2304,
+      "replacement_sha256": "942b65cd0605240b06e71e8c61a7cb8a25677a37efe6b2065008a192eb821bbc",
+      "replacement_size": [
+        16,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 18,
+      "identity_sha256": "37220be5a36b83383a31509428c353bfb15146e573dae2c194d0354c2a646602",
+      "key": 42,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        3,
+        6
+      ],
+      "nonzero_glyph_classes": [
+        1,
+        5,
+        7,
+        8
+      ],
+      "replacement_bytes": 576,
+      "replacement_sha256": "b408088d56728cf1d153873e0684dfd170a53edb7047762a595de77b49579d63",
+      "replacement_size": [
+        12,
+        24
+      ]
+    },
+    {
+      "identity_bytes": 110,
+      "identity_sha256": "3a65d6ca76acd23e15bbd588583ff8e3de4b16d4add4df5976099e850e510653",
+      "key": 43,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        10,
+        11
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        5,
+        7,
+        8
+      ],
+      "replacement_bytes": 3520,
+      "replacement_sha256": "0bcdebddca795084e5bb2a3d981c140c052c7612a41a5740a955e8f197e2dd71",
+      "replacement_size": [
+        40,
+        44
+      ]
+    },
+    {
+      "identity_bytes": 15,
+      "identity_sha256": "fb17de3a26bb3a680ae0d7426a67a5687ff851a30f1e554b22a5580fa07dd33b",
+      "key": 44,
+      "kind": 2,
+      "logical_origin": [
+        2,
+        18
+      ],
+      "logical_size": [
+        3,
+        5
+      ],
+      "nonzero_glyph_classes": [
+        1,
+        2,
+        5,
+        7,
+        8
+      ],
+      "replacement_bytes": 480,
+      "replacement_sha256": "79183da1861099609fe1730001d78e92dfb83fb621966c9b7fec9a826cbff860",
+      "replacement_size": [
+        12,
+        20
+      ]
+    },
+    {
+      "identity_bytes": 12,
+      "identity_sha256": "ef0387925c99c76fa0b64ff9b112b13ea0c1fc21ec0129baed7e1703e08cdaca",
+      "key": 45,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        4
+      ],
+      "logical_size": [
+        4,
+        3
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        5,
+        8
+      ],
+      "replacement_bytes": 384,
+      "replacement_sha256": "e4af7b44514d1ab7ece6edad90b339750370aa98374a3ec3d33e37a5e2c1941e",
+      "replacement_size": [
+        16,
+        12
+      ]
+    },
+    {
+      "identity_bytes": 9,
+      "identity_sha256": "7039894827385fec16b04e21bb9daa3fb7a54a36170d9fca0eda97be0fe698b0",
+      "key": 46,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        19
+      ],
+      "logical_size": [
+        3,
+        3
+      ],
+      "nonzero_glyph_classes": [
+        1,
+        2,
+        7,
+        8
+      ],
+      "replacement_bytes": 288,
+      "replacement_sha256": "26a0a2adc12208ca317977a25de6ac994af8edd24e635422cda028e05e4c6bfd",
+      "replacement_size": [
+        12,
+        12
+      ]
+    },
+    {
+      "identity_bytes": 90,
+      "identity_sha256": "15d6a2d47a336e3cfdd055854a8995d6e1ba40f22f0280a3476a506538f1d016",
+      "key": 47,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        5,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        4,
+        7,
+        8
+      ],
+      "replacement_bytes": 2880,
+      "replacement_sha256": "17add27e6db0011fe7958a0c1970872e345ef63a3766614460bd42b86f0a7f46",
+      "replacement_size": [
+        20,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "40c84694f24fc27614c8053b8f6edc01d3d7ce3740a681c2adf8b78342609274",
+      "key": 48,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "1155ed77e7720e08a94c0a9ad8854b5fc3fb4fdb006f5ab73378fdbe717c88c8",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 54,
+      "identity_sha256": "9a2aabec86c933a9336badcc4deb9338441c654ba00060ea021a6d94d1ef7aef",
+      "key": 49,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        3,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        7,
+        8
+      ],
+      "replacement_bytes": 1728,
+      "replacement_sha256": "de15ce94405ea2909c298246d2dae3239eed4228c6e234061c1bb306721e1aed",
+      "replacement_size": [
+        12,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 90,
+      "identity_sha256": "ae32cd7304658215ea486c87aa69ce0257a879523ec61de1a92c1957ff298ec6",
+      "key": 50,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        5,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        4,
+        7,
+        8
+      ],
+      "replacement_bytes": 2880,
+      "replacement_sha256": "25790a14a97c2dad838a94a2b4d449c19fa6a77001977569a3cfeb2e41e8dc55",
+      "replacement_size": [
+        20,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "a0c979f8bb6339b9af8d07d16021fbb401056dd5ecf818d1b0fa56b456cbaa73",
+      "key": 51,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        4,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "acccc56e75063be617fc239d71fe1ef92e5d2525571ce85457d7984fd6ed8bae",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 126,
+      "identity_sha256": "34a5402a244b81d181ace9e297b074caf53c97530597689d421e5c84a45df2c1",
+      "key": 52,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        7,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "replacement_bytes": 4032,
+      "replacement_sha256": "11b4d0f1e7f35b7ae382799ef3c2e3e1a305421a492d55a8c5f76b69db348aff",
+      "replacement_size": [
+        28,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "5d3203cdd9a608a42b3168f08503f95fa5f4e5e77eea2cc279c797fe5f6517c8",
+      "key": 53,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "30bfa714af2213e86159b249199ee746fbeeed7153d228066d471a22d2b62cee",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "7aef94917ebf0ee8c84d46c3f486da353ac1fddbd912ffa1b025b914e0110a0f",
+      "key": 54,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        3,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "489ce3fb5b5f77479121bcf6a7315cba39e27271b891727a1c623486967bc4e4",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "59037667f7121b5762928fddbf0205940d66a213678ab7fa5106b2c21f26a65d",
+      "key": 55,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        3,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "75decaa0fde9da4c99056a2a03806b5268c666a4b1669926b0b8bcb2b455d425",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "c58ebbf7bcbebda02af2479b4d9725aa4cdb165256d0f32edc40e713265c39a0",
+      "key": 56,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        3,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "0f5c390932fe5526431a8d8f2998d4507c6bdd43ae78d0d3b89a045670f6d9f9",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "11226588e7fbc97f24c22228025d7fb45ca398891a10101d50441e5dc947c78a",
+      "key": 57,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        4,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "64924206943b1d73d688ddf874715e18d422a6a101b1609bbf577e42fd8f5165",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 27,
+      "identity_sha256": "0e1bd7aabef8603622af07f79feb509aaa65a8910e22488837521027509ab737",
+      "key": 58,
+      "kind": 2,
+      "logical_origin": [
+        2,
+        5
+      ],
+      "logical_size": [
+        3,
+        9
+      ],
+      "nonzero_glyph_classes": [
+        1,
+        2,
+        5,
+        7,
+        8
+      ],
+      "replacement_bytes": 864,
+      "replacement_sha256": "e17529436284ecf6e1682c30d0dad9b8cfe8d4a09b9108892f6d72e6e85c10b4",
+      "replacement_size": [
+        12,
+        36
+      ]
+    },
+    {
+      "identity_bytes": 33,
+      "identity_sha256": "20f4ff6a9196b63a379bc382efb89ad8a8191ced6f781de17e155b5cb0f46595",
+      "key": 59,
+      "kind": 2,
+      "logical_origin": [
+        2,
+        4
+      ],
+      "logical_size": [
+        3,
+        11
+      ],
+      "nonzero_glyph_classes": [
+        1,
+        2,
+        5,
+        7,
+        8
+      ],
+      "replacement_bytes": 1056,
+      "replacement_sha256": "05d0174934ccc436e564df0dc94a8ddb77bb1a131a93ba42d091b1815fcbe463",
+      "replacement_size": [
+        12,
+        44
+      ]
+    },
+    {
+      "identity_bytes": 110,
+      "identity_sha256": "de19b63d0d390a399f01001c683ae212c9cc44f9ace5dae69cc1cd10b57973c5",
+      "key": 60,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        3
+      ],
+      "logical_size": [
+        10,
+        11
+      ],
+      "nonzero_glyph_classes": [
+        1,
+        2,
+        5,
+        7,
+        8
+      ],
+      "replacement_bytes": 3520,
+      "replacement_sha256": "c9e233215408a923f0e2d2f03a29a1e74d06e7f5b0517a3b9f6b12717bee350e",
+      "replacement_size": [
+        40,
+        44
+      ]
+    },
+    {
+      "identity_bytes": 70,
+      "identity_sha256": "b176f8583a2492e72e952fc8b5ec29fb3dd7c18956fcb66c79d9005dbdbe2670",
+      "key": 61,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        6
+      ],
+      "logical_size": [
+        10,
+        7
+      ],
+      "nonzero_glyph_classes": [
+        1,
+        2,
+        5,
+        7
+      ],
+      "replacement_bytes": 2240,
+      "replacement_sha256": "f2cba6aec6c4d6a608c301b0c5336ffbdd119b7d43b461dbeaa374fce3629e88",
+      "replacement_size": [
+        40,
+        28
+      ]
+    },
+    {
+      "identity_bytes": 110,
+      "identity_sha256": "b852be0ba1e747918694dfcd9ca5d45ef21854eb59d2977b184e4c8f97783288",
+      "key": 62,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        3
+      ],
+      "logical_size": [
+        10,
+        11
+      ],
+      "nonzero_glyph_classes": [
+        1,
+        2,
+        5,
+        7,
+        8
+      ],
+      "replacement_bytes": 3520,
+      "replacement_sha256": "e199ed1436a5a9940cd6c4dc32eb29d2e6c9bf9be8d00f140b33eb2617d84c66",
+      "replacement_size": [
+        40,
+        44
+      ]
+    },
+    {
+      "identity_bytes": 80,
+      "identity_sha256": "a372f105b7044871aebff40fa92459eef1accd6a72d04001d3d051a7ece297f6",
+      "key": 63,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        5,
+        16
+      ],
+      "nonzero_glyph_classes": [
+        1,
+        2,
+        5,
+        7,
+        8
+      ],
+      "replacement_bytes": 2560,
+      "replacement_sha256": "62752ad9ddff88c82d03ed825fd19c2d4388168dad99f88c5ed34803b594f852",
+      "replacement_size": [
+        20,
+        64
+      ]
+    },
+    {
+      "identity_bytes": 323,
+      "identity_sha256": "e2b721cb684b8eaed6f53835455fa5946deee5264a85f0563a31e34db3bc9653",
+      "key": 64,
+      "kind": 2,
+      "logical_origin": [
+        1,
+        0
+      ],
+      "logical_size": [
+        17,
+        19
+      ],
+      "nonzero_glyph_classes": [
+        1,
+        2,
+        5,
+        7,
+        8
+      ],
+      "replacement_bytes": 10336,
+      "replacement_sha256": "0cc399f5a9df7f6722813b19a8893e028b56c8e07e95842b6d0c4ffd1d299ed7",
+      "replacement_size": [
+        68,
+        76
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "689e1bab662e889e17448619cc2c6a1e918665d01ceda2acd64d554370586ec0",
+      "key": 65,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        4,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "493e5a532b73d1794225165235ecfbab9737258acdd97dcf7e69ff9aad1c95c2",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "af1be892e92cc47eb9ca9c5406d0e78fefc626bbcba0d7181ca9ae3126bd6ad2",
+      "key": 66,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        4,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "e68922374ea5a72b09e33e6ce715a6521cf70cdd4ed654372b5a5d821733acc7",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "94f77083af54b72b2c0f761acaafe7ad5b3066bf98c38a8f9c8f976f6304187d",
+      "key": 67,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "e2be4787baf3287184a9e07abedf20ea804ef8be18be046f38fce97c0057a5af",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "f81587da64fb27ee1bae8e599cbaff51784eed830930aa95d32857ec0fe33d79",
+      "key": 68,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "b07785da36a5a0fd936d57eec569791f939a726019cb0a50577c503aa9835e42",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 90,
+      "identity_sha256": "9279fd5480b968cc55ef7270fffed0ebe43d4c09c4d5d6c3d80490fd3f6f4529",
+      "key": 69,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        5,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        7,
+        8
+      ],
+      "replacement_bytes": 2880,
+      "replacement_sha256": "9fc004b65f24c1bbfcb5f526d828f4e9de6d922ca646010d2de1daf02165adb6",
+      "replacement_size": [
+        20,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 90,
+      "identity_sha256": "9c2bda7817d0f90efebf99d7aee31ac06068413c7c66d0a19041ed29740d2ad6",
+      "key": 70,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        5,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        7,
+        8
+      ],
+      "replacement_bytes": 2880,
+      "replacement_sha256": "eeffe2af5a78e887f6075301919b990dcdb1f5b6be8a9a190d92178afa7d11a9",
+      "replacement_size": [
+        20,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "469b4c529a8e10931f014a98a41098c5e5c0f1b006df4abca0d5f5818d5e1191",
+      "key": 71,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        3,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "952fb7d2db60075220c9af2298a1c3f74ac4555acf34c205eb18623f02707bcb",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "7ef0da3d7da9f018aba1fb9348134f1e5e07a069ec7097df95f8fbc87acd0c74",
+      "key": 72,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "28cf8bc2c53c6641967a1c0c15d180290680ff25537525f324d523dfa8d8f210",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 36,
+      "identity_sha256": "bb1857cfbcd7bff59ae23d8b79729408649cb13a516a512f717717b28e68fb07",
+      "key": 73,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        2,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        7,
+        8
+      ],
+      "replacement_bytes": 1152,
+      "replacement_sha256": "490167afad6c4e66fad0164876b5833862f94e1cab8a157f44c9136099b11f32",
+      "replacement_size": [
+        8,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 57,
+      "identity_sha256": "c39e0725cc378eec54810f8803693c9a8f2d327e692993ba91d731309df047cd",
+      "key": 74,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        3,
+        19
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        7,
+        8
+      ],
+      "replacement_bytes": 1824,
+      "replacement_sha256": "258254a3e0cd530d976e31d803a5440f66b25a215933b16fc0930eaa06adf115",
+      "replacement_size": [
+        12,
+        76
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "ba43f11cbc3e994f96182dee2c72306ba63b93d500db915296793ea579d9bb5c",
+      "key": 75,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        4,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "65a690d5ee793736711d4b4ae03f9bedd1b14017adc492ce223098d352c14c7f",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 72,
+      "identity_sha256": "7aa8073bf95dc52d750ce8f708ef6f308e640abc782ca4b37216870f7be26b7e",
+      "key": 76,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        4,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        7,
+        8
+      ],
+      "replacement_bytes": 2304,
+      "replacement_sha256": "cf05ca214c046526501c131c9a8c00e79fbce0bab8fa2939d415dc94f53ec291",
+      "replacement_size": [
+        16,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 144,
+      "identity_sha256": "952911d2db6e91377f5567d7c25c92b7913ae25fdc286a802e9135a6f2c044bb",
+      "key": 77,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        8,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        4,
+        5,
+        7,
+        8
+      ],
+      "replacement_bytes": 4608,
+      "replacement_sha256": "ccde268bf6d41959b38ff9ede91d0c89ebd4ec002966be8741e1e0d3fb2d1e01",
+      "replacement_size": [
+        32,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "d27ce6586a7009ec37679330580493a9ec58b347bbd577fbf89de692ec80ad09",
+      "key": 78,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        4,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "31670ee888c853fe8ce44027867074688ea814bb23672860d88e958666f243a7",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "40c84694f24fc27614c8053b8f6edc01d3d7ce3740a681c2adf8b78342609274",
+      "key": 79,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "1155ed77e7720e08a94c0a9ad8854b5fc3fb4fdb006f5ab73378fdbe717c88c8",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "df8bf37e03a4adc1ea10d33c8d460407d1db5446fa978fcd7e325361bc5c88ed",
+      "key": 80,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "bf9abd469ab82061c0e057404b4561214c9ad49d64def8e970a3fa94fa35913f",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 133,
+      "identity_sha256": "89b5aebfe3f29d3b19f1830a3f694b774dccbaf76ba09bbed2a228e8736de3a5",
+      "key": 81,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        7,
+        19
+      ],
+      "nonzero_glyph_classes": [
+        1,
+        2,
+        7,
+        8
+      ],
+      "replacement_bytes": 4256,
+      "replacement_sha256": "5e2118db3041e59434a56b3ca41c884a2c77afb45c1d9e8b49171ac9afa2a709",
+      "replacement_size": [
+        28,
+        76
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "e4f7fe772bec73d247b5d25e909d947a81d20c8eb856999d041b86b9c47e82c1",
+      "key": 82,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "a342bb7e30de23cf47b13b8c28948c678469d0687a52d054b056ea1dfb6ad7bf",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "aaedcc0f51d3dbb96c732901d8204a0d3586c7bee702faba72ed78db67c22669",
+      "key": 83,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        4,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "2d08c58cd3f46b831b3f2049758eb269c636a87e74225c5ea6b8cd7826798daa",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "71c0c4816c3ed93b03d3ab3a556cdd278ba7dccfd1d4768272d42cba2cadc406",
+      "key": 84,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "8dd57e9b81ee9952e46ccc2a002899b00ed190ebc7864e4b7fe525e3e4c076bc",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "235fd4b702a40269467055d3cbc2a28f05d576cf1804f17c0fa84c8a4a54097f",
+      "key": 85,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "2f890ca29839cf4d8c4156013fb5bab7d74a0ae50c1c307ac45b70a9c54a3c0a",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 126,
+      "identity_sha256": "6af7c3935244757df006dc9df4cb518a3c2ac03cd64337a0682c7e3d52590eeb",
+      "key": 86,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        7,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        3,
+        5,
+        7,
+        8
+      ],
+      "replacement_bytes": 4032,
+      "replacement_sha256": "8224a3d031e428a3f294113b71304cec5156e827deed3aefc38dbe00bbb8d19a",
+      "replacement_size": [
+        28,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 144,
+      "identity_sha256": "8e983b36987aaef771563f7970bfcf8db268241d13c7c6baf32027e621298d05",
+      "key": 87,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        8,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        7,
+        8
+      ],
+      "replacement_bytes": 4608,
+      "replacement_sha256": "99a89a168a41ef191a11a291c3c7195042b01b952942633177319499ca5abcda",
+      "replacement_size": [
+        32,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "5ee50b993630c95e2d0d2c15b654f9cf149e64b6cf33e1184bcb07e476e6b664",
+      "key": 88,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        4,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "73f3a55b826da596972af8a5a08f04241cd38e1420dc6f8a32f794bfa011b37f",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "9f26fb445198a9e8156dbe7c5af15e9d8cc5d7389887fc49186fb2fbeb9147c0",
+      "key": 89,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        4,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "5d2d2e4104a02b1276fbe86d055a56ea0d2687f4237709dfc993235c6cab9aec",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 90,
+      "identity_sha256": "8239706cfa5c4d694f094f5dacbdc82c917da9170eef0f218495528602e75702",
+      "key": 90,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        5,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        3,
+        4,
+        7,
+        8
+      ],
+      "replacement_bytes": 2880,
+      "replacement_sha256": "748374a2e11c29faac0c361c5b6ba31afa8f28558c52f19a1c7e404246e845c4",
+      "replacement_size": [
+        20,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 72,
+      "identity_sha256": "f489980313c08d281fa2b2f0d44f5bbb7f0afe0c3c94ffb24a2a4ae4f0562430",
+      "key": 91,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        4,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        7,
+        8
+      ],
+      "replacement_bytes": 2304,
+      "replacement_sha256": "f7215d60f381665f20559bb38e489a30d82f07995e5fd50ddcee5bf1808431a3",
+      "replacement_size": [
+        16,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 72,
+      "identity_sha256": "06df9d9711d0ed787e329f1ed227bef0d587fe860bc56f0363ef4002e5057c92",
+      "key": 92,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        4,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        1,
+        2,
+        5,
+        7,
+        8
+      ],
+      "replacement_bytes": 2304,
+      "replacement_sha256": "75d9a8a037acdeef781e4c244739767101d6c89370528e1ebb3356f5d87e003d",
+      "replacement_size": [
+        16,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 72,
+      "identity_sha256": "681938b0e93f14b8fd4e0f01e8399bf8d68a9024459741cf990c72e188c55be5",
+      "key": 93,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        4,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        7,
+        8
+      ],
+      "replacement_bytes": 2304,
+      "replacement_sha256": "886cbf5ecdde12c1bb0580ee17c524812530428e70036109dd8e25eec00ec8ae",
+      "replacement_size": [
+        16,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 64,
+      "identity_sha256": "70fe83e54572ac3c1cb855bbc160ff384bb5a7b5ea60194871e023da099c0de7",
+      "key": 94,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        8,
+        8
+      ],
+      "nonzero_glyph_classes": [
+        1,
+        2,
+        5,
+        7,
+        8
+      ],
+      "replacement_bytes": 2048,
+      "replacement_sha256": "2300497061e9deaa1e782fe7ecfbe5d7bb2d9d65badf82f11aeaa2124f3543e4",
+      "replacement_size": [
+        32,
+        32
+      ]
+    },
+    {
+      "identity_bytes": 10,
+      "identity_sha256": "61e6884c61fd479625e30dffb0364aee7463cd348edf5f8eb14a9b8b33c30b6d",
+      "key": 95,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        23
+      ],
+      "logical_size": [
+        10,
+        1
+      ],
+      "nonzero_glyph_classes": [
+        1,
+        2
+      ],
+      "replacement_bytes": 320,
+      "replacement_sha256": "0d8ad0495ee43744096924c52c8a0a4aa5012c2db9a53160eba1a399a35c75fc",
+      "replacement_size": [
+        40,
+        4
+      ]
+    },
+    {
+      "identity_bytes": 12,
+      "identity_sha256": "b6a3fb683ba30c0f8d8d9544e39cca59db2c17b726c4aa01d5493f20cdacc9a0",
+      "key": 96,
+      "kind": 2,
+      "logical_origin": [
+        1,
+        1
+      ],
+      "logical_size": [
+        2,
+        6
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        5,
+        7,
+        8
+      ],
+      "replacement_bytes": 384,
+      "replacement_sha256": "cb603cdefc9ec3be55d1b9cdec463de8df96e97fd95b5c8c55cce39d74594a86",
+      "replacement_size": [
+        8,
+        24
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "689e1bab662e889e17448619cc2c6a1e918665d01ceda2acd64d554370586ec0",
+      "key": 97,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        4,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "493e5a532b73d1794225165235ecfbab9737258acdd97dcf7e69ff9aad1c95c2",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "af1be892e92cc47eb9ca9c5406d0e78fefc626bbcba0d7181ca9ae3126bd6ad2",
+      "key": 98,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        4,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "e68922374ea5a72b09e33e6ce715a6521cf70cdd4ed654372b5a5d821733acc7",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "94f77083af54b72b2c0f761acaafe7ad5b3066bf98c38a8f9c8f976f6304187d",
+      "key": 99,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "e2be4787baf3287184a9e07abedf20ea804ef8be18be046f38fce97c0057a5af",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "f81587da64fb27ee1bae8e599cbaff51784eed830930aa95d32857ec0fe33d79",
+      "key": 100,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "b07785da36a5a0fd936d57eec569791f939a726019cb0a50577c503aa9835e42",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 90,
+      "identity_sha256": "9279fd5480b968cc55ef7270fffed0ebe43d4c09c4d5d6c3d80490fd3f6f4529",
+      "key": 101,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        5,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        7,
+        8
+      ],
+      "replacement_bytes": 2880,
+      "replacement_sha256": "9fc004b65f24c1bbfcb5f526d828f4e9de6d922ca646010d2de1daf02165adb6",
+      "replacement_size": [
+        20,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 90,
+      "identity_sha256": "9c2bda7817d0f90efebf99d7aee31ac06068413c7c66d0a19041ed29740d2ad6",
+      "key": 102,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        5,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        7,
+        8
+      ],
+      "replacement_bytes": 2880,
+      "replacement_sha256": "eeffe2af5a78e887f6075301919b990dcdb1f5b6be8a9a190d92178afa7d11a9",
+      "replacement_size": [
+        20,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "469b4c529a8e10931f014a98a41098c5e5c0f1b006df4abca0d5f5818d5e1191",
+      "key": 103,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        3,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "952fb7d2db60075220c9af2298a1c3f74ac4555acf34c205eb18623f02707bcb",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "7ef0da3d7da9f018aba1fb9348134f1e5e07a069ec7097df95f8fbc87acd0c74",
+      "key": 104,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "28cf8bc2c53c6641967a1c0c15d180290680ff25537525f324d523dfa8d8f210",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 36,
+      "identity_sha256": "bb1857cfbcd7bff59ae23d8b79729408649cb13a516a512f717717b28e68fb07",
+      "key": 105,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        2,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        7,
+        8
+      ],
+      "replacement_bytes": 1152,
+      "replacement_sha256": "490167afad6c4e66fad0164876b5833862f94e1cab8a157f44c9136099b11f32",
+      "replacement_size": [
+        8,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 57,
+      "identity_sha256": "c39e0725cc378eec54810f8803693c9a8f2d327e692993ba91d731309df047cd",
+      "key": 106,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        3,
+        19
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        7,
+        8
+      ],
+      "replacement_bytes": 1824,
+      "replacement_sha256": "258254a3e0cd530d976e31d803a5440f66b25a215933b16fc0930eaa06adf115",
+      "replacement_size": [
+        12,
+        76
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "ba43f11cbc3e994f96182dee2c72306ba63b93d500db915296793ea579d9bb5c",
+      "key": 107,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        4,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "65a690d5ee793736711d4b4ae03f9bedd1b14017adc492ce223098d352c14c7f",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 72,
+      "identity_sha256": "7aa8073bf95dc52d750ce8f708ef6f308e640abc782ca4b37216870f7be26b7e",
+      "key": 108,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        4,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        7,
+        8
+      ],
+      "replacement_bytes": 2304,
+      "replacement_sha256": "cf05ca214c046526501c131c9a8c00e79fbce0bab8fa2939d415dc94f53ec291",
+      "replacement_size": [
+        16,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 144,
+      "identity_sha256": "952911d2db6e91377f5567d7c25c92b7913ae25fdc286a802e9135a6f2c044bb",
+      "key": 109,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        8,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        4,
+        5,
+        7,
+        8
+      ],
+      "replacement_bytes": 4608,
+      "replacement_sha256": "ccde268bf6d41959b38ff9ede91d0c89ebd4ec002966be8741e1e0d3fb2d1e01",
+      "replacement_size": [
+        32,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "d27ce6586a7009ec37679330580493a9ec58b347bbd577fbf89de692ec80ad09",
+      "key": 110,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        4,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "31670ee888c853fe8ce44027867074688ea814bb23672860d88e958666f243a7",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "40c84694f24fc27614c8053b8f6edc01d3d7ce3740a681c2adf8b78342609274",
+      "key": 111,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "1155ed77e7720e08a94c0a9ad8854b5fc3fb4fdb006f5ab73378fdbe717c88c8",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "df8bf37e03a4adc1ea10d33c8d460407d1db5446fa978fcd7e325361bc5c88ed",
+      "key": 112,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "bf9abd469ab82061c0e057404b4561214c9ad49d64def8e970a3fa94fa35913f",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 133,
+      "identity_sha256": "89b5aebfe3f29d3b19f1830a3f694b774dccbaf76ba09bbed2a228e8736de3a5",
+      "key": 113,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        7,
+        19
+      ],
+      "nonzero_glyph_classes": [
+        1,
+        2,
+        7,
+        8
+      ],
+      "replacement_bytes": 4256,
+      "replacement_sha256": "5e2118db3041e59434a56b3ca41c884a2c77afb45c1d9e8b49171ac9afa2a709",
+      "replacement_size": [
+        28,
+        76
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "e4f7fe772bec73d247b5d25e909d947a81d20c8eb856999d041b86b9c47e82c1",
+      "key": 114,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "a342bb7e30de23cf47b13b8c28948c678469d0687a52d054b056ea1dfb6ad7bf",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "aaedcc0f51d3dbb96c732901d8204a0d3586c7bee702faba72ed78db67c22669",
+      "key": 115,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        4,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "2d08c58cd3f46b831b3f2049758eb269c636a87e74225c5ea6b8cd7826798daa",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "71c0c4816c3ed93b03d3ab3a556cdd278ba7dccfd1d4768272d42cba2cadc406",
+      "key": 116,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "8dd57e9b81ee9952e46ccc2a002899b00ed190ebc7864e4b7fe525e3e4c076bc",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "235fd4b702a40269467055d3cbc2a28f05d576cf1804f17c0fa84c8a4a54097f",
+      "key": 117,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        2,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "2f890ca29839cf4d8c4156013fb5bab7d74a0ae50c1c307ac45b70a9c54a3c0a",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 126,
+      "identity_sha256": "6af7c3935244757df006dc9df4cb518a3c2ac03cd64337a0682c7e3d52590eeb",
+      "key": 118,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        7,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        3,
+        5,
+        7,
+        8
+      ],
+      "replacement_bytes": 4032,
+      "replacement_sha256": "8224a3d031e428a3f294113b71304cec5156e827deed3aefc38dbe00bbb8d19a",
+      "replacement_size": [
+        28,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 144,
+      "identity_sha256": "8e983b36987aaef771563f7970bfcf8db268241d13c7c6baf32027e621298d05",
+      "key": 119,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        8,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        7,
+        8
+      ],
+      "replacement_bytes": 4608,
+      "replacement_sha256": "99a89a168a41ef191a11a291c3c7195042b01b952942633177319499ca5abcda",
+      "replacement_size": [
+        32,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "5ee50b993630c95e2d0d2c15b654f9cf149e64b6cf33e1184bcb07e476e6b664",
+      "key": 120,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        4,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "73f3a55b826da596972af8a5a08f04241cd38e1420dc6f8a32f794bfa011b37f",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 108,
+      "identity_sha256": "9f26fb445198a9e8156dbe7c5af15e9d8cc5d7389887fc49186fb2fbeb9147c0",
+      "key": 121,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        6,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        4,
+        7,
+        8
+      ],
+      "replacement_bytes": 3456,
+      "replacement_sha256": "5d2d2e4104a02b1276fbe86d055a56ea0d2687f4237709dfc993235c6cab9aec",
+      "replacement_size": [
+        24,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 90,
+      "identity_sha256": "8239706cfa5c4d694f094f5dacbdc82c917da9170eef0f218495528602e75702",
+      "key": 122,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        5,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        3,
+        4,
+        7,
+        8
+      ],
+      "replacement_bytes": 2880,
+      "replacement_sha256": "748374a2e11c29faac0c361c5b6ba31afa8f28558c52f19a1c7e404246e845c4",
+      "replacement_size": [
+        20,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 72,
+      "identity_sha256": "f489980313c08d281fa2b2f0d44f5bbb7f0afe0c3c94ffb24a2a4ae4f0562430",
+      "key": 123,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        4,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        7,
+        8
+      ],
+      "replacement_bytes": 2304,
+      "replacement_sha256": "f7215d60f381665f20559bb38e489a30d82f07995e5fd50ddcee5bf1808431a3",
+      "replacement_size": [
+        16,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 72,
+      "identity_sha256": "06df9d9711d0ed787e329f1ed227bef0d587fe860bc56f0363ef4002e5057c92",
+      "key": 124,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        4,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        1,
+        2,
+        5,
+        7,
+        8
+      ],
+      "replacement_bytes": 2304,
+      "replacement_sha256": "75d9a8a037acdeef781e4c244739767101d6c89370528e1ebb3356f5d87e003d",
+      "replacement_size": [
+        16,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 72,
+      "identity_sha256": "681938b0e93f14b8fd4e0f01e8399bf8d68a9024459741cf990c72e188c55be5",
+      "key": 125,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        4,
+        18
+      ],
+      "nonzero_glyph_classes": [
+        7,
+        8
+      ],
+      "replacement_bytes": 2304,
+      "replacement_sha256": "886cbf5ecdde12c1bb0580ee17c524812530428e70036109dd8e25eec00ec8ae",
+      "replacement_size": [
+        16,
+        72
+      ]
+    },
+    {
+      "identity_bytes": 64,
+      "identity_sha256": "70fe83e54572ac3c1cb855bbc160ff384bb5a7b5ea60194871e023da099c0de7",
+      "key": 126,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        0
+      ],
+      "logical_size": [
+        8,
+        8
+      ],
+      "nonzero_glyph_classes": [
+        1,
+        2,
+        5,
+        7,
+        8
+      ],
+      "replacement_bytes": 2048,
+      "replacement_sha256": "2300497061e9deaa1e782fe7ecfbe5d7bb2d9d65badf82f11aeaa2124f3543e4",
+      "replacement_size": [
+        32,
+        32
+      ]
+    },
+    {
+      "identity_bytes": 10,
+      "identity_sha256": "61e6884c61fd479625e30dffb0364aee7463cd348edf5f8eb14a9b8b33c30b6d",
+      "key": 127,
+      "kind": 2,
+      "logical_origin": [
+        0,
+        23
+      ],
+      "logical_size": [
+        10,
+        1
+      ],
+      "nonzero_glyph_classes": [
+        1,
+        2
+      ],
+      "replacement_bytes": 320,
+      "replacement_sha256": "0d8ad0495ee43744096924c52c8a0a4aa5012c2db9a53160eba1a399a35c75fc",
+      "replacement_size": [
+        40,
+        4
+      ]
+    }
+  ],
+  "reference_bytes_removed": 593038,
+  "schema": "selection-reference-free-conversion-1",
+  "source_bytes": 7548682
+}

@@ -1,0 +1,11 @@
+test_existing_child_and_focus_contract_preserved (test_source_scope.ScopeTests.test_existing_child_and_focus_contract_preserved) ... ok
+test_launch_order_and_environment_lifetime (test_source_scope.ScopeTests.test_launch_order_and_environment_lifetime) ... ok
+test_legacy_output_branch_unchanged (test_source_scope.ScopeTests.test_legacy_output_branch_unchanged) ... ok
+test_no_desktop_mutation_dpi_override_or_research_override (test_source_scope.ScopeTests.test_no_desktop_mutation_dpi_override_or_research_override) ... ok
+test_other_core_implementation_untouched (test_source_scope.ScopeTests.test_other_core_implementation_untouched) ... ok
+test_upstream_exact_installed_current_bytes (test_source_scope.ScopeTests.test_upstream_exact_installed_current_bytes) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.003s
+
+OK

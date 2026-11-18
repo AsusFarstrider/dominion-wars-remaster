@@ -1,0 +1,16 @@
+{
+  "id": "version-review-20261117-1.20-map",
+  "owner": "Master Integration",
+  "status": "candidate-proposal-pending-integrated-acceptance",
+  "proposed_remaster_version": "1.20",
+  "release_stage": "alpha",
+  "integration_build_id": "int-20261117.2",
+  "flavor": "native-display-campaign-ui-map-touchup",
+  "in_game_label": "Remastered 1.20",
+  "official_original_game_version": "1.04",
+  "rationale": "Retain the selected 1.20 Alpha campaign UI milestone. The approved mission-selection background touch-up replaces its provisional predecessor; it is not a separate version milestone. The revised candidate has its own immutable build ID.",
+  "known_scope": "Background-only source change. Original North American 1.04 owner data. Exact package gameplay acceptance pending. Multiplayer unsupported.",
+  "current_baseline_changed": false,
+  "version_advancement_approved": false,
+  "publication_authorized_by_this_record": false
+}

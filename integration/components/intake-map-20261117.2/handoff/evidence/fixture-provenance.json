@@ -1,0 +1,7 @@
+{
+  "production_cpp_sha256": "28c76cfb195d3e2cd9cc7b1c696518c0271d4cf05f3893c0171f77d1a0f1cb69",
+  "production_sites_sha256": "b007e95d494ee091a8c8a15b96ad184bead25b3cf37ff637c5fe71d862ddbfb4",
+  "fixture_cpp_sha256": "213a4297e9b3219c3ef16bf02e7729c462f1f647bcee0e888cbf1510d2531b10",
+  "fixture_sites_sha256": "36727e96a2867f6fa0cbc31b995370022086663f473c1dbf59e5f9627adde05d",
+  "changes": "Literal engine base/entry/site addresses relocated by0x1FC00000 and local include paths adjusted; installer/binder/bridge logic unchanged; no production edits."
+}

@@ -1,0 +1,17 @@
+{
+  "command": [
+    "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\paramount-restoration\\history_check_independent.exe",
+    "E:\\Codex\\research\\installed-1.04\\binkw32.dll",
+    "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\paramount-restoration\\private-1440-v1\\Paramount-1440p15-original-audio.bik"
+  ],
+  "exit": 0,
+  "stdout": "independent_handles=2 copies_per_handle_per_frame=1 dimensions=2560x1440 pitch=5120 history_bytes=7372800 compared=225 skipped=0 guard_ok=1 equal=1 sound_tested=0 wait_tested=0\n",
+  "stderr": "",
+  "asset_sha256": "5a3506e3f48190073591c1349f4e35dbfe8dde9d2ded19364fa865817deecff3",
+  "dll_sha256": "65358b3cde7281df10cb68ac8e1c9f8705893a47df33f87bb882073fd0955c90",
+  "runner_sha256": "78d18bd281fe73b8cdfb9bb582f7359217c807bac52f2bb610fdffe4967270fc",
+  "source_sha256": "ed25fd1b363f4d752bde004b0991b50752f01f5dc32b1559d6ff23e4675ecdd6",
+  "sound_tested": false,
+  "wait_tested": false,
+  "game_tested": false
+}

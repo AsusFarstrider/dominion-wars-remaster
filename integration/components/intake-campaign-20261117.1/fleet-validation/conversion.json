@@ -1,0 +1,15 @@
+{
+  "embedded_literal_palette_matches": 0,
+  "entries": 139,
+  "entry_section_byte_identical": true,
+  "entry_section_sha256": "b03b6825ba42d8221f61130483b9c48cfe98906172e1f910197b247d71f910af",
+  "format": "DWFLEET2",
+  "output_bytes": 66876310,
+  "output_sha256": "3efaf8c887a27b6ea701bc70f6ee443aae25ae40b0b25933bdd56a08898262d4",
+  "palette_sha256": {
+    "B200": "26a035d4c9df29dca4768cf1eb1bef60d22d1bd5b14c81262cbda2649d7f2401",
+    "B272": "df2a6356f1cd4c6a95dca130d5c912ee73a126d19658e7804cf2a0f24c7ffd0a"
+  },
+  "source_bytes": 66877270,
+  "source_sha256": "08ae3f6f29bd31994d81c323cc8251429c32e25eb6a2613a880cd438145a495a"
+}

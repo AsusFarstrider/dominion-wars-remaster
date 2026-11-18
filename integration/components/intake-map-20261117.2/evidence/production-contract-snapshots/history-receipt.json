@@ -1,0 +1,18 @@
+{
+  "command": [
+    "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\ss_history_check.exe",
+    "E:\\Codex\\research\\installed-1.04\\binkw32.dll",
+    "C:\\Users\\Example\\OneDrive\\Documents\\ChatGPT\\Dominion Wars\\cinematic-extraction\\original-ss-hd-v1\\SSLogo1-1440p-original-audio.bik",
+    "281"
+  ],
+  "exit": 0,
+  "stdout": "independent_handles=2 copies_per_handle_per_frame=1 dimensions=2560x1440 pitch=5120 history_bytes=7372800 compared=281 skipped=0 guard_ok=1 equal=1 sound_tested=0 wait_tested=0\n",
+  "stderr": "",
+  "asset_sha256": "910eb6d55755c72c67a557138634fc344fff25560cba7e267899ed9a9904bc50",
+  "dll_sha256": "65358b3cde7281df10cb68ac8e1c9f8705893a47df33f87bb882073fd0955c90",
+  "runner_sha256": "ad758f3287ec3e5d35603eade4894ce3c55068f8dc720c531b9c32dedeaa5e1b",
+  "source_sha256": "8526a1a02b9b46fcca82638a38f88ca488f516e8b0c9dd02c01d06d6008cf535",
+  "game_tested": false,
+  "audio_playback_tested": false,
+  "wait_cadence_tested": false
+}
